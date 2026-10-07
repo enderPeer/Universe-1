@@ -28,6 +28,9 @@ const USAGE: &str = "u1map <command> [options]
   catalog  --map map.u1prog --out catalog.tsv [--summary summary.json] [--deep]   (unary maps)
            --deep adds ANF degree/monomials, nearest named function + distance, best affine fit
            index every function with structural descriptors, sorted by class, name, steps, program id
+  budgets  --W w --a a --p p --isa ... [--lo L --hi H] [--every 8]   (unary)
+           run each program for 256 steps and record the function at every checkpoint step: distinct
+           functions per budget T and the union over all T (how much the time axis adds)
   vocab    --W w [--binary]            list the target vocabulary (names the classifier knows)
   run      --W .. --a .. --p .. --isa .. --program 0x..   disassemble and tabulate one program
 ";
@@ -220,6 +223,38 @@ fn run(args: &[String]) -> Result<(), String> {
                 fm.cfg.isa_string(), rows.len(), counts.iter().map(|(k, v)| format!("\"{}\":{}", k, v)).collect::<Vec<_>>().join(","), bij, inv, idem, xa, mono, full_dep, img_hist, dep_hist, t0.elapsed().as_secs_f64());
             if let Some(sp) = arg(args, "--summary") { std::fs::write(&sp, format!("{}\n", summary)).map_err(|e| e.to_string())?; }
             println!("{}", summary); eprintln!("wrote {} ({} rows)", out, rows.len()); Ok(())
+        }
+        "budgets" => {
+            let cfg = cfg_from_args(args)?; let (lo, hi) = range(args, &cfg); let every: usize = argn(args, "--every", 8);
+            let ncp = 256 / every; let nin = cfg.nin(); let cfg = Arc::new(cfg); let nthr = threads(args).max(1);
+            let sets: Vec<Vec<std::collections::HashSet<u64>>> = std::thread::scope(|sc| {
+                let hs: Vec<_> = (0..nthr).map(|t| { let cfg = cfg.clone(); sc.spawn(move || {
+                    let m = Machine::new(&cfg); let mut sc2 = Scratch::new(&cfg);
+                    let mut sets: Vec<std::collections::HashSet<u64>> = (0..ncp).map(|_| std::collections::HashSet::new()).collect();
+                    let mut pb = lo + t as u64;
+                    while pb < hi {
+                        let mut tabs = vec![0u64; ncp];
+                        for x in 0..nin as u32 {
+                            // run step by step: re-run with growing budgets is wasteful; instead simulate once and snapshot
+                            let snaps = m.run_snapshots(&mut sc2, pb, x, None, every);
+                            for (k, a) in snaps.iter().enumerate() { tabs[k] |= (*a as u64) << (4 * x); }
+                        }
+                        for k in 0..ncp { sets[k].insert(tabs[k]); }
+                        pb += nthr as u64;
+                    }
+                    sets }) }).collect();
+                hs.into_iter().map(|h| h.join().unwrap()).collect()
+            });
+            let mut per: Vec<std::collections::HashSet<u64>> = (0..ncp).map(|_| std::collections::HashSet::new()).collect(); let mut union = std::collections::HashSet::new();
+            for s in sets { for (k, set) in s.into_iter().enumerate() { for v in set { per[k].insert(v); union.insert(v); } } }
+            println!("programs {}..{} ({}), ISA {}", lo, hi, hi - lo, cfg.isa_string());
+            for k in 0..ncp { println!("T={:>3}: {:>9} distinct functions", (k + 1) * every, per[k].len()); }
+            let last = per[ncp - 1].len(); println!("union over all checkpoints: {} ({:.2}x the T=256 set)", union.len(), union.len() as f64 / last as f64);
+            // minimal-T view: for each function in the union, the smallest T at which it appears
+            let mut minT = vec![0usize; ncp]; let mut seen = std::collections::HashSet::new();
+            for k in 0..ncp { for v in &per[k] { if seen.insert(*v) { minT[k] += 1; } } }
+            println!("functions first appearing at T: {:?}", minT.iter().enumerate().map(|(k, c)| format!("{}:{}", (k + 1) * every, c)).collect::<Vec<_>>());
+            Ok(())
         }
         "vocab" => { let v = Vocab::new(argn(args, "--W", 4), flag(args, "--binary")); let mut names: Vec<_> = v.by_name.keys().collect(); names.sort(); for n in names { println!("{}", n); } eprintln!("{} names", v.by_name.len()); Ok(()) }
         "run" => {

@@ -220,6 +220,51 @@ impl<'a> Machine<'a> {
         RunResult { a: s.a, steps: MAX_STEPS, end: End::Budget }
     }
 
+    /// Run program `pb` for 256 steps with A = x (M[1] = y if given) and return A at every `every`-th step
+    /// (no cycle fast-forward; HALT freezes A for the remaining checkpoints).
+    pub fn run_snapshots(&self, sc: &mut Scratch, pb: u64, x: u32, y: Option<u32>, every: usize) -> Vec<u32> {
+        let cfg = self.cfg; sc.decoded = cfg.decode(pb);
+        let mask = cfg.mask(); let amask = cfg.amask(); let pmask = cfg.pmask(); let w = cfg.w;
+        let mut s = State { a: x & mask, z: 0, c: 0, pc: 0, m: vec![0; cfg.nm()] }; s.z = (s.a == 0) as u32;
+        if let Some(y) = y { s.m[1] = y & mask; }
+        let mut out = Vec::with_capacity(MAX_STEPS / every); let mut halted = false;
+        for t in 1..=MAX_STEPS {
+            if !halted {
+                let (prim, op) = sc.decoded[(s.pc & pmask) as usize]; s.pc = (s.pc + 1) & pmask;
+                let rd = |s: &State, a: u32| { let ad = a & amask; if ad == 0 { s.a } else { s.m[ad as usize] } };
+                use Prim::*;
+                match prim {
+                    Nop => {}, Halt => halted = true,
+                    Ld => { s.a = rd(&s, op); s.z = (s.a == 0) as u32 } St => { let ad = op & amask; if ad == 0 { } else { s.m[ad as usize] = s.a } }
+                    Ldi => { s.a = op & mask; s.z = (s.a == 0) as u32 } Clr => { s.a = 0; s.z = 1 } Set => { s.a = mask; s.z = 0 }
+                    Not => { s.a = !s.a & mask; s.z = (s.a == 0) as u32 }
+                    And => { s.a &= rd(&s, op); s.z = (s.a == 0) as u32 } Or => { s.a |= rd(&s, op); s.z = (s.a == 0) as u32 } Xor => { s.a ^= rd(&s, op); s.z = (s.a == 0) as u32 }
+                    Nand => { s.a = !(s.a & rd(&s, op)) & mask; s.z = (s.a == 0) as u32 } Nor => { s.a = !(s.a | rd(&s, op)) & mask; s.z = (s.a == 0) as u32 } Xnor => { s.a = !(s.a ^ rd(&s, op)) & mask; s.z = (s.a == 0) as u32 }
+                    Add => { let v = s.a + rd(&s, op); s.a = v & mask; s.z = (s.a == 0) as u32; s.c = (v > mask) as u32 }
+                    Adc => { let v = s.a + rd(&s, op) + s.c; s.a = v & mask; s.z = (s.a == 0) as u32; s.c = (v > mask) as u32 }
+                    Sub => { let v = s.a.wrapping_sub(rd(&s, op)); s.a = v & mask; s.z = (s.a == 0) as u32; s.c = ((v as i32) < 0) as u32 }
+                    Inc => { let v = s.a + 1; s.a = v & mask; s.z = (s.a == 0) as u32; s.c = (v > mask) as u32 }
+                    Dec => { let v = s.a.wrapping_sub(1); s.a = v & mask; s.z = (s.a == 0) as u32; s.c = ((v as i32) < 0) as u32 }
+                    Neg => { let c = (s.a != 0) as u32; s.a = s.a.wrapping_neg() & mask; s.z = (s.a == 0) as u32; s.c = c }
+                    Shl => { let c = (s.a >> (w - 1)) & 1; s.a = (s.a << 1) & mask; s.z = (s.a == 0) as u32; s.c = c }
+                    Shr => { let c = s.a & 1; s.a >>= 1; s.z = (s.a == 0) as u32; s.c = c }
+                    Rol => { s.a = ((s.a << 1) | (s.a >> (w - 1))) & mask; s.z = (s.a == 0) as u32 } Ror => { s.a = ((s.a >> 1) | ((s.a & 1) << (w - 1))) & mask; s.z = (s.a == 0) as u32 }
+                    Rcl => { let c = (s.a >> (w - 1)) & 1; s.a = ((s.a << 1) | s.c) & mask; s.z = (s.a == 0) as u32; s.c = c }
+                    Mul => { s.a = s.a.wrapping_mul(rd(&s, op)) & mask; s.z = (s.a == 0) as u32 }
+                    Swap => { let ta = s.a; let tt = rd(&s, op); let ad = op & amask; if ad != 0 { s.m[ad as usize] = ta & mask; } s.a = tt & mask; s.z = (s.a == 0) as u32 }
+                    Jmp => s.pc = op & pmask, Jz => if s.z != 0 { s.pc = op & pmask }, Jnz => if s.z == 0 { s.pc = op & pmask }, Jc => if s.c != 0 { s.pc = op & pmask },
+                    Skz => if s.z != 0 { s.pc = (s.pc + 1) & pmask }, Sknz => if s.z == 0 { s.pc = (s.pc + 1) & pmask },
+                    Incm => { let ad = op & amask; let v = rd(&s, op) + 1; if ad == 0 { s.a = v & mask } else { s.m[ad as usize] = v & mask } }
+                    Decm => { let ad = op & amask; let v = rd(&s, op).wrapping_sub(1); if ad == 0 { s.a = v & mask } else { s.m[ad as usize] = v & mask } }
+                    Ldind => { let ad = rd(&s, op); s.a = rd(&s, ad); s.z = (s.a == 0) as u32 }
+                    Stind => { let ad = rd(&s, op) & amask; if ad == 0 { } else { s.m[ad as usize] = s.a } }
+                }
+            }
+            if t % every == 0 { out.push(s.a); }
+        }
+        out
+    }
+
     /// Truth table of program `pb`: unary -> nin entries (x in A); binary -> nin*nin entries (x in A, y in M[1]).
     /// Also returns the maximum step count over all inputs and whether every input halted.
     pub fn table(&self, sc: &mut Scratch, pb: u64) -> (Vec<u8>, usize, bool) {

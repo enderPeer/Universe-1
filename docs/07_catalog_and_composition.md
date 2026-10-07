@@ -92,3 +92,33 @@ heuristic beyond.
 2. 5-byte sweep of the champion in unary mode (10 min) with CPU-side merge: how many of the 1.8e19
    functions does one extra byte buy, versus one extra stage?
 3. Binary catalog of the 24.68 M map on adler40.
+
+## 3. The time axis: one program is a family of functions
+
+Every function in the maps is "A at step 256". The same program read at another step is another function:
+the `x*3` program (0x521) computes 10x at step 248 and 9x at step 240, because the loop is a linear
+recurrence and the map records its 32nd term. So a function is addressed by a pair (program, T), and the
+sweeps so far have only read T = 256.
+
+Measured on the first 2,097,152 champion programs with `u1map budgets --every 8` (snapshots verified
+against the sweep at T = 256):
+
+| | distinct functions |
+|---|---:|
+| at T = 256 alone | 5,982 |
+| at any single checkpoint T = 8, 16, ..., 256 | 246 at T=8, rising to ~6,000 from T = 64 on |
+| union over all 32 checkpoints | 98,445, **16.5x** the T = 256 set |
+| functions first appearing at each checkpoint | 2,700-3,900 per checkpoint, every checkpoint adds new ones |
+
+The sample is biased toward low program ids, so the absolute numbers are small; the ratio is the finding.
+Reading at 32 budgets instead of one multiplies the champion's library by about an order of magnitude at zero
+extra execution cost (the run is the same 256 steps; only the hashing is repeated), and gives every function
+a **minimal T**: the cheapest clock at which some program computes it. For a HALT-less ISA that is the only
+cost dimension there is.
+
+**exp09 (cluster, Codex):** a sweep-kernel variant that hashes the truth table at every checkpoint T = 8k
+(32 tables per program, 32 hash tables per GPU, ~2x the unary sweep time) for the champion ISA, unary and
+binary; output one map per T plus the union map with (program, minimal T) witnesses; then `u1map catalog` on
+the union. Then the same for checkpoints at every step (256 tables) on a subsample to see whether finer
+clocks add more. Design question it decides: whether the Life genome should carry a clock field (a few bits
+selecting T) in addition to the 32 program bits.
