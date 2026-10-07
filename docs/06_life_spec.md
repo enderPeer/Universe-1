@@ -72,8 +72,8 @@ Final grid dump: `genome[]` then `meta[]` as little-endian u32 (for cross-engine
 | engine | file | status |
 |---|---|---|
 | CPU reference (Rust) | `life/src/main.rs` (shares `mapper/src/machine.rs`) | reference |
-| CUDA | `life/u1life.cu` | bit-identical final grids to the reference on two ISAs, 48x48, 400 ticks, via `gpu/cuda_shim.h` emulation |
-| Vulkan | `life/u1life.comp` + `life/u1life_vk.c` | written, not yet compiled (no glslc here); verify on specht32/falke64 with the recipe below |
+| CUDA | `life/u1life.cu` | bit-identical to the reference via `gpu/cuda_shim.h` emulation (48x48, 400 ticks, two ISAs); on the cluster: all five NVIDIA GPUs byte-identical to the CPU reference for both ISAs (Codex, 2026-10-07) |
+| Vulkan | `life/u1life.comp` + `life/u1life_vk.c` | on the cluster: all four AMD GPUs byte-identical to the CPU reference for both ISAs (Codex, 2026-10-07; logs to follow in `results/life/validation/`) |
 Verification recipe (any engine): same options, `--dump-final`, then `cmp a/final.bin b/final.bin`.
 
 ## Measured speed and what one run costs
