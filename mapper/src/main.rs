@@ -21,6 +21,8 @@ const USAGE: &str = "u1map <command> [options]
   info     --map map.u1prog [--named named.jsonl] [--stats stats.json] [--closure depth]
   list     --map map.u1prog [--filter substring] [--class named|permutation|predicate|constant|other] [--limit n]
   synth    --map map.u1prog (--target NAME | --table 0,1,2,...) [--depth d] [--extra n] [--fn name] [--out file.rs]
+  translate --map map.u1prog --targets file --out-dir dir [--depth d] [--extra n] [--report file.jsonl]
+           batch synth: each line of `file` is `name|t0,t1,...`; writes dir/<name>.rs and a JSONL report
   vocab    --W w [--binary]            list the target vocabulary (names the classifier knows)
   run      --W .. --a .. --p .. --isa .. --program 0x..   disassemble and tabulate one program
 ";
@@ -134,6 +136,36 @@ fn run(args: &[String]) -> Result<(), String> {
             let src = synth::emit_rust(&fm.cfg, &plan, &fname, &tname);
             if let Some(o) = arg(args, "--out") { std::fs::write(&o, &src).map_err(|e| e.to_string())?; println!("wrote {}", o); } else { println!("{}", src); }
             Ok(())
+        }
+        "translate" => {
+            let fm = FunctionMap::load_programs(&arg(args, "--map").ok_or("--map required")?, threads(args))?;
+            let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary);
+            let targets = std::fs::read_to_string(arg(args, "--targets").ok_or("--targets required")?).map_err(|e| e.to_string())?;
+            let dir = arg(args, "--out-dir").ok_or("--out-dir required")?; std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
+            let (depth, extra): (usize, usize) = (argn(args, "--depth", 3), argn(args, "--extra", 64));
+            let t0 = std::time::Instant::now(); let sy = synth::Synth::new(&fm, &vocab, depth, extra);
+            eprintln!("composition prefixes per level: {:?} ({:.1}s)", sy.prefix_counts(), t0.elapsed().as_secs_f64());
+            let mut report = String::new(); let (mut ok, mut total) = (0, 0);
+            for line in targets.lines().filter(|l| !l.trim().is_empty() && !l.starts_with('#')) {
+                let (name, tb) = line.split_once('|').ok_or(format!("bad target line: {}", line))?;
+                let tb: Vec<u8> = tb.split(',').map(|v| v.trim().parse().map_err(|_| format!("bad table in {}", name))).collect::<Result<_, _>>()?;
+                if tb.len() != fm.cfg.ntab() { return Err(format!("{}: table needs {} entries", name, fm.cfg.ntab())); }
+                total += 1;
+                match sy.synthesize(&tb) {
+                    Some(plan) => {
+                        ok += 1; let fname = sanitize(name);
+                        std::fs::write(format!("{}/{}.rs", dir, fname), synth::emit_rust(&fm.cfg, &plan, &fname, name)).map_err(|e| e.to_string())?;
+                        report += &format!("{{\"name\":{},\"ok\":true,\"stages\":{},\"stage_names\":[{}],\"programs\":[{}],\"max_steps\":{},\"halts\":{},\"file\":\"{}/{}.rs\"}}\n",
+                            map::json_str(name), plan.stages.len(), plan.stage_names.iter().map(|n| map::json_str(n)).collect::<Vec<_>>().join(","),
+                            plan.stages.iter().map(|e| format!("\"0x{:x}\"", e.program)).collect::<Vec<_>>().join(","),
+                            plan.stages.iter().map(|e| e.steps).sum::<usize>(), plan.stages.iter().all(|e| e.halts), dir, fname);
+                        println!("{:<20} {} stage(s): {}", name, plan.stages.len(), plan.stage_names.join(" -> "));
+                    }
+                    None => { report += &format!("{{\"name\":{},\"ok\":false}}\n", map::json_str(name)); println!("{:<20} NOT SYNTHESIZABLE (depth {})", name, depth); }
+                }
+            }
+            if let Some(r) = arg(args, "--report") { std::fs::write(&r, &report).map_err(|e| e.to_string())?; }
+            eprintln!("{}/{} targets translated from {}", ok, total, fm.cfg.isa_string()); Ok(())
         }
         "vocab" => { let v = Vocab::new(argn(args, "--W", 4), flag(args, "--binary")); let mut names: Vec<_> = v.by_name.keys().collect(); names.sort(); for n in names { println!("{}", n); } eprintln!("{} names", v.by_name.len()); Ok(()) }
         "run" => {

@@ -20,6 +20,7 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - `cluster/` — node/GPU/ISA configs and dispatchers for the 2^32-program sweeps (`docs/02_4byte_run.md`).
 - `mapper/` — Rust function mapper `u1map`: builds operator maps from sweep witnesses, names operators, synthesizes programs and Rust code (`docs/03_function_map.md`).
 - `results/maps/` — operator maps, named-operator listings and the cross-ISA usability matrix.
+- `translate/` — test-code corpus (Dimension42 TESTS + classic kernels) and the pipeline that translates it into Universe-1 programs and verified Rust (`docs/04_translate_run.md`).
 
 ## Cluster experiment results
 

@@ -1,0 +1,2214 @@
+{
+ "w4_o2_add/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x128616"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/a_plus_5.rs"
+ },
+ "w4_o2_add/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/not_b.rs"
+ },
+ "w4_o2_add/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/a_minus_1.rs"
+ },
+ "w4_o2_add/rotl3": {
+  "name": "rotl3",
+  "ok": false
+ },
+ "w4_o2_add/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/times3.rs"
+ },
+ "w4_o2_add/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o2_add/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o2_add/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o2_add/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(parity(x))",
+   "-x"
+  ],
+  "programs": [
+   "0xc1c8591",
+   "0x55c1"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/parity.rs"
+ },
+ "w4_o2_add/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x9a3c1171"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/abs_signed.rs"
+ },
+ "w4_o2_add/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x&12",
+   "(x*9)>=7"
+  ],
+  "programs": [
+   "0x894491",
+   "0x50ac01c3"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sign_bit.rs"
+ },
+ "w4_o2_add/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(rol(x,1))+8",
+   "x+9",
+   "rol((x+15),1)"
+  ],
+  "programs": [
+   "0x1823c062",
+   "0x5182",
+   "0x8182c502"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/nibble_swap.rs"
+ },
+ "w4_o2_add/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x5c18"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sat_inc.rs"
+ },
+ "w4_o2_add/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x15ac1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sat_dec.rs"
+ },
+ "w4_o2_add/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "ma(x+7)((x+7),7)",
+   "parity((x%7))"
+  ],
+  "programs": [
+   "0x51812c3",
+   "0x10169c2c"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/is_pow2.rs"
+ },
+ "w4_o2_add/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "1-(x%3)",
+   "1-x"
+  ],
+  "programs": [
+   "0x962c0c6",
+   "0x161825"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/mod3.rs"
+ },
+ "w4_o2_add/div3": {
+  "name": "div3",
+  "ok": false
+ },
+ "w4_o2_add/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!(x*x)",
+   "!x"
+  ],
+  "programs": [
+   "0x1a6a8426",
+   "0x91"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/square.rs"
+ },
+ "w4_o2_add/cube": {
+  "name": "cube",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x^12",
+   "unnamed"
+  ],
+  "programs": [
+   "0x12b3a266",
+   "0x1c55"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/cube.rs"
+ },
+ "w4_o2_add/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o2_add/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o2_add/ctz": {
+  "name": "ctz",
+  "ok": false
+ },
+ "w4_o2_add/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x1a2937"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/lowbit.rs"
+ },
+ "w4_o2_add/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/clear_lowbit.rs"
+ },
+ "w4_o2_add/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x181aca25"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/fill_right.rs"
+ },
+ "w4_o2_add/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false
+ },
+ "w4_o2_add/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x59441"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sign_extend2.rs"
+ },
+ "w4_o2_add/lerp_half": {
+  "name": "lerp_half",
+  "ok": false
+ },
+ "w4_o2_add/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o2_add/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o2_nand/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": false
+ },
+ "w4_o2_nand/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x10826e"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o2_nand/not_b.rs"
+ },
+ "w4_o2_nand/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": false
+ },
+ "w4_o2_nand/rotl3": {
+  "name": "rotl3",
+  "ok": false
+ },
+ "w4_o2_nand/times3": {
+  "name": "times3",
+  "ok": false
+ },
+ "w4_o2_nand/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o2_nand/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o2_nand/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o2_nand/parity": {
+  "name": "parity",
+  "ok": false
+ },
+ "w4_o2_nand/abs_signed": {
+  "name": "abs_signed",
+  "ok": false
+ },
+ "w4_o2_nand/sign_bit": {
+  "name": "sign_bit",
+  "ok": false
+ },
+ "w4_o2_nand/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": false
+ },
+ "w4_o2_nand/sat_inc": {
+  "name": "sat_inc",
+  "ok": false
+ },
+ "w4_o2_nand/sat_dec": {
+  "name": "sat_dec",
+  "ok": false
+ },
+ "w4_o2_nand/is_pow2": {
+  "name": "is_pow2",
+  "ok": false
+ },
+ "w4_o2_nand/mod3": {
+  "name": "mod3",
+  "ok": false
+ },
+ "w4_o2_nand/div3": {
+  "name": "div3",
+  "ok": false
+ },
+ "w4_o2_nand/square": {
+  "name": "square",
+  "ok": false
+ },
+ "w4_o2_nand/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o2_nand/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o2_nand/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o2_nand/ctz": {
+  "name": "ctz",
+  "ok": false
+ },
+ "w4_o2_nand/lowbit": {
+  "name": "lowbit",
+  "ok": false
+ },
+ "w4_o2_nand/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false
+ },
+ "w4_o2_nand/fill_right": {
+  "name": "fill_right",
+  "ok": false
+ },
+ "w4_o2_nand/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false
+ },
+ "w4_o2_nand/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": false
+ },
+ "w4_o2_nand/lerp_half": {
+  "name": "lerp_half",
+  "ok": false
+ },
+ "w4_o2_nand/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o2_nand/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o3_arith/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": false
+ },
+ "w4_o3_arith/not_b": {
+  "name": "not_b",
+  "ok": false
+ },
+ "w4_o3_arith/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": false
+ },
+ "w4_o3_arith/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol(x,1)",
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0xe55aaa3",
+   "0xe5555aa3"
+  ],
+  "max_steps": 15,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/rotl3.rs"
+ },
+ "w4_o3_arith/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0xe543"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/times3.rs"
+ },
+ "w4_o3_arith/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o3_arith/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o3_arith/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o3_arith/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(parity(x))*12",
+   "x/8"
+  ],
+  "programs": [
+   "0x35a7a435",
+   "0xeaaa"
+  ],
+  "max_steps": 260,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/parity.rs"
+ },
+ "w4_o3_arith/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x1d7a53"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/abs_signed.rs"
+ },
+ "w4_o3_arith/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0xeaaa"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sign_bit.rs"
+ },
+ "w4_o3_arith/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0xe5555aa3"
+  ],
+  "max_steps": 8,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/nibble_swap.rs"
+ },
+ "w4_o3_arith/sat_inc": {
+  "name": "sat_inc",
+  "ok": false
+ },
+ "w4_o3_arith/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "1-(max(x,1))",
+   "-x"
+  ],
+  "programs": [
+   "0xe7aaa7a3",
+   "0x377"
+  ],
+  "max_steps": 264,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sat_dec.rs"
+ },
+ "w4_o3_arith/is_pow2": {
+  "name": "is_pow2",
+  "ok": false
+ },
+ "w4_o3_arith/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "x*11",
+   "unnamed",
+   "(x+4)/6"
+  ],
+  "programs": [
+   "0x355",
+   "0xe7aa3",
+   "0x1ca3a5"
+  ],
+  "max_steps": 517,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/mod3.rs"
+ },
+ "w4_o3_arith/div3": {
+  "name": "div3",
+  "ok": false
+ },
+ "w4_o3_arith/square": {
+  "name": "square",
+  "ok": false
+ },
+ "w4_o3_arith/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o3_arith/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o3_arith/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o3_arith/ctz": {
+  "name": "ctz",
+  "ok": false
+ },
+ "w4_o3_arith/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0xaaa1c43"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/lowbit.rs"
+ },
+ "w4_o3_arith/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false
+ },
+ "w4_o3_arith/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x7ca3"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/fill_right.rs"
+ },
+ "w4_o3_arith/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false
+ },
+ "w4_o3_arith/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x37aa445"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sign_extend2.rs"
+ },
+ "w4_o3_arith/lerp_half": {
+  "name": "lerp_half",
+  "ok": false
+ },
+ "w4_o3_arith/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o3_arith/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o3_arith_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+y"
+  ],
+  "programs": [
+   "0xe5"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/a_plus_b.rs"
+ },
+ "w4_o3_arith_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": false
+ },
+ "w4_o3_arith_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x*2)+y"
+  ],
+  "programs": [
+   "0xe54"
+  ],
+  "max_steps": 3,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/op_2a_plus_b.rs"
+ },
+ "w4_o3_arith_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": false
+ },
+ "w4_o3_arith_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false
+ },
+ "w4_o3_arith_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-y"
+  ],
+  "programs": [
+   "0xe7"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/a_minus_b.rs"
+ },
+ "w4_o3_arith_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false
+ },
+ "w4_o3_arith_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false
+ },
+ "w4_o3_arith_bin/carry_out": {
+  "name": "carry_out",
+  "ok": false
+ },
+ "w4_o3_arith_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+y)&1"
+  ],
+  "programs": [
+   "0xc45a37"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/half_adder_sum.rs"
+ },
+ "w4_o3_arith_bin/mul": {
+  "name": "mul",
+  "ok": false
+ },
+ "w4_o3_arith_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false
+ },
+ "w4_o3_arith_bin/min": {
+  "name": "min",
+  "ok": false
+ },
+ "w4_o3_arith_bin/max": {
+  "name": "max",
+  "ok": false
+ },
+ "w4_o3_arith_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false
+ },
+ "w4_o3_arith_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false
+ },
+ "w4_o3_arith_bin/eq": {
+  "name": "eq",
+  "ok": false
+ },
+ "w4_o3_arith_bin/lt": {
+  "name": "lt",
+  "ok": false
+ },
+ "w4_o3_arith_bin/and_not": {
+  "name": "and_not",
+  "ok": false
+ },
+ "w4_o3_arith_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false
+ },
+ "w4_o3_arith_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false
+ },
+ "w4_o3_arith_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false
+ },
+ "w4_o3_arith_bin/hamming": {
+  "name": "hamming",
+  "ok": false
+ },
+ "w4_o3_arith_bin/gcd": {
+  "name": "gcd",
+  "ok": false
+ },
+ "w4_o3_arith_bin/mod": {
+  "name": "mod",
+  "ok": false
+ },
+ "w4_o3_bool/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": false
+ },
+ "w4_o3_bool/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0xe4"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_bool/not_b.rs"
+ },
+ "w4_o3_bool/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": false
+ },
+ "w4_o3_bool/rotl3": {
+  "name": "rotl3",
+  "ok": false
+ },
+ "w4_o3_bool/times3": {
+  "name": "times3",
+  "ok": false
+ },
+ "w4_o3_bool/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o3_bool/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o3_bool/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o3_bool/parity": {
+  "name": "parity",
+  "ok": false
+ },
+ "w4_o3_bool/abs_signed": {
+  "name": "abs_signed",
+  "ok": false
+ },
+ "w4_o3_bool/sign_bit": {
+  "name": "sign_bit",
+  "ok": false
+ },
+ "w4_o3_bool/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": false
+ },
+ "w4_o3_bool/sat_inc": {
+  "name": "sat_inc",
+  "ok": false
+ },
+ "w4_o3_bool/sat_dec": {
+  "name": "sat_dec",
+  "ok": false
+ },
+ "w4_o3_bool/is_pow2": {
+  "name": "is_pow2",
+  "ok": false
+ },
+ "w4_o3_bool/mod3": {
+  "name": "mod3",
+  "ok": false
+ },
+ "w4_o3_bool/div3": {
+  "name": "div3",
+  "ok": false
+ },
+ "w4_o3_bool/square": {
+  "name": "square",
+  "ok": false
+ },
+ "w4_o3_bool/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o3_bool/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o3_bool/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o3_bool/ctz": {
+  "name": "ctz",
+  "ok": false
+ },
+ "w4_o3_bool/lowbit": {
+  "name": "lowbit",
+  "ok": false
+ },
+ "w4_o3_bool/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false
+ },
+ "w4_o3_bool/fill_right": {
+  "name": "fill_right",
+  "ok": false
+ },
+ "w4_o3_bool/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false
+ },
+ "w4_o3_bool/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": false
+ },
+ "w4_o3_bool/lerp_half": {
+  "name": "lerp_half",
+  "ok": false
+ },
+ "w4_o3_bool/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o3_bool/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o3_bool_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": false
+ },
+ "w4_o3_bool_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x^y"
+  ],
+  "programs": [
+   "0xeb"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_bool_bin/a_xor_b.rs"
+ },
+ "w4_o3_bool_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": false
+ },
+ "w4_o3_bool_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": false
+ },
+ "w4_o3_bool_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false
+ },
+ "w4_o3_bool_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": false
+ },
+ "w4_o3_bool_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false
+ },
+ "w4_o3_bool_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false
+ },
+ "w4_o3_bool_bin/carry_out": {
+  "name": "carry_out",
+  "ok": false
+ },
+ "w4_o3_bool_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": false
+ },
+ "w4_o3_bool_bin/mul": {
+  "name": "mul",
+  "ok": false
+ },
+ "w4_o3_bool_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false
+ },
+ "w4_o3_bool_bin/min": {
+  "name": "min",
+  "ok": false
+ },
+ "w4_o3_bool_bin/max": {
+  "name": "max",
+  "ok": false
+ },
+ "w4_o3_bool_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false
+ },
+ "w4_o3_bool_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false
+ },
+ "w4_o3_bool_bin/eq": {
+  "name": "eq",
+  "ok": false
+ },
+ "w4_o3_bool_bin/lt": {
+  "name": "lt",
+  "ok": false
+ },
+ "w4_o3_bool_bin/and_not": {
+  "name": "and_not",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x&!y"
+  ],
+  "programs": [
+   "0x49"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_bool_bin/and_not.rs"
+ },
+ "w4_o3_bool_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false
+ },
+ "w4_o3_bool_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false
+ },
+ "w4_o3_bool_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false
+ },
+ "w4_o3_bool_bin/hamming": {
+  "name": "hamming",
+  "ok": false
+ },
+ "w4_o3_bool_bin/gcd": {
+  "name": "gcd",
+  "ok": false
+ },
+ "w4_o3_bool_bin/mod": {
+  "name": "mod",
+  "ok": false
+ },
+ "w4_o3_core/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0xc439539"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/a_plus_5.rs"
+ },
+ "w4_o3_core/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0xe6"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/not_b.rs"
+ },
+ "w4_o3_core/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0xc9643"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/a_minus_1.rs"
+ },
+ "w4_o3_core/rotl3": {
+  "name": "rotl3",
+  "ok": false
+ },
+ "w4_o3_core/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0xe983"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/times3.rs"
+ },
+ "w4_o3_core/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o3_core/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o3_core/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o3_core/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(parity(x))+15",
+   "x+1"
+  ],
+  "programs": [
+   "0x797c6c36",
+   "0xe953"
+  ],
+  "max_steps": 260,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/parity.rs"
+ },
+ "w4_o3_core/abs_signed": {
+  "name": "abs_signed",
+  "ok": false
+ },
+ "w4_o3_core/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x&9)*7",
+   "(x*5)>=6"
+  ],
+  "programs": [
+   "0x97868653",
+   "0xd9963"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sign_bit.rs"
+ },
+ "w4_o3_core/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": false
+ },
+ "w4_o3_core/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x95c063"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sat_inc.rs"
+ },
+ "w4_o3_core/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x956d63"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sat_dec.rs"
+ },
+ "w4_o3_core/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(!x)%15",
+   "(popcount(x))/3"
+  ],
+  "programs": [
+   "0xe6c",
+   "0x67d69539"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/is_pow2.rs"
+ },
+ "w4_o3_core/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x%3)+14",
+   "x+2"
+  ],
+  "programs": [
+   "0x6d958360",
+   "0xe9853"
+  ],
+  "max_steps": 261,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/mod3.rs"
+ },
+ "w4_o3_core/div3": {
+  "name": "div3",
+  "ok": false
+ },
+ "w4_o3_core/square": {
+  "name": "square",
+  "ok": false
+ },
+ "w4_o3_core/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o3_core/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o3_core/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o3_core/ctz": {
+  "name": "ctz",
+  "ok": false
+ },
+ "w4_o3_core/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x6768399"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/lowbit.rs"
+ },
+ "w4_o3_core/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xe679643"
+  ],
+  "max_steps": 7,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/clear_lowbit.rs"
+ },
+ "w4_o3_core/fill_right": {
+  "name": "fill_right",
+  "ok": false
+ },
+ "w4_o3_core/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false
+ },
+ "w4_o3_core/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x9788953"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sign_extend2.rs"
+ },
+ "w4_o3_core/lerp_half": {
+  "name": "lerp_half",
+  "ok": false
+ },
+ "w4_o3_core/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o3_core/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o3_core_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+y"
+  ],
+  "programs": [
+   "0xe9"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_plus_b.rs"
+ },
+ "w4_o3_core_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": false
+ },
+ "w4_o3_core_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x*2)+y"
+  ],
+  "programs": [
+   "0xe98"
+  ],
+  "max_steps": 3,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/op_2a_plus_b.rs"
+ },
+ "w4_o3_core_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-(!y)"
+  ],
+  "programs": [
+   "0xe9539"
+  ],
+  "max_steps": 5,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_plus_b_plus1.rs"
+ },
+ "w4_o3_core_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false
+ },
+ "w4_o3_core_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-y"
+  ],
+  "programs": [
+   "0xe696"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_minus_b.rs"
+ },
+ "w4_o3_core_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false
+ },
+ "w4_o3_core_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false
+ },
+ "w4_o3_core_bin/carry_out": {
+  "name": "carry_out",
+  "ok": false
+ },
+ "w4_o3_core_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+y)&1"
+  ],
+  "programs": [
+   "0x5d6396"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/half_adder_sum.rs"
+ },
+ "w4_o3_core_bin/mul": {
+  "name": "mul",
+  "ok": false
+ },
+ "w4_o3_core_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false
+ },
+ "w4_o3_core_bin/min": {
+  "name": "min",
+  "ok": false
+ },
+ "w4_o3_core_bin/max": {
+  "name": "max",
+  "ok": false
+ },
+ "w4_o3_core_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false
+ },
+ "w4_o3_core_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false
+ },
+ "w4_o3_core_bin/eq": {
+  "name": "eq",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x==y"
+  ],
+  "programs": [
+   "0x4d3696"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/eq.rs"
+ },
+ "w4_o3_core_bin/lt": {
+  "name": "lt",
+  "ok": false
+ },
+ "w4_o3_core_bin/and_not": {
+  "name": "and_not",
+  "ok": false
+ },
+ "w4_o3_core_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false
+ },
+ "w4_o3_core_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false
+ },
+ "w4_o3_core_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false
+ },
+ "w4_o3_core_bin/hamming": {
+  "name": "hamming",
+  "ok": false
+ },
+ "w4_o3_core_bin/gcd": {
+  "name": "gcd",
+  "ok": false
+ },
+ "w4_o3_core_bin/mod": {
+  "name": "mod",
+  "ok": false
+ },
+ "w4_o3_swap/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0xac"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/a_plus_5.rs"
+ },
+ "w4_o3_swap/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x51"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/not_b.rs"
+ },
+ "w4_o3_swap/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x1317"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/a_minus_1.rs"
+ },
+ "w4_o3_swap/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,3)"
+  ],
+  "programs": [
+   "0x187a"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/rotl3.rs"
+ },
+ "w4_o3_swap/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x7717"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/times3.rs"
+ },
+ "w4_o3_swap/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o3_swap/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o3_swap/popcount": {
+  "name": "popcount",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(popcount(x))*9",
+   "x*9"
+  ],
+  "programs": [
+   "0xa87c417",
+   "0xa17"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/popcount.rs"
+ },
+ "w4_o3_swap/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!(parity(x))",
+   "!(max(x,1))"
+  ],
+  "programs": [
+   "0x5763148c",
+   "0xe43a"
+  ],
+  "max_steps": 260,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/parity.rs"
+ },
+ "w4_o3_swap/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x+7",
+   "abs((x^7))"
+  ],
+  "programs": [
+   "0xc3a",
+   "0x4a4c3a14"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/abs_signed.rs"
+ },
+ "w4_o3_swap/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x453178"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sign_bit.rs"
+ },
+ "w4_o3_swap/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0xa18"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/nibble_swap.rs"
+ },
+ "w4_o3_swap/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0xe4ac"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sat_inc.rs"
+ },
+ "w4_o3_swap/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0xa1c4"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sat_dec.rs"
+ },
+ "w4_o3_swap/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!x",
+   "(popcount(x))==3"
+  ],
+  "programs": [
+   "0x51",
+   "0x457423a1"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/is_pow2.rs"
+ },
+ "w4_o3_swap/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x1cceac3a"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/mod3.rs"
+ },
+ "w4_o3_swap/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x/3)*13",
+   "x*5"
+  ],
+  "programs": [
+   "0x43a0ccc4",
+   "0x1777"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/div3.rs"
+ },
+ "w4_o3_swap/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x^1)+5",
+   "(x^2)*(x^2)"
+  ],
+  "programs": [
+   "0x1c04ac",
+   "0x4546514c"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/square.rs"
+ },
+ "w4_o3_swap/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o3_swap/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o3_swap/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o3_swap/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "ctz(x)"
+  ],
+  "programs": [
+   "0x61a10ac1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/ctz.rs"
+ },
+ "w4_o3_swap/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x13163a"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/lowbit.rs"
+ },
+ "w4_o3_swap/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x45741"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/clear_lowbit.rs"
+ },
+ "w4_o3_swap/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x17811a47"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/fill_right.rs"
+ },
+ "w4_o3_swap/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "rol((8-x),1)",
+   "unnamed",
+   "rol((1-x),1)"
+  ],
+  "programs": [
+   "0x70a3481c",
+   "0xec88c",
+   "0xe8cc4"
+  ],
+  "max_steps": 266,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/bcd_inc.rs"
+ },
+ "w4_o3_swap/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x75661"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sign_extend2.rs"
+ },
+ "w4_o3_swap/lerp_half": {
+  "name": "lerp_half",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "rol((x+15),3)",
+   "unnamed",
+   "rol((14-x),3)"
+  ],
+  "programs": [
+   "0xac803a",
+   "0xe46eac",
+   "0xe4888c"
+  ],
+  "max_steps": 267,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/lerp_half.rs"
+ },
+ "w4_o3_swap/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o3_swap/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ },
+ "w4_o4_full/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0xe8"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/a_plus_5.rs"
+ },
+ "w4_o4_full/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0xe2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/not_b.rs"
+ },
+ "w4_o4_full/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0xd9"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/a_minus_1.rs"
+ },
+ "w4_o4_full/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,3)"
+  ],
+  "programs": [
+   "0xe0ec"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/rotl3.rs"
+ },
+ "w4_o4_full/times3": {
+  "name": "times3",
+  "ok": false
+ },
+ "w4_o4_full/gray": {
+  "name": "gray",
+  "ok": false
+ },
+ "w4_o4_full/ungray": {
+  "name": "ungray",
+  "ok": false
+ },
+ "w4_o4_full/popcount": {
+  "name": "popcount",
+  "ok": false
+ },
+ "w4_o4_full/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol((3-x),2)",
+   "parity((x/2))"
+  ],
+  "programs": [
+   "0xf2cc9999",
+   "0xe80d9d9b"
+  ],
+  "max_steps": 264,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/parity.rs"
+ },
+ "w4_o4_full/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "abs((x+8))",
+   "8-x"
+  ],
+  "programs": [
+   "0xe20d2d9",
+   "0x22e92"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/abs_signed.rs"
+ },
+ "w4_o4_full/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0xdb98"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sign_bit.rs"
+ },
+ "w4_o4_full/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0xecc"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/nibble_swap.rs"
+ },
+ "w4_o4_full/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x2fd8"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sat_inc.rs"
+ },
+ "w4_o4_full/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0xf9d"
+  ],
+  "max_steps": 3,
+  "halts": true,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sat_dec.rs"
+ },
+ "w4_o4_full/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(x*9)+7",
+   "unnamed",
+   "(rol(x,2))/13"
+  ],
+  "programs": [
+   "0x80e0e0e8",
+   "0xf28dc",
+   "0x5d69cd8"
+  ],
+  "max_steps": 517,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/is_pow2.rs"
+ },
+ "w4_o4_full/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "1-(x%3)",
+   "1-x"
+  ],
+  "programs": [
+   "0xd0d92928",
+   "0xf299"
+  ],
+  "max_steps": 260,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/mod3.rs"
+ },
+ "w4_o4_full/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x/3)*13",
+   "(x*5)&7"
+  ],
+  "programs": [
+   "0x288e2d99",
+   "0x9bd6d9b6"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/div3.rs"
+ },
+ "w4_o4_full/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 4,
+  "stage_names": [
+   "unnamed",
+   "unnamed",
+   "unnamed",
+   "(x|4)*(x|4)"
+  ],
+  "programs": [
+   "0xfc69",
+   "0xf9c9",
+   "0xf28c9",
+   "0xe99b2686"
+  ],
+  "max_steps": 269,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/square.rs"
+ },
+ "w4_o4_full/cube": {
+  "name": "cube",
+  "ok": false
+ },
+ "w4_o4_full/bitrev": {
+  "name": "bitrev",
+  "ok": false
+ },
+ "w4_o4_full/clz": {
+  "name": "clz",
+  "ok": false
+ },
+ "w4_o4_full/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "unnamed",
+   "ctz((rol(x,3)))"
+  ],
+  "programs": [
+   "0xf86fe",
+   "0x688c9b0e"
+  ],
+  "max_steps": 260,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/ctz.rs"
+ },
+ "w4_o4_full/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x6d68e"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/lowbit.rs"
+ },
+ "w4_o4_full/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false
+ },
+ "w4_o4_full/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x22b2e"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/fill_right.rs"
+ },
+ "w4_o4_full/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "x+7",
+   "unnamed",
+   "unnamed"
+  ],
+  "programs": [
+   "0x88e",
+   "0xf2c9c",
+   "0xf2c9c"
+  ],
+  "max_steps": 266,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/bcd_inc.rs"
+ },
+ "w4_o4_full/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xc9c66"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sign_extend2.rs"
+ },
+ "w4_o4_full/lerp_half": {
+  "name": "lerp_half",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "rol((x+1),3)",
+   "unnamed",
+   "(rol(x,3))+15"
+  ],
+  "programs": [
+   "0xeccc8",
+   "0xf86fe",
+   "0xe9ccc"
+  ],
+  "max_steps": 516,
+  "halts": false,
+  "file": "/home/user/Universe-1/translate/out/w4_o4_full/lerp_half.rs"
+ },
+ "w4_o4_full/triangular": {
+  "name": "triangular",
+  "ok": false
+ },
+ "w4_o4_full/collatz_step": {
+  "name": "collatz_step",
+  "ok": false
+ }
+}
