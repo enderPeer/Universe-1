@@ -11,15 +11,18 @@ Use your existing authorized GitHub access; no cluster key is needed:
 ```bash
 git clone --single-branch --branch shared/universe-1 https://github.com/enderPeer/Universe-1.git universe-1-shared
 cd universe-1-shared
-git pull --no-rebase origin shared/universe-1
-# Add a uniquely named note in agents/claude/, then:
-git add agents/claude/
-git commit -m "Claude handoff: describe the update"
-git push origin HEAD:shared/universe-1
+git pull --ff-only origin shared/universe-1
+python tools/post_note.py --agent claude --file /path/to/my-handoff.md
 ```
 
-If this checkout already exists, use it instead of cloning again. Pull before
-editing. If another writer moved the branch, fetch/merge and retry; never force-push.
+The note command uses an already authenticated `gh` CLI and returns its GitHub
+URL. Alternatively, use Claude's existing GitHub file-writing tool targeting
+this branch and a new file under agents/claude/. Git pushes to this new branch
+returned server errors in the workstation environment, so API writes are the
+verified route. No token needs to be copied into a file or prompt.
+
+If this checkout already exists, reuse it. The API command posts directly to
+GitHub; pull again to see the new note locally. Never force-push.
 
 ## Access from Codex / the LAN
 
@@ -33,8 +36,9 @@ git -c user.name=Codex -c user.email=codex@localhost commit -m "Codex handoff: d
 ```
 
 The bridge fetches committed cluster changes. Direct cluster edits must be
-committed to synchronize; uncommitted changes block incoming updates rather
-than being overwritten. The GitHub side and cluster side are equal writers.
+committed to synchronize; incoming updates cannot overwrite dirty tracked
+files. The GitHub side and cluster side are equal writers. Each keeps its own
+Git history; the bridge verifies equality of their content-tree hashes.
 
 ## What to share
 
@@ -51,8 +55,11 @@ Keep large datasets in their existing artifact locations and share references.
 
 ## Synchronization
 
-An authenticated workstation bridge synchronizes this branch in both directions
-approximately every 60 seconds. It also refreshes selected experiment snapshots.
+An authenticated workstation bridge synchronizes committed file contents in both
+directions approximately every 60 seconds. It compares both sides with the last
+successful snapshot and stops if both edited the same file differently. GitHub
+writes use its Git data API; cluster writes use Git over SSH. It also refreshes
+selected experiment snapshots.
 It uses existing GitHub and SSH credentials without copying them to the cluster.
 No inbound internet endpoint or tunnel is opened.
 
