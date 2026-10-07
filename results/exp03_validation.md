@@ -99,3 +99,12 @@ The binary dispatcher uses one tar transfer per node to avoid repeated SCP
 connections. Its log is `results/exp03_binary_run.log`. Coordination requires
 the workstation to remain running and connected to the LAN. Peer SSH was
 not configured on the head node, and no credentials were changed.
+
+`cluster/finish_exp03.ps1 -RunPid <coordinator PID>` can wait for the binary
+coordinator and finalize the run. It requires all 23 supported result files,
+checks their configurations and exact coverage, validates sampled witnesses,
+regenerates the summary, copies final reports to Adler, then commits and pushes
+the result files to this branch. It stops on validation or publication errors.
+Its current background invocation writes `results/exp03_finalize.log` and
+`results/exp03_finalize.err.log`. A successful run creates
+`results/exp03_completion.md`; its absence means completion is not confirmed.
