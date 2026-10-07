@@ -1,0 +1,57 @@
+{
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "rss_limit_bytes": 40000000000,
+  "maps": {
+    "w4_o2_add": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o2_add.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 137.6289414439816,
+          "peak_group_rss_bytes": 3866767360,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/knecht24-w4_o2_add-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    },
+    "w4_o3_core": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_core.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 22.61143432999961,
+          "peak_group_rss_bytes": 871997440,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/knecht24-w4_o3_core-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    }
+  }
+}

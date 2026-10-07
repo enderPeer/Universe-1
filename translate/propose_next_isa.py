@@ -37,6 +37,28 @@ result={'proposed_isa':list(isa),'W':4,'a':2,'p':3,'I':4,'opcode_bits':3,'operan
         'rationale':'Retain SWAP/ADD/NAND/SKZ; add XOR, SHR, MUL and HALT to address corpus gaps. The HALT/SWAP/ADD/NAND/ROL combination and its binary mode were already swept.',
         'tradeoff':'One operand bit instead of two; only A and M[1] directly addressable. Compare named coverage and halting cost, not only operator count.',
         'witnesses':witnesses}
+current=Path(__file__).resolve().parent/'report_merged.json'
+if current.exists():
+    rows=json.loads(current.read_text())
+    for name,witness in witnesses.items():
+        choices=[(key,row) for key,row in rows.items() if row['name']==name and row['ok']]
+        if choices:
+            tag,row=min(choices,key=lambda item:(item[1]['stages'],item[1]['max_steps']))
+            witness['current_best']={'map_target':tag,'stages':row['stages'],'max_steps_bound':row['max_steps']}
+        else: witness['current_best']=None
+gray_words=[isa.index(op)*2+arg for op,arg in programs['gray']]+[14]*3
+inverse=[]
+for x in range(16):
+    value=x
+    for _ in range(3):
+        state,steps,end=machine.run(gray_words,value)
+        assert end=='halt' and steps==5
+        value=state.A
+    inverse.append(value)
+assert inverse==un['ungray']
+result['ungray_chain']={'programs':[witnesses['gray']['program']]*3,'verified_inputs':16,
+                        'all_inputs_halt':True,'total_steps':15,
+                        'explanation':'At W=4, three Gray-encode stages implement the inverse Gray transform.'}
 target=Path(__file__).resolve().parent/'next_isa_proposal.json'
 target.write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(witnesses,indent=2))

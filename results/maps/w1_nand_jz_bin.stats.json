@@ -1,0 +1,1 @@
+{"isa":"NAND,JZ","W":1,"a":2,"p":5,"I":1,"binary":true,"operators":4,"all_inputs_halt":0,"named_found":4,"vocabulary_size":16,"classes":{"named":4},"max_steps_histogram":{"1":0,"2-3":0,"4-7":0,"8-15":0,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":4}}

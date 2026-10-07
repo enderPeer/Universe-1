@@ -1,0 +1,1 @@
+{"isa":"SWAP,ADD,NAND,SKZ","W":4,"a":2,"p":3,"I":4,"binary":true,"operators":24684247,"all_inputs_halt":0,"named_found":1932,"vocabulary_size":14225,"classes":{"named":1932,"other":24677554,"predicate":4761},"max_steps_histogram":{"1":0,"2-3":0,"4-7":0,"8-15":0,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":24684247}}

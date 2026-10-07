@@ -46,5 +46,6 @@ for kind, names in (("unary", un), ("binary", bi)):
     tot = {t: sum(1 for n in names if rows.get((t, n), {}).get("ok")) for t, _ in cs}
     out.append("| **translated** | " + " | ".join(f"**{tot[t]}/{len(names)}**" for t, _ in cs) + " |"); out.append("")
 out += ["## Not translated within this search", "", ", ".join(f"`{n}`" for n in never) or "none", "",
-        "Binary maps marked 'binary forms <=3' use the matching unary map and the composition forms introduced in 87185a8; other binary rows are direct lookup. Unary depth and any memory fallback are listed above; all searches use bounded bases. Source revision and mode are stored per row in report_merged.json."]
+        "Binary maps marked 'binary forms <=3' use the matching unary map and the composition forms introduced in 87185a8; other binary rows are direct lookup. Unary depth and any memory fallback are listed above; all searches use bounded bases. Source revision and mode are stored per row in report_merged.json.", "",
+        "[Cluster timings, validation and next-ISA proposal](CLUSTER_RUN.md) | [All emitted sources and test logs](emitted_sources.zip)"]
 (ROOT / "translate/REPORT.md").write_text("\n".join(out) + "\n", encoding='utf-8'); print(f"{len(rows)} rows, {len(never)} functions not translated within search: {never}")

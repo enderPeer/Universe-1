@@ -1,0 +1,190 @@
+{
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "rss_limit_bytes": 40000000000,
+  "maps": {
+    "w4_o3_core_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_core_bin.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 7.285994873000163,
+          "peak_group_rss_bytes": 714850304,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o3_core_bin-d1.log",
+          "depth": 1
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o3_arith_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_arith_bin.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 3.5187686160024896,
+          "peak_group_rss_bytes": 237060096,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o3_arith_bin-d1.log",
+          "depth": 1
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o3_bool_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_bool_bin.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.7550614059982763,
+          "peak_group_rss_bytes": 192970752,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o3_bool_bin-d1.log",
+          "depth": 1
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o2_nand_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o2_nand_bin.u1prog",
+            "--refresh-names"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 1.7594969909987412,
+          "peak_group_rss_bytes": 215662592,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o2_nand_bin-d1.log",
+          "depth": 1,
+          "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718"
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o4_full_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o4_full_bin.u1prog",
+            "--refresh-names"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 29.13610945400069,
+          "peak_group_rss_bytes": 971067392,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o4_full_bin-d1.log",
+          "depth": 1,
+          "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718"
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o3_swap_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_swap_bin.u1prog",
+            "--refresh-names"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 188.87651510399883,
+          "peak_group_rss_bytes": 5579055104,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o3_swap_bin-d1.log",
+          "depth": 1,
+          "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718"
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    },
+    "w4_o2_add_bin": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "1",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o2_add_bin.u1prog",
+            "--refresh-names"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 1002.3775168600005,
+          "peak_group_rss_bytes": 17277317120,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/falke64-w4_o2_add_bin-d1.log",
+          "depth": 1,
+          "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718"
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 1
+    }
+  }
+}

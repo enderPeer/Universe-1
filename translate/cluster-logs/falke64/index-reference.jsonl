@@ -1,0 +1,25 @@
+{"name": "a_plus_b", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "a_xor_b", "ok": true, "stages": 1, "stage_names": ["x^y"], "programs": ["0xa978ab6"], "max_steps": 256, "halts": false, "file": "translate/out/w4_o2_nand_bin/a_xor_b.rs", "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "compiled": true, "test_ok": true, "map_wall_seconds": 1.414781833998859}
+{"name": "2a_plus_b", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "a_plus_b_plus1", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "a_xor_b_xor7", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "a_minus_b", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "sat_add", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "sat_sub", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "carry_out", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "half_adder_sum", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "mul", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "mul_hi", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "min", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "max", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "abs_diff", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "avg_floor", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "eq", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "lt", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "and_not", "ok": true, "stages": 1, "stage_names": ["x&!y"], "programs": ["0x8a96"], "max_steps": 256, "halts": false, "file": "translate/out/w4_o2_nand_bin/and_not.rs", "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "compiled": true, "test_ok": true, "map_wall_seconds": 1.414781833998859}
+{"name": "mux_lsb", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "shl_var", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "shr_var", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "hamming", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "gcd", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}
+{"name": "mod", "ok": false, "search_depth": 1, "basis_extra": 256, "node": "falke64", "source_commit": "96b8687", "map_wall_seconds": 1.414781833998859}

@@ -1,0 +1,12 @@
+w1_nand_jz_bin: 4 operators, all witness keys verified
+w1_nand_skz_bin: 4 operators, all witness keys verified
+w2_o1_bin: 2131 operators, all witness keys verified
+w2_o1_swap_bin: 8 operators, all witness keys verified
+w4_o2_nand_bin: 17827 operators, all witness keys verified
+w4_o4_full_bin: 977928 operators, all witness keys verified
+w4_o3_swap_bin: 7690892 operators, all witness keys verified
+w4_o2_add_bin: 24684247 operators, all witness keys verified
+w4_o2_nand_bin complete
+w4_o4_full_bin complete
+w4_o3_swap_bin complete
+w4_o2_add_bin complete

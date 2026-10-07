@@ -1,0 +1,82 @@
+{
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "rss_limit_bytes": 40000000000,
+  "maps": {
+    "w4_o3_arith": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_arith.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 22.880953314248472,
+          "peak_group_rss_bytes": 956432384,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/specht32-w4_o3_arith-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    },
+    "w4_o2_nand": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o2_nand.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.509827627800405,
+          "peak_group_rss_bytes": 191401984,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/specht32-w4_o2_nand-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    },
+    "w4_o3_bool": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_bool.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.5035667628981173,
+          "peak_group_rss_bytes": 195743744,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/specht32-w4_o3_bool-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    }
+  }
+}

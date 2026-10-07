@@ -1,0 +1,4 @@
+64 shards, 2131 witnesses verified
+wrote results/maps/w2_o1_bin.u1prog (2131 operators)
+wrote results/maps/w2_o1_bin.named.jsonl (14 named operators)
+{"isa":"NAND,JZ","W":2,"a":2,"p":4,"I":2,"binary":true,"operators":2131,"all_inputs_halt":0,"named_found":14,"vocabulary_size":2192,"classes":{"named":14,"other":2117},"max_steps_histogram":{"1":0,"2-3":0,"4-7":0,"8-15":0,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":2131}}

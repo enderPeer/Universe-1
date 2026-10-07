@@ -1,0 +1,57 @@
+{
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "rss_limit_bytes": 40000000000,
+  "maps": {
+    "w4_o3_swap": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o3_swap.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 104.1044291810831,
+          "peak_group_rss_bytes": 3925647360,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/adler40-w4_o3_swap-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    },
+    "w4_o4_full": {
+      "attempts": [
+        {
+          "command": [
+            "python3",
+            "-u",
+            "translate/translate.py",
+            "--depth",
+            "4",
+            "--extra",
+            "256",
+            "--maps",
+            "results/maps/w4_o4_full.u1prog"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 47.284241258050315,
+          "peak_group_rss_bytes": 1978990592,
+          "rss_cap_exceeded": false,
+          "log": "translate/cluster-logs/adler40-w4_o4_full-d4.log",
+          "depth": 4
+        }
+      ],
+      "status": "complete",
+      "actual_depth": 4
+    }
+  }
+}

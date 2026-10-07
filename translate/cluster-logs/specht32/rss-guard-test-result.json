@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "import time; allocation=bytearray(32*1024*1024); time.sleep(10)"
+  ],
+  "exit_code": -15,
+  "wall_seconds": 0.2652715970762074,
+  "peak_group_rss_bytes": 44232704,
+  "rss_cap_exceeded": true,
+  "log": "translate/cluster-logs/rss-guard-test.log"
+}

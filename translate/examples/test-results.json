@@ -1,0 +1,125 @@
+{
+  "a_plus_b": {
+    "file": "translate/examples/a_plus_b.rs",
+    "programs": [
+      "0xe9"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_plus_b.rs:42:111\n   |\n42 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n60 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "a_xor_b": {
+    "file": "translate/examples/a_xor_b.rs",
+    "programs": [
+      "0xeb"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_xor_b.rs:42:111\n   |\n42 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n60 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "2a_plus_b": {
+    "file": "translate/examples/op_2a_plus_b.rs",
+    "programs": [
+      "0xe54"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/op_2a_plus_b.rs:42:111\n   |\n42 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n60 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "a_plus_b_plus1": {
+    "file": "translate/examples/a_plus_b_plus1.rs",
+    "programs": [
+      "0xe9539"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_plus_b_plus1.rs:42:111\n   |\n42 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n60 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "times3": {
+    "file": "translate/examples/times3.rs",
+    "programs": [
+      "0x7717"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/times3.rs:45:111\n   |\n45 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n63 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "a_plus_5": {
+    "file": "translate/examples/a_plus_5.rs",
+    "programs": [
+      "0xac"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_plus_5.rs:45:111\n   |\n45 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n63 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "not_b": {
+    "file": "translate/examples/not_b.rs",
+    "programs": [
+      "0x51"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/not_b.rs:45:111\n   |\n45 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n63 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "a_minus_1": {
+    "file": "translate/examples/a_minus_1.rs",
+    "programs": [
+      "0x1317"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_minus_1.rs:45:111\n   |\n45 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n63 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "rotl3": {
+    "file": "translate/examples/rotl3.rs",
+    "programs": [
+      "0x187a"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/rotl3.rs:45:111\n   |\n45 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n63 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "a_xor_b_xor7": {
+    "file": "translate/examples/a_xor_b_xor7.rs",
+    "programs": [
+      "0x2b93",
+      "0x1826"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/a_xor_b_xor7.rs:49:111\n   |\n49 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n67 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s\n\n"
+  },
+  "popcount": {
+    "file": "translate/examples/popcount.rs",
+    "programs": [
+      "0xa87c417",
+      "0xa17"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/popcount.rs:46:111\n   |\n46 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n64 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  },
+  "square": {
+    "file": "translate/examples/square.rs",
+    "programs": [
+      "0x1c04ac",
+      "0x4546514c"
+    ],
+    "compiled": true,
+    "test_ok": true,
+    "compiler_output": "warning: value assigned to `a` is never read\n  --> /home/ender/universe-1/translate/examples/square.rs:46:111\n   |\n46 | ...   macro_rules! wr { ($ad:expr, $v:expr) => {{ let ad = $ad & amask; let v = $v & mask; if ad == 0 { a = v } else { m[ad as usize] = v...\n   |                                                                                                         ^^^^^\n...\n64 | ...       \"SWAP\" => { let ta = a; let tt = rd(a, &m, n); wr!(n, ta); seta!(tt) }\n   |                                                          ---------- in this macro invocation\n   |\n   = help: maybe it is overwritten before being read?\n   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\n   = note: this warning originates in the macro `wr` (in Nightly builds, run with -Z macro-backtrace for more info)\n\nwarning: 1 warning emitted\n\n",
+    "test_output": "\nrunning 1 test\ntest tests::emulation_matches_table ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+  }
+}

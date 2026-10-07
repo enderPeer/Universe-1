@@ -28,6 +28,7 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - [Validation, run details, and exact data locations](results/exp03_validation.md)
 - [Downloadable witness shards and Rust-compatible binary format](results/witnesses/README.md)
 - [Named mathematical functions with verified witness programs](results/function-map/README.md)
+- [Completed depth-4 cluster translation run, timings and next-ISA proposal](translate/CLUSTER_RUN.md)
 
 Raw shards are produced in `/home/ender/universe-1/results/shards/` on the
 cluster workers and collected in `results/shards/` on the coordinator.

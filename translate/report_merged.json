@@ -11,7 +11,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/a_plus_5.rs"
+  "file": "translate/out/w4_o2_add/a_plus_5.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/not_b": {
   "name": "not_b",
@@ -25,7 +32,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/not_b.rs"
+  "file": "translate/out/w4_o2_add/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/a_minus_1": {
   "name": "a_minus_1",
@@ -39,11 +53,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/a_minus_1.rs"
+  "file": "translate/out/w4_o2_add/a_minus_1.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/rotl3": {
   "name": "rotl3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/times3": {
   "name": "times3",
@@ -57,35 +83,64 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/times3.rs"
+  "file": "translate/out/w4_o2_add/times3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/parity": {
   "name": "parity",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "-(parity(x))",
-   "-x"
+   "(parity(x))+15",
+   "x+1"
   ],
   "programs": [
-   "0xc1c8591",
-   "0x55c1"
+   "0x12386ac2",
+   "0x1a15"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/parity.rs"
+  "file": "translate/out/w4_o2_add/parity.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/abs_signed": {
   "name": "abs_signed",
@@ -99,23 +154,37 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/abs_signed.rs"
+  "file": "translate/out/w4_o2_add/abs_signed.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/sign_bit": {
   "name": "sign_bit",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "x&12",
-   "(x*9)>=7"
+   "2-(max(x,4))",
+   "x<11"
   ],
   "programs": [
-   "0x894491",
-   "0x50ac01c3"
+   "0x1815a51c",
+   "0x51812c85"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sign_bit.rs"
+  "file": "translate/out/w4_o2_add/sign_bit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/nibble_swap": {
   "name": "nibble_swap",
@@ -123,17 +192,24 @@
   "stages": 3,
   "stage_names": [
    "(rol(x,1))+8",
-   "x+9",
-   "rol((x+15),1)"
+   "6-x",
+   "rol((14-x),1)"
   ],
   "programs": [
    "0x1823c062",
-   "0x5182",
-   "0x8182c502"
+   "0x1268",
+   "0x182c528"
   ],
   "max_steps": 768,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/nibble_swap.rs"
+  "file": "translate/out/w4_o2_add/nibble_swap.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/sat_inc": {
   "name": "sat_inc",
@@ -147,7 +223,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sat_inc.rs"
+  "file": "translate/out/w4_o2_add/sat_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/sat_dec": {
   "name": "sat_dec",
@@ -161,87 +244,160 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sat_dec.rs"
+  "file": "translate/out/w4_o2_add/sat_dec.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/is_pow2": {
   "name": "is_pow2",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "ma(x+7)((x+7),7)",
-   "parity((x%7))"
+   "unnamed",
+   "(popcount(x))<2"
   ],
   "programs": [
-   "0x51812c3",
-   "0x10169c2c"
+   "0x88c",
+   "0x958ac122"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/is_pow2.rs"
+  "file": "translate/out/w4_o2_add/is_pow2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/mod3": {
   "name": "mod3",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "1-(x%3)",
-   "1-x"
+   "2-(x%15)",
+   "(2-x)%3"
   ],
   "programs": [
-   "0x962c0c6",
-   "0x161825"
+   "0x5c29861",
+   "0x1a1c5553"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/mod3.rs"
+  "file": "translate/out/w4_o2_add/mod3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/div3": {
   "name": "div3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/square": {
   "name": "square",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "!(x*x)",
-   "!x"
+   "1-(x*x)",
+   "1-x"
   ],
   "programs": [
-   "0x1a6a8426",
-   "0x91"
+   "0x926c7c37",
+   "0x161825"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/square.rs"
+  "file": "translate/out/w4_o2_add/square.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/cube": {
   "name": "cube",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "x^12",
+   "(x*9)^4",
    "unnamed"
   ],
   "programs": [
-   "0x12b3a266",
+   "0x546a321",
    "0x1c55"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/cube.rs"
+  "file": "translate/out/w4_o2_add/cube.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/ctz": {
   "name": "ctz",
-  "ok": false
+  "ok": true,
+  "stages": 4,
+  "stage_names": [
+   "(lowbit(x))+6",
+   "unnamed",
+   "x+11",
+   "(!x)/2"
+  ],
+  "programs": [
+   "0x523971",
+   "0x128c6",
+   "0x12a16",
+   "0x5a3853c1"
+  ],
+  "max_steps": 1024,
+  "halts": false,
+  "file": "translate/out/w4_o2_add/ctz.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/lowbit": {
   "name": "lowbit",
@@ -255,7 +411,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/lowbit.rs"
+  "file": "translate/out/w4_o2_add/lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/clear_lowbit": {
   "name": "clear_lowbit",
@@ -269,7 +432,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/clear_lowbit.rs"
+  "file": "translate/out/w4_o2_add/clear_lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/fill_right": {
   "name": "fill_right",
@@ -283,11 +453,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/fill_right.rs"
+  "file": "translate/out/w4_o2_add/fill_right.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/bcd_inc": {
   "name": "bcd_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/sign_extend2": {
   "name": "sign_extend2",
@@ -301,23 +483,528 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_add/sign_extend2.rs"
+  "file": "translate/out/w4_o2_add/sign_extend2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/lerp_half": {
   "name": "lerp_half",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
  },
  "w4_o2_add/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 137.4295514880214
+ },
+ "w4_o2_add_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+y"
+  ],
+  "programs": [
+   "0x162"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x^y"
+  ],
+  "programs": [
+   "0x2b93"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/a_xor_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x*2)+y"
+  ],
+  "programs": [
+   "0x16362"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/op_2a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-(!y)"
+  ],
+  "programs": [
+   "0x1a15"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/a_plus_b_plus1.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x^y",
+   "x^7"
+  ],
+  "programs": [
+   "0x2b93",
+   "0x1826"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/a_xor_b_xor7.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-y"
+  ],
+  "programs": [
+   "0x1415"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/a_minus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xc2828611"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/sat_sub.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/carry_out": {
+  "name": "carry_out",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!(carry(x+y))",
+   "!x"
+  ],
+  "programs": [
+   "0x11c684b2",
+   "0x91"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/carry_out.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+y)&1"
+  ],
+  "programs": [
+   "0x1894815"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/half_adder_sum.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/mul": {
+  "name": "mul",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(x*y)",
+   "-x"
+  ],
+  "programs": [
+   "0x11c68026",
+   "0x55c1"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/mul.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/min": {
+  "name": "min",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/max": {
+  "name": "max",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/eq": {
+  "name": "eq",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x==y"
+  ],
+  "programs": [
+   "0x5a1c8581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/eq.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/lt": {
+  "name": "lt",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "!x",
+   "!(carry(x+y))",
+   "!x"
+  ],
+  "programs": [
+   "0x91",
+   "0x11c684b2",
+   "0x91"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/lt.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/and_not": {
+  "name": "and_not",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x&!y"
+  ],
+  "programs": [
+   "0x921"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/and_not.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x15500c18"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_bin/mux_lsb.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/hamming": {
+  "name": "hamming",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/gcd": {
+  "name": "gcd",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
+ },
+ "w4_o2_add_bin/mod": {
+  "name": "mod",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1002.2062675410016
  },
  "w4_o2_nand/a_plus_5": {
   "name": "a_plus_5",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/not_b": {
   "name": "not_b",
@@ -331,131 +1018,617 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o2_nand/not_b.rs"
+  "file": "translate/out/w4_o2_nand/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/a_minus_1": {
   "name": "a_minus_1",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/rotl3": {
   "name": "rotl3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/times3": {
   "name": "times3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/parity": {
   "name": "parity",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/abs_signed": {
   "name": "abs_signed",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/sign_bit": {
   "name": "sign_bit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/nibble_swap": {
   "name": "nibble_swap",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/sat_inc": {
   "name": "sat_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/sat_dec": {
   "name": "sat_dec",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/is_pow2": {
   "name": "is_pow2",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/mod3": {
   "name": "mod3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/div3": {
   "name": "div3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/square": {
   "name": "square",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/ctz": {
   "name": "ctz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/lowbit": {
   "name": "lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/clear_lowbit": {
   "name": "clear_lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/fill_right": {
   "name": "fill_right",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/bcd_inc": {
   "name": "bcd_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/sign_extend2": {
   "name": "sign_extend2",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/lerp_half": {
   "name": "lerp_half",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
  },
  "w4_o2_nand/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.42571083595976233
+ },
+ "w4_o2_nand_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x^y"
+  ],
+  "programs": [
+   "0xa978ab6"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nand_bin/a_xor_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/carry_out": {
+  "name": "carry_out",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/mul": {
+  "name": "mul",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/min": {
+  "name": "min",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/max": {
+  "name": "max",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/eq": {
+  "name": "eq",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/lt": {
+  "name": "lt",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/and_not": {
+  "name": "and_not",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x&!y"
+  ],
+  "programs": [
+   "0x8a96"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nand_bin/and_not.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/hamming": {
+  "name": "hamming",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/gcd": {
+  "name": "gcd",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nand_bin/mod": {
+  "name": "mod",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 1.5787662090006052
  },
  "w4_o3_arith/a_plus_5": {
   "name": "a_plus_5",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/not_b": {
   "name": "not_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/a_minus_1": {
   "name": "a_minus_1",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/rotl3": {
   "name": "rotl3",
@@ -471,7 +1644,14 @@
   ],
   "max_steps": 15,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/rotl3.rs"
+  "file": "translate/out/w4_o3_arith/rotl3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/times3": {
   "name": "times3",
@@ -485,35 +1665,82 @@
   ],
   "max_steps": 4,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/times3.rs"
+  "file": "translate/out/w4_o3_arith/times3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": true,
+  "stages": 4,
+  "stage_names": [
+   "unnamed",
+   "unnamed",
+   "unnamed",
+   "popcount((sar(x)))"
+  ],
+  "programs": [
+   "0xe5555a3",
+   "0xe545aa3",
+   "0xe7aaa34",
+   "0xd37a35a"
+  ],
+  "max_steps": 277,
+  "halts": false,
+  "file": "translate/out/w4_o3_arith/popcount.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/parity": {
   "name": "parity",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "(parity(x))*12",
-   "x/8"
+   "x*7",
+   "parity((x*7))"
   ],
   "programs": [
-   "0x35a7a435",
-   "0xeaaa"
+   "0xd773",
+   "0xaa7a4763"
   ],
-  "max_steps": 260,
+  "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/parity.rs"
+  "file": "translate/out/w4_o3_arith/parity.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/abs_signed": {
   "name": "abs_signed",
@@ -527,7 +1754,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/abs_signed.rs"
+  "file": "translate/out/w4_o3_arith/abs_signed.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/sign_bit": {
   "name": "sign_bit",
@@ -541,7 +1775,14 @@
   ],
   "max_steps": 4,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sign_bit.rs"
+  "file": "translate/out/w4_o3_arith/sign_bit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/nibble_swap": {
   "name": "nibble_swap",
@@ -555,11 +1796,23 @@
   ],
   "max_steps": 8,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/nibble_swap.rs"
+  "file": "translate/out/w4_o3_arith/nibble_swap.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/sat_inc": {
   "name": "sat_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/sat_dec": {
   "name": "sat_dec",
@@ -575,53 +1828,150 @@
   ],
   "max_steps": 264,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sat_dec.rs"
+  "file": "translate/out/w4_o3_arith/sat_dec.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/is_pow2": {
   "name": "is_pow2",
-  "ok": false
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "unnamed",
+   "unnamed",
+   "(x/4)&1"
+  ],
+  "programs": [
+   "0xe5555a3",
+   "0xe45a5aa3",
+   "0xeaaa4"
+  ],
+  "max_steps": 20,
+  "halts": true,
+  "file": "translate/out/w4_o3_arith/is_pow2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/mod3": {
   "name": "mod3",
   "ok": true,
-  "stages": 3,
+  "stages": 2,
   "stage_names": [
-   "x*11",
    "unnamed",
-   "(x+4)/6"
+   "min((x/4),2)"
   ],
   "programs": [
-   "0x355",
-   "0xe7aa3",
-   "0x1ca3a5"
+   "0xe455a5a3",
+   "0x41c0aa3"
   ],
-  "max_steps": 517,
+  "max_steps": 264,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/mod3.rs"
+  "file": "translate/out/w4_o3_arith/mod3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/div3": {
   "name": "div3",
-  "ok": false
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "unnamed",
+   "unnamed",
+   "unnamed"
+  ],
+  "programs": [
+   "0xe7aaa3",
+   "0xe7aaa43",
+   "0xea5a3a"
+  ],
+  "max_steps": 19,
+  "halts": true,
+  "file": "translate/out/w4_o3_arith/div3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/square": {
   "name": "square",
-  "ok": false
+  "ok": true,
+  "stages": 4,
+  "stage_names": [
+   "(x&7)*13",
+   "unnamed",
+   "unnamed",
+   "unnamed"
+  ],
+  "programs": [
+   "0xe77a34",
+   "0xe477aaa3",
+   "0xe5a3a4",
+   "0xe5a3a4"
+  ],
+  "max_steps": 26,
+  "halts": true,
+  "file": "translate/out/w4_o3_arith/square.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/ctz": {
   "name": "ctz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/lowbit": {
   "name": "lowbit",
@@ -635,11 +1985,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/lowbit.rs"
+  "file": "translate/out/w4_o3_arith/lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/clear_lowbit": {
   "name": "clear_lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/fill_right": {
   "name": "fill_right",
@@ -653,11 +2015,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/fill_right.rs"
+  "file": "translate/out/w4_o3_arith/fill_right.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/bcd_inc": {
   "name": "bcd_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/sign_extend2": {
   "name": "sign_extend2",
@@ -671,19 +2045,41 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith/sign_extend2.rs"
+  "file": "translate/out/w4_o3_arith/sign_extend2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/lerp_half": {
   "name": "lerp_half",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.711674361955374
  },
  "w4_o3_arith_bin/a_plus_b": {
   "name": "a_plus_b",
@@ -697,11 +2093,23 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/a_plus_b.rs"
+  "file": "translate/out/w4_o3_arith_bin/a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/a_xor_b": {
   "name": "a_xor_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/2a_plus_b": {
   "name": "2a_plus_b",
@@ -715,15 +2123,32 @@
   ],
   "max_steps": 3,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/op_2a_plus_b.rs"
+  "file": "translate/out/w4_o3_arith_bin/op_2a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/a_plus_b_plus1": {
   "name": "a_plus_b_plus1",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/a_xor_b_xor7": {
   "name": "a_xor_b_xor7",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/a_minus_b": {
   "name": "a_minus_b",
@@ -737,19 +2162,41 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/a_minus_b.rs"
+  "file": "translate/out/w4_o3_arith_bin/a_minus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/sat_add": {
   "name": "sat_add",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/sat_sub": {
   "name": "sat_sub",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/carry_out": {
   "name": "carry_out",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/half_adder_sum": {
   "name": "half_adder_sum",
@@ -763,71 +2210,158 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_arith_bin/half_adder_sum.rs"
+  "file": "translate/out/w4_o3_arith_bin/half_adder_sum.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/mul": {
   "name": "mul",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/mul_hi": {
   "name": "mul_hi",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/min": {
   "name": "min",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/max": {
   "name": "max",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/abs_diff": {
   "name": "abs_diff",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/avg_floor": {
   "name": "avg_floor",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/eq": {
   "name": "eq",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/lt": {
   "name": "lt",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/and_not": {
   "name": "and_not",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/mux_lsb": {
   "name": "mux_lsb",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/shl_var": {
   "name": "shl_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/shr_var": {
   "name": "shr_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/hamming": {
   "name": "hamming",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/gcd": {
   "name": "gcd",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_arith_bin/mod": {
   "name": "mod",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 3.3134128780002357
  },
  "w4_o3_bool/a_plus_5": {
   "name": "a_plus_5",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/not_b": {
   "name": "not_b",
@@ -841,123 +2375,275 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_bool/not_b.rs"
+  "file": "translate/out/w4_o3_bool/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/a_minus_1": {
   "name": "a_minus_1",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/rotl3": {
   "name": "rotl3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/times3": {
   "name": "times3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/parity": {
   "name": "parity",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/abs_signed": {
   "name": "abs_signed",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/sign_bit": {
   "name": "sign_bit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/nibble_swap": {
   "name": "nibble_swap",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/sat_inc": {
   "name": "sat_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/sat_dec": {
   "name": "sat_dec",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/is_pow2": {
   "name": "is_pow2",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/mod3": {
   "name": "mod3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/div3": {
   "name": "div3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/square": {
   "name": "square",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/ctz": {
   "name": "ctz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/lowbit": {
   "name": "lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/clear_lowbit": {
   "name": "clear_lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/fill_right": {
   "name": "fill_right",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/bcd_inc": {
   "name": "bcd_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/sign_extend2": {
   "name": "sign_extend2",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/lerp_half": {
   "name": "lerp_half",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "specht32",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.4009003872051835
  },
  "w4_o3_bool_bin/a_plus_b": {
   "name": "a_plus_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/a_xor_b": {
   "name": "a_xor_b",
@@ -971,71 +2657,158 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_bool_bin/a_xor_b.rs"
+  "file": "translate/out/w4_o3_bool_bin/a_xor_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/2a_plus_b": {
   "name": "2a_plus_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/a_plus_b_plus1": {
   "name": "a_plus_b_plus1",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/a_xor_b_xor7": {
   "name": "a_xor_b_xor7",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/a_minus_b": {
   "name": "a_minus_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/sat_add": {
   "name": "sat_add",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/sat_sub": {
   "name": "sat_sub",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/carry_out": {
   "name": "carry_out",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/half_adder_sum": {
   "name": "half_adder_sum",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/mul": {
   "name": "mul",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/mul_hi": {
   "name": "mul_hi",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/min": {
   "name": "min",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/max": {
   "name": "max",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/abs_diff": {
   "name": "abs_diff",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/avg_floor": {
   "name": "avg_floor",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/eq": {
   "name": "eq",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/lt": {
   "name": "lt",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/and_not": {
   "name": "and_not",
@@ -1049,31 +2822,68 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_bool_bin/and_not.rs"
+  "file": "translate/out/w4_o3_bool_bin/and_not.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/mux_lsb": {
   "name": "mux_lsb",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/shl_var": {
   "name": "shl_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/shr_var": {
   "name": "shr_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/hamming": {
   "name": "hamming",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/gcd": {
   "name": "gcd",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_bool_bin/mod": {
   "name": "mod",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 0.6179472740004712
  },
  "w4_o3_core/a_plus_5": {
   "name": "a_plus_5",
@@ -1087,7 +2897,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/a_plus_5.rs"
+  "file": "translate/out/w4_o3_core/a_plus_5.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/not_b": {
   "name": "not_b",
@@ -1101,7 +2918,14 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/not_b.rs"
+  "file": "translate/out/w4_o3_core/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/a_minus_1": {
   "name": "a_minus_1",
@@ -1115,11 +2939,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/a_minus_1.rs"
+  "file": "translate/out/w4_o3_core/a_minus_1.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/rotl3": {
   "name": "rotl3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/times3": {
   "name": "times3",
@@ -1133,19 +2969,41 @@
   ],
   "max_steps": 4,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/times3.rs"
+  "file": "translate/out/w4_o3_core/times3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/parity": {
   "name": "parity",
@@ -1161,31 +3019,55 @@
   ],
   "max_steps": 260,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/parity.rs"
+  "file": "translate/out/w4_o3_core/parity.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/abs_signed": {
   "name": "abs_signed",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/sign_bit": {
   "name": "sign_bit",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "(x&9)*7",
-   "(x*5)>=6"
+   "x|4",
+   "(x^12)<5"
   ],
   "programs": [
-   "0x97868653",
-   "0xd9963"
+   "0x768853",
+   "0x67c8c153"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sign_bit.rs"
+  "file": "translate/out/w4_o3_core/sign_bit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/nibble_swap": {
   "name": "nibble_swap",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/sat_inc": {
   "name": "sat_inc",
@@ -1199,7 +3081,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sat_inc.rs"
+  "file": "translate/out/w4_o3_core/sat_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/sat_dec": {
   "name": "sat_dec",
@@ -1213,7 +3102,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sat_dec.rs"
+  "file": "translate/out/w4_o3_core/sat_dec.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/is_pow2": {
   "name": "is_pow2",
@@ -1229,47 +3125,107 @@
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/is_pow2.rs"
+  "file": "translate/out/w4_o3_core/is_pow2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/mod3": {
   "name": "mod3",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "(x%3)+14",
-   "x+2"
+   "1-(x%3)",
+   "1-x"
   ],
   "programs": [
-   "0x6d958360",
-   "0xe9853"
+   "0x5c90539",
+   "0xe69653"
   ],
-  "max_steps": 261,
+  "max_steps": 262,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/mod3.rs"
+  "file": "translate/out/w4_o3_core/mod3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/div3": {
   "name": "div3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/square": {
   "name": "square",
-  "ok": false
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "unnamed",
+   "unnamed",
+   "unnamed"
+  ],
+  "programs": [
+   "0xe978836",
+   "0xe7983",
+   "0xe978983"
+  ],
+  "max_steps": 19,
+  "halts": true,
+  "file": "translate/out/w4_o3_core/square.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/ctz": {
   "name": "ctz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/lowbit": {
   "name": "lowbit",
@@ -1283,7 +3239,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/lowbit.rs"
+  "file": "translate/out/w4_o3_core/lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/clear_lowbit": {
   "name": "clear_lowbit",
@@ -1297,15 +3260,32 @@
   ],
   "max_steps": 7,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/clear_lowbit.rs"
+  "file": "translate/out/w4_o3_core/clear_lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/fill_right": {
   "name": "fill_right",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/bcd_inc": {
   "name": "bcd_inc",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/sign_extend2": {
   "name": "sign_extend2",
@@ -1319,19 +3299,41 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core/sign_extend2.rs"
+  "file": "translate/out/w4_o3_core/sign_extend2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/lerp_half": {
   "name": "lerp_half",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "knecht24",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 22.43277914915234
  },
  "w4_o3_core_bin/a_plus_b": {
   "name": "a_plus_b",
@@ -1345,11 +3347,23 @@
   ],
   "max_steps": 2,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_plus_b.rs"
+  "file": "translate/out/w4_o3_core_bin/a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/a_xor_b": {
   "name": "a_xor_b",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/2a_plus_b": {
   "name": "2a_plus_b",
@@ -1363,7 +3377,14 @@
   ],
   "max_steps": 3,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/op_2a_plus_b.rs"
+  "file": "translate/out/w4_o3_core_bin/op_2a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/a_plus_b_plus1": {
   "name": "a_plus_b_plus1",
@@ -1377,11 +3398,23 @@
   ],
   "max_steps": 5,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_plus_b_plus1.rs"
+  "file": "translate/out/w4_o3_core_bin/a_plus_b_plus1.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/a_xor_b_xor7": {
   "name": "a_xor_b_xor7",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/a_minus_b": {
   "name": "a_minus_b",
@@ -1395,19 +3428,41 @@
   ],
   "max_steps": 4,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/a_minus_b.rs"
+  "file": "translate/out/w4_o3_core_bin/a_minus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/sat_add": {
   "name": "sat_add",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/sat_sub": {
   "name": "sat_sub",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/carry_out": {
   "name": "carry_out",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/half_adder_sum": {
   "name": "half_adder_sum",
@@ -1421,31 +3476,68 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/half_adder_sum.rs"
+  "file": "translate/out/w4_o3_core_bin/half_adder_sum.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/mul": {
   "name": "mul",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/mul_hi": {
   "name": "mul_hi",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/min": {
   "name": "min",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/max": {
   "name": "max",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/abs_diff": {
   "name": "abs_diff",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/avg_floor": {
   "name": "avg_floor",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/eq": {
   "name": "eq",
@@ -1459,39 +3551,86 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_core_bin/eq.rs"
+  "file": "translate/out/w4_o3_core_bin/eq.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/lt": {
   "name": "lt",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/and_not": {
   "name": "and_not",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/mux_lsb": {
   "name": "mux_lsb",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/shl_var": {
   "name": "shl_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/shr_var": {
   "name": "shr_var",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/hamming": {
   "name": "hamming",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/gcd": {
   "name": "gcd",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_core_bin/mod": {
   "name": "mod",
-  "ok": false
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 7.022205000001122
  },
  "w4_o3_swap/a_plus_5": {
   "name": "a_plus_5",
@@ -1505,7 +3644,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/a_plus_5.rs"
+  "file": "translate/out/w4_o3_swap/a_plus_5.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/not_b": {
   "name": "not_b",
@@ -1519,7 +3665,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/not_b.rs"
+  "file": "translate/out/w4_o3_swap/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/a_minus_1": {
   "name": "a_minus_1",
@@ -1533,7 +3686,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/a_minus_1.rs"
+  "file": "translate/out/w4_o3_swap/a_minus_1.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/rotl3": {
   "name": "rotl3",
@@ -1547,7 +3707,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/rotl3.rs"
+  "file": "translate/out/w4_o3_swap/rotl3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/times3": {
   "name": "times3",
@@ -1561,63 +3728,101 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/times3.rs"
+  "file": "translate/out/w4_o3_swap/times3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/popcount": {
   "name": "popcount",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "(popcount(x))*9",
-   "x*9"
+   "(popcount(x))*5",
+   "x*13"
   ],
   "programs": [
-   "0xa87c417",
-   "0xa17"
+   "0x11a81777",
+   "0x17"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/popcount.rs"
+  "file": "translate/out/w4_o3_swap/popcount.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/parity": {
   "name": "parity",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "!(parity(x))",
-   "!(max(x,1))"
+   "(x*9)+4",
+   "parity((x|5))"
   ],
   "programs": [
-   "0x5763148c",
-   "0xe43a"
+   "0x10a7c71",
+   "0x76677187"
   ],
-  "max_steps": 260,
+  "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/parity.rs"
+  "file": "translate/out/w4_o3_swap/parity.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/abs_signed": {
   "name": "abs_signed",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "x+7",
-   "abs((x^7))"
+   "x+9",
+   "abs((x+7))"
   ],
   "programs": [
-   "0xc3a",
-   "0x4a4c3a14"
+   "0x14617",
+   "0xc443a"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/abs_signed.rs"
+  "file": "translate/out/w4_o3_swap/abs_signed.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/sign_bit": {
   "name": "sign_bit",
@@ -1631,7 +3836,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sign_bit.rs"
+  "file": "translate/out/w4_o3_swap/sign_bit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/nibble_swap": {
   "name": "nibble_swap",
@@ -1645,7 +3857,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/nibble_swap.rs"
+  "file": "translate/out/w4_o3_swap/nibble_swap.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/sat_inc": {
   "name": "sat_inc",
@@ -1659,7 +3878,14 @@
   ],
   "max_steps": 4,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sat_inc.rs"
+  "file": "translate/out/w4_o3_swap/sat_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/sat_dec": {
   "name": "sat_dec",
@@ -1673,23 +3899,37 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sat_dec.rs"
+  "file": "translate/out/w4_o3_swap/sat_dec.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/is_pow2": {
   "name": "is_pow2",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "!x",
+   "!(rol(x,1))",
    "(popcount(x))==3"
   ],
   "programs": [
-   "0x51",
+   "0x518",
    "0x457423a1"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/is_pow2.rs"
+  "file": "translate/out/w4_o3_swap/is_pow2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/mod3": {
   "name": "mod3",
@@ -1703,7 +3943,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/mod3.rs"
+  "file": "translate/out/w4_o3_swap/mod3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/div3": {
   "name": "div3",
@@ -1719,35 +3966,64 @@
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/div3.rs"
+  "file": "translate/out/w4_o3_swap/div3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/square": {
   "name": "square",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "(x^1)+5",
+   "(-x)^2",
    "(x^2)*(x^2)"
   ],
   "programs": [
-   "0x1c04ac",
+   "0x15463177",
    "0x4546514c"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/square.rs"
+  "file": "translate/out/w4_o3_swap/square.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/ctz": {
   "name": "ctz",
@@ -1761,7 +4037,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/ctz.rs"
+  "file": "translate/out/w4_o3_swap/ctz.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/lowbit": {
   "name": "lowbit",
@@ -1775,7 +4058,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/lowbit.rs"
+  "file": "translate/out/w4_o3_swap/lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/clear_lowbit": {
   "name": "clear_lowbit",
@@ -1789,7 +4079,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/clear_lowbit.rs"
+  "file": "translate/out/w4_o3_swap/clear_lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/fill_right": {
   "name": "fill_right",
@@ -1803,25 +4100,39 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/fill_right.rs"
+  "file": "translate/out/w4_o3_swap/fill_right.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/bcd_inc": {
   "name": "bcd_inc",
   "ok": true,
   "stages": 3,
   "stage_names": [
-   "rol((8-x),1)",
+   "x+7",
    "unnamed",
-   "rol((1-x),1)"
+   "unnamed"
   ],
   "programs": [
-   "0x70a3481c",
-   "0xec88c",
-   "0xe8cc4"
+   "0xc3a",
+   "0xe8c48",
+   "0xe8c48"
   ],
   "max_steps": 266,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/bcd_inc.rs"
+  "file": "translate/out/w4_o3_swap/bcd_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/sign_extend2": {
   "name": "sign_extend2",
@@ -1835,33 +4146,485 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/sign_extend2.rs"
+  "file": "translate/out/w4_o3_swap/sign_extend2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/lerp_half": {
   "name": "lerp_half",
   "ok": true,
   "stages": 3,
   "stage_names": [
-   "rol((x+15),3)",
+   "rol((-x),3)",
    "unnamed",
-   "rol((14-x),3)"
+   "(rol(x,2))^7"
   ],
   "programs": [
-   "0xac803a",
-   "0xe46eac",
-   "0xe4888c"
+   "0xe888c4",
+   "0xe8c6ea",
+   "0xa3144788"
   ],
   "max_steps": 267,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o3_swap/lerp_half.rs"
+  "file": "translate/out/w4_o3_swap/lerp_half.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
  },
  "w4_o3_swap/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 104.02723272598814
+ },
+ "w4_o3_swap_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+y"
+  ],
+  "programs": [
+   "0xe7"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "translate/out/w4_o3_swap_bin/a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x*2)+y"
+  ],
+  "programs": [
+   "0xe76"
+  ],
+  "max_steps": 3,
+  "halts": true,
+  "file": "translate/out/w4_o3_swap_bin/op_2a_plus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-(!y)"
+  ],
+  "programs": [
+   "0xe7c"
+  ],
+  "max_steps": 3,
+  "halts": true,
+  "file": "translate/out/w4_o3_swap_bin/a_plus_b_plus1.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x-y"
+  ],
+  "programs": [
+   "0x1617"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/a_minus_b.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/carry_out": {
+  "name": "carry_out",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "!x",
+   "-(x>=y)",
+   "x+1"
+  ],
+  "programs": [
+   "0x51",
+   "0x17a110ac",
+   "0xec"
+  ],
+  "max_steps": 514,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/carry_out.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+y)&1"
+  ],
+  "programs": [
+   "0x186667"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/half_adder_sum.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/mul": {
+  "name": "mul",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/min": {
+  "name": "min",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(min(x,y))+10",
+   "x+6"
+  ],
+  "programs": [
+   "0x7a17ac1c",
+   "0x1cc3a"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/min.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/max": {
+  "name": "max",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/eq": {
+  "name": "eq",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x==y"
+  ],
+  "programs": [
+   "0x3a121474"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/eq.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/lt": {
+  "name": "lt",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(x>=y)",
+   "x+1"
+  ],
+  "programs": [
+   "0x17a110ac",
+   "0xec"
+  ],
+  "max_steps": 258,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/lt.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/and_not": {
+  "name": "and_not",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x&!y"
+  ],
+  "programs": [
+   "0x15141"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o3_swap_bin/and_not.rs",
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/hamming": {
+  "name": "hamming",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/gcd": {
+  "name": "gcd",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
+ },
+ "w4_o3_swap_bin/mod": {
+  "name": "mod",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 188.7190792850015
  },
  "w4_o4_full/a_plus_5": {
   "name": "a_plus_5",
@@ -1875,7 +4638,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/a_plus_5.rs"
+  "file": "translate/out/w4_o4_full/a_plus_5.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/not_b": {
   "name": "not_b",
@@ -1889,7 +4659,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/not_b.rs"
+  "file": "translate/out/w4_o4_full/not_b.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/a_minus_1": {
   "name": "a_minus_1",
@@ -1903,7 +4680,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/a_minus_1.rs"
+  "file": "translate/out/w4_o4_full/a_minus_1.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/rotl3": {
   "name": "rotl3",
@@ -1917,55 +4701,96 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/rotl3.rs"
+  "file": "translate/out/w4_o4_full/rotl3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/times3": {
   "name": "times3",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/gray": {
   "name": "gray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/ungray": {
   "name": "ungray",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/popcount": {
   "name": "popcount",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/parity": {
   "name": "parity",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "rol((3-x),2)",
-   "parity((x/2))"
+   "rol((3-x),1)",
+   "parity((x*2))"
   ],
   "programs": [
-   "0xf2cc9999",
-   "0xe80d9d9b"
+   "0xf2c9999",
+   "0x898e9890"
   ],
-  "max_steps": 264,
+  "max_steps": 263,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/parity.rs"
+  "file": "translate/out/w4_o4_full/parity.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/abs_signed": {
   "name": "abs_signed",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "abs((x+8))",
-   "8-x"
+   "(abs(x))+7",
+   "x+9"
   ],
   "programs": [
-   "0xe20d2d9",
-   "0x22e92"
+   "0x80d2d20e",
+   "0x92e"
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/abs_signed.rs"
+  "file": "translate/out/w4_o4_full/abs_signed.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/sign_bit": {
   "name": "sign_bit",
@@ -1979,7 +4804,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sign_bit.rs"
+  "file": "translate/out/w4_o4_full/sign_bit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/nibble_swap": {
   "name": "nibble_swap",
@@ -1993,7 +4825,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/nibble_swap.rs"
+  "file": "translate/out/w4_o4_full/nibble_swap.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/sat_inc": {
   "name": "sat_inc",
@@ -2007,7 +4846,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sat_inc.rs"
+  "file": "translate/out/w4_o4_full/sat_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/sat_dec": {
   "name": "sat_dec",
@@ -2021,41 +4867,62 @@
   ],
   "max_steps": 3,
   "halts": true,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sat_dec.rs"
+  "file": "translate/out/w4_o4_full/sat_dec.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/is_pow2": {
   "name": "is_pow2",
   "ok": true,
   "stages": 3,
   "stage_names": [
-   "(x*9)+7",
+   "ma(x+3)((x+3),3)",
    "unnamed",
-   "(rol(x,2))/13"
+   "parity((x%7))"
   ],
   "programs": [
-   "0x80e0e0e8",
-   "0xf28dc",
-   "0x5d69cd8"
+   "0xfd8d8d8",
+   "0xf6c8",
+   "0x89d808d9"
   ],
-  "max_steps": 517,
+  "max_steps": 274,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/is_pow2.rs"
+  "file": "translate/out/w4_o4_full/is_pow2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/mod3": {
   "name": "mod3",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "1-(x%3)",
-   "1-x"
+   "(x%3)+15",
+   "(x+1)%15"
   ],
   "programs": [
-   "0xd0d92928",
-   "0xf299"
+   "0xd0d22988",
+   "0xf2d28"
   ],
-  "max_steps": 260,
+  "max_steps": 261,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/mod3.rs"
+  "file": "translate/out/w4_o4_full/mod3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/div3": {
   "name": "div3",
@@ -2071,7 +4938,14 @@
   ],
   "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/div3.rs"
+  "file": "translate/out/w4_o4_full/div3.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/square": {
   "name": "square",
@@ -2084,42 +4958,71 @@
    "(x|4)*(x|4)"
   ],
   "programs": [
-   "0xfc69",
-   "0xf9c9",
-   "0xf28c9",
+   "0xf2c69",
+   "0xf88c8",
+   "0xf8c8",
    "0xe99b2686"
   ],
-  "max_steps": 269,
+  "max_steps": 270,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/square.rs"
+  "file": "translate/out/w4_o4_full/square.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/cube": {
   "name": "cube",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/bitrev": {
   "name": "bitrev",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/clz": {
   "name": "clz",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/ctz": {
   "name": "ctz",
   "ok": true,
   "stages": 2,
   "stage_names": [
-   "unnamed",
+   "min((rol(x,1)),14)",
    "ctz((rol(x,3)))"
   ],
   "programs": [
-   "0xf86fe",
+   "0xc28e2",
    "0x688c9b0e"
   ],
-  "max_steps": 260,
+  "max_steps": 512,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/ctz.rs"
+  "file": "translate/out/w4_o4_full/ctz.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/lowbit": {
   "name": "lowbit",
@@ -2133,11 +5036,23 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/lowbit.rs"
+  "file": "translate/out/w4_o4_full/lowbit.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/clear_lowbit": {
   "name": "clear_lowbit",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/fill_right": {
   "name": "fill_right",
@@ -2151,7 +5066,14 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/fill_right.rs"
+  "file": "translate/out/w4_o4_full/fill_right.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/bcd_inc": {
   "name": "bcd_inc",
@@ -2169,7 +5091,14 @@
   ],
   "max_steps": 266,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/bcd_inc.rs"
+  "file": "translate/out/w4_o4_full/bcd_inc.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/sign_extend2": {
   "name": "sign_extend2",
@@ -2183,32 +5112,356 @@
   ],
   "max_steps": 256,
   "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/sign_extend2.rs"
+  "file": "translate/out/w4_o4_full/sign_extend2.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/lerp_half": {
   "name": "lerp_half",
   "ok": true,
   "stages": 3,
   "stage_names": [
-   "rol((x+1),3)",
+   "rol((-x),3)",
    "unnamed",
-   "(rol(x,3))+15"
+   "rol((14-x),3)"
   ],
   "programs": [
-   "0xeccc8",
-   "0xf86fe",
-   "0xe9ccc"
+   "0xf2ccc9",
+   "0xf96fe",
+   "0xf2ccc8"
   ],
-  "max_steps": 516,
-  "halts": false,
-  "file": "/home/user/Universe-1/translate/out/w4_o4_full/lerp_half.rs"
+  "max_steps": 16,
+  "halts": true,
+  "file": "translate/out/w4_o4_full/lerp_half.rs",
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/triangular": {
   "name": "triangular",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
  },
  "w4_o4_full/collatz_step": {
   "name": "collatz_step",
-  "ok": false
+  "ok": false,
+  "search_depth": 4,
+  "basis_extra": 256,
+  "node": "adler40",
+  "source_commit": "96b8687",
+  "map_wall_seconds": 46.98130694509018
+ },
+ "w4_o4_full_bin/a_plus_b": {
+  "name": "a_plus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/a_xor_b": {
+  "name": "a_xor_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/2a_plus_b": {
+  "name": "2a_plus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/a_plus_b_plus1": {
+  "name": "a_plus_b_plus1",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/a_xor_b_xor7": {
+  "name": "a_xor_b_xor7",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/a_minus_b": {
+  "name": "a_minus_b",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/sat_add": {
+  "name": "sat_add",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/sat_sub": {
+  "name": "sat_sub",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/carry_out": {
+  "name": "carry_out",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/half_adder_sum": {
+  "name": "half_adder_sum",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/mul": {
+  "name": "mul",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/mul_hi": {
+  "name": "mul_hi",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/min": {
+  "name": "min",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/max": {
+  "name": "max",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/abs_diff": {
+  "name": "abs_diff",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/avg_floor": {
+  "name": "avg_floor",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/eq": {
+  "name": "eq",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/lt": {
+  "name": "lt",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/and_not": {
+  "name": "and_not",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/mux_lsb": {
+  "name": "mux_lsb",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/shl_var": {
+  "name": "shl_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/shr_var": {
+  "name": "shr_var",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/hamming": {
+  "name": "hamming",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/gcd": {
+  "name": "gcd",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
+ },
+ "w4_o4_full_bin/mod": {
+  "name": "mod",
+  "ok": false,
+  "search_depth": 1,
+  "basis_extra": 256,
+  "node": "falke64",
+  "source_commit": "1a8388245511df6bd0fc4274f8c16c17a3165718",
+  "binary_composition": true,
+  "composition_max_stages": 3,
+  "names_refreshed": true,
+  "map_wall_seconds": 28.950210848997813
  }
 }

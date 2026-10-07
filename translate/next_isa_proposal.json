@@ -1,0 +1,102 @@
+{
+  "proposed_isa": [
+    "SWAP",
+    "ADD",
+    "NAND",
+    "XOR",
+    "SHR",
+    "MUL",
+    "SKZ",
+    "HALT"
+  ],
+  "W": 4,
+  "a": 2,
+  "p": 3,
+  "I": 4,
+  "opcode_bits": 3,
+  "operand_bits": 1,
+  "status": "proposal only; witnesses reference-verified; exhaustive coverage not measured",
+  "rationale": "Retain SWAP/ADD/NAND/SKZ; add XOR, SHR, MUL and HALT to address corpus gaps. The HALT/SWAP/ADD/NAND/ROL combination and its binary mode were already swept.",
+  "tradeoff": "One operand bit instead of two; only A and M[1] directly addressable. Compare named coverage and halting cost, not only operator count.",
+  "witnesses": {
+    "gray": {
+      "binary": false,
+      "program": "0xeeee7831",
+      "instructions": [
+        "SWAP 1",
+        "ADD 1",
+        "SHR 0",
+        "XOR 1",
+        "HALT 0"
+      ],
+      "verified_inputs": 16,
+      "all_inputs_halt": true,
+      "max_steps": 5,
+      "current_best": null
+    },
+    "mul": {
+      "binary": true,
+      "program": "0xeeeeeeeb",
+      "instructions": [
+        "MUL 1",
+        "HALT 0"
+      ],
+      "verified_inputs": 256,
+      "all_inputs_halt": true,
+      "max_steps": 2,
+      "current_best": {
+        "map_target": "w4_o2_add_bin/mul",
+        "stages": 2,
+        "max_steps_bound": 512
+      }
+    },
+    "square": {
+      "binary": false,
+      "program": "0xeeeeeeea",
+      "instructions": [
+        "MUL 0",
+        "HALT 0"
+      ],
+      "verified_inputs": 16,
+      "all_inputs_halt": true,
+      "max_steps": 2,
+      "current_best": {
+        "map_target": "w4_o2_add/square",
+        "stages": 2,
+        "max_steps_bound": 512
+      }
+    },
+    "a_xor_b_xor7": {
+      "binary": true,
+      "program": "0xee784617",
+      "instructions": [
+        "XOR 1",
+        "SWAP 1",
+        "XOR 0",
+        "NAND 0",
+        "SHR 0",
+        "XOR 1",
+        "HALT 0"
+      ],
+      "verified_inputs": 256,
+      "all_inputs_halt": true,
+      "max_steps": 7,
+      "current_best": {
+        "map_target": "w4_o2_add_bin/a_xor_b_xor7",
+        "stages": 2,
+        "max_steps_bound": 512
+      }
+    }
+  },
+  "ungray_chain": {
+    "programs": [
+      "0xeeee7831",
+      "0xeeee7831",
+      "0xeeee7831"
+    ],
+    "verified_inputs": 16,
+    "all_inputs_halt": true,
+    "total_steps": 15,
+    "explanation": "At W=4, three Gray-encode stages implement the inverse Gray transform."
+  }
+}

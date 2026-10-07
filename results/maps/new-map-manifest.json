@@ -1,0 +1,64 @@
+[
+  {
+    "file": "w1_nand_jz_bin.u1prog",
+    "operators": 4,
+    "bytes": 74,
+    "sha256": "bb1478e3d9723d7efcce5c6f2a4d55c7556e03a7189285968ac6cba253e2cf2c",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w1_nand_skz_bin.u1prog",
+    "operators": 4,
+    "bytes": 74,
+    "sha256": "48bd6e51f6bf8e3bacc299010dd3b244b5333a4feb92eb769f86ceb0f172384c",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w2_o1_bin.u1prog",
+    "operators": 2131,
+    "bytes": 17090,
+    "sha256": "f65b8bd13aecff25038101a4828fcf5db5923567611695a65d545e96afcf3a34",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w2_o1_swap_bin.u1prog",
+    "operators": 8,
+    "bytes": 106,
+    "sha256": "8fde7b9c113c8855f4b082fdc58fafcab6a089bb6ba12e67fb3bf43928eff912",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w4_o2_nand_bin.u1prog",
+    "operators": 17827,
+    "bytes": 142660,
+    "sha256": "4f2a15a53ab164d284d0411d06f587998f07966fad9f64d3bb3849492c8cdcfb",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w4_o4_full_bin.u1prog",
+    "operators": 977928,
+    "bytes": 7823480,
+    "sha256": "e8353fa89406e391e6a8110976dc72070ce1006a50eca9f63ffd6fb27dbb87a1",
+    "build_source_commit": "96b8687"
+  },
+  {
+    "file": "w4_o3_swap_bin.u1prog",
+    "operators": 7690892,
+    "bytes": 61527184,
+    "sha256": "f2e2fe5bf4ba84595e1429e989646a9f45af9bde8a59a4dcfe5cd393b2300abf",
+    "build_source_commit": "96b8687",
+    "archive": "w4_o3_swap_bin.u1prog.zip",
+    "archive_bytes": 10579148,
+    "archive_sha256": "405043e7a4aa445f343d1742783312f80b78afd877e459c90a3ed4329e6a810a"
+  },
+  {
+    "file": "w4_o2_add_bin.u1prog",
+    "operators": 24684247,
+    "bytes": 197474020,
+    "sha256": "3ebe8476ebfe0f635744d4c0b8fff20b8ca1d556e6e6f2510654ab4730c10f70",
+    "build_source_commit": "96b8687",
+    "archive": "w4_o2_add_bin.u1prog.zip",
+    "archive_bytes": 35916799,
+    "archive_sha256": "2406b9f1d0486dc93c8c53dd92a17141ea7416f46cf41d2b718357af229d5a5b"
+  }
+]
