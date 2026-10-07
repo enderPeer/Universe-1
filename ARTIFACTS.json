@@ -1,0 +1,19 @@
+{
+  "project": "Universe-1",
+  "source_branch": "claude/charming-rubin-pi8nzs",
+  "source": "https://github.com/enderPeer/Universe-1/tree/claude/charming-rubin-pi8nzs",
+  "witness_archives_and_checksums": "https://github.com/enderPeer/Universe-1/tree/claude/charming-rubin-pi8nzs/results/witnesses",
+  "python_verified_function_map": "https://github.com/enderPeer/Universe-1/tree/claude/charming-rubin-pi8nzs/results/function-map",
+  "rust_mapper_and_interpreter": "https://github.com/enderPeer/Universe-1/tree/claude/charming-rubin-pi8nzs/mapper",
+  "rust_function_maps": "https://github.com/enderPeer/Universe-1/tree/claude/charming-rubin-pi8nzs/results/maps",
+  "cluster_share": "ender@192.168.178.171:/home/ender/universe-1-share",
+  "cluster_reports": "adler40:/home/ender/universe-1/results/",
+  "worker_shards": {
+    "adler40": "/home/ender/universe-1/results/shards/",
+    "specht32": "/home/ender/universe-1/results/shards/",
+    "knecht24": "/home/ender/universe-1/results/shards/",
+    "falke64": "/home/ender/universe-1/results/shards/"
+  },
+  "coordinator_shards": "C:/Users/end/Desktop/u1/results/shards/",
+  "note": "Worker directories contain the chunks each worker produced; the coordinator aggregates them. Cloud users should use the GitHub witness archives. Check snapshots/status.json for publication status."
+}
