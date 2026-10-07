@@ -5,6 +5,7 @@ w2_o1_swap: 128 sampled witnesses agree with Python
 w4_o2_add: 192 sampled witnesses agree with Python
 w4_o2_nand: 192 sampled witnesses agree with Python
 w4_o3_arith: 192 sampled witnesses agree with Python
+w4_o3_arith_bin: 192 sampled witnesses agree with Python
 w4_o3_bool: 192 sampled witnesses agree with Python
 w4_o3_bool_bin: 192 sampled witnesses agree with Python
 w4_o3_core: 192 sampled witnesses agree with Python
@@ -12,4 +13,4 @@ w4_o3_core_bin: 192 sampled witnesses agree with Python
 w4_o3_swap: 192 sampled witnesses agree with Python
 w4_o4_full: 192 sampled witnesses agree with Python
 w8_o4: 192 sampled witnesses agree with Python
-TOTAL: 2624 sampled witnesses agree
+TOTAL: 2816 sampled witnesses agree

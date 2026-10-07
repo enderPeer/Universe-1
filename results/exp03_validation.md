@@ -74,9 +74,10 @@ continues using its surviving NVIDIA workers.
 - Dispatch log: `results/exp03_run.log`.
 - Engine validation logs: `results/validation/` (Adler logs are at its root).
 
-Large binary shards are ignored by Git and preserved on disk. JSON counts,
-validation logs, and the summary are suitable for committing. JSON contains
-coverage and counts; minimum-program witnesses remain in binary shards.
+Original binary shards are ignored by Git and preserved on disk. Verified ZIP
+copies are committed under `results/witnesses/`, together with checksums and
+extraction/format instructions for Fable. JSON contains coverage and counts;
+minimum-program witnesses are in the archived binary shards.
 
 ## Run command
 

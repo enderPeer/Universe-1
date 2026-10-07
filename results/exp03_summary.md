@@ -12,6 +12,7 @@ Wall time includes dispatch and GPU work; excludes shard download and merge.
 | 4 | exp03_w4_o3_swap | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | unary | 1463824 | 2^64 | 29.79 | 144.18 | complete |
 | 4 | exp03_w4_o3_core_bin | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | binary | 1020901 | 2^1024 | 397.64 | 10.8 | complete |
 | 4 | exp03_w4_o4_full | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | unary | 977928 | 2^64 | 42.99 | 99.91 | complete |
+| 4 | exp03_w4_o3_arith_bin | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | binary | 339877 | 2^1024 | 474.82 | 9.05 | complete |
 | 4 | exp03_w4_o3_core | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | unary | 62880 | 2^64 | 27.05 | 158.79 | complete |
 | 4 | exp03_w4_o3_arith | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | unary | 24420 | 2^64 | 35.02 | 122.64 | complete |
 | 4 | exp03_w4_o3_bool_bin | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | binary | 11946 | 2^1024 | 331.58 | 12.95 | complete |

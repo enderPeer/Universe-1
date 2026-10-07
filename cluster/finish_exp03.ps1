@@ -33,6 +33,8 @@ print('All 23 supported sweeps have verified complete coverage.')
     if ($LASTEXITCODE -ne 0) { throw 'Witness validation failed.' }
     & python cluster/summarize.py
     if ($LASTEXITCODE -ne 0) { throw 'Summary generation failed.' }
+    & python -u cluster/package_witnesses.py
+    if ($LASTEXITCODE -ne 0) { throw 'Witness archive verification failed.' }
 
     $completed = @"
 # Experiment 03 completed
@@ -54,7 +56,18 @@ Completed at $([DateTimeOffset]::UtcNow.ToString('u')) (UTC).
     if ((& git branch --show-current).Trim() -ne $branch) { throw 'Branch changed; refusing to publish to an unrelated branch.' }
     $alreadyStaged = @(& git diff --cached --name-only)
     if ($LASTEXITCODE -ne 0 -or $alreadyStaged.Count -gt 0) { throw 'Existing staged changes detected; preserving them and stopping publication.' }
-    & git add -- 'results/exp03_*.json' results/exp03_summary.md results/exp03_validation.md results/exp03_binary_run.log results/validation/witnesses.log results/exp03_completion.md
+    foreach ($archive in Get-ChildItem results/witnesses -Filter '*.zip' | Sort-Object Name) {
+        & git add -- ("results/witnesses/" + $archive.Name)
+        if ($LASTEXITCODE -ne 0) { throw 'Staging witness archive failed.' }
+        & git diff --cached --quiet
+        if ($LASTEXITCODE -eq 1) {
+            & git commit -m ("Publish witness archive " + $archive.Name)
+            if ($LASTEXITCODE -ne 0) { throw 'Committing witness archive failed.' }
+            & git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 push origin $branch
+            if ($LASTEXITCODE -ne 0) { throw 'Archive push failed; verified data remains local.' }
+        } elseif ($LASTEXITCODE -ne 0) { throw 'Checking staged archive failed.' }
+    }
+    & git add -- 'results/exp03_*.json' results/exp03_summary.md results/exp03_validation.md results/exp03_binary_run.log results/validation/witnesses.log results/exp03_completion.md results/witnesses
     if ($LASTEXITCODE -ne 0) { throw 'Staging results failed.' }
     & git diff --cached --check
     if ($LASTEXITCODE -ne 0) { throw 'Staged result formatting check failed.' }
