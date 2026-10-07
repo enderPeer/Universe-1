@@ -23,6 +23,7 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - `docs/05_alife_plan.md` — plan for an artificial-life universe on the mapped functions (grid world, tabulated genotype-to-phenotype map, self-replicator sweep).
 - `life/` — Universe-1 Life: artificial-life world on the mapped functions, CPU reference + CUDA + Vulkan engines (`docs/06_life_spec.md`); ensemble dispatcher `cluster/run_life.py`.
 - `results/catalog/` — sorted index of every champion-ISA function with structural descriptors; `docs/07_catalog_and_composition.md` also shows composition reaches all 16^16 functions.
+- `docs/08_exp09_every_step.md` — exp09: map every step of every program; data volumes, GPU plan, index design.
 - `translate/` — test-code corpus (Dimension42 TESTS + classic kernels) and the pipeline that translates it into Universe-1 programs and verified Rust (`docs/04_translate_run.md`).
 
 ## Cluster experiment results
