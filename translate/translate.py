@@ -20,8 +20,11 @@ for m in maps:
     kind = "binary" if stats["binary"] else "unary"; tag = m.stem; cols.append((tag, stats))
     out = ROOT / "translate/out" / tag; out.mkdir(parents=True, exist_ok=True)
     rep = ROOT / "translate/out" / f"{tag}.report.jsonl"
-    r = subprocess.run([str(U), "translate", "--map", str(m), "--targets", str(tdir / f"{kind}.txt"), "--out-dir", str(out),
-                        "--depth", str(a.depth), "--extra", str(a.extra), "--report", str(rep)], capture_output=True, text=True)
+    cmd = [str(U), "translate", "--map", str(m), "--targets", str(tdir / f"{kind}.txt"), "--out-dir", str(out),
+           "--depth", str(a.depth), "--extra", str(a.extra), "--report", str(rep)]
+    umap = m.with_name(m.name.replace("_bin.u1prog", ".u1prog"))
+    if kind == "binary" and umap != m and umap.exists(): cmd += ["--unary-map", str(umap)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: print(f"!! {tag}: {r.stderr.strip()[:300]}"); continue
     print(f"{tag}: {r.stderr.strip().splitlines()[-1]}")
     for line in rep.read_text().splitlines():

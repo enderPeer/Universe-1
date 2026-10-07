@@ -36,6 +36,18 @@ reports into `translate/REPORT.md` and `translate/report_merged.json`.
 All 99 emitted Rust files compile and pass their self-test. The exact grid and the list of
 functions no map can translate are in `translate/REPORT.md`.
 
+## Binary composition (added after the depth-4 run started)
+For a binary map, `translate.py` now passes `--unary-map results/maps/<same ISA>.u1prog`
+automatically when that file exists. `u1map translate` then also searches `u(b(x,y))`,
+`b(u(x),y)`, `u2(b(u1(x),y))`, `b2(b1(x,y),y)` and `u(b2(b1(x,y),y))`, where b are binary
+witnesses and u unary witnesses of the same ISA (y is re-supplied in M[1] to every binary
+stage; emitted Rust carries `STAGE_BINARY`). Verified: `(x+y)*3+5` on the core ISA becomes
+`x-(!y)` then `x*3+2`, and its emitted test passes. The three existing binary ISAs gained
+nothing from it (their binary witnesses are too few); the four new W=4 binary maps should.
+Also fixed: vocabulary names substituted the letter x inside identifiers (`max` became
+`ma(x+y)`); regenerate `*.named.jsonl` / `*.stats.json` of any map built before this commit
+with `u1map info --map <m> --named <m>.named.jsonl --stats <m>.stats.json`.
+
 ## Run it on the cluster (one node per group of maps; maps are independent)
 ```bash
 # on every node, once

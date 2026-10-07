@@ -5,6 +5,19 @@ use std::collections::HashMap;
 
 pub type Table = Vec<u8>;
 
+/// Replace the variable `var` (a single letter) in `name` only where it stands alone
+/// (not inside identifiers such as `max`, `min`, `bitrev`).
+pub fn subst(name: &str, var: char, repl: &str) -> String {
+    let b: Vec<char> = name.chars().collect(); let mut out = String::new();
+    for (i, &c) in b.iter().enumerate() {
+        let prev_alpha = i > 0 && b[i - 1].is_ascii_alphanumeric();
+        let next_alpha = i + 1 < b.len() && b[i + 1].is_ascii_alphanumeric();
+        if c == var && !prev_alpha && !next_alpha { out.push_str(repl); } else { out.push(c); }
+    }
+    out
+}
+
+
 pub struct Vocab { pub w: u32, pub binary: bool, pub by_table: HashMap<Table, String>, pub by_name: HashMap<String, Table> }
 
 fn ops_unary(w: u32) -> Vec<(String, Box<dyn Fn(u32) -> u32>)> {
@@ -108,7 +121,7 @@ impl Vocab {
                 for (j, (ng, _)) in un.iter().enumerate() {
                     if ng == "x" || ng.parse::<u32>().is_ok() || i == j { continue; }
                     let t: Table = tabs[j].iter().map(|&g| f(g as u32) as u8).collect();
-                    add(t, nf.replace('x', &format!("({})", ng)));
+                    add(t, subst(nf, 'x', &format!("({})", ng)));
                 }
             }
         } else {
@@ -121,11 +134,11 @@ impl Vocab {
                 for (j, (nb, b)) in bi.iter().enumerate() {
                     if nb == "x" || nb == "y" { continue; }
                     let t: Table = btabs[j].iter().map(|&v| f(v as u32) as u8).collect();
-                    add(t, nf.replace('x', &format!("({})", nb)));
+                    add(t, subst(nf, 'x', &format!("({})", nb)));
                     let tx: Table = (0..n).flat_map(|x| (0..n).map(move |y| (x, y))).map(|(x, y)| b(f(x), y) as u8).collect();
-                    add(tx, nb.replace('x', &format!("({})", nf)));
+                    add(tx, subst(nb, 'x', &format!("({})", nf)));
                     let ty: Table = (0..n).flat_map(|x| (0..n).map(move |y| (x, y))).map(|(x, y)| b(x, f(y)) as u8).collect();
-                    add(ty, nb.replace('y', &format!("({})", nf.replace('x', "y"))));
+                    add(ty, subst(nb, 'y', &format!("({})", subst(nf, 'x', "y"))));
                 }
             }
         }

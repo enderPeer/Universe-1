@@ -21,7 +21,8 @@ const USAGE: &str = "u1map <command> [options]
   info     --map map.u1prog [--named named.jsonl] [--stats stats.json] [--closure depth]
   list     --map map.u1prog [--filter substring] [--class named|permutation|predicate|constant|other] [--limit n]
   synth    --map map.u1prog (--target NAME | --table 0,1,2,...) [--depth d] [--extra n] [--fn name] [--out file.rs]
-  translate --map map.u1prog --targets file --out-dir dir [--depth d] [--extra n] [--report file.jsonl]
+  translate --map map.u1prog --targets file --out-dir dir [--depth d] [--extra n] [--report file.jsonl] [--unary-map u.u1prog]
+           (--unary-map: for a binary map, enables unary pre/post-op composition from the same ISA's unary map)
            batch synth: each line of `file` is `name|t0,t1,...`; writes dir/<name>.rs and a JSONL report
   vocab    --W w [--binary]            list the target vocabulary (names the classifier knows)
   run      --W .. --a .. --p .. --isa .. --program 0x..   disassemble and tabulate one program
@@ -144,14 +145,17 @@ fn run(args: &[String]) -> Result<(), String> {
             let dir = arg(args, "--out-dir").ok_or("--out-dir required")?; std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
             let (depth, extra): (usize, usize) = (argn(args, "--depth", 3), argn(args, "--extra", 64));
             let t0 = std::time::Instant::now(); let sy = synth::Synth::new(&fm, &vocab, depth, extra);
-            eprintln!("composition prefixes per level: {:?} ({:.1}s)", sy.prefix_counts(), t0.elapsed().as_secs_f64());
+            let um = match arg(args, "--unary-map") { Some(p) if fm.cfg.binary => Some(FunctionMap::load_programs(&p, threads(args))?), _ => None };
+            let uv = um.as_ref().map(|u| Vocab::new(u.cfg.w, false));
+            let sb = um.as_ref().map(|u| synth::SynthBinary::new(&fm, u, &vocab, uv.as_ref().unwrap(), extra));
+            eprintln!("composition prefixes per level: {:?} ({:.1}s){}", sy.prefix_counts(), t0.elapsed().as_secs_f64(), if sb.is_some() { "; binary composition with unary map enabled" } else { "" });
             let mut report = String::new(); let (mut ok, mut total) = (0, 0);
             for line in targets.lines().filter(|l| !l.trim().is_empty() && !l.starts_with('#')) {
                 let (name, tb) = line.split_once('|').ok_or(format!("bad target line: {}", line))?;
                 let tb: Vec<u8> = tb.split(',').map(|v| v.trim().parse().map_err(|_| format!("bad table in {}", name))).collect::<Result<_, _>>()?;
                 if tb.len() != fm.cfg.ntab() { return Err(format!("{}: table needs {} entries", name, fm.cfg.ntab())); }
                 total += 1;
-                match sy.synthesize(&tb) {
+                match sb.as_ref().map_or_else(|| sy.synthesize(&tb), |b| b.synthesize(&tb)) {
                     Some(plan) => {
                         ok += 1; let fname = sanitize(name);
                         std::fs::write(format!("{}/{}.rs", dir, fname), synth::emit_rust(&fm.cfg, &plan, &fname, name)).map_err(|e| e.to_string())?;

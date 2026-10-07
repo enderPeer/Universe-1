@@ -5,7 +5,7 @@ use crate::machine::Config;
 use crate::map::{Entry, FunctionMap};
 use std::collections::{HashMap, HashSet};
 
-pub struct Plan { pub target: Table, pub stages: Vec<Entry>, pub stage_names: Vec<String> }
+pub struct Plan { pub target: Table, pub stages: Vec<Entry>, pub stage_names: Vec<String>, pub stage_binary: Vec<bool> }
 
 /// Precomputed composition prefixes for one map, so that many targets can be synthesized
 /// cheaply. `levels[k]` holds every function reachable by composing k+1 basis operators
@@ -41,7 +41,7 @@ impl<'a> Synth<'a> {
     pub fn synthesize(&self, target: &Table) -> Option<Plan> {
         let name_of = |e: &Entry| self.vocab.name(&e.table).cloned().unwrap_or_else(|| "unnamed".into());
         if let Some(e) = self.fm.get(target) {
-            return Some(Plan { target: target.clone(), stages: vec![e.clone()], stage_names: vec![name_of(e)] });
+            return Some(Plan { target: target.clone(), stages: vec![e.clone()], stage_names: vec![name_of(e)], stage_binary: vec![self.fm.cfg.binary] });
         }
         let n = self.fm.cfg.nin();
         // target = last(prefix(x)): prefix from level k, last from the full basis
@@ -54,10 +54,78 @@ impl<'a> Synth<'a> {
                     let idxs: Vec<usize> = path.iter().copied().chain(std::iter::once(last)).collect();
                     let stages: Vec<Entry> = idxs.iter().map(|&i| self.full[i].clone()).collect();
                     let names = stages.iter().map(|e| name_of(e)).collect();
-                    return Some(Plan { target: target.clone(), stages, stage_names: names });
+                    let k = stages.len(); return Some(Plan { target: target.clone(), stages, stage_names: names, stage_binary: vec![false; k] });
                 }
             }
         }
+        None
+    }
+}
+
+/// Composition for binary targets t(x, y): stages are run in sequence with A carried over
+/// and M[1] = y re-supplied to every binary stage. Forms searched, in order:
+///   b(x,y)            direct witness in the binary map
+///   u(b(x,y))         unary post-op (u from the unary map of the same ISA)
+///   b(u(x), y)        unary pre-op on x
+///   u2(b(u1(x), y))   pre-op (elementary only) and post-op
+///   b2(b1(x,y), y)    two binary stages (y re-supplied), optionally with a unary post-op
+pub struct SynthBinary<'a> { bin: &'a FunctionMap, un: &'a FunctionMap, vocab_b: &'a Vocab, vocab_u: &'a Vocab, bfull: Vec<&'a Entry>, ufull: Vec<&'a Entry>, uelem: Vec<usize> }
+
+impl<'a> SynthBinary<'a> {
+    pub fn new(bin: &'a FunctionMap, un: &'a FunctionMap, vocab_b: &'a Vocab, vocab_u: &'a Vocab, extra: usize) -> SynthBinary<'a> {
+        let basis = |fm: &'a FunctionMap, v: &Vocab| -> Vec<&'a Entry> {
+            let mut cheap: Vec<&Entry> = fm.entries.iter().filter(|e| v.name(&e.table).is_none()).collect();
+            cheap.sort_by_key(|e| (e.steps, e.program));
+            let mut full: Vec<&Entry> = fm.entries.iter().filter(|e| v.name(&e.table).is_some()).collect();
+            full.sort_by_key(|e| (e.steps, e.program)); full.extend(cheap.into_iter().take(extra)); full
+        };
+        let bfull = basis(bin, vocab_b); let ufull = basis(un, vocab_u);
+        let uelem = (0..ufull.len()).filter(|&i| vocab_u.name(&ufull[i].table).map_or(true, |n| !n.contains('('))).collect();
+        SynthBinary { bin, un, vocab_b, vocab_u, bfull, ufull, uelem }
+    }
+
+    fn post_op(&self, inner: &Table, target: &Table) -> Option<usize> {
+        let n = self.un.cfg.nin(); let mut need = vec![255u8; n];
+        for (i, &v) in inner.iter().enumerate() { let t = target[i]; let slot = &mut need[v as usize]; if *slot == 255 { *slot = t; } else if *slot != t { return None; } }
+        self.ufull.iter().position(|e| e.table.iter().enumerate().all(|(v, &sv)| need[v] == 255 || need[v] == sv))
+    }
+
+    pub fn synthesize(&self, target: &Table) -> Option<Plan> {
+        let nb = |e: &Entry| self.vocab_b.name(&e.table).cloned().unwrap_or_else(|| "unnamed".into());
+        let nu = |e: &Entry| self.vocab_u.name(&e.table).cloned().unwrap_or_else(|| "unnamed".into());
+        let n = self.bin.cfg.nin();
+        if let Some(e) = self.bin.get(target) { return Some(Plan { target: target.clone(), stages: vec![e.clone()], stage_names: vec![nb(e)], stage_binary: vec![true] }); }
+        for b in &self.bfull {
+            if let Some(u) = self.post_op(&b.table, target) {
+                return Some(Plan { target: target.clone(), stages: vec![(*b).clone(), self.ufull[u].clone()], stage_names: vec![nb(b), nu(self.ufull[u])], stage_binary: vec![true, false] });
+            }
+        }
+        let pre = |u: &Entry, b: &Entry| -> Table { (0..n).flat_map(|x| (0..n).map(move |y| (x, y))).map(|(x, y)| b.table[u.table[x] as usize * n + y]).collect() };
+        for u in &self.ufull { for b in &self.bfull {
+            if pre(u, b) == *target { return Some(Plan { target: target.clone(), stages: vec![(*u).clone(), (*b).clone()], stage_names: vec![nu(u), nb(b)], stage_binary: vec![false, true] }); }
+        } }
+        for &ui in &self.uelem { let u = self.ufull[ui]; for b in &self.bfull {
+            let inner = pre(u, b);
+            if let Some(u2) = self.post_op(&inner, target) {
+                return Some(Plan { target: target.clone(), stages: vec![u.clone(), (*b).clone(), self.ufull[u2].clone()], stage_names: vec![nu(u), nb(b), nu(self.ufull[u2])], stage_binary: vec![false, true, false] });
+            }
+        } }
+        // two binary stages: b2(b1(x,y), y) == t  <=>  b2[b1[x,y]*n + y] == t[x,y]
+        let chain2 = |b1: &Entry, b2: &Entry| -> Table { (0..n * n).map(|i| b2.table[b1.table[i] as usize * n + i % n]).collect() };
+        for b1 in &self.bfull {
+            let mut need = vec![255u8; n * n]; let mut ok = true;
+            for i in 0..n * n { let slot = &mut need[b1.table[i] as usize * n + i % n]; if *slot == 255 { *slot = target[i]; } else if *slot != target[i] { ok = false; break; } }
+            if !ok { continue; }
+            if let Some(b2) = self.bfull.iter().find(|e| e.table.iter().enumerate().all(|(v, &sv)| need[v] == 255 || need[v] == sv)) {
+                return Some(Plan { target: target.clone(), stages: vec![(*b1).clone(), (*b2).clone()], stage_names: vec![nb(b1), nb(b2)], stage_binary: vec![true, true] });
+            }
+        }
+        for b1 in &self.bfull { for b2 in &self.bfull {
+            let inner = chain2(b1, b2);
+            if let Some(u) = self.post_op(&inner, target) {
+                return Some(Plan { target: target.clone(), stages: vec![(*b1).clone(), (*b2).clone(), self.ufull[u].clone()], stage_names: vec![nb(b1), nb(b2), nu(self.ufull[u])], stage_binary: vec![true, true, false] });
+            }
+        } }
         None
     }
 }
@@ -100,7 +168,8 @@ pub fn emit_rust(cfg: &Config, plan: &Plan, fn_name: &str, target_name: &str) ->
     if bin {
         s += &format!("#[inline]\npub fn {}(x: {}, y: {}) -> {} {{ TABLE[((x as usize) & {}) * {} + ((y as usize) & {})] }}\n\n", fn_name, ty, ty, ty, n - 1, n, n - 1);
         s += "/// Runs the program on the embedded Universe-1 machine (reference semantics).\n";
-        s += &format!("pub fn {}_emulated(x: {}, y: {}) -> {} {{ machine::run(PROGRAMS[0], x as u32, Some(y as u32)) as {} }}\n\n", fn_name, ty, ty, ty, ty);
+        s += &format!("/// Which stages take y in M[1] (binary) versus only A (unary post/pre-ops).\npub const STAGE_BINARY: [bool; {}] = {:?};\n", plan.stages.len(), plan.stage_binary);
+        s += &format!("pub fn {}_emulated(x: {}, y: {}) -> {} {{\n    let mut v = x as u32;\n    for (k, &p) in PROGRAMS.iter().enumerate() {{ v = machine::run(p, v, if STAGE_BINARY[k] {{ Some(y as u32) }} else {{ None }}); }}\n    v as {}\n}}\n\n", fn_name, ty, ty, ty, ty);
     } else {
         s += &format!("#[inline]\npub fn {}(x: {}) -> {} {{ TABLE[(x as usize) & {}] }}\n\n", fn_name, ty, ty, n - 1);
         s += "/// Runs the stage programs on the embedded Universe-1 machine (reference semantics).\n";
