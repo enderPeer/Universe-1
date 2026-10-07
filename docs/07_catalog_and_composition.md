@@ -3,9 +3,9 @@
 ## 1. Catalog of every function of the champion ISA (unary)
 `u1map catalog` indexes a map: every function gets a row with structural descriptors, sorted by class,
 then name, then step cost, then program id. Output for `SWAP,ADD,NAND,SKZ`:
-`results/catalog/w4_o2_add.tsv.gz` (1,829,051 rows, 35 MB compressed) and `w4_o2_add.summary.json`.
+`results/catalog/w4_o2_add.tsv.gz` (1,829,051 rows, 55 MB compressed, deep columns included) and `w4_o2_add.summary.json`.
 
-Columns: `index, program, name, class, sort_class, image (distinct outputs), fixed_points, bijective,
+Columns (`--deep` adds `anf_degree, anf_monomials, anf_degree_per_bit, nearest_named, nearest_dist, affine_fit_errors, fit_a, fit_b`): `index, program, name, class, sort_class, image (distinct outputs), fixed_points, bijective,
 involution, idempotent, affine_a, affine_b (f = a*x+b mod 16 when set), xor_affine (linear over GF(2) plus a
 constant), monotone, depends_bits (which input bits change the output), settle_iters (iterations of f until
 the image stops shrinking), cycles (cycle type for permutations, e.g. "1^14 2^1" = one transposition),
@@ -31,6 +31,26 @@ Rebuild for any unary map: `u1map catalog --map results/maps/<m>.u1prog --out <m
 (28 s for the champion on the 4-thread, 15 GB cloud container this was first run in; the catalog in results/ was produced there, not on the cluster). The binary map (24.68 M functions) needs the same command on a
 64 GB node; descriptors for binary functions (commutative, associative, has identity, latin square,
 depends on x only / y only) are the next addition.
+
+### Deep descriptors (`--deep`): what the 1.81 M unnamed functions are
+Three exact measures were added per function: the algebraic normal form (ANF) of each output bit over
+GF(2), giving the degree and monomial count; the nearest vocabulary function by Hamming distance over the
+16 table entries; and the best affine fit a*x+b with its error count. Results for the champion:
+
+| measure | finding |
+|---|---|
+| ANF degree, all 1.83 M | degree 0: 16, 1: 3,804, 2: 61,363, 3: 391,084, 4: 1,372,784. Three quarters of all functions have full degree 4: they are not "simple" in any Boolean sense. |
+| nearest named function (unnamed only) | distance 1: 24,083; distance 2: 60,375; <= 4: 300,403 (17 %). The rest are at distance 5-12 from every one of the 12,161 vocabulary tables: genuinely new functions, not variants. |
+| best affine fit (unnamed) | only 7,533 are affine with one exception; the median unnamed function disagrees with its best affine fit on 9 of 16 inputs. |
+| common anchors of "named with exceptions" | `x`, `-(x<15)`, `-(x&1)`, `-(x!=0)`, `x%15`: identity- and predicate-like functions with a few inputs remapped. |
+| input dependence | 162,809 functions depend only on the low three bits (period-8 patterns): repeated ADD doubling discards bit 3, so many orbits are functions of x mod 8. |
+
+Reading: the unnamed majority is dominated by full-degree, non-affine, non-periodic functions that are
+far from every named one. They are the output of 256-step orbits of an 8-instruction loop, and they look
+like it: structured (1.63 M depend on all four bits, 15 k are permutations) but outside the vocabulary of
+closed-form arithmetic. Naming them further needs a different language, e.g. "value at step 256 of loop L",
+or decomposition into chains (section 2). Monomial count is not a good complexity measure here: a constant
+with one exception has all 16 monomials per bit.
 
 ## 2. "4 bytes is not much": what composition buys
 

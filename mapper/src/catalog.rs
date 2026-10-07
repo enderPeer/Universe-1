@@ -49,3 +49,33 @@ pub fn row(idx: usize, e: &Entry, d: &Desc, w: u32) -> String {
         d.xor_affine as u8, d.monotone as u8, d.depends_mask, d.nilpotent_steps, d.cycle_structure, e.steps, e.halts as u8, tbl.join(","), w = w as usize)
 }
 pub fn class_name(r: u8) -> &'static str { ["constant", "affine-mod16", "xor-affine", "named", "permutation", "near-predicate", "other"][r as usize] }
+
+/// Algebraic normal form over GF(2) of a W-bit function: per output bit, the Möbius transform of the
+/// bit's truth table. Returns (max degree over output bits, total monomial count, degree per bit).
+pub fn anf(t: &[u8], w: u32) -> (u32, u32, Vec<u32>) {
+    let n = 1usize << w; let mut maxdeg = 0; let mut total = 0; let mut degs = Vec::new();
+    for bit in 0..w {
+        let mut c: Vec<u8> = (0..n).map(|x| (t[x] >> bit) & 1).collect();
+        let mut step = 1; while step < n { for i in 0..n { if i & step != 0 { c[i] ^= c[i ^ step]; } } step <<= 1; }
+        let mut deg = 0; let mut cnt = 0;
+        for (m, &v) in c.iter().enumerate() { if v == 1 { cnt += 1; deg = deg.max(m.count_ones()); } }
+        maxdeg = maxdeg.max(deg); total += cnt; degs.push(deg);
+    }
+    (maxdeg, total, degs)
+}
+
+/// Pack a 16-entry nibble table into u64 for fast Hamming comparison.
+pub fn pack16(t: &[u8]) -> u64 { let mut v = 0u64; for (i, &x) in t.iter().enumerate() { v |= (x as u64 & 15) << (4 * i); } v }
+/// Number of differing nibbles between two packed tables.
+pub fn nibble_dist(a: u64, b: u64) -> u32 {
+    let x = a ^ b; let m = (x | (x >> 1) | (x >> 2) | (x >> 3)) & 0x1111_1111_1111_1111; m.count_ones()
+}
+/// Best affine fit a*x+b mod 2^w: minimal number of inputs where it differs from t.
+pub fn affine_fit(t: &[u8], w: u32) -> (u32, u32, u32) {
+    let n = 1usize << w; let mask = (n - 1) as u32; let mut best = (u32::MAX, 0, 0);
+    for a in 0..n as u32 { for b in 0..n as u32 {
+        let err = (0..n).filter(|&x| (a.wrapping_mul(x as u32).wrapping_add(b)) & mask != t[x] as u32).count() as u32;
+        if err < best.0 { best = (err, a, b); }
+    } }
+    best
+}

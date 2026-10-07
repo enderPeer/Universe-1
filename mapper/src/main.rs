@@ -25,7 +25,8 @@ const USAGE: &str = "u1map <command> [options]
   translate --map map.u1prog --targets file --out-dir dir [--depth d] [--extra n] [--report file.jsonl] [--unary-map u.u1prog]
            (--unary-map: for a binary map, enables unary pre/post-op composition from the same ISA's unary map)
            batch synth: each line of `file` is `name|t0,t1,...`; writes dir/<name>.rs and a JSONL report
-  catalog  --map map.u1prog --out catalog.tsv [--summary summary.json]   (unary maps)
+  catalog  --map map.u1prog --out catalog.tsv [--summary summary.json] [--deep]   (unary maps)
+           --deep adds ANF degree/monomials, nearest named function + distance, best affine fit
            index every function with structural descriptors, sorted by class, name, steps, program id
   vocab    --W w [--binary]            list the target vocabulary (names the classifier knows)
   run      --W .. --a .. --p .. --isa .. --program 0x..   disassemble and tabulate one program
@@ -186,13 +187,31 @@ fn run(args: &[String]) -> Result<(), String> {
             let t0 = std::time::Instant::now();
             let mut rows: Vec<(u8, String, usize, u64, usize, catalog::Desc)> = fm.entries.iter().enumerate().map(|(i, e)| { let d = catalog::describe_unary(&e.table, w, &vocab); (catalog::class_rank(&d), d.name.clone(), e.steps, e.program, i, d) }).collect();
             rows.sort_by(|a, b| (a.0, &a.1, a.2, a.3).cmp(&(b.0, &b.1, b.2, b.3)));
-            let out = arg(args, "--out").ok_or("--out required")?;
+            let out = arg(args, "--out").ok_or("--out required")?; let deep = flag(args, "--deep") && w == 4;
+            // deep: nearest named vocabulary table (packed) for Hamming search, computed in parallel
+            let vocab_packed: Vec<(u64, &String)> = vocab.by_table.iter().map(|(t, n)| (catalog::pack16(t), n)).collect();
+            let deep_rows: Vec<String> = if deep {
+                let entries: Vec<(usize, Vec<u8>)> = rows.iter().map(|r| (r.4, fm.entries[r.4].table.clone())).collect();
+                let nthr = threads(args).max(1); let chunks: Vec<Vec<(usize, Vec<u8>)>> = (0..nthr).map(|t| entries.iter().skip(t).step_by(nthr).cloned().collect()).collect();
+                let vp = std::sync::Arc::new(vocab_packed.iter().map(|(p, n)| (*p, (*n).clone())).collect::<Vec<(u64, String)>>());
+                let results: Vec<Vec<(usize, String)>> = std::thread::scope(|sc| {
+                    let hs: Vec<_> = chunks.iter().map(|ch| { let vp = vp.clone(); sc.spawn(move || ch.iter().map(|(i, t)| {
+                        let (deg, mono, degs) = catalog::anf(t, 4); let p = catalog::pack16(t);
+                        let mut best = (99u32, ""); for (q, n) in vp.iter() { let d = catalog::nibble_dist(p, *q); if d < best.0 { best = (d, n.as_str()); if d == 0 { break; } } }
+                        let (err, a, b) = catalog::affine_fit(t, 4);
+                        (*i, format!("{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}", deg, mono, degs.iter().map(|d| d.to_string()).collect::<Vec<_>>().join(""), best.1, best.0, err, a, b))
+                    }).collect::<Vec<_>>()) }).collect();
+                    hs.into_iter().map(|h| h.join().unwrap()).collect()
+                });
+                let mut by_entry = vec![String::new(); fm.entries.len()]; for v in results { for (i, s) in v { by_entry[i] = s; } }
+                rows.iter().map(|r| by_entry[r.4].clone()).collect()
+            } else { Vec::new() };
             let mut f = std::io::BufWriter::new(std::fs::File::create(&out).map_err(|e| e.to_string())?);
-            use std::io::Write; writeln!(f, "{}", catalog::header()).map_err(|e| e.to_string())?;
+            use std::io::Write; writeln!(f, "{}{}", catalog::header(), if deep { "\tanf_degree\tanf_monomials\tanf_degree_per_bit\tnearest_named\tnearest_dist\taffine_fit_errors\tfit_a\tfit_b" } else { "" }).map_err(|e| e.to_string())?;
             let mut counts: std::collections::BTreeMap<String, usize> = std::collections::BTreeMap::new();
             let (mut bij, mut inv, mut idem, mut xa, mut mono, mut full_dep) = (0, 0, 0, 0, 0, 0); let mut img_hist = vec![0usize; (1 << w) + 1]; let mut dep_hist = vec![0usize; 1 << w];
             for (k, (_, _, _, _, i, d)) in rows.iter().enumerate() {
-                let e = &fm.entries[*i]; writeln!(f, "{}", catalog::row(k, e, d, w)).map_err(|e| e.to_string())?;
+                let e = &fm.entries[*i]; writeln!(f, "{}{}", catalog::row(k, e, d, w), if deep { format!("\t{}", deep_rows[k]) } else { String::new() }).map_err(|e| e.to_string())?;
                 *counts.entry(catalog::class_name(catalog::class_rank(d)).to_string()).or_default() += 1;
                 bij += d.bijective as usize; inv += d.involution as usize; idem += d.idempotent as usize; xa += d.xor_affine as usize; mono += d.monotone as usize; full_dep += (d.depends_mask == (1 << w) - 1) as usize;
                 img_hist[d.image] += 1; dep_hist[d.depends_mask as usize] += 1;
