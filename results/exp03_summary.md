@@ -10,9 +10,11 @@ Wall time includes dispatch and GPU work; excludes shard download and merge.
 | 2 | exp03_w2_o1_swap | 2 | 4 | 2 | 1 | SWAP,SKNZ | unary | 2 | 2^8 | 19.14 | 224.37 | complete |
 | 4 | exp03_w4_o2_add | 2 | 3 | 4 | 2 | SWAP,ADD,NAND,SKZ | unary | 1829051 | 2^64 | 54.97 | 78.13 | complete |
 | 4 | exp03_w4_o3_swap | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | unary | 1463824 | 2^64 | 29.79 | 144.18 | complete |
+| 4 | exp03_w4_o3_core_bin | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | binary | 1020901 | 2^1024 | 397.64 | 10.8 | complete |
 | 4 | exp03_w4_o4_full | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | unary | 977928 | 2^64 | 42.99 | 99.91 | complete |
 | 4 | exp03_w4_o3_core | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | unary | 62880 | 2^64 | 27.05 | 158.79 | complete |
 | 4 | exp03_w4_o3_arith | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | unary | 24420 | 2^64 | 35.02 | 122.64 | complete |
+| 4 | exp03_w4_o3_bool_bin | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | binary | 11946 | 2^1024 | 331.58 | 12.95 | complete |
 | 4 | exp03_w4_o2_nand | 2 | 3 | 4 | 2 | LD,ST,NAND,JZ | unary | 16 | 2^64 | 41.01 | 104.72 | complete |
 | 4 | exp03_w4_o3_bool | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | unary | 16 | 2^64 | 20.95 | 205.03 | complete |
 | 8 | exp03_w8_o4 | 4 | 2 | 8 | 4 | LD,ST,LDI,NOT,AND,OR,XOR,ADD,SUB,SHL,SHR,JMP,JZ,JC,SWAP,HALT | unary | 7119 | 2^2048 | 677.31 | 6.34 | complete |
@@ -21,6 +23,7 @@ Wall time includes dispatch and GPU work; excludes shard download and merge.
 
 - W=1, unary: exp03_w1_nand_jz, exp03_w1_nand_skz (4 operators).
 - W=2, unary: exp03_w2_o1 (12 operators).
+- W=4, binary: exp03_w4_o3_core_bin (1020901 operators).
 - W=4, unary: exp03_w4_o2_add (1829051 operators).
 - W=8, unary: exp03_w8_o4 (7119 operators).
 

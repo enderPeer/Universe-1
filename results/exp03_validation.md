@@ -68,6 +68,8 @@ continues using its surviving NVIDIA workers.
 - Collected shards and per-chunk logs:
   `C:\Users\end\Desktop\u1\results\shards\`.
 - Merged results: `C:\Users\end\Desktop\u1\results\exp03_<ISA>.json`.
+- Published result/report copies on the head node:
+  `/home/ender/universe-1/results/` on `adler40`.
 - Human-readable report: `results/exp03_summary.md`.
 - Dispatch log: `results/exp03_run.log`.
 - Engine validation logs: `results/validation/` (Adler logs are at its root).
