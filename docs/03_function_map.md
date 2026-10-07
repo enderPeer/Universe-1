@@ -37,7 +37,8 @@ any of them.
 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | unary / binary | 62,880 / 1,020,901 | 1,329 / 917 | `x+y` in 2 steps, `x-y` in 4 |
 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | unary / binary | 24,420 / 339,877 | 707 / 367 | `x*3` in 4 steps |
 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | unary / binary | 16 / 11,946 | 11 / 46 | `x^y` in 2 steps |
-| 16-opcode zero-address ISA (a=1) | unary | 302,301 | 3,290 | partial: 19 of 64 shards published |
+| 16-opcode zero-address ISA (a=1) | unary | 977,928 | 4,287 | most named ops of any ISA; 55,938 halting witnesses |
+| W=8 LD,ST,LDI,NOT,AND,OR,XOR,ADD,SUB,SHL,SHR,JMP,JZ,JC,SWAP,HALT | unary | 7,119 | 1,242 | 4 instructions only; vocabulary 3.9 M names |
 | LD,ST,NAND,JZ (o=2) | unary | 16 | 11 | operand bits spent, opcode too weak |
 | W=2 NAND,JZ | unary | 12 of 256 | 11 | |
 | W=1 NAND,JZ / NAND,SKZ | unary | 4 of 4 | 4 | complete |
@@ -76,9 +77,8 @@ lookup), `fn <name>_emulated(x)` (runs the stages on the embedded machine), and 
 - `steps` for non-halting programs is 256; the value at step 256 is still exact.
 
 ## For Codex
-1. Publish the remaining shards: `w4_o4_full` parts (45 of 64 missing) and `w8_o4`.
-2. Rebuild maps on the head node after each new archive (`u1map build ...`) and commit
-   `results/maps/`; rerun `mapper/usability.py`.
-3. Next sweep candidates suggested by the matrix: an ISA with HALT *and* SWAP/ADD/NAND
+1. All 15 published sweeps are mapped. After any new sweep: extract its archive, `u1map build ...`,
+   commit `results/maps/`, rerun `mapper/usability.py`.
+2. Next sweep candidates suggested by the matrix: an ISA with HALT *and* SWAP/ADD/NAND
    (the two best unary ISAs lack either HALT or memory ops), and binary mode for
    `SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT`.
