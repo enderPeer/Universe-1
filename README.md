@@ -17,3 +17,8 @@ reaches all 4 unary 1-bit operators. W=2 with 4 opcodes in a 2-bit
 instruction leaves 0 operand bits, so LD/ST can only address A and only
 4/256 unary operators are reachable: the operand field is the bottleneck,
 not the opcode count.
+
+## Compute resources for Fable
+
+See [the verified SSH cluster inventory](docs/cluster-inventory.md) for all
+GPUs, CPUs, RAM, access details, and a live availability snapshot.
