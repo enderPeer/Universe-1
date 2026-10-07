@@ -1,0 +1,153 @@
+mod classify;
+mod machine;
+mod map;
+mod shard;
+mod synth;
+
+use classify::Vocab;
+use machine::{table_key, Config, Machine, Scratch};
+use map::FunctionMap;
+use std::collections::HashMap;
+use std::sync::{Arc, Mutex};
+
+const USAGE: &str = "u1map <command> [options]
+
+  sweep    --W w --a a --p p [--I i] --isa LD,ST,... [--binary] [--lo L --hi H] --out shard.bin [--threads t]
+           enumerate programs [lo,hi) and write a shard (same format as fast/u1)
+  build    --shards a.bin b.bin ... --out map.u1prog [--named named.jsonl] [--stats stats.json]
+           build the function map from sweep shards (recomputes and verifies every witness)
+  build    --W .. --a .. --p .. --isa .. [--lo L --hi H] --out map.u1prog [--named ..] [--stats ..]
+           build the map by sweeping directly (small spaces)
+  info     --map map.u1prog [--named named.jsonl] [--stats stats.json] [--closure depth]
+  list     --map map.u1prog [--filter substring] [--class named|permutation|predicate|constant|other] [--limit n]
+  synth    --map map.u1prog (--target NAME | --table 0,1,2,...) [--depth d] [--extra n] [--fn name] [--out file.rs]
+  vocab    --W w [--binary]            list the target vocabulary (names the classifier knows)
+  run      --W .. --a .. --p .. --isa .. --program 0x..   disassemble and tabulate one program
+";
+
+fn arg(args: &[String], k: &str) -> Option<String> { args.iter().position(|a| a == k).and_then(|i| args.get(i + 1).cloned()) }
+fn flag(args: &[String], k: &str) -> bool { args.iter().any(|a| a == k) }
+fn argn<T: std::str::FromStr>(args: &[String], k: &str, d: T) -> T { arg(args, k).and_then(|v| v.parse().ok()).unwrap_or(d) }
+fn argu64(args: &[String], k: &str) -> Option<u64> { arg(args, k).map(|v| if let Some(h) = v.strip_prefix("0x") { u64::from_str_radix(h, 16).unwrap() } else { v.parse().unwrap() }) }
+fn multi(args: &[String], k: &str) -> Vec<String> {
+    let mut out = Vec::new();
+    if let Some(i) = args.iter().position(|a| a == k) { for a in &args[i + 1..] { if a.starts_with("--") { break; } out.push(a.clone()); } }
+    out
+}
+fn threads(args: &[String]) -> usize { argn(args, "--threads", std::thread::available_parallelism().map(|n| n.get()).unwrap_or(4)) }
+
+fn cfg_from_args(args: &[String]) -> Result<Config, String> {
+    let isa = Config::parse_isa(&arg(args, "--isa").ok_or("--isa required")?)?;
+    Config::new(argn(args, "--W", 4), argn(args, "--a", 2), argn(args, "--p", 3), arg(args, "--I").map(|v| v.parse().unwrap()), isa, flag(args, "--binary"))
+}
+
+fn sweep(cfg: &Config, lo: u64, hi: u64, nthreads: usize) -> HashMap<(u64, u64), u32> {
+    let cfg = Arc::new(cfg.clone()); let next = Arc::new(Mutex::new(lo)); let chunk = 1u64 << 14;
+    let th: Vec<_> = (0..nthreads).map(|_| { let (cfg, next) = (cfg.clone(), next.clone()); std::thread::spawn(move || {
+        let m = Machine::new(&cfg); let mut sc = Scratch::new(&cfg); let mut set: HashMap<(u64, u64), u32> = HashMap::new();
+        loop {
+            let start = { let mut n = next.lock().unwrap(); let s = *n; if s >= hi { break; } *n = (s + chunk).min(hi); s };
+            for pb in start..(start + chunk).min(hi) {
+                let (t, _, _) = m.table(&mut sc, pb); let k = table_key(&t, cfg.w);
+                let e = set.entry(k).or_insert(pb as u32); if (pb as u32) < *e { *e = pb as u32; }
+            }
+        }
+        set }) }).collect();
+    let mut all: HashMap<(u64, u64), u32> = HashMap::new();
+    for t in th { for (k, p) in t.join().unwrap() { let e = all.entry(k).or_insert(p); if p < *e { *e = p; } } }
+    all
+}
+
+fn range(args: &[String], cfg: &Config) -> (u64, u64) {
+    let total = if cfg.program_bits() >= 64 { u64::MAX } else { 1u64 << cfg.program_bits() };
+    (argu64(args, "--lo").unwrap_or(0), argu64(args, "--hi").unwrap_or(total))
+}
+
+fn finish_map(args: &[String], fm: &FunctionMap) -> Result<(), String> {
+    let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary);
+    if let Some(o) = arg(args, "--out") { fm.save_programs(&o)?; eprintln!("wrote {} ({} operators)", o, fm.entries.len()); }
+    if let Some(n) = arg(args, "--named") { let c = fm.write_named_jsonl(&vocab, &n)?; eprintln!("wrote {} ({} named operators)", n, c); }
+    let stats = fm.stats(&vocab);
+    if let Some(s) = arg(args, "--stats") { std::fs::write(&s, format!("{}\n", stats)).map_err(|e| e.to_string())?; }
+    println!("{}", stats);
+    Ok(())
+}
+
+fn main() {
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    if let Err(e) = run(&args) { eprintln!("error: {}", e); std::process::exit(1); }
+}
+
+fn run(args: &[String]) -> Result<(), String> {
+    let cmd = args.first().cloned().unwrap_or_default();
+    match cmd.as_str() {
+        "sweep" => {
+            let cfg = cfg_from_args(args)?; let (lo, hi) = range(args, &cfg); let t0 = std::time::Instant::now();
+            let set = sweep(&cfg, lo, hi, threads(args));
+            let out = arg(args, "--out").ok_or("--out required")?; shard::write(&out, &cfg, lo, hi, &set)?;
+            let secs = t0.elapsed().as_secs_f64();
+            eprintln!("W={} a={} p={} I={} o={} isa={} {} programs=[{},{}) distinct={} {:.1}s ({:.2} Mprog/s)", cfg.w, cfg.a, cfg.p, cfg.i, cfg.o, cfg.isa_string(), if cfg.binary { "binary" } else { "unary" }, lo, hi, set.len(), secs, (hi - lo) as f64 / secs / 1e6);
+            println!("{}", set.len()); Ok(())
+        }
+        "build" => {
+            let sh = multi(args, "--shards");
+            let fm = if !sh.is_empty() {
+                let (fm, bad) = FunctionMap::from_shards(&sh, threads(args))?;
+                if bad > 0 { return Err(format!("{} witnesses did not reproduce their shard key", bad)); }
+                eprintln!("{} shards, {} witnesses verified", sh.len(), fm.entries.len()); fm
+            } else {
+                let cfg = cfg_from_args(args)?; let (lo, hi) = range(args, &cfg);
+                let set = sweep(&cfg, lo, hi, threads(args)); FunctionMap::from_programs(cfg, set.values().map(|&p| p as u64).collect(), threads(args))
+            };
+            finish_map(args, &fm)
+        }
+        "info" => {
+            let fm = FunctionMap::load_programs(&arg(args, "--map").ok_or("--map required")?, threads(args))?;
+            let a2: Vec<String> = args.iter().filter(|a| *a != "--out").cloned().collect(); finish_map(&a2, &fm)?;
+            if let Some(d) = arg(args, "--closure") {
+                let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary);
+                let c = synth::closure_count(&fm, &vocab, d.parse().unwrap(), argn(args, "--extra", 0));
+                println!("closure under composition (operators reachable with 1..{} stages): {:?}", d, c);
+            }
+            Ok(())
+        }
+        "list" => {
+            let fm = FunctionMap::load_programs(&arg(args, "--map").ok_or("--map required")?, threads(args))?;
+            let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary); let filt = arg(args, "--filter"); let cls = arg(args, "--class"); let limit: usize = argn(args, "--limit", 100);
+            let mut rows: Vec<_> = fm.entries.iter().filter(|e| { let n = vocab.name(&e.table); cls.as_deref().map_or(true, |c| vocab.class(&e.table) == c) && filt.as_deref().map_or(true, |f| n.map_or(false, |n| n.contains(f))) }).collect();
+            rows.sort_by_key(|e| (vocab.name(&e.table).is_none(), e.steps, e.program));
+            for e in rows.iter().take(limit) {
+                println!("{:<24} steps={:<3} halts={:<5} prog=0x{:x}  {}  table={:?}", vocab.name(&e.table).map(|s| s.as_str()).unwrap_or("-"), e.steps, e.halts, e.program, fm.cfg.disassemble(e.program).join(" ; "), e.table);
+            }
+            eprintln!("{} matching, {} shown", rows.len(), rows.len().min(limit)); Ok(())
+        }
+        "synth" => {
+            let fm = FunctionMap::load_programs(&arg(args, "--map").ok_or("--map required")?, threads(args))?;
+            let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary);
+            let (target, tname) = if let Some(n) = arg(args, "--target") { (vocab.table(&n).ok_or(format!("unknown target '{}' (see `u1map vocab --W {}`)", n, fm.cfg.w))?.clone(), n) }
+                else if let Some(t) = arg(args, "--table") { let tb: Vec<u8> = t.split(',').map(|v| v.trim().parse().unwrap()).collect(); if tb.len() != fm.cfg.ntab() { return Err(format!("table needs {} entries", fm.cfg.ntab())); } (tb.clone(), vocab.name(&tb).cloned().unwrap_or("custom".into())) }
+                else { return Err("--target or --table required".into()) };
+            let plan = synth::synthesize(&fm, &vocab, &target, argn(args, "--depth", 3), argn(args, "--extra", 64)).ok_or("not synthesizable from this map within the search depth")?;
+            println!("target {}: {} stage(s): {}", tname, plan.stages.len(), plan.stage_names.join(" -> "));
+            for (k, e) in plan.stages.iter().enumerate() { println!("  stage {} program 0x{:x} steps<={} halts={}", k, e.program, e.steps, e.halts); for l in fm.cfg.disassemble(e.program) { println!("      {}", l); } }
+            let fname = arg(args, "--fn").unwrap_or_else(|| sanitize(&tname));
+            let src = synth::emit_rust(&fm.cfg, &plan, &fname, &tname);
+            if let Some(o) = arg(args, "--out") { std::fs::write(&o, &src).map_err(|e| e.to_string())?; println!("wrote {}", o); } else { println!("{}", src); }
+            Ok(())
+        }
+        "vocab" => { let v = Vocab::new(argn(args, "--W", 4), flag(args, "--binary")); let mut names: Vec<_> = v.by_name.keys().collect(); names.sort(); for n in names { println!("{}", n); } eprintln!("{} names", v.by_name.len()); Ok(()) }
+        "run" => {
+            let cfg = cfg_from_args(args)?; let pb = argu64(args, "--program").ok_or("--program required")?;
+            let m = Machine::new(&cfg); let mut sc = Scratch::new(&cfg); let (t, steps, halts) = m.table(&mut sc, pb);
+            for l in cfg.disassemble(pb) { println!("{}", l); }
+            let vocab = Vocab::new(cfg.w, cfg.binary);
+            println!("table={:?} max_steps={} all_halt={} name={}", t, steps, halts, vocab.name(&t).map(|s| s.as_str()).unwrap_or("-")); Ok(())
+        }
+        _ => { eprint!("{}", USAGE); Err("unknown command".into()) }
+    }
+}
+
+fn sanitize(n: &str) -> String {
+    let s: String = n.chars().map(|c| if c.is_ascii_alphanumeric() { c } else { '_' }).collect();
+    let s = s.trim_matches('_').to_string(); if s.is_empty() || s.chars().next().unwrap().is_ascii_digit() { format!("op_{}", s) } else { s }
+}

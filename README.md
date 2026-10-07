@@ -11,6 +11,8 @@ mathematical operators on the smallest bitmap (word width 1..8 bits).
 - `fast/` — C/OpenMP brute-force core (`u1`), `crosscheck.py` vs the Python reference, `merge.py`, `compare_shards.py`.
 - `gpu/` — CUDA (`u1_cuda.cu`) and Vulkan (`u1.comp` + `u1_vk.c`) ports, same shard format.
 - `cluster/` — node/GPU/ISA configs and dispatchers for the 2^32-program sweeps (`docs/02_4byte_run.md`).
+- `mapper/` — Rust function mapper `u1map`: builds operator maps from sweep witnesses, names operators, synthesizes programs and Rust code (`docs/03_function_map.md`).
+- `results/maps/` — operator maps, named-operator listings and the cross-ISA usability matrix.
 
 ## Cluster experiment results
 

@@ -4,3 +4,4 @@ results/validation/*.bin
 gpu/u1_cuda
 gpu/u1_vk
 gpu/u1.spv
+mapper/target/

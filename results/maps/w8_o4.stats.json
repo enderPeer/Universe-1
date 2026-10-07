@@ -1,0 +1,1 @@
+{"isa":"LD,ST,LDI,NOT,AND,OR,XOR,ADD,SUB,SHL,SHR,JMP,JZ,JC,SWAP,HALT","W":8,"a":4,"p":2,"I":8,"binary":false,"operators":7119,"all_inputs_halt":0,"named_found":1242,"vocabulary_size":3930315,"classes":{"named":1242,"other":5675,"permutation":184,"predicate":18},"max_steps_histogram":{"1":0,"2-3":0,"4-7":0,"8-15":0,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":7119}}
