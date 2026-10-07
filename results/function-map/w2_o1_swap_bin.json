@@ -1,0 +1,1096 @@
+{
+ "run": "w2_o1_swap_bin",
+ "W": 2,
+ "binary": true,
+ "isa": [
+  "SWAP",
+  "SKNZ"
+ ],
+ "geometry": {
+  "a": 2,
+  "p": 4,
+  "I": 2,
+  "opcode_bits": 1
+ },
+ "source_result_sha256": "2e1db97f451434b89262380bfde3eb4eaf83b3c14b27ffa14184ff5ecde1ff0e",
+ "source_distinct_operators": 8,
+ "source_shards": 64,
+ "catalog_labels": 233,
+ "catalog_distinct_tables": 125,
+ "matched_distinct_tables": 2,
+ "matched_labels": 20,
+ "matches": [
+  {
+   "aliases": [
+    {
+     "name": "identity_of_x",
+     "expression": "x (ignore y)"
+    },
+    {
+     "name": "add_0_of_x",
+     "expression": "(x + 0) mod N (ignore y)"
+    },
+    {
+     "name": "xor_0_of_x",
+     "expression": "x XOR 0 (ignore y)"
+    },
+    {
+     "name": "or_0_of_x",
+     "expression": "x OR 0 (ignore y)"
+    },
+    {
+     "name": "multiply_1_of_x",
+     "expression": "1*x mod N (ignore y)"
+    },
+    {
+     "name": "and_3_of_x",
+     "expression": "x AND 3 (ignore y)"
+    },
+    {
+     "name": "affine_1_0_of_x",
+     "expression": "(1*x + 0) mod N (ignore y)"
+    },
+    {
+     "name": "rotate_left_2_of_x",
+     "expression": "rotate W-bit x left by 2 (ignore y)"
+    },
+    {
+     "name": "rotate_right_2_of_x",
+     "expression": "rotate W-bit x right by 2 (ignore y)"
+    },
+    {
+     "name": "bitwise_boolean_1100",
+     "expression": "per-bit Boolean table 0b1100, bit index=2*x_bit+y_bit"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3
+   ],
+   "key_low": 4289352960,
+   "key_high": 0,
+   "program_id": 0,
+   "program_hex": "0x00000000",
+   "instruction_words": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w2_o1_swap_bin_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "identity_of_y",
+     "expression": "y (ignore x)"
+    },
+    {
+     "name": "add_0_of_y",
+     "expression": "(y + 0) mod N (ignore x)"
+    },
+    {
+     "name": "xor_0_of_y",
+     "expression": "y XOR 0 (ignore x)"
+    },
+    {
+     "name": "or_0_of_y",
+     "expression": "y OR 0 (ignore x)"
+    },
+    {
+     "name": "multiply_1_of_y",
+     "expression": "1*y mod N (ignore x)"
+    },
+    {
+     "name": "and_3_of_y",
+     "expression": "y AND 3 (ignore x)"
+    },
+    {
+     "name": "affine_1_0_of_y",
+     "expression": "(1*y + 0) mod N (ignore x)"
+    },
+    {
+     "name": "rotate_left_2_of_y",
+     "expression": "rotate W-bit y left by 2 (ignore x)"
+    },
+    {
+     "name": "rotate_right_2_of_y",
+     "expression": "rotate W-bit y right by 2 (ignore x)"
+    },
+    {
+     "name": "bitwise_boolean_1010",
+     "expression": "per-bit Boolean table 0b1010, bit index=2*x_bit+y_bit"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3
+   ],
+   "key_low": 3840206052,
+   "key_high": 0,
+   "program_id": 18,
+   "program_hex": "0x00000012",
+   "instruction_words": [
+    2,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SKNZ",
+    "SWAP 0",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w2_o1_swap_bin_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  }
+ ],
+ "not_found_in_this_run": [
+  {
+   "name": "negation_of_x",
+   "expression": "-x mod N (ignore y)"
+  },
+  {
+   "name": "negation_of_y",
+   "expression": "-y mod N (ignore x)"
+  },
+  {
+   "name": "bitwise_not_of_x",
+   "expression": "~x masked to W bits (ignore y)"
+  },
+  {
+   "name": "bitwise_not_of_y",
+   "expression": "~y masked to W bits (ignore x)"
+  },
+  {
+   "name": "increment_of_x",
+   "expression": "(x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "increment_of_y",
+   "expression": "(y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "decrement_of_x",
+   "expression": "(x - 1) mod N (ignore y)"
+  },
+  {
+   "name": "decrement_of_y",
+   "expression": "(y - 1) mod N (ignore x)"
+  },
+  {
+   "name": "square_of_x",
+   "expression": "x^2 mod N (ignore y)"
+  },
+  {
+   "name": "square_of_y",
+   "expression": "y^2 mod N (ignore x)"
+  },
+  {
+   "name": "cube_of_x",
+   "expression": "x^3 mod N (ignore y)"
+  },
+  {
+   "name": "cube_of_y",
+   "expression": "y^3 mod N (ignore x)"
+  },
+  {
+   "name": "integer_sqrt_of_x",
+   "expression": "floor(sqrt(x)) (ignore y)"
+  },
+  {
+   "name": "integer_sqrt_of_y",
+   "expression": "floor(sqrt(y)) (ignore x)"
+  },
+  {
+   "name": "popcount_of_x",
+   "expression": "number of set bits in x, reduced mod N (ignore y)"
+  },
+  {
+   "name": "popcount_of_y",
+   "expression": "number of set bits in y, reduced mod N (ignore x)"
+  },
+  {
+   "name": "parity_of_x",
+   "expression": "popcount(x) mod 2 (ignore y)"
+  },
+  {
+   "name": "parity_of_y",
+   "expression": "popcount(y) mod 2 (ignore x)"
+  },
+  {
+   "name": "bit_reverse_of_x",
+   "expression": "reverse the W bits of x (ignore y)"
+  },
+  {
+   "name": "bit_reverse_of_y",
+   "expression": "reverse the W bits of y (ignore x)"
+  },
+  {
+   "name": "gray_encode_of_x",
+   "expression": "x XOR (x >> 1) (ignore y)"
+  },
+  {
+   "name": "gray_encode_of_y",
+   "expression": "y XOR (y >> 1) (ignore x)"
+  },
+  {
+   "name": "gray_decode_of_x",
+   "expression": "inverse reflected Gray-code transform (ignore y)"
+  },
+  {
+   "name": "gray_decode_of_y",
+   "expression": "inverse reflected Gray-code transform (ignore x)"
+  },
+  {
+   "name": "signed_abs_of_x",
+   "expression": "abs(signed_W(x)) mod N (ignore y)"
+  },
+  {
+   "name": "signed_abs_of_y",
+   "expression": "abs(signed_W(y)) mod N (ignore x)"
+  },
+  {
+   "name": "signed_signum_of_x",
+   "expression": "sign(signed_W(x)) encoded mod N (ignore y)"
+  },
+  {
+   "name": "signed_signum_of_y",
+   "expression": "sign(signed_W(y)) encoded mod N (ignore x)"
+  },
+  {
+   "name": "is_zero_of_x",
+   "expression": "1 if x = 0 else 0 (ignore y)"
+  },
+  {
+   "name": "is_zero_of_y",
+   "expression": "1 if y = 0 else 0 (ignore x)"
+  },
+  {
+   "name": "is_nonzero_of_x",
+   "expression": "1 if x != 0 else 0 (ignore y)"
+  },
+  {
+   "name": "is_nonzero_of_y",
+   "expression": "1 if y != 0 else 0 (ignore x)"
+  },
+  {
+   "name": "is_power_of_two_of_x",
+   "expression": "1 if x is a positive power of two else 0 (ignore y)"
+  },
+  {
+   "name": "is_power_of_two_of_y",
+   "expression": "1 if y is a positive power of two else 0 (ignore x)"
+  },
+  {
+   "name": "lowest_set_bit_of_x",
+   "expression": "x AND (-x), masked to W bits (ignore y)"
+  },
+  {
+   "name": "lowest_set_bit_of_y",
+   "expression": "y AND (-y), masked to W bits (ignore x)"
+  },
+  {
+   "name": "clear_lowest_set_bit_of_x",
+   "expression": "x AND (x-1) (ignore y)"
+  },
+  {
+   "name": "clear_lowest_set_bit_of_y",
+   "expression": "y AND (y-1) (ignore x)"
+  },
+  {
+   "name": "floor_log2_zero_is_zero_of_x",
+   "expression": "floor(log2(x)); define output 0 at x=0 (ignore y)"
+  },
+  {
+   "name": "floor_log2_zero_is_zero_of_y",
+   "expression": "floor(log2(y)); define output 0 at y=0 (ignore x)"
+  },
+  {
+   "name": "leading_zeros_mod_N_of_x",
+   "expression": "W - bit_length(x), reduced mod N (ignore y)"
+  },
+  {
+   "name": "leading_zeros_mod_N_of_y",
+   "expression": "W - bit_length(y), reduced mod N (ignore x)"
+  },
+  {
+   "name": "trailing_zeros_mod_N_of_x",
+   "expression": "trailing-zero count; x=0 maps to W mod N (ignore y)"
+  },
+  {
+   "name": "trailing_zeros_mod_N_of_y",
+   "expression": "trailing-zero count; y=0 maps to W mod N (ignore x)"
+  },
+  {
+   "name": "constant_0_of_x",
+   "expression": "0 (ignore y)"
+  },
+  {
+   "name": "constant_0_of_y",
+   "expression": "0 (ignore x)"
+  },
+  {
+   "name": "multiply_0_of_x",
+   "expression": "0*x mod N (ignore y)"
+  },
+  {
+   "name": "multiply_0_of_y",
+   "expression": "0*y mod N (ignore x)"
+  },
+  {
+   "name": "and_0_of_x",
+   "expression": "x AND 0 (ignore y)"
+  },
+  {
+   "name": "and_0_of_y",
+   "expression": "y AND 0 (ignore x)"
+  },
+  {
+   "name": "equal_0_of_x",
+   "expression": "1 if x=0 else 0 (ignore y)"
+  },
+  {
+   "name": "equal_0_of_y",
+   "expression": "1 if y=0 else 0 (ignore x)"
+  },
+  {
+   "name": "less_than_0_of_x",
+   "expression": "1 if x<0 else 0 (unsigned) (ignore y)"
+  },
+  {
+   "name": "less_than_0_of_y",
+   "expression": "1 if y<0 else 0 (unsigned) (ignore x)"
+  },
+  {
+   "name": "constant_1_of_x",
+   "expression": "1 (ignore y)"
+  },
+  {
+   "name": "constant_1_of_y",
+   "expression": "1 (ignore x)"
+  },
+  {
+   "name": "add_1_of_x",
+   "expression": "(x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "add_1_of_y",
+   "expression": "(y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "xor_1_of_x",
+   "expression": "x XOR 1 (ignore y)"
+  },
+  {
+   "name": "xor_1_of_y",
+   "expression": "y XOR 1 (ignore x)"
+  },
+  {
+   "name": "and_1_of_x",
+   "expression": "x AND 1 (ignore y)"
+  },
+  {
+   "name": "and_1_of_y",
+   "expression": "y AND 1 (ignore x)"
+  },
+  {
+   "name": "or_1_of_x",
+   "expression": "x OR 1 (ignore y)"
+  },
+  {
+   "name": "or_1_of_y",
+   "expression": "y OR 1 (ignore x)"
+  },
+  {
+   "name": "equal_1_of_x",
+   "expression": "1 if x=1 else 0 (ignore y)"
+  },
+  {
+   "name": "equal_1_of_y",
+   "expression": "1 if y=1 else 0 (ignore x)"
+  },
+  {
+   "name": "less_than_1_of_x",
+   "expression": "1 if x<1 else 0 (unsigned) (ignore y)"
+  },
+  {
+   "name": "less_than_1_of_y",
+   "expression": "1 if y<1 else 0 (unsigned) (ignore x)"
+  },
+  {
+   "name": "constant_2_of_x",
+   "expression": "2 (ignore y)"
+  },
+  {
+   "name": "constant_2_of_y",
+   "expression": "2 (ignore x)"
+  },
+  {
+   "name": "add_2_of_x",
+   "expression": "(x + 2) mod N (ignore y)"
+  },
+  {
+   "name": "add_2_of_y",
+   "expression": "(y + 2) mod N (ignore x)"
+  },
+  {
+   "name": "multiply_2_of_x",
+   "expression": "2*x mod N (ignore y)"
+  },
+  {
+   "name": "multiply_2_of_y",
+   "expression": "2*y mod N (ignore x)"
+  },
+  {
+   "name": "xor_2_of_x",
+   "expression": "x XOR 2 (ignore y)"
+  },
+  {
+   "name": "xor_2_of_y",
+   "expression": "y XOR 2 (ignore x)"
+  },
+  {
+   "name": "and_2_of_x",
+   "expression": "x AND 2 (ignore y)"
+  },
+  {
+   "name": "and_2_of_y",
+   "expression": "y AND 2 (ignore x)"
+  },
+  {
+   "name": "or_2_of_x",
+   "expression": "x OR 2 (ignore y)"
+  },
+  {
+   "name": "or_2_of_y",
+   "expression": "y OR 2 (ignore x)"
+  },
+  {
+   "name": "equal_2_of_x",
+   "expression": "1 if x=2 else 0 (ignore y)"
+  },
+  {
+   "name": "equal_2_of_y",
+   "expression": "1 if y=2 else 0 (ignore x)"
+  },
+  {
+   "name": "less_than_2_of_x",
+   "expression": "1 if x<2 else 0 (unsigned) (ignore y)"
+  },
+  {
+   "name": "less_than_2_of_y",
+   "expression": "1 if y<2 else 0 (unsigned) (ignore x)"
+  },
+  {
+   "name": "constant_3_of_x",
+   "expression": "3 (ignore y)"
+  },
+  {
+   "name": "constant_3_of_y",
+   "expression": "3 (ignore x)"
+  },
+  {
+   "name": "add_3_of_x",
+   "expression": "(x + 3) mod N (ignore y)"
+  },
+  {
+   "name": "add_3_of_y",
+   "expression": "(y + 3) mod N (ignore x)"
+  },
+  {
+   "name": "multiply_3_of_x",
+   "expression": "3*x mod N (ignore y)"
+  },
+  {
+   "name": "multiply_3_of_y",
+   "expression": "3*y mod N (ignore x)"
+  },
+  {
+   "name": "xor_3_of_x",
+   "expression": "x XOR 3 (ignore y)"
+  },
+  {
+   "name": "xor_3_of_y",
+   "expression": "y XOR 3 (ignore x)"
+  },
+  {
+   "name": "or_3_of_x",
+   "expression": "x OR 3 (ignore y)"
+  },
+  {
+   "name": "or_3_of_y",
+   "expression": "y OR 3 (ignore x)"
+  },
+  {
+   "name": "equal_3_of_x",
+   "expression": "1 if x=3 else 0 (ignore y)"
+  },
+  {
+   "name": "equal_3_of_y",
+   "expression": "1 if y=3 else 0 (ignore x)"
+  },
+  {
+   "name": "less_than_3_of_x",
+   "expression": "1 if x<3 else 0 (unsigned) (ignore y)"
+  },
+  {
+   "name": "less_than_3_of_y",
+   "expression": "1 if y<3 else 0 (unsigned) (ignore x)"
+  },
+  {
+   "name": "affine_0_0_of_x",
+   "expression": "(0*x + 0) mod N (ignore y)"
+  },
+  {
+   "name": "affine_0_0_of_y",
+   "expression": "(0*y + 0) mod N (ignore x)"
+  },
+  {
+   "name": "affine_0_1_of_x",
+   "expression": "(0*x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "affine_0_1_of_y",
+   "expression": "(0*y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "affine_0_2_of_x",
+   "expression": "(0*x + 2) mod N (ignore y)"
+  },
+  {
+   "name": "affine_0_2_of_y",
+   "expression": "(0*y + 2) mod N (ignore x)"
+  },
+  {
+   "name": "affine_0_3_of_x",
+   "expression": "(0*x + 3) mod N (ignore y)"
+  },
+  {
+   "name": "affine_0_3_of_y",
+   "expression": "(0*y + 3) mod N (ignore x)"
+  },
+  {
+   "name": "affine_1_1_of_x",
+   "expression": "(1*x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "affine_1_1_of_y",
+   "expression": "(1*y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "affine_1_2_of_x",
+   "expression": "(1*x + 2) mod N (ignore y)"
+  },
+  {
+   "name": "affine_1_2_of_y",
+   "expression": "(1*y + 2) mod N (ignore x)"
+  },
+  {
+   "name": "affine_1_3_of_x",
+   "expression": "(1*x + 3) mod N (ignore y)"
+  },
+  {
+   "name": "affine_1_3_of_y",
+   "expression": "(1*y + 3) mod N (ignore x)"
+  },
+  {
+   "name": "affine_2_0_of_x",
+   "expression": "(2*x + 0) mod N (ignore y)"
+  },
+  {
+   "name": "affine_2_0_of_y",
+   "expression": "(2*y + 0) mod N (ignore x)"
+  },
+  {
+   "name": "affine_2_1_of_x",
+   "expression": "(2*x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "affine_2_1_of_y",
+   "expression": "(2*y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "affine_2_2_of_x",
+   "expression": "(2*x + 2) mod N (ignore y)"
+  },
+  {
+   "name": "affine_2_2_of_y",
+   "expression": "(2*y + 2) mod N (ignore x)"
+  },
+  {
+   "name": "affine_2_3_of_x",
+   "expression": "(2*x + 3) mod N (ignore y)"
+  },
+  {
+   "name": "affine_2_3_of_y",
+   "expression": "(2*y + 3) mod N (ignore x)"
+  },
+  {
+   "name": "affine_3_0_of_x",
+   "expression": "(3*x + 0) mod N (ignore y)"
+  },
+  {
+   "name": "affine_3_0_of_y",
+   "expression": "(3*y + 0) mod N (ignore x)"
+  },
+  {
+   "name": "affine_3_1_of_x",
+   "expression": "(3*x + 1) mod N (ignore y)"
+  },
+  {
+   "name": "affine_3_1_of_y",
+   "expression": "(3*y + 1) mod N (ignore x)"
+  },
+  {
+   "name": "affine_3_2_of_x",
+   "expression": "(3*x + 2) mod N (ignore y)"
+  },
+  {
+   "name": "affine_3_2_of_y",
+   "expression": "(3*y + 2) mod N (ignore x)"
+  },
+  {
+   "name": "affine_3_3_of_x",
+   "expression": "(3*x + 3) mod N (ignore y)"
+  },
+  {
+   "name": "affine_3_3_of_y",
+   "expression": "(3*y + 3) mod N (ignore x)"
+  },
+  {
+   "name": "shift_left_1_of_x",
+   "expression": "(x << 1) mod N (ignore y)"
+  },
+  {
+   "name": "shift_left_1_of_y",
+   "expression": "(y << 1) mod N (ignore x)"
+  },
+  {
+   "name": "shift_right_1_of_x",
+   "expression": "x >> 1 (unsigned) (ignore y)"
+  },
+  {
+   "name": "shift_right_1_of_y",
+   "expression": "y >> 1 (unsigned) (ignore x)"
+  },
+  {
+   "name": "signed_shift_right_1_of_x",
+   "expression": "signed_W(x) >> 1, encoded mod N (ignore y)"
+  },
+  {
+   "name": "signed_shift_right_1_of_y",
+   "expression": "signed_W(y) >> 1, encoded mod N (ignore x)"
+  },
+  {
+   "name": "rotate_left_1_of_x",
+   "expression": "rotate W-bit x left by 1 (ignore y)"
+  },
+  {
+   "name": "rotate_left_1_of_y",
+   "expression": "rotate W-bit y left by 1 (ignore x)"
+  },
+  {
+   "name": "rotate_right_1_of_x",
+   "expression": "rotate W-bit x right by 1 (ignore y)"
+  },
+  {
+   "name": "rotate_right_1_of_y",
+   "expression": "rotate W-bit y right by 1 (ignore x)"
+  },
+  {
+   "name": "shift_left_2_of_x",
+   "expression": "(x << 2) mod N (ignore y)"
+  },
+  {
+   "name": "shift_left_2_of_y",
+   "expression": "(y << 2) mod N (ignore x)"
+  },
+  {
+   "name": "shift_right_2_of_x",
+   "expression": "x >> 2 (unsigned) (ignore y)"
+  },
+  {
+   "name": "shift_right_2_of_y",
+   "expression": "y >> 2 (unsigned) (ignore x)"
+  },
+  {
+   "name": "signed_shift_right_2_of_x",
+   "expression": "signed_W(x) >> 2, encoded mod N (ignore y)"
+  },
+  {
+   "name": "signed_shift_right_2_of_y",
+   "expression": "signed_W(y) >> 2, encoded mod N (ignore x)"
+  },
+  {
+   "name": "add",
+   "expression": "(x+y) mod N"
+  },
+  {
+   "name": "subtract",
+   "expression": "(x-y) mod N"
+  },
+  {
+   "name": "reverse_subtract",
+   "expression": "(y-x) mod N"
+  },
+  {
+   "name": "multiply",
+   "expression": "x*y mod N"
+  },
+  {
+   "name": "power",
+   "expression": "x^y mod N; 0^0=1"
+  },
+  {
+   "name": "unsigned_divide_zero_returns_zero",
+   "expression": "floor(x/y); output 0 if y=0"
+  },
+  {
+   "name": "unsigned_remainder_zero_returns_zero",
+   "expression": "x mod y; output 0 if y=0"
+  },
+  {
+   "name": "gcd",
+   "expression": "gcd(x,y); gcd(0,0)=0"
+  },
+  {
+   "name": "lcm_mod_N",
+   "expression": "lcm(x,y) mod N"
+  },
+  {
+   "name": "unsigned_min",
+   "expression": "min(x,y)"
+  },
+  {
+   "name": "unsigned_max",
+   "expression": "max(x,y)"
+  },
+  {
+   "name": "signed_min",
+   "expression": "min(signed_W(x),signed_W(y)) encoded mod N"
+  },
+  {
+   "name": "signed_max",
+   "expression": "max(signed_W(x),signed_W(y)) encoded mod N"
+  },
+  {
+   "name": "absolute_difference",
+   "expression": "|x-y| (unsigned inputs)"
+  },
+  {
+   "name": "saturating_add",
+   "expression": "min(x+y,N-1)"
+  },
+  {
+   "name": "saturating_subtract",
+   "expression": "max(x-y,0)"
+  },
+  {
+   "name": "and",
+   "expression": "x AND y"
+  },
+  {
+   "name": "or",
+   "expression": "x OR y"
+  },
+  {
+   "name": "xor",
+   "expression": "x XOR y"
+  },
+  {
+   "name": "nand",
+   "expression": "NOT(x AND y)"
+  },
+  {
+   "name": "nor",
+   "expression": "NOT(x OR y)"
+  },
+  {
+   "name": "xnor",
+   "expression": "NOT(x XOR y)"
+  },
+  {
+   "name": "and_not",
+   "expression": "x AND NOT y"
+  },
+  {
+   "name": "bitwise_implication",
+   "expression": "(NOT x) OR y"
+  },
+  {
+   "name": "hamming_distance",
+   "expression": "popcount(x XOR y), reduced mod N"
+  },
+  {
+   "name": "shift_left_by_y",
+   "expression": "(x << y) mod N; y>=W gives 0"
+  },
+  {
+   "name": "shift_right_by_y",
+   "expression": "x >> y (unsigned); y>=W gives 0"
+  },
+  {
+   "name": "rotate_left_by_y",
+   "expression": "rotate W-bit x left by y mod W"
+  },
+  {
+   "name": "rotate_right_by_y",
+   "expression": "rotate W-bit x right by y mod W"
+  },
+  {
+   "name": "carry",
+   "expression": "1 if x+y>=N else 0"
+  },
+  {
+   "name": "borrow",
+   "expression": "1 if x<y else 0 (unsigned)"
+  },
+  {
+   "name": "equal_unsigned_bool",
+   "expression": "equal: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "equal_unsigned_mask",
+   "expression": "equal: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "equal_signed_bool",
+   "expression": "equal: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "equal_signed_mask",
+   "expression": "equal: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "not_equal_unsigned_bool",
+   "expression": "not_equal: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "not_equal_unsigned_mask",
+   "expression": "not_equal: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "not_equal_signed_bool",
+   "expression": "not_equal: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "not_equal_signed_mask",
+   "expression": "not_equal: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "less_than_unsigned_bool",
+   "expression": "less_than: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "less_than_unsigned_mask",
+   "expression": "less_than: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "less_than_signed_bool",
+   "expression": "less_than: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "less_than_signed_mask",
+   "expression": "less_than: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "less_equal_unsigned_bool",
+   "expression": "less_equal: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "less_equal_unsigned_mask",
+   "expression": "less_equal: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "less_equal_signed_bool",
+   "expression": "less_equal: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "less_equal_signed_mask",
+   "expression": "less_equal: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "greater_than_unsigned_bool",
+   "expression": "greater_than: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "greater_than_unsigned_mask",
+   "expression": "greater_than: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "greater_than_signed_bool",
+   "expression": "greater_than: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "greater_than_signed_mask",
+   "expression": "greater_than: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "greater_equal_unsigned_bool",
+   "expression": "greater_equal: unsigned inputs, true=1, false=0"
+  },
+  {
+   "name": "greater_equal_unsigned_mask",
+   "expression": "greater_equal: unsigned inputs, true=3, false=0"
+  },
+  {
+   "name": "greater_equal_signed_bool",
+   "expression": "greater_equal: signed inputs, true=1, false=0"
+  },
+  {
+   "name": "greater_equal_signed_mask",
+   "expression": "greater_equal: signed inputs, true=3, false=0"
+  },
+  {
+   "name": "bitwise_boolean_0000",
+   "expression": "per-bit Boolean table 0b0000, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0001",
+   "expression": "per-bit Boolean table 0b0001, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0010",
+   "expression": "per-bit Boolean table 0b0010, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0011",
+   "expression": "per-bit Boolean table 0b0011, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0100",
+   "expression": "per-bit Boolean table 0b0100, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0101",
+   "expression": "per-bit Boolean table 0b0101, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0110",
+   "expression": "per-bit Boolean table 0b0110, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_0111",
+   "expression": "per-bit Boolean table 0b0111, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1000",
+   "expression": "per-bit Boolean table 0b1000, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1001",
+   "expression": "per-bit Boolean table 0b1001, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1011",
+   "expression": "per-bit Boolean table 0b1011, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1101",
+   "expression": "per-bit Boolean table 0b1101, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1110",
+   "expression": "per-bit Boolean table 0b1110, bit index=2*x_bit+y_bit"
+  },
+  {
+   "name": "bitwise_boolean_1111",
+   "expression": "per-bit Boolean table 0b1111, bit index=2*x_bit+y_bit"
+  }
+ ]
+}

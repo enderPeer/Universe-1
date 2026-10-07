@@ -1,9 +1,15 @@
 w1_nand_jz: 192 sampled witnesses agree with Python
+w1_nand_jz_bin: 192 sampled witnesses agree with Python
 w1_nand_skz: 192 sampled witnesses agree with Python
+w1_nand_skz_bin: 192 sampled witnesses agree with Python
 w2_o1: 192 sampled witnesses agree with Python
+w2_o1_bin: 192 sampled witnesses agree with Python
 w2_o1_swap: 128 sampled witnesses agree with Python
+w2_o1_swap_bin: 192 sampled witnesses agree with Python
 w4_o2_add: 192 sampled witnesses agree with Python
+w4_o2_add_bin: 192 sampled witnesses agree with Python
 w4_o2_nand: 192 sampled witnesses agree with Python
+w4_o2_nand_bin: 192 sampled witnesses agree with Python
 w4_o3_arith: 192 sampled witnesses agree with Python
 w4_o3_arith_bin: 192 sampled witnesses agree with Python
 w4_o3_bool: 192 sampled witnesses agree with Python
@@ -11,6 +17,8 @@ w4_o3_bool_bin: 192 sampled witnesses agree with Python
 w4_o3_core: 192 sampled witnesses agree with Python
 w4_o3_core_bin: 192 sampled witnesses agree with Python
 w4_o3_swap: 192 sampled witnesses agree with Python
+w4_o3_swap_bin: 192 sampled witnesses agree with Python
 w4_o4_full: 192 sampled witnesses agree with Python
+w4_o4_full_bin: 192 sampled witnesses agree with Python
 w8_o4: 192 sampled witnesses agree with Python
-TOTAL: 2816 sampled witnesses agree
+TOTAL: 4352 sampled witnesses agree

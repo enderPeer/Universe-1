@@ -13,10 +13,15 @@ Unmatched functions are unclassified by this catalog, not established as novel. 
 | Run | Mode | Discovered functions | Catalog tables | Matched tables | Matched names (aliases included) |
 |---|---|---:|---:|---:|---:|
 | [w1_nand_jz](w1_nand_jz.json) | W=1 unary | 4 | 4 | 4 | 48 |
+| [w1_nand_jz_bin](w1_nand_jz_bin.json) | W=1 binary | 4 | 16 | 4 | 67 |
 | [w1_nand_skz](w1_nand_skz.json) | W=1 unary | 4 | 4 | 4 | 48 |
+| [w1_nand_skz_bin](w1_nand_skz_bin.json) | W=1 binary | 4 | 16 | 4 | 67 |
 | [w2_o1](w2_o1.json) | W=2 unary | 12 | 39 | 3 | 19 |
+| [w2_o1_bin](w2_o1_bin.json) | W=2 binary | 2,131 | 125 | 3 | 13 |
 | [w2_o1_swap](w2_o1_swap.json) | W=2 unary | 2 | 39 | 2 | 16 |
+| [w2_o1_swap_bin](w2_o1_swap_bin.json) | W=2 binary | 8 | 125 | 2 | 20 |
 | [w4_o2_add](w4_o2_add.json) | W=4 unary | 1,829,051 | 352 | 324 | 396 |
+| [w4_o2_add_bin](w4_o2_add_bin.json) | W=4 binary | 24,684,247 | 740 | 646 | 824 |
 | [w4_o2_nand](w4_o2_nand.json) | W=4 unary | 16 | 352 | 4 | 22 |
 | [w4_o2_nand_bin](w4_o2_nand_bin.json) | W=4 binary | 17,827 | 740 | 16 | 68 |
 | [w4_o3_arith](w4_o3_arith.json) | W=4 unary | 24,420 | 352 | 49 | 84 |
@@ -28,6 +33,7 @@ Unmatched functions are unclassified by this catalog, not established as novel. 
 | [w4_o3_swap](w4_o3_swap.json) | W=4 unary | 1,463,824 | 352 | 335 | 410 |
 | [w4_o3_swap_bin](w4_o3_swap_bin.json) | W=4 binary | 7,690,892 | 740 | 638 | 820 |
 | [w4_o4_full](w4_o4_full.json) | W=4 unary | 977,928 | 352 | 206 | 273 |
+| [w4_o4_full_bin](w4_o4_full_bin.json) | W=4 binary | 977,928 | 740 | 206 | 315 |
 | [w8_o4](w8_o4.json) | W=8 unary | 7,119 | 1805 | 485 | 552 |
 
 ## Distinct recognized functions across ISAs
@@ -37,9 +43,11 @@ These counts deduplicate identical truth tables within each width and arity; ali
 | Width | Mode | Distinct recognized functions |
 |---|---|---:|
 | 1 | unary | 4 |
+| 1 | binary | 4 |
 | 2 | unary | 3 |
+| 2 | binary | 4 |
 | 4 | unary | 341 |
-| 4 | binary | 656 |
+| 4 | binary | 685 |
 | 8 | unary | 485 |
 
 ## Affine arithmetic at W=4
@@ -82,8 +90,8 @@ There are 256 distinct functions `(a*x+b) mod 16` for a,b in 0..15.
 
 | Function | Matching completed runs and verified witness IDs |
 |---|---|
-| add | w4_o3_arith_bin `0x000000e5`; w4_o3_core_bin `0x000000e9`; w4_o3_swap_bin `0x000000e7` |
-| subtract | w4_o3_arith_bin `0x000000e7`; w4_o3_core_bin `0x0000e696`; w4_o3_swap_bin `0x00001617` |
+| add | w4_o2_add_bin `0x00000162`; w4_o3_arith_bin `0x000000e5`; w4_o3_core_bin `0x000000e9`; w4_o3_swap_bin `0x000000e7` |
+| subtract | w4_o2_add_bin `0x00001415`; w4_o3_arith_bin `0x000000e7`; w4_o3_core_bin `0x0000e696`; w4_o3_swap_bin `0x00001617` |
 | multiply | Not found in the mapped completed runs |
 | unsigned_divide_zero_returns_zero | Not found in the mapped completed runs |
 | unsigned_remainder_zero_returns_zero | Not found in the mapped completed runs |
@@ -91,12 +99,12 @@ There are 256 distinct functions `(a*x+b) mod 16` for a,b in 0..15.
 | unsigned_max | Not found in the mapped completed runs |
 | gcd | Not found in the mapped completed runs |
 | lcm_mod_N | Not found in the mapped completed runs |
-| and | w4_o2_nand_bin `0x00000059`; w4_o3_bool_bin `0x00000007`; w4_o3_core_bin `0x00000037`; w4_o3_swap_bin `0x00000045` |
-| or | w4_o2_nand_bin `0x00000a96`; w4_o3_bool_bin `0x00000009`; w4_o3_swap_bin `0x000e5414` |
-| xor | w4_o2_nand_bin `0x0a978ab6`; w4_o3_bool_bin `0x000000eb` |
-| nand | w4_o2_nand_bin `0x00006a59`; w4_o3_bool_bin `0x00000e47`; w4_o3_core_bin `0x000000e7`; w4_o3_swap_bin `0x00000015` |
-| xnor | w4_o2_nand_bin `0xab978ab6`; w4_o3_bool_bin `0x00000e4b` |
-| equal_unsigned_bool | w4_o3_core_bin `0x004d3696`; w4_o3_swap_bin `0x3a121474` |
+| and | w4_o2_add_bin `0x00000089`; w4_o2_nand_bin `0x00000059`; w4_o3_bool_bin `0x00000007`; w4_o3_core_bin `0x00000037`; w4_o3_swap_bin `0x00000045` |
+| or | w4_o2_add_bin `0x00009231`; w4_o2_nand_bin `0x00000a96`; w4_o3_bool_bin `0x00000009`; w4_o3_swap_bin `0x000e5414` |
+| xor | w4_o2_add_bin `0x00002b93`; w4_o2_nand_bin `0x0a978ab6`; w4_o3_bool_bin `0x000000eb` |
+| nand | w4_o2_add_bin `0x00000019`; w4_o2_nand_bin `0x00006a59`; w4_o3_bool_bin `0x00000e47`; w4_o3_core_bin `0x000000e7`; w4_o3_swap_bin `0x00000015` |
+| xnor | w4_o2_add_bin `0x000a58a2`; w4_o2_nand_bin `0xab978ab6`; w4_o3_bool_bin `0x00000e4b` |
+| equal_unsigned_bool | w4_o2_add_bin `0x5a1c8581`; w4_o3_core_bin `0x004d3696`; w4_o3_swap_bin `0x3a121474` |
 | less_than_unsigned_bool | Not found in the mapped completed runs |
 | less_than_unsigned_mask | Not found in the mapped completed runs |
 | carry | Not found in the mapped completed runs |

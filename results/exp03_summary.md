@@ -5,16 +5,24 @@ Wall time includes dispatch and GPU work; excludes shard download and merge.
 | W | run | a | p | I | opcode bits | ISA | mode | distinct operators | universe | seconds | M programs/s | coverage |
 |---|---|---|---|---|---|---|---|---:|---|---:|---:|---|
 | 1 | exp03_w1_nand_jz | 2 | 5 | 1 | 1 | NAND,JZ | unary | 4 | 2^2 | 11.91 | 360.5 | complete |
+| 1 | exp03_w1_nand_jz_bin | 2 | 5 | 1 | 1 | NAND,JZ | binary | 4 | 2^4 | 16.89 | 254.35 | complete |
 | 1 | exp03_w1_nand_skz | 2 | 5 | 1 | 1 | NAND,SKZ | unary | 4 | 2^2 | 12.43 | 345.63 | complete |
+| 1 | exp03_w1_nand_skz_bin | 2 | 5 | 1 | 1 | NAND,SKZ | binary | 4 | 2^4 | 21.83 | 196.72 | complete |
+| 2 | exp03_w2_o1_bin | 2 | 4 | 2 | 1 | NAND,JZ | binary | 2131 | 2^32 | 42.35 | 101.41 | complete |
 | 2 | exp03_w2_o1 | 2 | 4 | 2 | 1 | NAND,JZ | unary | 12 | 2^8 | 13.42 | 320.05 | complete |
+| 2 | exp03_w2_o1_swap_bin | 2 | 4 | 2 | 1 | SWAP,SKNZ | binary | 8 | 2^32 | 48.87 | 87.89 | complete |
 | 2 | exp03_w2_o1_swap | 2 | 4 | 2 | 1 | SWAP,SKNZ | unary | 2 | 2^8 | 19.14 | 224.37 | complete |
+| 4 | exp03_w4_o2_add_bin | 2 | 3 | 4 | 2 | SWAP,ADD,NAND,SKZ | binary | 24684247 | 2^1024 | 840.87 | 5.11 | complete |
+| 4 | exp03_w4_o3_swap_bin | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | binary | 7690892 | 2^1024 | 438.23 | 9.8 | complete |
 | 4 | exp03_w4_o2_add | 2 | 3 | 4 | 2 | SWAP,ADD,NAND,SKZ | unary | 1829051 | 2^64 | 54.97 | 78.13 | complete |
 | 4 | exp03_w4_o3_swap | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | unary | 1463824 | 2^64 | 29.79 | 144.18 | complete |
 | 4 | exp03_w4_o3_core_bin | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | binary | 1020901 | 2^1024 | 397.64 | 10.8 | complete |
 | 4 | exp03_w4_o4_full | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | unary | 977928 | 2^64 | 42.99 | 99.91 | complete |
+| 4 | exp03_w4_o4_full_bin | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | binary | 977928 | 2^1024 | 649.57 | 6.61 | complete |
 | 4 | exp03_w4_o3_arith_bin | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | binary | 339877 | 2^1024 | 474.82 | 9.05 | complete |
 | 4 | exp03_w4_o3_core | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | unary | 62880 | 2^64 | 27.05 | 158.79 | complete |
 | 4 | exp03_w4_o3_arith | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | unary | 24420 | 2^64 | 35.02 | 122.64 | complete |
+| 4 | exp03_w4_o2_nand_bin | 2 | 3 | 4 | 2 | LD,ST,NAND,JZ | binary | 17827 | 2^1024 | 587.79 | 7.31 | complete |
 | 4 | exp03_w4_o3_bool_bin | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | binary | 11946 | 2^1024 | 331.58 | 12.95 | complete |
 | 4 | exp03_w4_o2_nand | 2 | 3 | 4 | 2 | LD,ST,NAND,JZ | unary | 16 | 2^64 | 41.01 | 104.72 | complete |
 | 4 | exp03_w4_o3_bool | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | unary | 16 | 2^64 | 20.95 | 205.03 | complete |
@@ -22,9 +30,11 @@ Wall time includes dispatch and GPU work; excludes shard download and merge.
 
 ## Highest counts among completed candidates
 
+- W=1, binary: exp03_w1_nand_jz_bin, exp03_w1_nand_skz_bin (4 operators).
 - W=1, unary: exp03_w1_nand_jz, exp03_w1_nand_skz (4 operators).
+- W=2, binary: exp03_w2_o1_bin (2131 operators).
 - W=2, unary: exp03_w2_o1 (12 operators).
-- W=4, binary: exp03_w4_o3_core_bin (1020901 operators).
+- W=4, binary: exp03_w4_o2_add_bin (24684247 operators).
 - W=4, unary: exp03_w4_o2_add (1829051 operators).
 - W=8, unary: exp03_w8_o4 (7119 operators).
 
