@@ -1,0 +1,2 @@
+W=4 a=2 p=3 I=4 o=3 isa=LD,ST,LDI,NAND,ADD,SHL,JZ,HALT unary programs=[0,16777216) n=16777216 distinct=2606 halt_runs=140859688/268435456 2.9s (5.71 Mprog/s, 8 thr)
+2606

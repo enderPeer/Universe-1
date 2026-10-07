@@ -1,6 +1,6 @@
 """Merge shard files from fast/u1 into one result.
 Usage: python3 fast/merge.py results/shards/exp03_W4_*.bin --out results/exp03_W4.json"""
-import argparse, json, struct, sys
+import argparse, json, math, struct, sys
 from pathlib import Path
 PNAME = ["NOP","HALT","LD","ST","LDI","CLR","SET","NOT","AND","OR","XOR","NAND","NOR","XNOR",
   "ADD","ADC","SUB","INC","DEC","NEG","SHL","SHR","ROL","ROR","RCL","MUL","SWAP",
@@ -34,7 +34,8 @@ def main():
            "isa": [PNAME[i] for i in isa], "program_bits": (1 << p) * I,
            "programs_covered": [[lo, hi] for lo, hi in covered], "gaps": gaps,
            "distinct_operators": len(merged), "operator_universe": universe,
-           "fraction": len(merged) / universe}
+           "fraction": len(merged) / universe,
+           "fraction_log10": math.log10(len(merged)) - math.log10(universe) if merged else None}
     if args.dump_tables and not binary and ntab * W <= 128:
         tabs = []
         for (klo, khi), prog in sorted(merged.items(), key=lambda kv: kv[1]):

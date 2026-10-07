@@ -12,6 +12,16 @@ mathematical operators on the smallest bitmap (word width 1..8 bits).
 - `gpu/` — CUDA (`u1_cuda.cu`) and Vulkan (`u1.comp` + `u1_vk.c`) ports, same shard format.
 - `cluster/` — node/GPU/ISA configs and dispatchers for the 2^32-program sweeps (`docs/02_4byte_run.md`).
 
+## Cluster experiment results
+
+- [Exhaustive sweep results](results/exp03_summary.md)
+- [Validation, run details, and exact data locations](results/exp03_validation.md)
+
+Raw shards are produced in `/home/ender/universe-1/results/shards/` on the
+cluster workers and collected in `results/shards/` on the coordinator.
+Merged JSON files and the summary live in `results/`; large binary shards
+are kept on disk and excluded from Git.
+
 First smoke results (this session): W=1 with ISA {NOT, JZ} or {NAND, JZ}
 reaches all 4 unary 1-bit operators. W=2 with 4 opcodes in a 2-bit
 instruction leaves 0 operand bits, so LD/ST can only address A and only

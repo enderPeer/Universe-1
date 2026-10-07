@@ -1,0 +1,22 @@
+w4_o3_core binary
+100/100 programs agree
+w4_o3_bool binary
+100/100 programs agree
+w4_o3_arith binary
+100/100 programs agree
+w4_o3_swap binary
+100/100 programs agree
+w4_o2_nand binary
+100/100 programs agree
+w4_o2_add binary
+100/100 programs agree
+w4_o4_full binary
+100/100 programs agree
+w2_o1 binary
+100/100 programs agree
+w2_o1_swap binary
+100/100 programs agree
+w1_nand_jz binary
+100/100 programs agree
+w1_nand_skz binary
+100/100 programs agree

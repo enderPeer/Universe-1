@@ -1,0 +1,4 @@
+WARNING: radv is not a conformant Vulkan implementation, testing use only.
+WARNING: radv is not a conformant Vulkan implementation, testing use only.
+W=4 a=2 p=3 I=4 o=3 isa=LD,ST,LDI,NAND,ADD,SHL,JZ,HALT unary programs=[0,16777216) distinct=2606 0.91s (18.4 Mprog/s) AMD Radeon AI PRO R9700 (RADV GFX1201)
+2606

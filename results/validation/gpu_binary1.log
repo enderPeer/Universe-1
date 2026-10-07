@@ -1,0 +1,2 @@
+W=4 a=2 p=3 I=4 o=3 isa=LD,ST,LDI,NAND,ADD,SHL,JZ,HALT binary programs=[123456789,123522325) distinct=1219 0.06s (1.0 Mprog/s) NVIDIA GeForce RTX 4080
+1219

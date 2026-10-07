@@ -1,0 +1,2 @@
+W=4 a=2 p=3 I=4 o=3 isa=LD,ST,LDI,NAND,ADD,SHL,JZ,HALT unary programs=[0,16777216) distinct=2606 1.20s (14.0 Mprog/s) NVIDIA GeForce RTX 3060
+2606

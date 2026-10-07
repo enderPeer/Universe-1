@@ -10,7 +10,8 @@
 #define CK(x) do { VkResult r_ = (x); if (r_ != VK_SUCCESS) { fprintf(stderr, "ERROR %s failed: %d\n", #x, r_); exit(1); } } while (0)
 typedef unsigned long long ull;
 typedef struct { uint32_t W, a, p, I, o, bin, nins, nM, nin, ntab, cap_log2, lo_lo, lo_hi, count; } Push;
-#define SUB (1ull << 25)
+/* Keep X workgroups below Vulkan's guaranteed limit of 65535. */
+#define SUB (1ull << 23)
 #define EMPTY 0xFFFFFFFFFFFFFFFFull
 static const char *PNAME[] = { "NOP","HALT","LD","ST","LDI","CLR","SET","NOT","AND","OR","XOR","NAND","NOR","XNOR",
   "ADD","ADC","SUB","INC","DEC","NEG","SHL","SHR","ROL","ROR","RCL","MUL","SWAP","JMP","JZ","JNZ","JC","SKZ","SKNZ",
@@ -102,13 +103,19 @@ int main(int argc, char **argv) {
   VkFenceCreateInfo fci = { VK_STRUCTURE_TYPE_FENCE_CREATE_INFO, NULL, 0 }; VkFence fence; CK(vkCreateFence(dev, &fci, NULL, &fence));
 
   double t0 = now();
-  for (ull off = lo; off < hi; off += SUB) {
-    ull n = hi - off < SUB ? hi - off : SUB;
+  /* Wide truth tables can exceed the AMD scheduler timeout in a large dispatch. */
+  const ull sub = P.ntab > 16 ? (1ull << 18) : SUB;
+  for (ull off = lo; off < hi; off += sub) {
+    ull n = hi - off < sub ? hi - off : sub;
     P.lo_lo = (uint32_t)off; P.lo_hi = (uint32_t)(off >> 32); P.count = (uint32_t)n;
     VkCommandBufferBeginInfo bi = { VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO, NULL, VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT, NULL };
     CK(vkResetCommandBuffer(cb, 0)); CK(vkBeginCommandBuffer(cb, &bi));
     vkCmdBindPipeline(cb, VK_PIPELINE_BIND_POINT_COMPUTE, pipe); vkCmdBindDescriptorSets(cb, VK_PIPELINE_BIND_POINT_COMPUTE, pl, 0, 1, &ds, 0, NULL);
     vkCmdPushConstants(cb, pl, VK_SHADER_STAGE_COMPUTE_BIT, 0, sizeof P, &P); vkCmdDispatch(cb, (uint32_t)((n + 255) / 256), 1, 1);
+    VkMemoryBarrier barrier = { VK_STRUCTURE_TYPE_MEMORY_BARRIER, NULL,
+      VK_ACCESS_SHADER_WRITE_BIT, VK_ACCESS_SHADER_READ_BIT | VK_ACCESS_SHADER_WRITE_BIT | VK_ACCESS_HOST_READ_BIT };
+    vkCmdPipelineBarrier(cb, VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT,
+      VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT | VK_PIPELINE_STAGE_HOST_BIT, 0, 1, &barrier, 0, NULL, 0, NULL);
     CK(vkEndCommandBuffer(cb));
     VkSubmitInfo si = { VK_STRUCTURE_TYPE_SUBMIT_INFO, NULL, 0, NULL, NULL, 1, &cb, 0, NULL };
     CK(vkQueueSubmit(queue, 1, &si, fence)); CK(vkWaitForFences(dev, 1, &fence, VK_TRUE, UINT64_MAX)); CK(vkResetFences(dev, 1, &fence));
