@@ -9,6 +9,9 @@
 #define __device__
 #define __constant__
 #define __forceinline__ inline
+#define __host__
+#include <algorithm>
+using std::min; using std::max;
 struct dim3 { unsigned x, y, z; };
 static dim3 blockIdx, blockDim, threadIdx;
 typedef int cudaError_t; enum { cudaSuccess = 0 }; enum cudaMemcpyKind { cudaMemcpyHostToDevice, cudaMemcpyDeviceToHost };

@@ -10,3 +10,9 @@ translate/targets/
 translate/indexed-maps/
 results/maps/w4_o2_add_bin.u1prog
 results/maps/w4_o3_swap_bin.u1prog
+life/target/
+life/u1life_cuda
+life/u1life_vk
+life/u1life.spv
+life/u1life_emu
+results/life/*/final.bin

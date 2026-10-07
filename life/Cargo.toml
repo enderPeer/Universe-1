@@ -1,0 +1,14 @@
+[package]
+name = "u1life"
+version = "0.1.0"
+edition = "2021"
+description = "Universe-1 Life: CPU reference world for the artificial-life universe on the mapped functions"
+
+[[bin]]
+name = "u1life"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

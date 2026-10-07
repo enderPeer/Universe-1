@@ -1,0 +1,95 @@
+#version 450
+// Universe-1 Life, Vulkan compute (AMD cards). Same semantics as life/u1life.cu and life/src/main.rs (docs/06_life_spec.md).
+// mode 0: init; mode 1: phase 1; mode 2: phase 2.
+#extension GL_EXT_shader_explicit_arithmetic_types_int64 : require
+layout(local_size_x = 256) in;
+layout(std430, binding = 0) buffer G  { uint genome[]; };
+layout(std430, binding = 1) buffer M  { uint meta[]; };
+layout(std430, binding = 2) buffer NG { uint ngen[]; };
+layout(std430, binding = 3) buffer NM { uint nmeta[]; };
+layout(std430, binding = 4) buffer P1 { uint p1[]; };
+layout(std430, binding = 5) buffer CNT { uint counts[]; };   // 0 births, 1 deaths
+layout(std430, binding = 6) buffer ISAB { uint isa[]; };
+layout(push_constant) uniform Push {
+  uint mode, n, W, a, p, I, o, income, trigger, repro_cost, max_energy, max_age, start_energy, thr_hi, pad0, pad1;
+  uint seed_lo, seed_hi, tick_lo, tick_hi, mu_lo, mu_hi, dr_lo, dr_hi;
+} pc;
+const uint P_NOP=0u,P_HALT=1u,P_LD=2u,P_ST=3u,P_LDI=4u,P_CLR=5u,P_SET=6u,P_NOT=7u,P_AND=8u,P_OR=9u,P_XOR=10u,
+  P_NAND=11u,P_NOR=12u,P_XNOR=13u,P_ADD=14u,P_ADC=15u,P_SUB=16u,P_INC=17u,P_DEC=18u,P_NEG=19u,P_SHL=20u,P_SHR=21u,
+  P_ROL=22u,P_ROR=23u,P_RCL=24u,P_MUL=25u,P_SWAP=26u,P_JMP=27u,P_JZ=28u,P_JNZ=29u,P_JC=30u,P_SKZ=31u,P_SKNZ=32u,
+  P_INCM=33u,P_DECM=34u,P_LDIND=35u,P_STIND=36u;
+uint64_t mix(uint64_t x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdul; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ul; x ^= x >> 33; return x; }
+uint64_t hsh(uint64_t seed, uint64_t tick, uint64_t cell, uint64_t k) { return mix(seed ^ mix(tick * 0x9E3779B97F4A7C15ul + cell) ^ (k * 0xD1B54A32D192ED03ul)); }
+uint pk(uint state, uint alive, uint age, uint energy) { return (state & 15u) | (alive << 4) | (min(age, 2047u) << 5) | (min(energy, 65535u) << 16); }
+uint alv(uint m) { return (m >> 4) & 1u; }
+const int DX[4] = int[](0, 1, 0, -1); const int DY[4] = int[](-1, 0, 1, 0);
+
+uint A, Z, Cf, PC; uint Mm[16]; uint mask, amask, pmask;
+uint rd(uint addr) { addr &= amask; return addr == 0u ? A : Mm[addr]; }
+void wr(uint addr, uint v) { addr &= amask; v &= mask; if (addr == 0u) A = v; else Mm[addr] = v; }
+void setA(uint v) { A = v & mask; Z = uint(A == 0u); }
+
+uint run(uint g, uint x, uint y, out uint steps) {
+  uint opc[8], opnd[8]; uint opmask = (1u << (pc.I - pc.o)) - 1u;
+  for (uint k = 0u; k < (1u << pc.p); k++) { uint ins = (g >> (k * pc.I)) & ((1u << pc.I) - 1u); opc[k] = isa[ins >> (pc.I - pc.o)]; opnd[k] = ins & opmask; }
+  A = x & mask; Z = uint(A == 0u); Cf = 0u; PC = 0u; for (uint i = 0u; i < (1u << pc.a); i++) Mm[i] = 0u; Mm[1] = y & mask;
+  for (uint t = 0u; t < 256u; t++) {
+    uint k = PC & pmask, op = opnd[k], v, cy; PC = (PC + 1u) & pmask; uint o = opc[k];
+    if (o == P_HALT) { steps = t + 1u; return A; }
+    else if (o == P_LD) setA(rd(op)); else if (o == P_ST) wr(op, A); else if (o == P_LDI) setA(op);
+    else if (o == P_CLR) setA(0u); else if (o == P_SET) setA(mask); else if (o == P_NOT) setA(~A);
+    else if (o == P_AND) setA(A & rd(op)); else if (o == P_OR) setA(A | rd(op)); else if (o == P_XOR) setA(A ^ rd(op));
+    else if (o == P_NAND) setA(~(A & rd(op))); else if (o == P_NOR) setA(~(A | rd(op))); else if (o == P_XNOR) setA(~(A ^ rd(op)));
+    else if (o == P_ADD) { v = A + rd(op); setA(v); Cf = uint(v > mask); }
+    else if (o == P_ADC) { v = A + rd(op) + Cf; setA(v); Cf = uint(v > mask); }
+    else if (o == P_SUB) { v = A - rd(op); cy = uint(int(v) < 0); setA(v); Cf = cy; }
+    else if (o == P_INC) { v = A + 1u; setA(v); Cf = uint(v > mask); }
+    else if (o == P_DEC) { v = A - 1u; cy = uint(int(v) < 0); setA(v); Cf = cy; }
+    else if (o == P_NEG) { cy = uint(A != 0u); setA(uint(-int(A))); Cf = cy; }
+    else if (o == P_SHL) { cy = (A >> (pc.W - 1u)) & 1u; setA(A << 1u); Cf = cy; }
+    else if (o == P_SHR) { cy = A & 1u; setA(A >> 1u); Cf = cy; }
+    else if (o == P_ROL) setA((A << 1u) | (A >> (pc.W - 1u))); else if (o == P_ROR) setA((A >> 1u) | ((A & 1u) << (pc.W - 1u)));
+    else if (o == P_RCL) { cy = (A >> (pc.W - 1u)) & 1u; setA((A << 1u) | Cf); Cf = cy; }
+    else if (o == P_MUL) setA(A * rd(op));
+    else if (o == P_SWAP) { uint tA = A, tt = rd(op); wr(op, tA); setA(tt); }
+    else if (o == P_JMP) PC = op & pmask; else if (o == P_JZ) { if (Z != 0u) PC = op & pmask; } else if (o == P_JNZ) { if (Z == 0u) PC = op & pmask; }
+    else if (o == P_JC) { if (Cf != 0u) PC = op & pmask; } else if (o == P_SKZ) { if (Z != 0u) PC = (PC + 1u) & pmask; } else if (o == P_SKNZ) { if (Z == 0u) PC = (PC + 1u) & pmask; }
+    else if (o == P_INCM) wr(op, rd(op) + 1u); else if (o == P_DECM) wr(op, rd(op) - 1u);
+    else if (o == P_LDIND) setA(rd(rd(op))); else if (o == P_STIND) wr(rd(op), A);
+  }
+  steps = 256u; return A;
+}
+
+void main() {
+  uint c = gl_GlobalInvocationID.x; uint n = pc.n; uint nn = n * n; if (c >= nn) return;
+  uint64_t seed = (uint64_t(pc.seed_hi) << 32) | uint64_t(pc.seed_lo); uint64_t tick = (uint64_t(pc.tick_hi) << 32) | uint64_t(pc.tick_lo);
+  uint64_t mu = (uint64_t(pc.mu_hi) << 32) | uint64_t(pc.mu_lo); uint64_t dr = (uint64_t(pc.dr_hi) << 32) | uint64_t(pc.dr_lo);
+  mask = (1u << pc.W) - 1u; amask = (1u << pc.a) - 1u; pmask = (1u << pc.p) - 1u;
+  if (pc.mode == 0u) {
+    if (uint(hsh(seed, 0ul, uint64_t(c), 0ul) >> 32) < pc.thr_hi) { genome[c] = uint(hsh(seed, 0ul, uint64_t(c), 1ul)); meta[c] = pk(uint(hsh(seed, 0ul, uint64_t(c), 2ul) & 15ul), 1u, 0u, pc.start_energy); }
+    else { genome[c] = 0u; meta[c] = 0u; }
+    return;
+  }
+  int d = int(tick % 4ul); int x = int(c % n), y = int(c / n); int ni = int(n);
+  if (pc.mode == 1u) {
+    uint me = meta[c]; if (alv(me) == 0u) { p1[c] = 0u; return; }
+    int nx = ((x + DX[d]) % ni + ni) % ni, ny = ((y + DY[d]) % ni + ni) % ni; uint nbm = meta[uint(ny) * n + uint(nx)];
+    uint steps; uint av = run(genome[c], me & 15u, alv(nbm) != 0u ? (nbm & 15u) : 0u, steps);
+    uint cost = (steps + 15u) / 16u; uint e = me >> 16; uint ea = min(e + pc.income, pc.max_energy); ea = ea > cost ? ea - cost : 0u;
+    p1[c] = (av & 15u) | (cost << 4) | (ea << 16); return;
+  }
+  uint parent = uint(((y - DY[d]) % ni + ni) % ni) * n + uint(((x - DX[d]) % ni + ni) % ni);
+  uint child  = uint(((y + DY[d]) % ni + ni) % ni) * n + uint(((x + DX[d]) % ni + ni) % ni);
+  #define NS(i) (p1[i] & 15u)
+  #define EA(i) (p1[i] >> 16)
+  #define QUAL(i) (alv(meta[i]) != 0u && NS(i) == pc.trigger && EA(i) >= pc.repro_cost)
+  #define COLON(ch, pa) (QUAL(pa) && !(alv(meta[ch]) != 0u && NS(ch) == pc.trigger && EA(ch) >= EA(pa)))
+  if (COLON(c, parent)) {
+    uint g = genome[parent]; for (uint k = 0u; k < 32u; k++) if (hsh(seed, tick, uint64_t(c), 16ul + uint64_t(k)) % mu == 0ul) g ^= (1u << k);
+    ngen[c] = g; nmeta[c] = pk(0u, 1u, 0u, pc.start_energy); atomicAdd(counts[0], 1u); if (alv(meta[c]) != 0u) atomicAdd(counts[1], 1u);
+  } else if (alv(meta[c]) != 0u) {
+    uint ag = ((meta[c] >> 5) & 2047u) + 1u; uint e = EA(c); if (COLON(child, c)) e -= pc.repro_cost;
+    if (e == 0u || ag > pc.max_age || hsh(seed, tick, uint64_t(c), 8ul) % dr == 0ul) { ngen[c] = 0u; nmeta[c] = 0u; atomicAdd(counts[1], 1u); }
+    else { ngen[c] = genome[c]; nmeta[c] = pk(NS(c), 1u, ag, e); }
+  } else { ngen[c] = 0u; nmeta[c] = 0u; }
+}

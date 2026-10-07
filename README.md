@@ -21,6 +21,7 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - `mapper/` — Rust function mapper `u1map`: builds operator maps from sweep witnesses, names operators, synthesizes programs and Rust code (`docs/03_function_map.md`).
 - `results/maps/` — operator maps, named-operator listings and the cross-ISA usability matrix.
 - `docs/05_alife_plan.md` — plan for an artificial-life universe on the mapped functions (grid world, tabulated genotype-to-phenotype map, self-replicator sweep).
+- `life/` — Universe-1 Life: artificial-life world on the mapped functions, CPU reference + CUDA + Vulkan engines (`docs/06_life_spec.md`); ensemble dispatcher `cluster/run_life.py`.
 - `translate/` — test-code corpus (Dimension42 TESTS + classic kernels) and the pipeline that translates it into Universe-1 programs and verified Rust (`docs/04_translate_run.md`).
 
 ## Cluster experiment results
