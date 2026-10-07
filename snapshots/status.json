@@ -1,0 +1,363 @@
+{
+  "experiment": "exp03: 32-bit program sweeps",
+  "completed_sweeps": 23,
+  "expected_supported_sweeps": 23,
+  "publication": "complete",
+  "published_source_revision": "b382e9b338b999d0370e91b24d4035f134e59846",
+  "cluster_share": "ender@192.168.178.171:/home/ender/universe-1-share",
+  "worker_data": "/home/ender/universe-1/results/shards/",
+  "coordinator_data": "C:/Users/end/Desktop/u1/results/shards/",
+  "runs": [
+    {
+      "run": "w1_nand_jz",
+      "W": 1,
+      "binary": false,
+      "isa": [
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 4,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w1_nand_jz.json"
+    },
+    {
+      "run": "w1_nand_jz_bin",
+      "W": 1,
+      "binary": true,
+      "isa": [
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 4,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w1_nand_jz_bin.json"
+    },
+    {
+      "run": "w1_nand_skz",
+      "W": 1,
+      "binary": false,
+      "isa": [
+        "NAND",
+        "SKZ"
+      ],
+      "distinct_operators": 4,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w1_nand_skz.json"
+    },
+    {
+      "run": "w1_nand_skz_bin",
+      "W": 1,
+      "binary": true,
+      "isa": [
+        "NAND",
+        "SKZ"
+      ],
+      "distinct_operators": 4,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w1_nand_skz_bin.json"
+    },
+    {
+      "run": "w2_o1",
+      "W": 2,
+      "binary": false,
+      "isa": [
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 12,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w2_o1.json"
+    },
+    {
+      "run": "w2_o1_bin",
+      "W": 2,
+      "binary": true,
+      "isa": [
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 2131,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w2_o1_bin.json"
+    },
+    {
+      "run": "w2_o1_swap",
+      "W": 2,
+      "binary": false,
+      "isa": [
+        "SWAP",
+        "SKNZ"
+      ],
+      "distinct_operators": 2,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w2_o1_swap.json"
+    },
+    {
+      "run": "w2_o1_swap_bin",
+      "W": 2,
+      "binary": true,
+      "isa": [
+        "SWAP",
+        "SKNZ"
+      ],
+      "distinct_operators": 8,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w2_o1_swap_bin.json"
+    },
+    {
+      "run": "w4_o2_add",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "SWAP",
+        "ADD",
+        "NAND",
+        "SKZ"
+      ],
+      "distinct_operators": 1829051,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o2_add.json"
+    },
+    {
+      "run": "w4_o2_add_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "SWAP",
+        "ADD",
+        "NAND",
+        "SKZ"
+      ],
+      "distinct_operators": 24684247,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o2_add_bin.json"
+    },
+    {
+      "run": "w4_o2_nand",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 16,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o2_nand.json"
+    },
+    {
+      "run": "w4_o2_nand_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "LD",
+        "ST",
+        "NAND",
+        "JZ"
+      ],
+      "distinct_operators": 17827,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o2_nand_bin.json"
+    },
+    {
+      "run": "w4_o3_arith",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "ADD",
+        "SUB",
+        "SHL",
+        "SHR",
+        "JNZ",
+        "HALT"
+      ],
+      "distinct_operators": 24420,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_arith.json"
+    },
+    {
+      "run": "w4_o3_arith_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "LD",
+        "ST",
+        "ADD",
+        "SUB",
+        "SHL",
+        "SHR",
+        "JNZ",
+        "HALT"
+      ],
+      "distinct_operators": 339877,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_arith_bin.json"
+    },
+    {
+      "run": "w4_o3_bool",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "NOT",
+        "AND",
+        "OR",
+        "XOR",
+        "SKZ",
+        "HALT"
+      ],
+      "distinct_operators": 16,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_bool.json"
+    },
+    {
+      "run": "w4_o3_bool_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "LD",
+        "ST",
+        "NOT",
+        "AND",
+        "OR",
+        "XOR",
+        "SKZ",
+        "HALT"
+      ],
+      "distinct_operators": 11946,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_bool_bin.json"
+    },
+    {
+      "run": "w4_o3_core",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "LDI",
+        "NAND",
+        "ADD",
+        "SHL",
+        "JZ",
+        "HALT"
+      ],
+      "distinct_operators": 62880,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_core.json"
+    },
+    {
+      "run": "w4_o3_core_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "LD",
+        "ST",
+        "LDI",
+        "NAND",
+        "ADD",
+        "SHL",
+        "JZ",
+        "HALT"
+      ],
+      "distinct_operators": 1020901,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_core_bin.json"
+    },
+    {
+      "run": "w4_o3_swap",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "SWAP",
+        "LDI",
+        "NAND",
+        "ADD",
+        "ROL",
+        "SKNZ",
+        "INC",
+        "HALT"
+      ],
+      "distinct_operators": 1463824,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_swap.json"
+    },
+    {
+      "run": "w4_o3_swap_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "SWAP",
+        "LDI",
+        "NAND",
+        "ADD",
+        "ROL",
+        "SKNZ",
+        "INC",
+        "HALT"
+      ],
+      "distinct_operators": 7690892,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o3_swap_bin.json"
+    },
+    {
+      "run": "w4_o4_full",
+      "W": 4,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "NOT",
+        "AND",
+        "OR",
+        "XOR",
+        "ADD",
+        "SUB",
+        "INC",
+        "DEC",
+        "SHL",
+        "SHR",
+        "ROL",
+        "SKZ",
+        "SKNZ",
+        "HALT"
+      ],
+      "distinct_operators": 977928,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o4_full.json"
+    },
+    {
+      "run": "w4_o4_full_bin",
+      "W": 4,
+      "binary": true,
+      "isa": [
+        "LD",
+        "ST",
+        "NOT",
+        "AND",
+        "OR",
+        "XOR",
+        "ADD",
+        "SUB",
+        "INC",
+        "DEC",
+        "SHL",
+        "SHR",
+        "ROL",
+        "SKZ",
+        "SKNZ",
+        "HALT"
+      ],
+      "distinct_operators": 977928,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w4_o4_full_bin.json"
+    },
+    {
+      "run": "w8_o4",
+      "W": 8,
+      "binary": false,
+      "isa": [
+        "LD",
+        "ST",
+        "LDI",
+        "NOT",
+        "AND",
+        "OR",
+        "XOR",
+        "ADD",
+        "SUB",
+        "SHL",
+        "SHR",
+        "JMP",
+        "JZ",
+        "JC",
+        "SWAP",
+        "HALT"
+      ],
+      "distinct_operators": 7119,
+      "report": "https://github.com/enderPeer/Universe-1/blob/claude/charming-rubin-pi8nzs/results/exp03_w8_o4.json"
+    }
+  ]
+}
