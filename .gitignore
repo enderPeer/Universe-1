@@ -7,3 +7,4 @@ gpu/u1.spv
 mapper/target/
 translate/out/
 translate/targets/
+translate/indexed-maps/

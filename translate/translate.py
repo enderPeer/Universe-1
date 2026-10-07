@@ -1,7 +1,7 @@
 """Translate the test corpus into Universe-1 programs with every available map, compile and
 self-test the emitted Rust, and write translate/REPORT.md.
 Usage: python3 translate/translate.py [--depth 3] [--extra 64] [--no-compile]"""
-import argparse, json, subprocess, sys
+import argparse, json, subprocess, sys, time, socket
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import corpus
@@ -20,22 +20,35 @@ for m in maps:
     kind = "binary" if stats["binary"] else "unary"; tag = m.stem; cols.append((tag, stats))
     out = ROOT / "translate/out" / tag; out.mkdir(parents=True, exist_ok=True)
     rep = ROOT / "translate/out" / f"{tag}.report.jsonl"
+    started = time.monotonic()
     cmd = [str(U), "translate", "--map", str(m), "--targets", str(tdir / f"{kind}.txt"), "--out-dir", str(out),
            "--depth", str(a.depth), "--extra", str(a.extra), "--report", str(rep)]
     umap = m.with_name(m.name.replace("_bin.u1prog", ".u1prog"))
     if kind == "binary" and umap != m and umap.exists(): cmd += ["--unary-map", str(umap)]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    if r.returncode: print(f"!! {tag}: {r.stderr.strip()[:300]}"); continue
+    (out / 'synthesis.log').write_text(r.stdout + '\n' + r.stderr)
+    if r.returncode: raise RuntimeError(f"{tag}: synthesis failed: {r.stderr[-2000:]}")
     print(f"{tag}: {r.stderr.strip().splitlines()[-1]}")
+    verified_rows = []
     for line in rep.read_text().splitlines():
         row = json.loads(line); results[(tag, row["name"])] = row
+        row.update(search_depth=a.depth, basis_extra=a.extra, node=socket.gethostname(), source_commit='96b8687')
+        verified_rows.append(row)
         if row["ok"] and not a.no_compile:
             src = ROOT / row["file"]; exe = src.with_suffix("")
             c = subprocess.run(["rustc", "--edition", "2021", "--test", "-O", "-o", str(exe), str(src)], capture_output=True, text=True)
             t = subprocess.run([str(exe)], capture_output=True, text=True) if c.returncode == 0 else None
-            row["compiled"] = c.returncode == 0; row["test_ok"] = bool(t and "test result: ok" in t.stdout)
+            row["compiled"] = c.returncode == 0; row["test_ok"] = bool(t and t.returncode == 0 and "test result: ok" in t.stdout)
+            (out / (row['name'] + '.test.log')).write_text(c.stdout+c.stderr+(t.stdout+t.stderr if t else ''))
             if exe.exists(): exe.unlink()
-            if not row["test_ok"]: print(f"!! {tag}/{row['name']}: compile/test failed\n{c.stderr[:400]}{(t.stdout if t else '')[:400]}")
+            if not row["test_ok"]:
+                rep.write_text(''.join(json.dumps(v)+'\n' for v in verified_rows))
+                raise RuntimeError(f"{tag}/{row['name']}: compile/test failed; programs={row['programs']}")
+    elapsed = time.monotonic()-started
+    for row in verified_rows:
+        row['map_wall_seconds'] = elapsed
+        if row.get('file'): row['file'] = str(Path(row['file']).relative_to(ROOT)).replace('\\','/')
+    rep.write_text(''.join(json.dumps(row)+'\n' for row in verified_rows))
 def cell(tag, name):
     r = results.get((tag, name))
     if r is None: return "-"
@@ -53,4 +66,4 @@ for kind, names in (("unary", un), ("binary", bi)):
     for n in names: out.append(f"| `{n}` | " + " | ".join(cell(t, n) for t, _ in cs) + " |")
     tot = {t: sum(1 for n in names if results.get((t, n), {}).get("ok")) for t, _ in cs}
     out.append("| **translated** | " + " | ".join(f"**{tot[t]}/{len(names)}**" for t, _ in cs) + " |"); out.append("")
-(ROOT / "translate/REPORT.md").write_text("\n".join(out) + "\n"); print("wrote translate/REPORT.md")
+(ROOT / "translate/REPORT.md").write_text("\n".join(out) + "\n", encoding='utf-8'); print("wrote translate/REPORT.md")
