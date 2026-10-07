@@ -52,6 +52,8 @@ Completed at $([DateTimeOffset]::UtcNow.ToString('u')) (UTC).
     if ($LASTEXITCODE -ne 0) { throw 'Copying final results to Adler failed.' }
 
     if ((& git branch --show-current).Trim() -ne $branch) { throw 'Branch changed; refusing to publish to an unrelated branch.' }
+    $alreadyStaged = @(& git diff --cached --name-only)
+    if ($LASTEXITCODE -ne 0 -or $alreadyStaged.Count -gt 0) { throw 'Existing staged changes detected; preserving them and stopping publication.' }
     & git add -- 'results/exp03_*.json' results/exp03_summary.md results/exp03_validation.md results/exp03_binary_run.log results/validation/witnesses.log results/exp03_completion.md
     if ($LASTEXITCODE -ne 0) { throw 'Staging results failed.' }
     & git diff --cached --check
