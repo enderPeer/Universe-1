@@ -216,6 +216,7 @@ def write_summary(out):
     reports = [json.loads(p.read_text()) for p in sorted(out.glob('*.json'))]
     lines = ['# Named mathematical functions found in Universe-1', '',
              'Exact finite-domain recognition against a bounded, explicit catalog. All matched witnesses were replayed on every input using the Python reference simulator.', '',
+             'For a broader vocabulary including composed expressions, see the [Rust mapper usability matrix](../maps/usability.md) and [mapper documentation](../../docs/03_function_map.md). The catalogs differ, so their named-function counts are not directly comparable. This report retains every matching alias and explicitly states signedness, modular arithmetic, and zero-divisor conventions.', '',
              'Arithmetic wraps modulo N=2^W unless the formula says otherwise. Signed values use two\'s complement. Comparisons explicitly distinguish 0/1 from 0/all-ones outputs.', '',
              'A match describes the accumulator at HALT or step 256; it does not imply termination. Witness IDs are minimum numeric IDs across the source shards, not shortest or fastest programs.', '',
              'Unmatched functions are unclassified by this catalog, not established as novel. A missing label means it was not found in that completed run, not that it is impossible with a different ISA, geometry, or budget.', '',

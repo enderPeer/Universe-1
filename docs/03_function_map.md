@@ -1,5 +1,11 @@
 # Function map and synthesizer (`mapper/`, Rust)
 
+See also the [independent Python-verified mathematical catalog](../results/function-map/README.md).
+It records complete truth tables, explicit arithmetic conventions, aliases, decoded
+witnesses, and per-input termination statistics for direct named-function matches.
+The Rust vocabulary below additionally includes composed expressions; its named
+counts therefore measure a different catalog.
+
 The sweeps in experiment 03 produce, per ISA, the set of distinct operators and one witness
 program each (the smallest program id realizing the operator). Codex published the raw shards
 as `results/witnesses/*.zip`. The function map turns them into something usable:
