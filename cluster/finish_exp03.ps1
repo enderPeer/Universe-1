@@ -33,6 +33,8 @@ print('All 23 supported sweeps have verified complete coverage.')
     if ($LASTEXITCODE -ne 0) { throw 'Witness validation failed.' }
     & python cluster/summarize.py
     if ($LASTEXITCODE -ne 0) { throw 'Summary generation failed.' }
+    & python -u fast/map_functions.py
+    if ($LASTEXITCODE -ne 0) { throw 'Named-function mapping or witness verification failed.' }
     & python -u cluster/package_witnesses.py
     if ($LASTEXITCODE -ne 0) { throw 'Witness archive verification failed.' }
 
@@ -52,6 +54,8 @@ Completed at $([DateTimeOffset]::UtcNow.ToString('u')) (UTC).
     $resultFiles = @(Get-ChildItem results/exp03_*.json | ForEach-Object FullName)
     & scp @resultFiles results/exp03_summary.md results/exp03_validation.md results/exp03_completion.md adler40:universe-1/results/
     if ($LASTEXITCODE -ne 0) { throw 'Copying final results to Adler failed.' }
+    & scp -r results/function-map adler40:universe-1/results/
+    if ($LASTEXITCODE -ne 0) { throw 'Copying function maps to Adler failed.' }
 
     if ((& git branch --show-current).Trim() -ne $branch) { throw 'Branch changed; refusing to publish to an unrelated branch.' }
     $alreadyStaged = @(& git diff --cached --name-only)
@@ -67,7 +71,7 @@ Completed at $([DateTimeOffset]::UtcNow.ToString('u')) (UTC).
             if ($LASTEXITCODE -ne 0) { throw 'Archive push failed; verified data remains local.' }
         } elseif ($LASTEXITCODE -ne 0) { throw 'Checking staged archive failed.' }
     }
-    & git add -- 'results/exp03_*.json' results/exp03_summary.md results/exp03_validation.md results/exp03_binary_run.log results/validation/witnesses.log results/exp03_completion.md results/witnesses
+    & git add -- 'results/exp03_*.json' results/exp03_summary.md results/exp03_validation.md results/exp03_binary_run.log results/validation/witnesses.log results/exp03_completion.md results/witnesses results/function-map
     if ($LASTEXITCODE -ne 0) { throw 'Staging results failed.' }
     & git diff --cached --check
     if ($LASTEXITCODE -ne 0) { throw 'Staged result formatting check failed.' }

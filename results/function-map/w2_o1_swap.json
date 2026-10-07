@@ -1,0 +1,464 @@
+{
+ "run": "w2_o1_swap",
+ "W": 2,
+ "binary": false,
+ "isa": [
+  "SWAP",
+  "SKNZ"
+ ],
+ "geometry": {
+  "a": 2,
+  "p": 4,
+  "I": 2,
+  "opcode_bits": 1
+ },
+ "source_result_sha256": "d543b34a8a24d9c755ee6f36f16938fdb02ef0deea92df8870aab45dc8d35c80",
+ "source_distinct_operators": 2,
+ "source_shards": 64,
+ "catalog_labels": 81,
+ "catalog_distinct_tables": 39,
+ "matched_distinct_tables": 2,
+ "matched_labels": 16,
+ "matches": [
+  {
+   "aliases": [
+    {
+     "name": "identity",
+     "expression": "x"
+    },
+    {
+     "name": "add_0",
+     "expression": "(x + 0) mod N"
+    },
+    {
+     "name": "xor_0",
+     "expression": "x XOR 0"
+    },
+    {
+     "name": "or_0",
+     "expression": "x OR 0"
+    },
+    {
+     "name": "multiply_1",
+     "expression": "1*x mod N"
+    },
+    {
+     "name": "and_3",
+     "expression": "x AND 3"
+    },
+    {
+     "name": "affine_1_0",
+     "expression": "(1*x + 0) mod N"
+    },
+    {
+     "name": "rotate_left_2",
+     "expression": "rotate W-bit x left by 2"
+    },
+    {
+     "name": "rotate_right_2",
+     "expression": "rotate W-bit x right by 2"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "key_low": 228,
+   "key_high": 0,
+   "program_id": 0,
+   "program_hex": "0x00000000",
+   "instruction_words": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w2_o1_swap_0000.bin",
+   "reference_verified_inputs": 4,
+   "termination_counts": {
+    "loop": 4
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "constant_0",
+     "expression": "0"
+    },
+    {
+     "name": "multiply_0",
+     "expression": "0*x mod N"
+    },
+    {
+     "name": "and_0",
+     "expression": "x AND 0"
+    },
+    {
+     "name": "less_than_0",
+     "expression": "1 if x<0 else 0 (unsigned)"
+    },
+    {
+     "name": "affine_0_0",
+     "expression": "(0*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_2",
+     "expression": "(x << 2) mod N"
+    },
+    {
+     "name": "shift_right_2",
+     "expression": "x >> 2 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 0,
+   "key_high": 0,
+   "program_id": 9,
+   "program_hex": "0x00000009",
+   "instruction_words": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "SKNZ",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w2_o1_swap_0000.bin",
+   "reference_verified_inputs": 4,
+   "termination_counts": {
+    "loop": 4
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  }
+ ],
+ "not_found_in_this_run": [
+  {
+   "name": "negation",
+   "expression": "-x mod N"
+  },
+  {
+   "name": "bitwise_not",
+   "expression": "~x masked to W bits"
+  },
+  {
+   "name": "increment",
+   "expression": "(x + 1) mod N"
+  },
+  {
+   "name": "decrement",
+   "expression": "(x - 1) mod N"
+  },
+  {
+   "name": "square",
+   "expression": "x^2 mod N"
+  },
+  {
+   "name": "cube",
+   "expression": "x^3 mod N"
+  },
+  {
+   "name": "integer_sqrt",
+   "expression": "floor(sqrt(x))"
+  },
+  {
+   "name": "popcount",
+   "expression": "number of set bits in x, reduced mod N"
+  },
+  {
+   "name": "parity",
+   "expression": "popcount(x) mod 2"
+  },
+  {
+   "name": "bit_reverse",
+   "expression": "reverse the W bits of x"
+  },
+  {
+   "name": "gray_encode",
+   "expression": "x XOR (x >> 1)"
+  },
+  {
+   "name": "gray_decode",
+   "expression": "inverse reflected Gray-code transform"
+  },
+  {
+   "name": "signed_abs",
+   "expression": "abs(signed_W(x)) mod N"
+  },
+  {
+   "name": "signed_signum",
+   "expression": "sign(signed_W(x)) encoded mod N"
+  },
+  {
+   "name": "is_zero",
+   "expression": "1 if x = 0 else 0"
+  },
+  {
+   "name": "is_nonzero",
+   "expression": "1 if x != 0 else 0"
+  },
+  {
+   "name": "is_power_of_two",
+   "expression": "1 if x is a positive power of two else 0"
+  },
+  {
+   "name": "lowest_set_bit",
+   "expression": "x AND (-x), masked to W bits"
+  },
+  {
+   "name": "clear_lowest_set_bit",
+   "expression": "x AND (x-1)"
+  },
+  {
+   "name": "floor_log2_zero_is_zero",
+   "expression": "floor(log2(x)); define output 0 at x=0"
+  },
+  {
+   "name": "leading_zeros_mod_N",
+   "expression": "W - bit_length(x), reduced mod N"
+  },
+  {
+   "name": "trailing_zeros_mod_N",
+   "expression": "trailing-zero count; x=0 maps to W mod N"
+  },
+  {
+   "name": "equal_0",
+   "expression": "1 if x=0 else 0"
+  },
+  {
+   "name": "constant_1",
+   "expression": "1"
+  },
+  {
+   "name": "add_1",
+   "expression": "(x + 1) mod N"
+  },
+  {
+   "name": "xor_1",
+   "expression": "x XOR 1"
+  },
+  {
+   "name": "and_1",
+   "expression": "x AND 1"
+  },
+  {
+   "name": "or_1",
+   "expression": "x OR 1"
+  },
+  {
+   "name": "equal_1",
+   "expression": "1 if x=1 else 0"
+  },
+  {
+   "name": "less_than_1",
+   "expression": "1 if x<1 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_2",
+   "expression": "2"
+  },
+  {
+   "name": "add_2",
+   "expression": "(x + 2) mod N"
+  },
+  {
+   "name": "multiply_2",
+   "expression": "2*x mod N"
+  },
+  {
+   "name": "xor_2",
+   "expression": "x XOR 2"
+  },
+  {
+   "name": "and_2",
+   "expression": "x AND 2"
+  },
+  {
+   "name": "or_2",
+   "expression": "x OR 2"
+  },
+  {
+   "name": "equal_2",
+   "expression": "1 if x=2 else 0"
+  },
+  {
+   "name": "less_than_2",
+   "expression": "1 if x<2 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_3",
+   "expression": "3"
+  },
+  {
+   "name": "add_3",
+   "expression": "(x + 3) mod N"
+  },
+  {
+   "name": "multiply_3",
+   "expression": "3*x mod N"
+  },
+  {
+   "name": "xor_3",
+   "expression": "x XOR 3"
+  },
+  {
+   "name": "or_3",
+   "expression": "x OR 3"
+  },
+  {
+   "name": "equal_3",
+   "expression": "1 if x=3 else 0"
+  },
+  {
+   "name": "less_than_3",
+   "expression": "1 if x<3 else 0 (unsigned)"
+  },
+  {
+   "name": "affine_0_1",
+   "expression": "(0*x + 1) mod N"
+  },
+  {
+   "name": "affine_0_2",
+   "expression": "(0*x + 2) mod N"
+  },
+  {
+   "name": "affine_0_3",
+   "expression": "(0*x + 3) mod N"
+  },
+  {
+   "name": "affine_1_1",
+   "expression": "(1*x + 1) mod N"
+  },
+  {
+   "name": "affine_1_2",
+   "expression": "(1*x + 2) mod N"
+  },
+  {
+   "name": "affine_1_3",
+   "expression": "(1*x + 3) mod N"
+  },
+  {
+   "name": "affine_2_0",
+   "expression": "(2*x + 0) mod N"
+  },
+  {
+   "name": "affine_2_1",
+   "expression": "(2*x + 1) mod N"
+  },
+  {
+   "name": "affine_2_2",
+   "expression": "(2*x + 2) mod N"
+  },
+  {
+   "name": "affine_2_3",
+   "expression": "(2*x + 3) mod N"
+  },
+  {
+   "name": "affine_3_0",
+   "expression": "(3*x + 0) mod N"
+  },
+  {
+   "name": "affine_3_1",
+   "expression": "(3*x + 1) mod N"
+  },
+  {
+   "name": "affine_3_2",
+   "expression": "(3*x + 2) mod N"
+  },
+  {
+   "name": "affine_3_3",
+   "expression": "(3*x + 3) mod N"
+  },
+  {
+   "name": "shift_left_1",
+   "expression": "(x << 1) mod N"
+  },
+  {
+   "name": "shift_right_1",
+   "expression": "x >> 1 (unsigned)"
+  },
+  {
+   "name": "signed_shift_right_1",
+   "expression": "signed_W(x) >> 1, encoded mod N"
+  },
+  {
+   "name": "rotate_left_1",
+   "expression": "rotate W-bit x left by 1"
+  },
+  {
+   "name": "rotate_right_1",
+   "expression": "rotate W-bit x right by 1"
+  },
+  {
+   "name": "signed_shift_right_2",
+   "expression": "signed_W(x) >> 2, encoded mod N"
+  }
+ ]
+}

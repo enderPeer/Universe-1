@@ -17,6 +17,7 @@ mathematical operators on the smallest bitmap (word width 1..8 bits).
 - [Exhaustive sweep results](results/exp03_summary.md)
 - [Validation, run details, and exact data locations](results/exp03_validation.md)
 - [Downloadable witness shards and Rust-compatible binary format](results/witnesses/README.md)
+- [Named mathematical functions with verified witness programs](results/function-map/README.md)
 
 Raw shards are produced in `/home/ender/universe-1/results/shards/` on the
 cluster workers and collected in `results/shards/` on the coordinator.

@@ -1,0 +1,565 @@
+{
+ "run": "w1_nand_jz",
+ "W": 1,
+ "binary": false,
+ "isa": [
+  "NAND",
+  "JZ"
+ ],
+ "geometry": {
+  "a": 2,
+  "p": 5,
+  "I": 1,
+  "opcode_bits": 1
+ },
+ "source_result_sha256": "0419b0e4f876adb6dfa0fd1ea0dc851858dcb7c0f5cdf2675af366baae41ab94",
+ "source_distinct_operators": 4,
+ "source_shards": 64,
+ "catalog_labels": 48,
+ "catalog_distinct_tables": 4,
+ "matched_distinct_tables": 4,
+ "matched_labels": 48,
+ "matches": [
+  {
+   "aliases": [
+    {
+     "name": "identity",
+     "expression": "x"
+    },
+    {
+     "name": "negation",
+     "expression": "-x mod N"
+    },
+    {
+     "name": "square",
+     "expression": "x^2 mod N"
+    },
+    {
+     "name": "cube",
+     "expression": "x^3 mod N"
+    },
+    {
+     "name": "integer_sqrt",
+     "expression": "floor(sqrt(x))"
+    },
+    {
+     "name": "popcount",
+     "expression": "number of set bits in x, reduced mod N"
+    },
+    {
+     "name": "parity",
+     "expression": "popcount(x) mod 2"
+    },
+    {
+     "name": "bit_reverse",
+     "expression": "reverse the W bits of x"
+    },
+    {
+     "name": "gray_encode",
+     "expression": "x XOR (x >> 1)"
+    },
+    {
+     "name": "gray_decode",
+     "expression": "inverse reflected Gray-code transform"
+    },
+    {
+     "name": "signed_abs",
+     "expression": "abs(signed_W(x)) mod N"
+    },
+    {
+     "name": "signed_signum",
+     "expression": "sign(signed_W(x)) encoded mod N"
+    },
+    {
+     "name": "is_nonzero",
+     "expression": "1 if x != 0 else 0"
+    },
+    {
+     "name": "is_power_of_two",
+     "expression": "1 if x is a positive power of two else 0"
+    },
+    {
+     "name": "lowest_set_bit",
+     "expression": "x AND (-x), masked to W bits"
+    },
+    {
+     "name": "add_0",
+     "expression": "(x + 0) mod N"
+    },
+    {
+     "name": "xor_0",
+     "expression": "x XOR 0"
+    },
+    {
+     "name": "or_0",
+     "expression": "x OR 0"
+    },
+    {
+     "name": "multiply_1",
+     "expression": "1*x mod N"
+    },
+    {
+     "name": "and_1",
+     "expression": "x AND 1"
+    },
+    {
+     "name": "equal_1",
+     "expression": "1 if x=1 else 0"
+    },
+    {
+     "name": "affine_1_0",
+     "expression": "(1*x + 0) mod N"
+    },
+    {
+     "name": "signed_shift_right_1",
+     "expression": "signed_W(x) >> 1, encoded mod N"
+    },
+    {
+     "name": "rotate_left_1",
+     "expression": "rotate W-bit x left by 1"
+    },
+    {
+     "name": "rotate_right_1",
+     "expression": "rotate W-bit x right by 1"
+    }
+   ],
+   "truth_table": [
+    0,
+    1
+   ],
+   "key_low": 2,
+   "key_high": 0,
+   "program_id": 0,
+   "program_hex": "0x00000000",
+   "instruction_words": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0"
+   ],
+   "source_shard": "w1_nand_jz_0000.bin",
+   "reference_verified_inputs": 2,
+   "termination_counts": {
+    "loop": 2
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "clear_lowest_set_bit",
+     "expression": "x AND (x-1)"
+    },
+    {
+     "name": "floor_log2_zero_is_zero",
+     "expression": "floor(log2(x)); define output 0 at x=0"
+    },
+    {
+     "name": "constant_0",
+     "expression": "0"
+    },
+    {
+     "name": "multiply_0",
+     "expression": "0*x mod N"
+    },
+    {
+     "name": "and_0",
+     "expression": "x AND 0"
+    },
+    {
+     "name": "less_than_0",
+     "expression": "1 if x<0 else 0 (unsigned)"
+    },
+    {
+     "name": "affine_0_0",
+     "expression": "(0*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_1",
+     "expression": "(x << 1) mod N"
+    },
+    {
+     "name": "shift_right_1",
+     "expression": "x >> 1 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0
+   ],
+   "key_low": 0,
+   "key_high": 0,
+   "program_id": 1,
+   "program_hex": "0x00000001",
+   "instruction_words": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "JZ 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0"
+   ],
+   "source_shard": "w1_nand_jz_0000.bin",
+   "reference_verified_inputs": 2,
+   "termination_counts": {
+    "loop": 2
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "constant_1",
+     "expression": "1"
+    },
+    {
+     "name": "or_1",
+     "expression": "x OR 1"
+    },
+    {
+     "name": "affine_0_1",
+     "expression": "(0*x + 1) mod N"
+    }
+   ],
+   "truth_table": [
+    1,
+    1
+   ],
+   "key_low": 3,
+   "key_high": 0,
+   "program_id": 2,
+   "program_hex": "0x00000002",
+   "instruction_words": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "NAND 0",
+    "JZ 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0"
+   ],
+   "source_shard": "w1_nand_jz_0000.bin",
+   "reference_verified_inputs": 2,
+   "termination_counts": {
+    "loop": 2
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "bitwise_not",
+     "expression": "~x masked to W bits"
+    },
+    {
+     "name": "increment",
+     "expression": "(x + 1) mod N"
+    },
+    {
+     "name": "decrement",
+     "expression": "(x - 1) mod N"
+    },
+    {
+     "name": "is_zero",
+     "expression": "1 if x = 0 else 0"
+    },
+    {
+     "name": "leading_zeros_mod_N",
+     "expression": "W - bit_length(x), reduced mod N"
+    },
+    {
+     "name": "trailing_zeros_mod_N",
+     "expression": "trailing-zero count; x=0 maps to W mod N"
+    },
+    {
+     "name": "equal_0",
+     "expression": "1 if x=0 else 0"
+    },
+    {
+     "name": "add_1",
+     "expression": "(x + 1) mod N"
+    },
+    {
+     "name": "xor_1",
+     "expression": "x XOR 1"
+    },
+    {
+     "name": "less_than_1",
+     "expression": "1 if x<1 else 0 (unsigned)"
+    },
+    {
+     "name": "affine_1_1",
+     "expression": "(1*x + 1) mod N"
+    }
+   ],
+   "truth_table": [
+    1,
+    0
+   ],
+   "key_low": 1,
+   "key_high": 0,
+   "program_id": 4,
+   "program_hex": "0x00000004",
+   "instruction_words": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "NAND 0",
+    "NAND 0",
+    "JZ 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0",
+    "NAND 0"
+   ],
+   "source_shard": "w1_nand_jz_0000.bin",
+   "reference_verified_inputs": 2,
+   "termination_counts": {
+    "loop": 2
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  }
+ ],
+ "not_found_in_this_run": []
+}
