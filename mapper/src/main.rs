@@ -140,6 +140,11 @@ fn run(args: &[String]) -> Result<(), String> {
         }
         "translate" => {
             let fm = FunctionMap::load_programs(&arg(args, "--map").ok_or("--map required")?, threads(args))?;
+            // Refresh names/stats from this already loaded map, avoiding a second
+            // full witness replay via a separate `info` invocation.
+            if arg(args, "--named").is_some() || arg(args, "--stats").is_some() {
+                finish_map(args, &fm)?;
+            }
             let vocab = Vocab::new(fm.cfg.w, fm.cfg.binary);
             let targets = std::fs::read_to_string(arg(args, "--targets").ok_or("--targets required")?).map_err(|e| e.to_string())?;
             let dir = arg(args, "--out-dir").ok_or("--out-dir required")?; std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;

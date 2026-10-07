@@ -58,8 +58,11 @@ def main():
             path.write_text(json.dumps(manifest,indent=2))
             command=['python3','-u','translate/translate.py','--depth',str(depth),'--extra','256',
                      '--maps',f'results/maps/{tag}.u1prog']
+            if tag.endswith('_bin'): command.append('--refresh-names')
             result=monitored(command, logs/f'{node}-{tag}-d{depth}.log')
             result['depth']=depth; attempts.append(result)
+            revision=ROOT/'cluster/source-revision.txt'
+            result['source_commit']=revision.read_text().strip() if revision.exists() else '87185a8'
             if result['exit_code']==0:
                 manifest['maps'][tag].update(status='complete',actual_depth=depth)
                 break

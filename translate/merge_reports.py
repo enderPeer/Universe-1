@@ -32,7 +32,8 @@ out = ["# Translation report: test corpus -> Universe-1 programs", "",
        "## Run settings and timings", "", "| Map | Node | Actual depth | Extra basis | Wall seconds (including tests) |", "|---|---|---:|---:|---:|"]
 for tag,_ in cols:
     r=next(v for (t,n),v in rows.items() if t==tag)
-    out.append(f"| {tag} | {r.get('node','unknown')} | {r.get('search_depth','unknown')} | {r.get('basis_extra','unknown')} | {r.get('map_wall_seconds',0):.2f} |")
+    depth='binary forms <=3' if r.get('binary_composition') else r.get('search_depth','unknown')
+    out.append(f"| {tag} | {r.get('node','unknown')} | {depth} | {r.get('basis_extra','unknown')} | {r.get('map_wall_seconds',0):.2f} |")
 out.append('')
 never = []
 for kind, names in (("unary", un), ("binary", bi)):
@@ -45,5 +46,5 @@ for kind, names in (("unary", un), ("binary", bi)):
     tot = {t: sum(1 for n in names if rows.get((t, n), {}).get("ok")) for t, _ in cs}
     out.append("| **translated** | " + " | ".join(f"**{tot[t]}/{len(names)}**" for t, _ in cs) + " |"); out.append("")
 out += ["## Not translated within this search", "", ", ".join(f"`{n}`" for n in never) or "none", "",
-        "Binary maps use direct lookup only. Unary depth and any memory fallback are listed above; the basis is named operators plus the requested cheapest unnamed entries, with the synthesizer's restricted intermediate basis."]
+        "Binary maps marked 'binary forms <=3' use the matching unary map and the composition forms introduced in 87185a8; other binary rows are direct lookup. Unary depth and any memory fallback are listed above; all searches use bounded bases. Source revision and mode are stored per row in report_merged.json."]
 (ROOT / "translate/REPORT.md").write_text("\n".join(out) + "\n", encoding='utf-8'); print(f"{len(rows)} rows, {len(never)} functions not translated within search: {never}")

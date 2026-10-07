@@ -8,6 +8,7 @@ import corpus
 ROOT = Path(__file__).resolve().parents[1]; U = ROOT / "mapper/target/release/u1map"
 ap = argparse.ArgumentParser(); ap.add_argument("--depth", type=int, default=3); ap.add_argument("--extra", type=int, default=64)
 ap.add_argument("--no-compile", action="store_true"); ap.add_argument("--maps", nargs="*")
+ap.add_argument('--refresh-names',action='store_true')
 a = ap.parse_args()
 un, bi = corpus.tables()
 tdir = ROOT / "translate/targets"; tdir.mkdir(exist_ok=True)
@@ -24,7 +25,9 @@ for m in maps:
     cmd = [str(U), "translate", "--map", str(m), "--targets", str(tdir / f"{kind}.txt"), "--out-dir", str(out),
            "--depth", str(a.depth), "--extra", str(a.extra), "--report", str(rep)]
     umap = m.with_name(m.name.replace("_bin.u1prog", ".u1prog"))
-    if kind == "binary" and umap != m and umap.exists(): cmd += ["--unary-map", str(umap)]
+    binary_composition = kind == "binary" and umap != m and umap.exists()
+    if binary_composition: cmd += ["--unary-map", str(umap)]
+    if a.refresh_names: cmd += ['--named',str(m.with_suffix('.named.jsonl')),'--stats',str(m.with_suffix('.stats.json'))]
     r = subprocess.run(cmd, capture_output=True, text=True)
     (out / 'synthesis.log').write_text(r.stdout + '\n' + r.stderr)
     if r.returncode: raise RuntimeError(f"{tag}: synthesis failed: {r.stderr[-2000:]}")
@@ -32,7 +35,11 @@ for m in maps:
     verified_rows = []
     for line in rep.read_text().splitlines():
         row = json.loads(line); results[(tag, row["name"])] = row
-        row.update(search_depth=a.depth, basis_extra=a.extra, node=socket.gethostname(), source_commit='96b8687')
+        revision = ROOT/'cluster/source-revision.txt'
+        row.update(search_depth=a.depth, basis_extra=a.extra, node=socket.gethostname(),
+                   source_commit=revision.read_text().strip() if revision.exists() else '87185a8',
+                   binary_composition=binary_composition, composition_max_stages=3 if binary_composition else a.depth,
+                   names_refreshed=a.refresh_names)
         verified_rows.append(row)
         if row["ok"] and not a.no_compile:
             src = ROOT / row["file"]; exe = src.with_suffix("")
