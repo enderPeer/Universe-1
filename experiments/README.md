@@ -27,3 +27,7 @@ halt/budget/loop, and the shortest program per discovered operator.
 2. Which memory layout (docs/00_machine_model.md §4) won per W.
 3. Where the 256-step budget binds (programs ending in "budget" not "halt").
 4. Proposed next sweep.
+
+## exp03 — exhaustive 4-byte sweep on the cluster (GPU + CPU)
+See `docs/02_4byte_run.md`. Engines: `fast/u1` (CPU), `gpu/u1_cuda` (NVIDIA), `gpu/u1_vk` (AMD).
+Dispatch: `python3 cluster/run_4byte_gpu.py` (9 GPUs) or `cluster/run_4byte.sh` (72 CPU threads).

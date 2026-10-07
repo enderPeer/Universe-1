@@ -1,0 +1,99 @@
+#version 450
+// Universe-1 GPU brute force, Vulkan compute (AMD cards). Same semantics as fast/u1.c and gpu/u1_cuda.cu.
+#extension GL_EXT_shader_explicit_arithmetic_types_int64 : require
+#extension GL_EXT_shader_atomic_int64 : require
+layout(local_size_x = 256) in;
+layout(std430, binding = 0) buffer Keys { uint64_t keys[]; };
+layout(std430, binding = 1) buffer His  { uint64_t his[]; };
+layout(std430, binding = 2) buffer Progs { uint progs[]; };
+layout(std430, binding = 3) buffer Misc { uint misc[]; };      // 0 sentinel prog, 1 sentinel seen, 2 overflow
+layout(std430, binding = 4) buffer Isa { uint isa[]; };        // one primitive id per opcode
+layout(push_constant) uniform Push { uint W, a, p, I, o, bin, nins, nM, nin, ntab, cap_log2, lo_lo, lo_hi, count; } pc;
+
+const uint P_NOP=0u,P_HALT=1u,P_LD=2u,P_ST=3u,P_LDI=4u,P_CLR=5u,P_SET=6u,P_NOT=7u,P_AND=8u,P_OR=9u,P_XOR=10u,
+  P_NAND=11u,P_NOR=12u,P_XNOR=13u,P_ADD=14u,P_ADC=15u,P_SUB=16u,P_INC=17u,P_DEC=18u,P_NEG=19u,P_SHL=20u,P_SHR=21u,
+  P_ROL=22u,P_ROR=23u,P_RCL=24u,P_MUL=25u,P_SWAP=26u,P_JMP=27u,P_JZ=28u,P_JNZ=29u,P_JC=30u,P_SKZ=31u,P_SKNZ=32u,
+  P_INCM=33u,P_DECM=34u,P_LDIND=35u,P_STIND=36u;
+const uint64_t EMPTY = 0xFFFFFFFFFFFFFFFFul;
+#define MAXM 16
+
+uint64_t mix(uint64_t x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdul; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ul; x ^= x >> 33; return x; }
+
+uint A, Z, Cf, PC, chg; uint M[MAXM]; uint mask, amask, pmask;
+uint rd(uint addr) { addr &= amask; return addr == 0u ? A : M[addr]; }
+void wr(uint addr, uint v) { addr &= amask; v &= mask; if (addr == 0u) { chg |= uint(A != v); A = v; } else { chg |= uint(M[addr] != v); M[addr] = v; } }
+void setA(uint v) { v &= mask; chg |= uint(A != v); A = v; uint z = uint(v == 0u); chg |= uint(Z != z); Z = z; }
+void setC(uint cy) { chg |= uint(Cf != cy); Cf = cy; }
+
+uint run(uint opc[256], uint opnd[256], uint initA, uint y, bool have_y) {
+  A = initA & mask; Z = uint(A == 0u); Cf = 0u; PC = 0u;
+  for (uint i = 0u; i < pc.nM; i++) M[i] = 0u;
+  if (have_y) M[1] = y;
+  for (uint t = 0u; t < 256u; t++) {
+    uint pc0 = PC, k = PC & pmask, op = opnd[k], v, cy;
+    PC = (PC + 1u) & pmask; chg = 0u;
+    uint o = opc[k];
+    if (o == P_HALT) return A;
+    else if (o == P_LD) setA(rd(op)); else if (o == P_ST) wr(op, A); else if (o == P_LDI) setA(op);
+    else if (o == P_CLR) setA(0u); else if (o == P_SET) setA(mask); else if (o == P_NOT) setA(~A);
+    else if (o == P_AND) setA(A & rd(op)); else if (o == P_OR) setA(A | rd(op)); else if (o == P_XOR) setA(A ^ rd(op));
+    else if (o == P_NAND) setA(~(A & rd(op))); else if (o == P_NOR) setA(~(A | rd(op))); else if (o == P_XNOR) setA(~(A ^ rd(op)));
+    else if (o == P_ADD) { v = A + rd(op); setA(v); setC(uint(v > mask)); }
+    else if (o == P_ADC) { v = A + rd(op) + Cf; setA(v); setC(uint(v > mask)); }
+    else if (o == P_SUB) { v = A - rd(op); cy = uint(int(v) < 0); setA(v); setC(cy); }
+    else if (o == P_INC) { v = A + 1u; setA(v); setC(uint(v > mask)); }
+    else if (o == P_DEC) { v = A - 1u; cy = uint(int(v) < 0); setA(v); setC(cy); }
+    else if (o == P_NEG) { cy = uint(A != 0u); setA(uint(-int(A))); setC(cy); }
+    else if (o == P_SHL) { cy = (A >> (pc.W - 1u)) & 1u; setA(A << 1u); setC(cy); }
+    else if (o == P_SHR) { cy = A & 1u; setA(A >> 1u); setC(cy); }
+    else if (o == P_ROL) setA((A << 1u) | (A >> (pc.W - 1u)));
+    else if (o == P_ROR) setA((A >> 1u) | ((A & 1u) << (pc.W - 1u)));
+    else if (o == P_RCL) { cy = (A >> (pc.W - 1u)) & 1u; setA((A << 1u) | Cf); setC(cy); }
+    else if (o == P_MUL) setA(A * rd(op));
+    else if (o == P_SWAP) { uint tA = A, tt = rd(op); wr(op, tA); setA(tt); }
+    else if (o == P_JMP) PC = op & pmask; else if (o == P_JZ) { if (Z != 0u) PC = op & pmask; }
+    else if (o == P_JNZ) { if (Z == 0u) PC = op & pmask; } else if (o == P_JC) { if (Cf != 0u) PC = op & pmask; }
+    else if (o == P_SKZ) { if (Z != 0u) PC = (PC + 1u) & pmask; } else if (o == P_SKNZ) { if (Z == 0u) PC = (PC + 1u) & pmask; }
+    else if (o == P_INCM) wr(op, rd(op) + 1u); else if (o == P_DECM) wr(op, rd(op) - 1u);
+    else if (o == P_LDIND) setA(rd(rd(op))); else if (o == P_STIND) wr(rd(op), A);
+    if (chg == 0u && PC == pc0) return A;
+  }
+  return A;
+}
+
+void main() {
+  uint idx = gl_GlobalInvocationID.x;
+  if (idx >= pc.count) return;
+  mask = (1u << pc.W) - 1u; amask = (1u << pc.a) - 1u; pmask = (1u << pc.p) - 1u;
+  uint64_t pb = ((uint64_t(pc.lo_hi) << 32) | uint64_t(pc.lo_lo)) + uint64_t(idx);
+  uint opc[256], opnd[256], tbl[256];
+  uint opmask = (1u << (pc.I - pc.o)) - 1u;
+  for (uint k = 0u; k < pc.nins; k++) {
+    uint ins = uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u);
+    opc[k] = isa[ins >> (pc.I - pc.o)]; opnd[k] = ins & opmask;
+  }
+  uint n = 0u;
+  if (pc.bin == 0u) { for (uint x = 0u; x < pc.nin; x++) tbl[n++] = run(opc, opnd, x, 0u, false); }
+  else { for (uint x = 0u; x < pc.nin; x++) for (uint y = 0u; y < pc.nin; y++) tbl[n++] = run(opc, opnd, x, y, true); }
+  uint64_t klo, khi;
+  if (pc.ntab * pc.W <= 128u) {
+    uint64_t l = 0ul, h = 0ul;
+    for (uint i = 0u; i < pc.ntab; i++) { uint sh = i * pc.W;
+      if (sh < 64u) { l |= uint64_t(tbl[i]) << sh; if (sh + pc.W > 64u) h |= uint64_t(tbl[i]) >> (64u - sh); }
+      else h |= uint64_t(tbl[i]) << (sh - 64u); }
+    klo = l; khi = h;
+  } else {
+    uint64_t a = 0x9E3779B97F4A7C15ul, b = 0xD1B54A32D192ED03ul;
+    for (uint i = 0u; i < pc.ntab; i++) { a = mix(a ^ uint64_t(tbl[i])); b = mix(b + uint64_t(tbl[i]) * 0x100000001b3ul); }
+    klo = a; khi = b;
+  }
+  uint prog = uint(pb);
+  if (klo == EMPTY) { atomicMin(misc[0], prog); misc[1] = 1u; return; }
+  uint64_t m = (1ul << pc.cap_log2) - 1ul, h = mix(klo ^ mix(khi)) & m;
+  for (uint probe = 0u; probe < 4096u; probe++) {
+    uint64_t old = atomicCompSwap(keys[uint(h)], EMPTY, klo);
+    if (old == EMPTY || old == klo) { if (old == EMPTY) his[uint(h)] = khi; atomicMin(progs[uint(h)], prog); return; }
+    h = (h + 1ul) & m;
+  }
+  atomicAdd(misc[2], 1u);
+}
