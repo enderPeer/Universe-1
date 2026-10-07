@@ -16,3 +16,4 @@ life/u1life_vk
 life/u1life.spv
 life/u1life_emu
 results/life/*/final.bin
+results/catalog/*.tsv
