@@ -1,0 +1,1 @@
+{"isa":"SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT","W":4,"a":2,"p":3,"I":4,"binary":false,"operators":1463824,"all_inputs_halt":10508,"named_found":4045,"vocabulary_size":12161,"classes":{"named":4045,"other":1445353,"permutation":13021,"predicate":1405},"max_steps_histogram":{"1":0,"2-3":10,"4-7":3614,"8-15":6884,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":1453316}}

@@ -1,0 +1,1 @@
+{"isa":"LD,ST,NOT,AND,OR,XOR,SKZ,HALT","W":4,"a":2,"p":3,"I":4,"binary":true,"operators":11946,"all_inputs_halt":405,"named_found":46,"vocabulary_size":14225,"classes":{"named":46,"other":11900},"max_steps_histogram":{"1":0,"2-3":9,"4-7":195,"8-15":195,"16-31":6,"32-63":0,"64-127":0,"128-255":0,"256":11541}}

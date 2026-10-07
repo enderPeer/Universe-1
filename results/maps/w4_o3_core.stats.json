@@ -1,0 +1,1 @@
+{"isa":"LD,ST,LDI,NAND,ADD,SHL,JZ,HALT","W":4,"a":2,"p":3,"I":4,"binary":false,"operators":62880,"all_inputs_halt":2394,"named_found":1329,"vocabulary_size":12161,"classes":{"named":1329,"other":60976,"permutation":246,"predicate":329},"max_steps_histogram":{"1":0,"2-3":5,"4-7":373,"8-15":2006,"16-31":10,"32-63":0,"64-127":0,"128-255":0,"256":60486}}

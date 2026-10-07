@@ -1,0 +1,1 @@
+{"isa":"LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT","W":4,"a":2,"p":3,"I":4,"binary":false,"operators":24420,"all_inputs_halt":861,"named_found":707,"vocabulary_size":12161,"classes":{"named":707,"other":23461,"permutation":77,"predicate":175},"max_steps_histogram":{"1":0,"2-3":2,"4-7":237,"8-15":588,"16-31":26,"32-63":8,"64-127":0,"128-255":0,"256":23559}}
