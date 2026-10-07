@@ -4,6 +4,13 @@ Math
 Machine-level bits-and-bytes simulation. Goal: the maximum number of
 mathematical operators on the smallest bitmap (word width 1..8 bits).
 
+## Codex / Claude shared workspace
+
+Use the [shared coordination branch](https://github.com/enderPeer/Universe-1/tree/shared/universe-1)
+for handoffs, current status, decisions, and artifact locations. It synchronizes
+with `/home/ender/universe-1-share` on `adler40`.
+See [access and synchronization details](docs/04_shared_workspace.md).
+
 - `docs/00_machine_model.md` — everything allocatable at machine level and the candidate memory layouts.
 - `docs/01_bruteforce_plan.md` — ISA search (per width) and program search (256-step runtime), with search-space sizes and pruning.
 - `sim/machine.py` — parametric W-bit machine with a primitive catalogue.
