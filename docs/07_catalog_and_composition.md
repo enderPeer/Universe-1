@@ -28,7 +28,7 @@ No witness halts (the ISA has no HALT), so every function costs 256 steps.
 Querying: `zcat results/catalog/w4_o2_add.tsv.gz | awk -F'\t' '$8==1 && $9==1'` lists all involutive
 permutations; `$5=="affine-mod16"` the affine maps; `$15=="0011"` functions of the low two bits only.
 Rebuild for any unary map: `u1map catalog --map results/maps/<m>.u1prog --out <m>.tsv --summary <m>.json`
-(28 s for the champion on 4 threads). The binary map (24.68 M functions) needs the same command on a
+(28 s for the champion on the 4-thread, 15 GB cloud container this was first run in; the catalog in results/ was produced there, not on the cluster). The binary map (24.68 M functions) needs the same command on a
 64 GB node; descriptors for binary functions (commutative, associative, has identity, latin square,
 depends on x only / y only) are the next addition.
 
@@ -37,8 +37,8 @@ depends on x only / y only) are the next addition.
 A chain of programs is composition of functions: stage k's output becomes stage k+1's input (A is
 carried, memory is reset, y is re-supplied for binary stages). The chained function is f_k o ... o f_1.
 
-**Exact result.** The champion map contains `x+1` (a 16-cycle, program 0x56), the transposition of 0 and 15
-(program 0xc8, table 15,1,2,...,14,0) and functions of image size 15 (14,678 of them, e.g. 0x88c). A 16-cycle
+**Exact result.** The champion map contains `x+1` (a 16-cycle, program 0x1a15), the transposition of 0 and 15
+(program 0xc8, table 15,1,2,...,14,0) and functions of image size 15 (14,678 of them, e.g. 0x185c). A 16-cycle
 and a transposition generate the full symmetric group S_16; S_16 plus any map of rank 15 generates the
 full transformation monoid T_16. Therefore **every one of the 16^16 = 1.8e19 unary 4-bit functions is a
 composition of champion programs.** The 32-bit genome is not the limit; the number of stages is.
