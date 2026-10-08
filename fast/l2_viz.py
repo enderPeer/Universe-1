@@ -48,8 +48,8 @@ def summary(path):
     picks = []
     if r['intact_copiers_sample']: picks.append(('first copier with intact code', int(r['intact_copiers_sample'][0]['program'], 16)))
     if r['copiers_sample']: picks.append(('first full copier', int(r['copiers_sample'][0]['program'], 16)))
-    for s in (n, n - 1, n - 2):
-        if str(s) in r['best_score_min_program'] and len(picks) < 3: picks.append((f'first program with best score {s}/{n}', int(r['best_score_min_program'][str(s)], 16)))
+    for s in range(n, 0, -1):
+        if str(s) in r['best_score_min_program'] and len(picks) < 3 and all(int(r['best_score_min_program'][str(s)], 16) != pg for _, pg in picks): picks.append((f'first program with best score {s}/{n}', int(r['best_score_min_program'][str(s)], 16)))
     for i, (lab, prog) in enumerate(picks[:3]):
         ax = fig.add_subplot(gs[1, i]); spacetime(ax, isa, prog, 128); ax.set_title(lab + '\n' + ax.get_title(), fontsize=8)
     fig.suptitle(f'exp06b {name}: {isa} (layout L2, o={max(1, (len(r["isa"]) - 1).bit_length())}), {r["distinct_unary_functions"]:,} unary functions at step 256', fontsize=11)

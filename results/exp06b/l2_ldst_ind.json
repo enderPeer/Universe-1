@@ -1,0 +1,76 @@
+{
+ "name": "l2_ldst_ind",
+ "layout": "L2",
+ "W": 4,
+ "a": 4,
+ "p": 3,
+ "I": 4,
+ "isa": [
+  "LD",
+  "ST",
+  "LDIND",
+  "STIND",
+  "INCM",
+  "ADD",
+  "JNZ",
+  "HALT"
+ ],
+ "programs": 4294967296,
+ "distinct_unary_functions": 129910772,
+ "final_score_counts": {
+  "0": 4220545679,
+  "1": 70653657,
+  "2": 3511788,
+  "3": 247780,
+  "4": 8241,
+  "5": 151,
+  "6": 0,
+  "7": 0,
+  "8": 0
+ },
+ "best_score_counts": {
+  "0": 4190622821,
+  "1": 99656076,
+  "2": 4352858,
+  "3": 321208,
+  "4": 13995,
+  "5": 333,
+  "6": 5,
+  "7": 0,
+  "8": 0
+ },
+ "final_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000006c",
+  "2": "0x00000739",
+  "3": "0x0000976d",
+  "4": "0x00079776",
+  "5": "0x0336a665"
+ },
+ "best_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000006c",
+  "2": "0x00000739",
+  "3": "0x0000976d",
+  "4": "0x00079776",
+  "5": "0x0336a665",
+  "6": "0x469d68a7"
+ },
+ "ever_mod": 2751811988,
+ "final_mod": 2716775494,
+ "walkers": 399065587,
+ "copiers_ever": 0,
+ "copiers_final": 0,
+ "copiers_intact": 0,
+ "min_intact_copier": null,
+ "first_full_copy_step_histogram": {},
+ "copiers_listed": 0,
+ "copiers_sample": [],
+ "intact_copiers_sample": [],
+ "wall_seconds": 199.96498370170593,
+ "programs_per_second": 21478596.984794788,
+ "gpus": [
+  0,
+  1
+ ]
+}

@@ -35,6 +35,7 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - [exp09: every step of every champion program, 142 M functions = 78x the step-256 map](results/exp09_summary.md) and [its validation](results/exp09_validation.md)
 - [exp09 for the JC ISA and the comparison with the champion: 876 M vs 142 M functions over 256 steps](results/exp09_jc_vs_champion.md)
 - [exp10: the clock extended to 512 steps, 267 M functions, what is new and how to use it](results/exp10_w4_o2_add_summary.md)
+- [exp06b: the von Neumann layout, 20 M to 368 M functions per ISA, and the first self-copiers (141 in the crawler ISA, none with intact code)](results/exp06b_summary.md)
 - [Learned world model: a conv net predicting the JC world one tick ahead (97.6 % next-state accuracy in-world, 81.5 % on an unseen seed)](results/life/worldmodel/REPORT.md)
 - [Downloadable witness shards and Rust-compatible binary format](results/witnesses/README.md)
 - [Named mathematical functions with verified witness programs](results/function-map/README.md)

@@ -1,0 +1,948 @@
+{
+ "name": "l2_o2_crawl",
+ "layout": "L2",
+ "W": 4,
+ "a": 4,
+ "p": 3,
+ "I": 4,
+ "isa": [
+  "LDIND",
+  "STIND",
+  "INCM",
+  "JNZ"
+ ],
+ "programs": 4294967296,
+ "distinct_unary_functions": 200738959,
+ "final_score_counts": {
+  "0": 3957267604,
+  "1": 314541989,
+  "2": 21572046,
+  "3": 1476458,
+  "4": 93165,
+  "5": 11883,
+  "6": 3835,
+  "7": 300,
+  "8": 16
+ },
+ "best_score_counts": {
+  "0": 3893358660,
+  "1": 374716095,
+  "2": 24993477,
+  "3": 1738100,
+  "4": 122498,
+  "5": 23146,
+  "6": 12098,
+  "7": 3081,
+  "8": 141
+ },
+ "final_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000002a",
+  "2": "0x0000009b",
+  "3": "0x0000048c",
+  "4": "0x0000048b",
+  "5": "0x000000a3",
+  "6": "0x000003a3",
+  "7": "0x0592a08e",
+  "8": "0xda8068f0"
+ },
+ "best_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000002a",
+  "2": "0x0000009b",
+  "3": "0x0000048c",
+  "4": "0x0000048b",
+  "5": "0x000000a3",
+  "6": "0x000003a3",
+  "7": "0x0592a08e",
+  "8": "0x1e891417"
+ },
+ "ever_mod": 3819287244,
+ "final_mod": 3791511841,
+ "walkers": 2274327574,
+ "copiers_ever": 141,
+ "copiers_final": 16,
+ "copiers_intact": 0,
+ "min_intact_copier": null,
+ "first_full_copy_step_histogram": {
+  "41": 13,
+  "42": 36,
+  "43": 30,
+  "44": 2,
+  "45": 4,
+  "47": 9,
+  "48": 8,
+  "49": 14,
+  "50": 2,
+  "51": 7,
+  "73": 1,
+  "74": 1,
+  "91": 1,
+  "92": 1,
+  "95": 2,
+  "99": 1,
+  "102": 1,
+  "111": 1,
+  "117": 2,
+  "119": 2,
+  "120": 1,
+  "138": 1,
+  "198": 1
+ },
+ "copiers_listed": 141,
+ "copiers_sample": [
+  {
+   "program": "0x1e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x1e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x259aa22f",
+   "first_step": 111,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x2e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x2e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x3e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x3e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x4e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x4e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x5e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x5e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x6e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x6e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x7e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x7e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x8e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x8e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x9e891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0x9e981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xae891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xae981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xbe891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xbe981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xce891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xce981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xd48a22f7",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xd4a822f7",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xda4822f7",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xda8068f0",
+   "first_step": 99,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xde891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xde981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe0419818",
+   "first_step": 102,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe0489107",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe0579870",
+   "first_step": 91,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe0579880",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe0759880",
+   "first_step": 74,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe482aea7",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891017",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891117",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891217",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891317",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891417",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4891f17",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981017",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981117",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981217",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981317",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981417",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe4981f17",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe6059880",
+   "first_step": 95,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8079580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8900580",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8901580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8902580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8903580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8905580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8905f80",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8911417",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe8951417",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9084118",
+   "first_step": 92,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9148f17",
+   "first_step": 95,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481017",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481117",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481217",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481317",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481417",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9481f17",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9800580",
+   "first_step": 49,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9801580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9802580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9803580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9805580",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9805f80",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9811417",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xe9851417",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xee891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xee981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf284a268",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf28a4268",
+   "first_step": 119,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf2a84268",
+   "first_step": 119,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf428a268",
+   "first_step": 117,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf42a8268",
+   "first_step": 117,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf4891017",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4891117",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4891217",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4891317",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4891417",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4891f17",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a2207",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a2217",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a2227",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a2237",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a2277",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a22c7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a22d7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a22e7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf48a22f7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981017",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981117",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981217",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981317",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981417",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4981f17",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a82207",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a82217",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a82227",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a82237",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a82277",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a822c7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a822d7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a822e7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf4a822f7",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf8905580",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf8905c80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf8905d80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf8905e80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf8905f80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf9481017",
+   "first_step": 44,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9481117",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9481217",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9481317",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9481417",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9481f17",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9805580",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf9805c80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xf9805d80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf9805e80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xf9805f80",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xfa482207",
+   "first_step": 44,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa482217",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa482227",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa482237",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa482277",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa4822c7",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa4822d7",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa4822e7",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfa4822f7",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfd481917",
+   "first_step": 198,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfd4819d7",
+   "first_step": 138,
+   "intact": 0,
+   "persists": 1
+  },
+  {
+   "program": "0xfe891417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  },
+  {
+   "program": "0xfe981417",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0
+  }
+ ],
+ "intact_copiers_sample": [],
+ "wall_seconds": 353.033504486084,
+ "programs_per_second": 12165891.456257803,
+ "gpus": [
+  0,
+  1
+ ]
+}

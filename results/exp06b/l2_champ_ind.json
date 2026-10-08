@@ -1,0 +1,79 @@
+{
+ "name": "l2_champ_ind",
+ "layout": "L2",
+ "W": 4,
+ "a": 4,
+ "p": 3,
+ "I": 4,
+ "isa": [
+  "SWAP",
+  "ADD",
+  "NAND",
+  "SKZ",
+  "LDIND",
+  "STIND",
+  "INCM",
+  "HALT"
+ ],
+ "programs": 4294967296,
+ "distinct_unary_functions": 336500469,
+ "final_score_counts": {
+  "0": 4147404184,
+  "1": 140410624,
+  "2": 6706490,
+  "3": 424181,
+  "4": 21054,
+  "5": 732,
+  "6": 30,
+  "7": 1,
+  "8": 0
+ },
+ "best_score_counts": {
+  "0": 4102050457,
+  "1": 182650139,
+  "2": 9653111,
+  "3": 583589,
+  "4": 28942,
+  "5": 1015,
+  "6": 42,
+  "7": 1,
+  "8": 0
+ },
+ "final_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000000a",
+  "2": "0x0000009d",
+  "3": "0x00000c9d",
+  "4": "0x00000acb",
+  "5": "0x00000ac6",
+  "6": "0x04b6d569",
+  "7": "0xb4b6d569"
+ },
+ "best_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000000a",
+  "2": "0x0000009d",
+  "3": "0x00000c9d",
+  "4": "0x00000acb",
+  "5": "0x00000ac6",
+  "6": "0x04b6d569",
+  "7": "0xb4b6d569"
+ },
+ "ever_mod": 2824599538,
+ "final_mod": 2757095806,
+ "walkers": 468187740,
+ "copiers_ever": 0,
+ "copiers_final": 0,
+ "copiers_intact": 0,
+ "min_intact_copier": null,
+ "first_full_copy_step_histogram": {},
+ "copiers_listed": 0,
+ "copiers_sample": [],
+ "intact_copiers_sample": [],
+ "wall_seconds": 126.27080655097961,
+ "programs_per_second": 34013937.29330447,
+ "gpus": [
+  0,
+  1
+ ]
+}

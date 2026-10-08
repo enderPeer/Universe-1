@@ -1,0 +1,79 @@
+{
+ "name": "l2_jc_ind",
+ "layout": "L2",
+ "W": 4,
+ "a": 4,
+ "p": 3,
+ "I": 4,
+ "isa": [
+  "SWAP",
+  "ADD",
+  "NAND",
+  "JC",
+  "LDIND",
+  "STIND",
+  "INCM",
+  "HALT"
+ ],
+ "programs": 4294967296,
+ "distinct_unary_functions": 367521120,
+ "final_score_counts": {
+  "0": 4159084190,
+  "1": 129764915,
+  "2": 5739205,
+  "3": 360115,
+  "4": 18009,
+  "5": 798,
+  "6": 63,
+  "7": 1,
+  "8": 0
+ },
+ "best_score_counts": {
+  "0": 4121054691,
+  "1": 165231163,
+  "2": 8160437,
+  "3": 494236,
+  "4": 25661,
+  "5": 1039,
+  "6": 68,
+  "7": 1,
+  "8": 0
+ },
+ "final_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000000a",
+  "2": "0x0000009d",
+  "3": "0x00000c9d",
+  "4": "0x00000acb",
+  "5": "0x00000ac6",
+  "6": "0x04b6d569",
+  "7": "0xb4b6d569"
+ },
+ "best_score_min_program": {
+  "0": "0x00000000",
+  "1": "0x0000000a",
+  "2": "0x0000009d",
+  "3": "0x00000c9d",
+  "4": "0x00000acb",
+  "5": "0x00000ac6",
+  "6": "0x04b6d569",
+  "7": "0xb4b6d569"
+ },
+ "ever_mod": 2809479998,
+ "final_mod": 2741260258,
+ "walkers": 379652100,
+ "copiers_ever": 0,
+ "copiers_final": 0,
+ "copiers_intact": 0,
+ "min_intact_copier": null,
+ "first_full_copy_step_histogram": {},
+ "copiers_listed": 0,
+ "copiers_sample": [],
+ "intact_copiers_sample": [],
+ "wall_seconds": 211.0175883769989,
+ "programs_per_second": 20353598.621962808,
+ "gpus": [
+  0,
+  1
+ ]
+}
