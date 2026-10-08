@@ -22,7 +22,7 @@ static const char *PNAME[P_COUNT] = { "NOP","HALT","LD","ST","LDI","CLR","SET","
   "NEG","SHL","SHR","ROL","ROR","RCL","MUL","SWAP","JMP","JZ","JNZ","JC","SKZ","SKNZ","INCM","DECM","LDIND","STIND" };
 
 struct Cfg { int W, a, p, I, o, nins, nM; unsigned mask, amask, pmask, opmask; };
-struct Par { unsigned n, income, trigger, repro_cost, max_energy, max_age, start_energy; ull seed, mu_bits, death_rate; };
+struct Par { unsigned n, income, trigger, repro_cost, max_energy, max_age, start_energy, max_steps; ull seed, mu_bits, death_rate; };
 __constant__ Cfg C; __constant__ Par PR; __constant__ unsigned char ISA[256];
 #define MAX_STEPS 256
 #define MAXM 16
@@ -42,7 +42,7 @@ __device__ unsigned run(unsigned genome, unsigned x, unsigned y, unsigned *steps
   unsigned char opc[8], opnd[8];
   for (int k = 0; k < C.nins; k++) { unsigned ins = (genome >> (k * C.I)) & ((1u << C.I) - 1); opc[k] = ISA[ins >> (C.I - C.o)]; opnd[k] = ins & C.opmask; }
   St s; s.A = x & C.mask; s.Z = (s.A == 0); s.Cf = 0; s.PC = 0; for (int i = 0; i < C.nM; i++) s.M[i] = 0; s.M[1] = y & C.mask;
-  for (int t = 0; t < MAX_STEPS; t++) {
+  for (unsigned t = 0; t < PR.max_steps; t++) {   // exp10: runtime step budget (--max-steps, default 256)
     unsigned k = s.PC & C.pmask, op = opnd[k]; s.PC = (s.PC + 1) & C.pmask; unsigned v, cy;
     switch (opc[k]) {
     case P_NOP: break;
@@ -69,7 +69,7 @@ __device__ unsigned run(unsigned genome, unsigned x, unsigned y, unsigned *steps
     case P_LDIND: setA(s, rd(s, rd(s, op))); break; case P_STIND: wr(s, rd(s, op), s.A); break;
     }
   }
-  *steps_out = MAX_STEPS; return s.A;
+  *steps_out = PR.max_steps; return s.A;
 }
 
 __device__ __host__ __forceinline__ unsigned pk(unsigned state, unsigned alive, unsigned age, unsigned energy) { return (state & 15) | (alive << 4) | (min(age, 2047u) << 5) | (min(energy, 65535u) << 16); }
@@ -118,7 +118,7 @@ static void write_ppm(const std::string &path, const std::vector<unsigned> &g, c
 }
 
 int main(int argc, char **argv) {
-  Cfg c; memset(&c, 0, sizeof c); c.W = 4; c.a = 2; c.p = 3; c.I = 4; Par pr; pr.n = 256; pr.income = 20; pr.trigger = 15; pr.repro_cost = 128; pr.max_energy = 255; pr.max_age = 1024; pr.start_energy = 64; pr.seed = 1; pr.mu_bits = 128; pr.death_rate = 512;
+  Cfg c; memset(&c, 0, sizeof c); c.W = 4; c.a = 2; c.p = 3; c.I = 4; Par pr; pr.max_steps = 256; pr.n = 256; pr.income = 20; pr.trigger = 15; pr.repro_cost = 128; pr.max_energy = 255; pr.max_age = 1024; pr.start_energy = 64; pr.seed = 1; pr.mu_bits = 128; pr.death_rate = 512;
   double density = 0.05; ull ticks = 10000, report = 100; const char *isa_s = "SWAP,ADD,NAND,SKZ"; std::string out_dir = "."; const char *load = nullptr; int gpu = 0, dump_final = 0; ull ppm_every = 0, dump_every = 0;
   for (int i = 1; i < argc; i++) {
     #define ARG(nm) (!strcmp(argv[i], nm) && i + 1 < argc)
@@ -128,6 +128,7 @@ int main(int argc, char **argv) {
     else if (ARG("--income")) pr.income = atoi(argv[++i]); else if (ARG("--trigger")) pr.trigger = atoi(argv[++i]); else if (ARG("--repro-cost")) pr.repro_cost = atoi(argv[++i]);
     else if (ARG("--max-energy")) pr.max_energy = atoi(argv[++i]); else if (ARG("--mu-bits")) pr.mu_bits = strtoull(argv[++i], 0, 0); else if (ARG("--max-age")) pr.max_age = atoi(argv[++i]);
     else if (ARG("--death-rate")) pr.death_rate = strtoull(argv[++i], 0, 0); else if (ARG("--start-energy")) pr.start_energy = atoi(argv[++i]); else if (ARG("--out-dir")) out_dir = argv[++i];
+    else if (ARG("--max-steps")) pr.max_steps = atoi(argv[++i]);
     else if (ARG("--ppm-every")) ppm_every = strtoull(argv[++i], 0, 0); else if (ARG("--dump-every")) dump_every = strtoull(argv[++i], 0, 0); else if (ARG("--load")) load = argv[++i]; else if (!strcmp(argv[i], "--dump-final")) dump_final = 1; else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
   unsigned char isa[256]; int nisa = 0; char buf[1024]; strncpy(buf, isa_s, 1023); buf[1023] = 0;

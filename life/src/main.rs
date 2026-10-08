@@ -6,9 +6,9 @@ use std::sync::{Arc, Mutex};
 
 #[derive(Clone, Debug)]
 pub struct Params { pub n: usize, pub seed: u64, pub density: f64, pub start_energy: u32, pub income: u32, pub trigger: u32,
-    pub repro_cost: u32, pub max_energy: u32, pub mu_bits: u64, pub max_age: u32, pub death_rate: u64, pub ticks: u64, pub report_every: u64 }
+    pub repro_cost: u32, pub max_energy: u32, pub mu_bits: u64, pub max_age: u32, pub death_rate: u64, pub ticks: u64, pub report_every: u64, pub max_steps: usize }
 impl Default for Params { fn default() -> Params { Params { n: 256, seed: 1, density: 0.05, start_energy: 64, income: 20, trigger: 15,
-    repro_cost: 128, max_energy: 255, mu_bits: 128, max_age: 1024, death_rate: 512, ticks: 10000, report_every: 100 } } }
+    repro_cost: 128, max_energy: 255, mu_bits: 128, max_age: 1024, death_rate: 512, ticks: 10000, report_every: 100, max_steps: 256 } } }
 
 #[inline] pub fn h(seed: u64, tick: u64, cell: u64, k: u64) -> u64 {
     mix(seed ^ mix(tick.wrapping_mul(0x9E3779B97F4A7C15).wrapping_add(cell)) ^ k.wrapping_mul(0xD1B54A32D192ED03))
@@ -47,7 +47,7 @@ impl World {
                 let me = meta[c]; if !alive(me) { continue; }
                 let (x, y) = ((c % n) as i64, (c / n) as i64); let nb = ((y + DY[d]).rem_euclid(n as i64) as usize) * n + (x + DX[d]).rem_euclid(n as i64) as usize;
                 let nbs = if alive(meta[nb]) { st(meta[nb]) } else { 0 };
-                let r = m.run(&mut sc, genome[c] as u64, st(me), Some(nbs));
+                let r = m.run_budget(&mut sc, genome[c] as u64, st(me), Some(nbs), p.max_steps);
                 let cost = ((r.steps + 15) / 16) as u32;
                 let ea = (energy(me) + p.income).min(p.max_energy).saturating_sub(cost);
                 local.push((c, (r.a & 15) | (cost << 4) | (ea << 16)));
@@ -130,6 +130,7 @@ fn main() {
     p.report_every = argn(&args, "--report-every", p.report_every); p.income = argn(&args, "--income", p.income); p.trigger = argn(&args, "--trigger", p.trigger);
     p.repro_cost = argn(&args, "--repro-cost", p.repro_cost); p.max_energy = argn(&args, "--max-energy", p.max_energy); p.mu_bits = argn(&args, "--mu-bits", p.mu_bits);
     p.max_age = argn(&args, "--max-age", p.max_age); p.death_rate = argn(&args, "--death-rate", p.death_rate); p.start_energy = argn(&args, "--start-energy", p.start_energy);
+    p.max_steps = argn(&args, "--max-steps", p.max_steps);  // exp10: step budget per organism run (cost = ceil(steps / 16), so 512 -> cost up to 32)
     let isa = Config::parse_isa(&arg(&args, "--isa").unwrap_or("SWAP,ADD,NAND,SKZ".into())).unwrap_or_else(|e| { eprintln!("{}", e); std::process::exit(2) });
     let cfg = Config::new(4, argn(&args, "--a", 2), argn(&args, "--p", 3), Some(argn(&args, "--I", 4)), isa, true).unwrap_or_else(|e| { eprintln!("{}", e); std::process::exit(2) });
     let threads: usize = argn(&args, "--threads", std::thread::available_parallelism().map(|n| n.get()).unwrap_or(4));

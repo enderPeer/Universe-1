@@ -1,4 +1,4 @@
-// Universe-1 exp09 kernel (CUDA): the truth table of every program at EVERY step T in [T_lo, T_hi], not only at step 256.
+// Universe-1 exp09/exp10 kernel (CUDA): the truth table of every program at EVERY step T in [T_lo, T_hi] (T <= 512), not only at step 256.
 // Same machine semantics and shard format as gpu/u1_cuda.cu; one shard file per checkpoint T: <out>.T<nnn>.bin.
 // usage: u1_multi --gpu g --W w --a a --p p --I i --isa SWAP,ADD,... [--binary] --lo L --hi H --T-lo 1 --T-hi 64 --out prefix
 // Checkpoint semantics = mapper `u1map budgets --every 1`: A after exactly T steps; HALT (or a fixed point) freezes A.
@@ -26,7 +26,7 @@ static const char *PNAME[P_COUNT] = {
 struct Cfg { int W, a, p, I, o, binary, nins, nM, nin, ntab, Tlo, nT; unsigned mask, amask, pmask, opmask; };
 __constant__ Cfg C;
 __constant__ unsigned char ISA[256];
-#define MAX_STEPS 256
+#define MAX_STEPS 512     // exp10: the clock runs to 512; T-hi selects how far a pass simulates
 #define MAXM 16
 #define MAXTBL 1024      // checkpoints x table entries held per thread (64 x 16 unary, 4 x 256 binary)
 #define EMPTY 0xFFFFFFFFFFFFFFFFull
@@ -160,7 +160,7 @@ int main(int argc, char **argv) {
   if (c.I < 0) c.I = c.W;
   c.mask = (1u << c.W) - 1; c.amask = (1u << c.a) - 1; c.pmask = (1u << c.p) - 1; c.nins = 1 << c.p; c.nM = 1 << c.a; c.nin = 1 << c.W;
   c.ntab = c.binary ? c.nin * c.nin : c.nin; c.nT = Thi - c.Tlo + 1;
-  if (c.Tlo < 1 || Thi > MAX_STEPS || c.nT < 1 || c.nT * c.ntab > MAXTBL) { fprintf(stderr, "checkpoint range must satisfy 1 <= T-lo <= T-hi <= 256 and nT * table entries <= %d\n", MAXTBL); return 2; }
+  if (c.Tlo < 1 || Thi > MAX_STEPS || c.nT < 1 || c.nT * c.ntab > MAXTBL) { fprintf(stderr, "checkpoint range must satisfy 1 <= T-lo <= T-hi <= 512 and nT * table entries <= %d\n", MAXTBL); return 2; }
   if (c.nM > MAXM || c.ntab > 256 || c.nins > 256) { fprintf(stderr, "config exceeds compiled limits (a<=4, table<=256, instr<=256)\n"); return 2; }
   unsigned char isa[256]; int nisa = 0; char buf[2048]; strncpy(buf, isa_s, sizeof buf - 1); buf[sizeof buf - 1] = 0;
   for (char *t = strtok(buf, ","); t; t = strtok(nullptr, ",")) { int id = -1; for (int k = 0; k < P_COUNT; k++) if (!strcmp(t, PNAME[k])) id = k;

@@ -28,6 +28,7 @@ Packed: `meta = state | alive << 4 | age << 5 | energy << 16` (u32). Empty cell:
 | max_age | 1024 | death by age |
 | death_rate | 512 | each live cell dies with probability 1/death_rate per tick (random turnover keeps the mutation supply) |
 | ticks | 10000 | run length |
+| max_steps | 256 | step budget of one organism run (exp10: 512 draws phenotypes from the 512-step library; cost = ceil(steps/16) then reaches 32). CUDA and CPU reference only; Vulkan still fixed at 256 |
 
 ## Hash (shared with the sweep engines' `mix`)
 ```

@@ -138,12 +138,20 @@ impl<'a> Machine<'a> {
 
     /// Run program `pb` with A = x (and M[1] = y when `y` is Some) for at most 256 steps.
     pub fn run(&self, sc: &mut Scratch, pb: u64, x: u32, y: Option<u32>) -> RunResult {
-        let cfg = self.cfg;
-        sc.decoded = cfg.decode(pb);
-        self.run_decoded(sc, x, y)
+        self.run_budget(sc, pb, x, y, MAX_STEPS)
     }
 
-    pub fn run_decoded(&self, sc: &mut Scratch, x: u32, y: Option<u32>) -> RunResult {
+    /// Same as `run` with an explicit step budget (exp10: Life worlds with a 512-step clock). Loop fast-forward lands on
+    /// the state at step `budget`, so the result equals simulating `budget` steps.
+    pub fn run_budget(&self, sc: &mut Scratch, pb: u64, x: u32, y: Option<u32>, budget: usize) -> RunResult {
+        let cfg = self.cfg;
+        sc.decoded = cfg.decode(pb);
+        self.run_decoded_budget(sc, x, y, budget)
+    }
+
+    pub fn run_decoded(&self, sc: &mut Scratch, x: u32, y: Option<u32>) -> RunResult { self.run_decoded_budget(sc, x, y, MAX_STEPS) }
+
+    pub fn run_decoded_budget(&self, sc: &mut Scratch, x: u32, y: Option<u32>, budget: usize) -> RunResult {
         let cfg = self.cfg;
         let mask = cfg.mask(); let amask = cfg.amask(); let pmask = cfg.pmask(); let w = cfg.w;
         let mut s = State { a: x & mask, z: 0, c: 0, pc: 0, m: vec![0; cfg.nm()] };
@@ -160,7 +168,7 @@ impl<'a> Machine<'a> {
         macro_rules! wr { ($addr:expr, $v:expr) => {{ let ad = $addr & amask; let v = $v & mask; if ad == 0 { s.a = v } else { s.m[ad as usize] = v } }}; }
         macro_rules! seta { ($v:expr) => {{ s.a = $v & mask; s.z = (s.a == 0) as u32; }}; }
         macro_rules! seta_c { ($v:expr, $c:expr) => {{ let c = $c; s.a = $v & mask; s.z = (s.a == 0) as u32; s.c = c; }}; }
-        for t in 0..MAX_STEPS {
+        for t in 0..budget {
             let pc0 = s.pc;
             let (prim, op) = sc.decoded[(s.pc & pmask) as usize];
             s.pc = (s.pc + 1) & pmask;
@@ -209,15 +217,15 @@ impl<'a> Machine<'a> {
                 if sc.stamp[k as usize] == sc.cur {
                     let start = sc.hist.iter().position(|h| *h == k).unwrap();
                     let period = (t + 1) - start;
-                    let idx = start + (MAX_STEPS - start) % period;
+                    let idx = start + (budget - start) % period;
                     unpack(cfg, sc.hist[idx], &mut s);
-                    return RunResult { a: s.a, steps: MAX_STEPS, end: End::Loop };
+                    return RunResult { a: s.a, steps: budget, end: End::Loop };
                 }
                 sc.stamp[k as usize] = sc.cur; sc.hist.push(k);
             }
             let _ = pc0;
         }
-        RunResult { a: s.a, steps: MAX_STEPS, end: End::Budget }
+        RunResult { a: s.a, steps: budget, end: End::Budget }
     }
 
     /// Run program `pb` for 256 steps with A = x (M[1] = y if given) and return A at every `every`-th step
