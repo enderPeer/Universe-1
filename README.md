@@ -33,6 +33,8 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 - [exp05: 14 candidate ISAs, unary sweeps](results/exp05_summary.md) and [their validation and what they say](results/exp05_validation.md)
 - [Life ensemble: nine 1024^2 worlds for 200,000 ticks, analysis](results/life/ANALYSIS.md)
 - [exp09: every step of every champion program, 142 M functions = 78x the step-256 map](results/exp09_summary.md) and [its validation](results/exp09_validation.md)
+- [exp10: the clock extended to 512 steps, 267 M functions, what is new and how to use it](results/exp10_w4_o2_add_summary.md)
+- [Learned world model: a conv net predicting the JC world one tick ahead (97.6 % next-state accuracy in-world, 81.5 % on an unseen seed)](results/life/worldmodel/REPORT.md)
 - [Downloadable witness shards and Rust-compatible binary format](results/witnesses/README.md)
 - [Named mathematical functions with verified witness programs](results/function-map/README.md)
 - [Completed depth-4 cluster translation run, timings and next-ISA proposal](translate/CLUSTER_RUN.md)

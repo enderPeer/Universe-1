@@ -6,19 +6,20 @@ this report: `cluster/analyze_life.py`. Phenotypes below use the Python referenc
 
 ## Runs, speed, survival
 
-| run | ISA | seed | mu_bits | repro_cost | income | GPU | GPU s | ticks/s | M cell-updates/s | final alive | min alive (t>=1000) | extinct |
-|---|---|---:|---:|---:|---:|---|---:|---:|---:|---:|---:|---|
-| champ_s1 | SWAP,ADD,NAND,SKZ | 1 | 128 | 128 | 20 | adler40 RTX 4090 | 500 | 400 | 419 | 882,215 (84.1%) | 311,933 | no |
-| champ_s2 | SWAP,ADD,NAND,SKZ | 2 | 128 | 128 | 20 | adler40 RTX 4080 | 530 | 377 | 395 | 900,669 (85.9%) | 312,129 | no |
-| champ_s3 | SWAP,ADD,NAND,SKZ | 3 | 128 | 128 | 20 | knecht24 RTX 3060 #0 | 1499 | 133 | 140 | 952,442 (90.8%) | 305,170 | no |
-| swap_s1 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 128 | 8 | knecht24 RTX 3060 #1 | 179 | 1117 | 1172 | 869,286 (82.9%) | 835,894 | no |
-| swap_s2 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 2 | 128 | 128 | 8 | knecht24 RTX 3060 #2 | 174 | 1153 | 1209 | 859,658 (82.0%) | 831,548 | no |
-| swap_s3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 3 | 128 | 128 | 8 | specht32 RX 9070 XT | 1738 | 115 | 121 | 855,590 (81.6%) | 820,895 | no |
-| swap_mu32 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 32 | 128 | 8 | specht32 RX 9060 XT | 1700 | 118 | 123 | 1,039,320 (99.1%) | 1,016,041 | no |
-| swap_mu512 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 512 | 128 | 8 | falke64 R9700 #0 | 996 | 201 | 211 | 884,981 (84.4%) | 791,731 | no |
-| swap_rc64 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 64 | 8 | falke64 R9700 #1 | 444 | 451 | 473 | 1,046,089 (99.8%) | 1,043,366 | no |
-| jc_s1 | SWAP,ADD,NAND,JC | 1 | 128 | 128 | 20 | adler40 RTX 4090 | 494 | 405 | 425 | 916,979 (87.4%) | 215,352 | no |
-| jc_s2 | SWAP,ADD,NAND,JC | 2 | 128 | 128 | 20 | adler40 RTX 4080 | 531 | 377 | 395 | 928,638 (88.6%) | 194,467 | no |
+| run | ISA | seed | mu_bits | repro_cost | income | steps | GPU | GPU s | ticks/s | M cell-updates/s | final alive | min alive (t>=1000) | extinct |
+|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|---:|---|
+| champ_s1 | SWAP,ADD,NAND,SKZ | 1 | 128 | 128 | 20 | 256 | adler40 RTX 4090 | 500 | 400 | 419 | 882,215 (84.1%) | 311,933 | no |
+| champ_s2 | SWAP,ADD,NAND,SKZ | 2 | 128 | 128 | 20 | 256 | adler40 RTX 4080 | 530 | 377 | 395 | 900,669 (85.9%) | 312,129 | no |
+| champ_s3 | SWAP,ADD,NAND,SKZ | 3 | 128 | 128 | 20 | 256 | knecht24 RTX 3060 #0 | 1499 | 133 | 140 | 952,442 (90.8%) | 305,170 | no |
+| swap_s1 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 128 | 8 | 256 | knecht24 RTX 3060 #1 | 179 | 1117 | 1172 | 869,286 (82.9%) | 835,894 | no |
+| swap_s2 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 2 | 128 | 128 | 8 | 256 | knecht24 RTX 3060 #2 | 174 | 1153 | 1209 | 859,658 (82.0%) | 831,548 | no |
+| swap_s3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 3 | 128 | 128 | 8 | 256 | specht32 RX 9070 XT | 1738 | 115 | 121 | 855,590 (81.6%) | 820,895 | no |
+| swap_mu32 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 32 | 128 | 8 | 256 | specht32 RX 9060 XT | 1700 | 118 | 123 | 1,039,320 (99.1%) | 1,016,041 | no |
+| swap_mu512 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 512 | 128 | 8 | 256 | falke64 R9700 #0 | 996 | 201 | 211 | 884,981 (84.4%) | 791,731 | no |
+| swap_rc64 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 64 | 8 | 256 | falke64 R9700 #1 | 444 | 451 | 473 | 1,046,089 (99.8%) | 1,043,366 | no |
+| jc_s1 | SWAP,ADD,NAND,JC | 1 | 128 | 128 | 20 | 256 | adler40 RTX 4090 | 494 | 405 | 425 | 916,979 (87.4%) | 215,352 | no |
+| jc_s2 | SWAP,ADD,NAND,JC | 2 | 128 | 128 | 20 | 256 | adler40 RTX 4080 | 531 | 377 | 395 | 928,638 (88.6%) | 194,467 | no |
+| champ512_s1 | SWAP,ADD,NAND,SKZ | 1 | 128 | 128 | 36 | 512 | adler40 RTX 4080 | 1017 | 197 | 206 | 916,394 (87.4%) | 314,234 | no |
 
 GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall time in RUNS.md adds the copy-back.
 
@@ -37,6 +38,7 @@ GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall t
 | swap_rc64 | 52,579 | 324,911 | 183,627 | 92,456 | 74,605 | 62,614 | 324,911 | 61,556 | 44,999 | 198.4 |
 | jc_s1 | 52,579 | 92,695 | 163,068 | 90,733 | 76,158 | 63,826 | 236,784 | 63,826 | 10,029 | 184.8 |
 | jc_s2 | 52,104 | 84,056 | 161,396 | 103,362 | 83,580 | 71,090 | 242,090 | 70,891 | 10,700 | 180.9 |
+| champ512_s1 | 52,579 | 134,923 | 202,527 | 104,466 | 90,497 | 89,144 | 273,500 | 82,974 | 10,251 | 172.7 |
 
 ![curves](curves.png)
 
@@ -44,7 +46,7 @@ GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall t
 
 Each run's 100 most abundant genomes were executed on all 256 (state, neighbour state) inputs. `trigger` is the fraction of inputs
 whose new state is 15 (reproduction); `nb-dep` is how many of the 16 own states give a neighbour-dependent outcome; `halt` is the
-fraction of inputs that reach HALT (the champion ISA has none, so every genome costs the full 256 steps = cost 16).
+fraction of inputs that reach HALT (the champion ISA has none, so every genome costs the full budget: cost 16 at 256 steps, 32 at 512).
 
 | run | genome | share | trigger | nb-dep states | halt | mean steps | mean cost | program |
 |---|---|---:|---:|---:|---:|---:|---:|---|
@@ -81,6 +83,9 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | jc_s2 | `0x32b4936d` | 12.1% | 0.44 | 16 | 0.00 | 256 | 16.0 | `JC 1; ADD 2; SWAP 3; NAND 1; ADD 0; NAND 3; SWAP 2; SWAP 3` |
 | jc_s2 | `0x2a493206` | 5.2% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 2; SWAP 0; SWAP 2; SWAP 3; NAND 1; ADD 0; NAND 2; SWAP 2` |
 | jc_s2 | `0xb6a49273` | 4.0% | 0.41 | 16 | 0.00 | 256 | 16.0 | `SWAP 3; ADD 3; SWAP 2; NAND 1; ADD 0; NAND 2; ADD 2; NAND 3` |
+| champ512_s1 | `0x6a375582` | 20.0% | 0.38 | 15 | 0.00 | 512 | 32.0 | `SWAP 2; NAND 0; ADD 1; ADD 1; ADD 3; SWAP 3; NAND 2; ADD 2` |
+| champ512_s1 | `0x6a357582` | 11.7% | 0.38 | 15 | 0.00 | 512 | 32.0 | `SWAP 2; NAND 0; ADD 1; ADD 3; ADD 1; SWAP 3; NAND 2; ADD 2` |
+| champ512_s1 | `0xb7377755` | 1.5% | 0.24 | 16 | 0.00 | 512 | 32.0 | `ADD 1; ADD 1; ADD 3; ADD 3; ADD 3; SWAP 3; ADD 3; NAND 3` |
 
 | run | top-3 share | top-N share | distinct phenotypes in top-N | largest phenotype share | cells in state 15 | mean age |
 |---|---:|---:|---:|---:|---:|---:|
@@ -95,6 +100,7 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | swap_rc64 | 0.8% | 15.1% | 4 | 8.9% | 5.4% | 244 |
 | jc_s1 | 22.9% | 50.5% | 41 | 23.4% | 6.6% | 233 |
 | jc_s2 | 21.2% | 48.3% | 42 | 19.4% | 7.6% | 227 |
+| champ512_s1 | 33.2% | 47.6% | 32 | 32.2% | 6.8% | 224 |
 
 ![final grids](final_montage.png)
 

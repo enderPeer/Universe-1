@@ -1,6 +1,6 @@
 # exp09: map every step of every program (the time axis of the champion ISA)
 
-**Status 2026-10-08: done for the champion ISA (unary)**, see `results/exp09_summary.md` and `results/exp09_validation.md`: 142,263,973 functions over T = 1..256, 77.8x the step-256 map. Kernel `gpu/u1_multi.cu`, driver `cluster/exp09_node.py`.
+**Status 2026-10-08: done for the champion ISA (unary)**, see `results/exp09_summary.md` and `results/exp09_validation.md`: 142,263,973 functions over T = 1..256, 77.8x the step-256 map. Kernel `gpu/u1_multi.cu`, driver `cluster/exp09_node.py`. **exp10 (same day): steps 257..512 added**, union 267,132,154 (`results/exp10_w4_o2_add_summary.md`).
 
 ## Why
 A program is a trajectory; the maps so far record only its state at step 256. On a 2 M-program sample,

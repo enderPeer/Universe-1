@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT))
 from sim.machine import Config, Machine
 LIFE = ROOT / 'results/life'
-DEFAULTS = dict(N=256, seed=1, density=0.05, start_energy=64, max_energy=255, income=20, trigger=15, repro_cost=128, mu_bits=128, max_age=1024, death_rate=512, ticks=10000)
+DEFAULTS = dict(N=256, seed=1, density=0.05, start_energy=64, max_energy=255, income=20, trigger=15, repro_cost=128, mu_bits=128, max_age=1024, death_rate=512, ticks=10000, max_steps=256)
 ap = argparse.ArgumentParser(); ap.add_argument('--top', type=int, default=100); args = ap.parse_args()
 
 def parse_options(opts):
@@ -26,13 +26,13 @@ for line in (ROOT / 'cluster/life_runs.conf').read_text().splitlines():
         name, opts = (x.strip() for x in line.split('|')); runs.append((name, parse_options(opts)))
 status = json.loads((LIFE / 'status.json').read_text())
 
-def phenotype(machine, genome):
+def phenotype(machine, genome, budget=256):
     code = [(genome >> (4 * k)) & 15 for k in range(8)]
     table = []; steps_sum = 0; halts = 0; costs = []
     for s in range(16):
         row = []
         for nb in range(16):
-            st, steps, reason = machine.run(code, init_A=s, init_M=[0, nb, 0, 0])
+            st, steps, reason = machine.run(code, init_A=s, init_M=[0, nb, 0, 0], max_steps=budget)
             row.append(st.A); steps_sum += steps; halts += reason == 'halt'; costs.append(max(1, math.ceil(steps / 16)))
         table.append(tuple(row))
     trig = sum(v == 15 for row in table for v in row) / 256
@@ -66,11 +66,11 @@ for name, p in runs:
     top = counts.most_common(args.top)
     phen = {}; classes = collections.Counter(); covered = 0
     for g, n in top:
-        ph = phenotype(machine, g); phen[g] = ph; classes[ph['table']] += n; covered += n
+        ph = phenotype(machine, g, p['max_steps']); phen[g] = ph; classes[ph['table']] += n; covered += n
     final = rows[-1]
     at = {int(t): next((r['distinct_genomes'] for r in rows if r['tick'] == t), None) for t in (1000, 10000, 50000, 100000, 200000)}
     after = [r for r in rows if r['tick'] >= 1000]
-    r = dict(isa=p['isa'], seed=p['seed'], N=p['N'], income=p['income'], mu_bits=p['mu_bits'], repro_cost=p['repro_cost'],
+    r = dict(isa=p['isa'], seed=p['seed'], N=p['N'], income=p['income'], mu_bits=p['mu_bits'], repro_cost=p['repro_cost'], max_steps=p['max_steps'],
              node=status[name]['node'], gpu=status[name]['gpu'], gpu_seconds=gpu_seconds, dispatcher_seconds=status[name]['wall_seconds'],
              ticks=ticks_done, ticks_per_second=ticks_done / gpu_seconds, cell_updates_per_second=ticks_done * nn / gpu_seconds,
              final_alive=len(live), final_fill=len(live) / nn, min_alive=min(r['alive'] for r in rows), min_alive_after_1000=min(r['alive'] for r in after),
@@ -120,10 +120,10 @@ L = ['# Life ensemble: analysis of the nine 1024^2 x 200,000-tick runs', '',
      'CPU reference on all nine GPUs before the run). Configuration: `cluster/life_runs.conf`; dispatch: `cluster/run_life.py`;',
      'this report: `cluster/analyze_life.py`. Phenotypes below use the Python reference machine on the dumped final grids.', '',
      '## Runs, speed, survival', '',
-     '| run | ISA | seed | mu_bits | repro_cost | income | GPU | GPU s | ticks/s | M cell-updates/s | final alive | min alive (t>=1000) | extinct |',
-     '|---|---|---:|---:|---:|---:|---|---:|---:|---:|---:|---:|---|']
+     '| run | ISA | seed | mu_bits | repro_cost | income | steps | GPU | GPU s | ticks/s | M cell-updates/s | final alive | min alive (t>=1000) | extinct |',
+     '|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|---:|---|']
 for name, r in report.items():
-    L.append(f"| {name} | {r['isa']} | {r['seed']} | {r['mu_bits']} | {r['repro_cost']} | {r['income']} | {r['node']} {r['gpu']} | {r['gpu_seconds']:.0f} | "
+    L.append(f"| {name} | {r['isa']} | {r['seed']} | {r['mu_bits']} | {r['repro_cost']} | {r['income']} | {r['max_steps']} | {r['node']} {r['gpu']} | {r['gpu_seconds']:.0f} | "
              f"{r['ticks_per_second']:.0f} | {r['cell_updates_per_second'] / 1e6:.0f} | {r['final_alive']:,} ({r['final_fill']:.1%}) | {int(r['min_alive_after_1000']):,} | {'yes' if r['extinct'] else 'no'} |")
 L += ['', 'GPU seconds are the engine\'s own `done ... ticks in ...s`; the dispatcher wall time in RUNS.md adds the copy-back.', '',
       '## Genome diversity (distinct genomes among live cells)', '',
@@ -136,7 +136,7 @@ for name, r in report.items():
 L += ['', '![curves](curves.png)', '', '## Final populations: most common genomes', '',
       f"Each run's {args.top} most abundant genomes were executed on all 256 (state, neighbour state) inputs. `trigger` is the fraction of inputs",
       'whose new state is 15 (reproduction); `nb-dep` is how many of the 16 own states give a neighbour-dependent outcome; `halt` is the',
-      'fraction of inputs that reach HALT (the champion ISA has none, so every genome costs the full 256 steps = cost 16).', '',
+      'fraction of inputs that reach HALT (the champion ISA has none, so every genome costs the full budget: cost 16 at 256 steps, 32 at 512).', '',
       '| run | genome | share | trigger | nb-dep states | halt | mean steps | mean cost | program |', '|---|---|---:|---:|---:|---:|---:|---:|---|']
 for name, r in report.items():
     for g in r['top_genomes']:

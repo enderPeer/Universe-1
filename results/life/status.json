@@ -108,5 +108,15 @@
     "source_commit": "acf7e16",
     "wall_seconds": 531.0,
     "note": "first run as the world-model cross-world test set (dump-every 1000); rerun with frames for the video"
+  },
+  "champ512_s1": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4080",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 36 --max-steps 512",
+    "source_commit": "b8975eb",
+    "wall_seconds": 1017.0,
+    "note": "exp10 phase C: 512-step clock; income 20 went extinct within 1,000 ticks, income 36 keeps the net budget of a full-cost organism at +4"
   }
 }

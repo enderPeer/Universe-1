@@ -23,3 +23,5 @@ results/life/*/*_512.mp4
 results/exp09/*/T[0-9]*.npy
 results/exp09/*/union.npy
 results/shards/exp09/
+results/life/*/*_showcase.mp4
+results/life/*/*_showcase.wav
