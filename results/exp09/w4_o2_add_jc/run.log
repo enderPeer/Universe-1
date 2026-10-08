@@ -1,0 +1,55 @@
+2026-10-08T12:42:29 exp09/10 w4_o2_add_jc isa=SWAP,ADD,NAND,JC chunks=64 x 2^26, passes=[(1, 64), (65, 128), (129, 192), (193, 256)], gpus=[0, 1]
+2026-10-08T12:42:43 pass T=[1,64]: 8/64 chunks (14s) last: 69762048,536870912) T=[1,64] records=29140988 1.59s (42.1 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:42:58 pass T=[1,64]: 16/64 chunks (29s) last: 6632960,1073741824) T=[1,64] records=29140988 1.59s (42.1 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:43:11 pass T=[1,64]: 24/64 chunks (42s) last: 3503872,1610612736) T=[1,64] records=28892015 1.61s (41.6 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:43:25 pass T=[1,64]: 32/64 chunks (56s) last: 0374784,2147483648) T=[1,64] records=28892015 1.65s (40.6 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:43:38 pass T=[1,64]: 40/64 chunks (69s) last: 7245696,2684354560) T=[1,64] records=19762785 1.75s (38.3 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:43:52 pass T=[1,64]: 48/64 chunks (83s) last: 4116608,3221225472) T=[1,64] records=19762785 1.95s (34.5 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:44:03 pass T=[1,64]: 56/64 chunks (94s) last: 90987520,3758096384) T=[1,64] records=8808814 1.53s (43.9 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:44:14 pass T=[1,64]: 64/64 chunks (105s) last: 60749568,4227858432) T=[1,64] records=9290097 1.89s (35.6 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:48:36 pass T=[1,64] done: sweep 105s, merge 262s, 330,936,571 records
+2026-10-08T12:48:56 pass T=[65,128]: 8/64 chunks (19s) last: 762048,536870912) T=[65,128] records=49806582 2.29s (29.3 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:49:18 pass T=[65,128]: 16/64 chunks (41s) last: 41824,1140850688) T=[65,128] records=18210724 2.68s (25.0 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:49:36 pass T=[65,128]: 24/64 chunks (60s) last: 03872,1610612736) T=[65,128] records=45570564 2.61s (25.8 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:49:56 pass T=[65,128]: 32/64 chunks (80s) last: 83648,2214592512) T=[65,128] records=17350458 2.55s (26.3 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:50:12 pass T=[65,128]: 40/64 chunks (95s) last: 45696,2684354560) T=[65,128] records=32708516 2.30s (29.2 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:50:30 pass T=[65,128]: 48/64 chunks (113s) last: 16608,3221225472) T=[65,128] records=32708516 2.31s (29.0 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:50:44 pass T=[65,128]: 56/64 chunks (128s) last: 87520,3758096384) T=[65,128] records=13372673 2.10s (31.9 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:50:59 pass T=[65,128]: 64/64 chunks (143s) last: 58432,4294967296) T=[65,128] records=13372673 2.17s (31.0 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:58:28 pass T=[65,128] done: sweep 143s, merge 449s, 574,154,839 records
+2026-10-08T12:58:51 pass T=[129,192]: 8/64 chunks (23s) last: 62048,536870912) T=[129,192] records=49361048 3.18s (21.1 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:59:16 pass T=[129,192]: 16/64 chunks (48s) last: 1824,1140850688) T=[129,192] records=17721189 3.78s (17.8 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T12:59:36 pass T=[129,192]: 24/64 chunks (69s) last: 3872,1610612736) T=[129,192] records=45211589 3.01s (22.3 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T12:59:59 pass T=[129,192]: 32/64 chunks (91s) last: 4784,2147483648) T=[129,192] records=45211589 3.02s (22.2 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:00:19 pass T=[129,192]: 40/64 chunks (111s) last: 5696,2684354560) T=[129,192] records=32820915 3.38s (19.9 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:00:41 pass T=[129,192]: 48/64 chunks (133s) last: 6608,3221225472) T=[129,192] records=32820915 3.38s (19.9 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:00:58 pass T=[129,192]: 56/64 chunks (150s) last: 7520,3758096384) T=[129,192] records=13242892 2.71s (24.8 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:01:15 pass T=[129,192]: 64/64 chunks (167s) last: 9568,4227858432) T=[129,192] records=14487117 3.25s (20.6 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:08:40 pass T=[129,192] done: sweep 167s, merge 445s, 568,619,652 records
+2026-10-08T13:09:07 pass T=[193,256]: 8/64 chunks (26s) last: 62048,536870912) T=[193,256] records=49223794 4.10s (16.4 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:09:36 pass T=[193,256]: 16/64 chunks (56s) last: 2960,1073741824) T=[193,256] records=49223794 3.62s (18.6 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:10:00 pass T=[193,256]: 24/64 chunks (79s) last: 3872,1610612736) T=[193,256] records=45064094 3.77s (17.8 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:10:25 pass T=[193,256]: 32/64 chunks (105s) last: 4784,2147483648) T=[193,256] records=45064094 4.40s (15.2 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:10:49 pass T=[193,256]: 40/64 chunks (129s) last: 5696,2684354560) T=[193,256] records=32771448 4.20s (16.0 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:11:13 pass T=[193,256]: 48/64 chunks (153s) last: 6608,3221225472) T=[193,256] records=32771448 3.59s (18.7 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:11:33 pass T=[193,256]: 56/64 chunks (173s) last: 7520,3758096384) T=[193,256] records=13173223 3.40s (19.7 Mprog/s) NVIDIA GeForce RTX 4090
+2026-10-08T13:11:53 pass T=[193,256]: 64/64 chunks (193s) last: 8432,4294967296) T=[193,256] records=13173223 3.90s (17.2 Mprog/s) NVIDIA GeForce RTX 4080
+2026-10-08T13:19:13 pass T=[193,256] done: sweep 193s, merge 440s, 565,740,405 records
+2026-10-08T13:19:13 building the union over all T
+2026-10-08T13:19:14 union after T=16: 2,997,573 functions
+2026-10-08T13:19:18 union after T=32: 38,365,955 functions
+2026-10-08T13:19:28 union after T=48: 101,646,493 functions
+2026-10-08T13:19:41 union after T=64: 171,622,154 functions
+2026-10-08T13:19:55 union after T=80: 240,884,476 functions
+2026-10-08T13:20:09 union after T=96: 307,792,396 functions
+2026-10-08T13:20:25 union after T=112: 372,237,411 functions
+2026-10-08T13:20:43 union after T=128: 434,398,395 functions
+2026-10-08T13:21:04 union after T=144: 494,536,530 functions
+2026-10-08T13:21:24 union after T=160: 552,967,662 functions
+2026-10-08T13:21:47 union after T=176: 609,842,068 functions
+2026-10-08T13:22:13 union after T=192: 665,261,399 functions
+2026-10-08T13:22:42 union after T=208: 719,491,386 functions
+2026-10-08T13:23:10 union after T=224: 772,606,721 functions
+2026-10-08T13:23:42 union after T=240: 824,697,935 functions
+2026-10-08T13:24:16 union after T=256: 875,798,276 functions
+2026-10-08T13:24:50 done: union 875,798,276 functions; summary in /home/ender/universe-1/results/exp09/w4_o2_add_jc
