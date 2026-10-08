@@ -1,0 +1,70 @@
+{
+  "gray": {
+    "binary": false,
+    "program": "0xeeee7831",
+    "instructions": [
+      "SWAP 1",
+      "ADD 1",
+      "SHR 0",
+      "XOR 1",
+      "HALT 0"
+    ],
+    "verified_inputs": 16,
+    "all_inputs_halt": true,
+    "max_steps": 5,
+    "current_best": null
+  },
+  "mul": {
+    "binary": true,
+    "program": "0xeeeeeeeb",
+    "instructions": [
+      "MUL 1",
+      "HALT 0"
+    ],
+    "verified_inputs": 256,
+    "all_inputs_halt": true,
+    "max_steps": 2,
+    "current_best": {
+      "map_target": "w4_o2_add_bin/mul",
+      "stages": 2,
+      "max_steps_bound": 512
+    }
+  },
+  "square": {
+    "binary": false,
+    "program": "0xeeeeeeea",
+    "instructions": [
+      "MUL 0",
+      "HALT 0"
+    ],
+    "verified_inputs": 16,
+    "all_inputs_halt": true,
+    "max_steps": 2,
+    "current_best": {
+      "map_target": "w4_o2_add/square",
+      "stages": 2,
+      "max_steps_bound": 512
+    }
+  },
+  "a_xor_b_xor7": {
+    "binary": true,
+    "program": "0xee784617",
+    "instructions": [
+      "XOR 1",
+      "SWAP 1",
+      "XOR 0",
+      "NAND 0",
+      "SHR 0",
+      "XOR 1",
+      "HALT 0"
+    ],
+    "verified_inputs": 256,
+    "all_inputs_halt": true,
+    "max_steps": 7,
+    "current_best": {
+      "map_target": "w4_o2_add_bin/a_xor_b_xor7",
+      "stages": 2,
+      "max_steps_bound": 512
+    }
+  }
+}

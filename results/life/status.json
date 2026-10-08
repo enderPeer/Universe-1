@@ -1,0 +1,92 @@
+{
+  "champ_s1": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4090",
+    "gpu_index": "0",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 20",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.049226,
+    "wall_seconds": 501.08676940004807
+  },
+  "champ_s2": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4080",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 1024 --seed 2 --ticks 200000 --report-every 1000 --income 20",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.05023,
+    "wall_seconds": 531.1948961999733
+  },
+  "champ_s3": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #0",
+    "gpu_index": "0",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 1024 --seed 3 --ticks 200000 --report-every 1000 --income 20",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.05023,
+    "wall_seconds": 1500.7766226000385
+  },
+  "swap_s1": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 8",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.0520873,
+    "wall_seconds": 180.37589360005222
+  },
+  "swap_s2": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #2",
+    "gpu_index": "2",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 2 --ticks 200000 --report-every 1000 --income 8",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.052737,
+    "wall_seconds": 174.93160400004126
+  },
+  "swap_s3": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "RX 9070 XT",
+    "gpu_index": "1",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 3 --ticks 200000 --report-every 1000 --income 8",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.0542405,
+    "wall_seconds": 1738.8688602999318
+  },
+  "swap_mu32": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "RX 9060 XT",
+    "gpu_index": "0",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 8 --mu-bits 32",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.0547981,
+    "wall_seconds": 1700.5556181999855
+  },
+  "swap_mu512": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #0",
+    "gpu_index": "0",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 8 --mu-bits 512",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.0568018,
+    "wall_seconds": 996.9666665999684
+  },
+  "swap_rc64": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 8 --repro-cost 64",
+    "source_commit": "eed02f8",
+    "started_unix": 1791394032.0568018,
+    "wall_seconds": 444.4316863999702
+  }
+}

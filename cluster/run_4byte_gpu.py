@@ -15,14 +15,19 @@ ap.add_argument("--binary", action="store_true"); ap.add_argument("--only"); ap.
 ap.add_argument("--no-sync", action="store_true"); ap.add_argument("--dry", action="store_true")
 ap.add_argument("--cap-log2", type=int, help="hash capacity exponent (unary: 22, binary: 26)")
 ap.add_argument("--resume", action="store_true")
+ap.add_argument('--experiment', choices=['exp03','exp05'],default='exp03')
 args = ap.parse_args()
 if args.cap_log2 is None: args.cap_log2 = 26 if args.binary else 22
 if not 10 <= args.cap_log2 <= 28: ap.error("--cap-log2 must be between 10 and 28")
 if not 1 <= args.chunk_log2 <= 32: ap.error("--chunk-log2 must be between 1 and 32")
 GPUS = [tuple(x.strip() for x in l.split("|")) for l in (ROOT / "cluster/gpus.conf").read_text().splitlines() if l.strip() and not l.startswith("#")]
 ISAS = []
+in_exp05=False
 for l in (ROOT / "cluster/isas_4byte.conf").read_text().splitlines():
+    if l.startswith('# ---- exp05'): in_exp05=True
     if not l.strip() or l.lstrip().startswith("#"): continue
+    if args.experiment=='exp05' and not in_exp05: continue
+    if args.experiment=='exp03' and in_exp05: continue
     name, geom, isa = (x.strip() for x in l.split("|")); W, a, p, I = (int(x) for x in geom.split())
     if (1 << p) * I != 32: print(f"skip {name}: program bits != 32"); continue
     if args.only and args.only != name: continue
@@ -44,7 +49,7 @@ CH = 1 << args.chunk_log2; SPAN = 1 << 32
 summary = []
 for name, W, a, p, I, isa in ISAS:
     tag = f"{name}{'_bin' if args.binary else ''}"
-    result_path = ROOT / f"results/exp03_{tag}.json"
+    result_path = ROOT / f"results/{args.experiment}_{tag}.json"
     if args.resume and result_path.exists():
         previous = json.loads(result_path.read_text())
         ranges = sorted(previous.get("programs_covered", []))
@@ -89,14 +94,14 @@ for name, W, a, p, I, isa in ISAS:
                                 shutil.copyfileobj(src, dst)
                             received.add(member.name)
                         if received != set(files): raise ValueError(f"Missing shards from {node}")
-        r = subprocess.run([sys.executable, "fast/merge.py", *[str(ROOT / o) for _, o, _ in done.values()], "--out", f"results/exp03_{tag}.json"],
+        r = subprocess.run([sys.executable, "fast/merge.py", *[str(ROOT / o) for _, o, _ in done.values()], "--out", str(result_path)],
                            cwd=ROOT, capture_output=True, text=True, check=True); print(r.stdout.strip())
         result = json.loads(result_path.read_text())
         successful_devices = sorted({(ROOT / f"{out}.log").read_text().splitlines()[0] for _, out, _ in done.values()})
         result.update(wall_seconds=secs, programs_per_second=SPAN / secs, gpu_count=len(successful_devices),
                       configured_gpu_count=len(GPUS), successful_devices=successful_devices, cap_log2=args.cap_log2,
-                      source_commit="7132c01", runner_notes="Vulkan dispatch limited to 32768 workgroups, or 1024 for tables over 16 entries; cap configurable; logs retained")
+                      source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(), experiment=args.experiment, runner_notes="Vulkan dispatch limited to 32768 workgroups, or 1024 for tables over 16 entries; cap configurable; logs retained")
         result_path.write_text(json.dumps(result, indent=1))
     print(f"{tag}: 2^32 programs in {secs:.1f}s ({SPAN / secs / 1e9:.2f} Gprog/s) on {len(GPUS)} GPUs")
     summary.append((tag, secs))
-if not args.dry: subprocess.run([sys.executable, "cluster/summarize.py"], cwd=ROOT)
+if not args.dry: subprocess.run([sys.executable, "cluster/summarize.py",'--experiment',args.experiment], cwd=ROOT,check=True)

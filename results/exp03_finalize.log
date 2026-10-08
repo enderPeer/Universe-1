@@ -1,0 +1,454 @@
+Waiting for experiment coordinator PID 15612
+All 23 supported sweeps have verified complete coverage.
+w1_nand_jz: 192 sampled witnesses agree with Python
+w1_nand_jz_bin: 192 sampled witnesses agree with Python
+w1_nand_skz: 192 sampled witnesses agree with Python
+w1_nand_skz_bin: 192 sampled witnesses agree with Python
+w2_o1: 192 sampled witnesses agree with Python
+w2_o1_bin: 192 sampled witnesses agree with Python
+w2_o1_swap: 128 sampled witnesses agree with Python
+w2_o1_swap_bin: 192 sampled witnesses agree with Python
+w4_o2_add: 192 sampled witnesses agree with Python
+w4_o2_add_bin: 192 sampled witnesses agree with Python
+w4_o2_nand: 192 sampled witnesses agree with Python
+w4_o2_nand_bin: 192 sampled witnesses agree with Python
+w4_o3_arith: 192 sampled witnesses agree with Python
+w4_o3_arith_bin: 192 sampled witnesses agree with Python
+w4_o3_bool: 192 sampled witnesses agree with Python
+w4_o3_bool_bin: 192 sampled witnesses agree with Python
+w4_o3_core: 192 sampled witnesses agree with Python
+w4_o3_core_bin: 192 sampled witnesses agree with Python
+w4_o3_swap: 192 sampled witnesses agree with Python
+w4_o3_swap_bin: 192 sampled witnesses agree with Python
+w4_o4_full: 192 sampled witnesses agree with Python
+w4_o4_full_bin: 192 sampled witnesses agree with Python
+w8_o4: 192 sampled witnesses agree with Python
+TOTAL: 4352 sampled witnesses agree
+# Experiment 03: 4-byte (2^32 program) exhaustive sweeps
+
+Wall time includes dispatch and GPU work; excludes shard download and merge.
+
+| W | run | a | p | I | opcode bits | ISA | mode | distinct operators | universe | seconds | M programs/s | coverage |
+|---|---|---|---|---|---|---|---|---:|---|---:|---:|---|
+| 1 | exp03_w1_nand_jz | 2 | 5 | 1 | 1 | NAND,JZ | unary | 4 | 2^2 | 11.91 | 360.5 | complete |
+| 1 | exp03_w1_nand_jz_bin | 2 | 5 | 1 | 1 | NAND,JZ | binary | 4 | 2^4 | 16.89 | 254.35 | complete |
+| 1 | exp03_w1_nand_skz | 2 | 5 | 1 | 1 | NAND,SKZ | unary | 4 | 2^2 | 12.43 | 345.63 | complete |
+| 1 | exp03_w1_nand_skz_bin | 2 | 5 | 1 | 1 | NAND,SKZ | binary | 4 | 2^4 | 21.83 | 196.72 | complete |
+| 2 | exp03_w2_o1_bin | 2 | 4 | 2 | 1 | NAND,JZ | binary | 2131 | 2^32 | 42.35 | 101.41 | complete |
+| 2 | exp03_w2_o1 | 2 | 4 | 2 | 1 | NAND,JZ | unary | 12 | 2^8 | 13.42 | 320.05 | complete |
+| 2 | exp03_w2_o1_swap_bin | 2 | 4 | 2 | 1 | SWAP,SKNZ | binary | 8 | 2^32 | 48.87 | 87.89 | complete |
+| 2 | exp03_w2_o1_swap | 2 | 4 | 2 | 1 | SWAP,SKNZ | unary | 2 | 2^8 | 19.14 | 224.37 | complete |
+| 4 | exp03_w4_o2_add_bin | 2 | 3 | 4 | 2 | SWAP,ADD,NAND,SKZ | binary | 24684247 | 2^1024 | 840.87 | 5.11 | complete |
+| 4 | exp03_w4_o3_swap_bin | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | binary | 7690892 | 2^1024 | 438.23 | 9.8 | complete |
+| 4 | exp03_w4_o2_add | 2 | 3 | 4 | 2 | SWAP,ADD,NAND,SKZ | unary | 1829051 | 2^64 | 54.97 | 78.13 | complete |
+| 4 | exp03_w4_o3_swap | 2 | 3 | 4 | 3 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | unary | 1463824 | 2^64 | 29.79 | 144.18 | complete |
+| 4 | exp03_w4_o3_core_bin | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | binary | 1020901 | 2^1024 | 397.64 | 10.8 | complete |
+| 4 | exp03_w4_o4_full | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | unary | 977928 | 2^64 | 42.99 | 99.91 | complete |
+| 4 | exp03_w4_o4_full_bin | 1 | 3 | 4 | 4 | LD,ST,NOT,AND,OR,XOR,ADD,SUB,INC,DEC,SHL,SHR,ROL,SKZ,SKNZ,HALT | binary | 977928 | 2^1024 | 649.57 | 6.61 | complete |
+| 4 | exp03_w4_o3_arith_bin | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | binary | 339877 | 2^1024 | 474.82 | 9.05 | complete |
+| 4 | exp03_w4_o3_core | 2 | 3 | 4 | 3 | LD,ST,LDI,NAND,ADD,SHL,JZ,HALT | unary | 62880 | 2^64 | 27.05 | 158.79 | complete |
+| 4 | exp03_w4_o3_arith | 2 | 3 | 4 | 3 | LD,ST,ADD,SUB,SHL,SHR,JNZ,HALT | unary | 24420 | 2^64 | 35.02 | 122.64 | complete |
+| 4 | exp03_w4_o2_nand_bin | 2 | 3 | 4 | 2 | LD,ST,NAND,JZ | binary | 17827 | 2^1024 | 587.79 | 7.31 | complete |
+| 4 | exp03_w4_o3_bool_bin | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | binary | 11946 | 2^1024 | 331.58 | 12.95 | complete |
+| 4 | exp03_w4_o2_nand | 2 | 3 | 4 | 2 | LD,ST,NAND,JZ | unary | 16 | 2^64 | 41.01 | 104.72 | complete |
+| 4 | exp03_w4_o3_bool | 2 | 3 | 4 | 3 | LD,ST,NOT,AND,OR,XOR,SKZ,HALT | unary | 16 | 2^64 | 20.95 | 205.03 | complete |
+| 8 | exp03_w8_o4 | 4 | 2 | 8 | 4 | LD,ST,LDI,NOT,AND,OR,XOR,ADD,SUB,SHL,SHR,JMP,JZ,JC,SWAP,HALT | unary | 7119 | 2^2048 | 677.31 | 6.34 | complete |
+
+## Highest counts among completed candidates
+
+- W=1, binary: exp03_w1_nand_jz_bin, exp03_w1_nand_skz_bin (4 operators).
+- W=1, unary: exp03_w1_nand_jz, exp03_w1_nand_skz (4 operators).
+- W=2, binary: exp03_w2_o1_bin (2131 operators).
+- W=2, unary: exp03_w2_o1 (12 operators).
+- W=4, binary: exp03_w4_o2_add_bin (24684247 operators).
+- W=4, unary: exp03_w4_o2_add (1829051 operators).
+- W=8, unary: exp03_w8_o4 (7119 operators).
+
+These rankings compare only the configured candidate ISAs; they do not prove global optimality.
+All runs use layout L3 (address 0 aliases A), so no memory-layout winner is established.
+Raw shards and minimum-program witnesses are in results/shards/ on the coordinator and producing worker.
+W<=4 unary and W<=2 binary use exact keys; larger tables are represented by hashes.
+GPU engines do not report halt/loop/budget distributions. W=8 binary exceeds the current GPU table limit.
+w1_nand_jz: 4 recognized tables / 48 names; all witnesses fully verified
+w1_nand_jz_bin: 4 recognized tables / 67 names; all witnesses fully verified
+w1_nand_skz: 4 recognized tables / 48 names; all witnesses fully verified
+w1_nand_skz_bin: 4 recognized tables / 67 names; all witnesses fully verified
+w2_o1: 3 recognized tables / 19 names; all witnesses fully verified
+w2_o1_bin: 3 recognized tables / 13 names; all witnesses fully verified
+w2_o1_swap: 2 recognized tables / 16 names; all witnesses fully verified
+w2_o1_swap_bin: 2 recognized tables / 20 names; all witnesses fully verified
+w4_o2_add: 324 recognized tables / 396 names; all witnesses fully verified
+w4_o2_add_bin: 646 recognized tables / 824 names; all witnesses fully verified
+w4_o2_nand: 4 recognized tables / 22 names; all witnesses fully verified
+w4_o2_nand_bin: 16 recognized tables / 68 names; all witnesses fully verified
+w4_o3_arith: 49 recognized tables / 84 names; all witnesses fully verified
+w4_o3_arith_bin: 97 recognized tables / 173 names; all witnesses fully verified
+w4_o3_bool: 4 recognized tables / 22 names; all witnesses fully verified
+w4_o3_bool_bin: 18 recognized tables / 72 names; all witnesses fully verified
+w4_o3_core: 280 recognized tables / 351 names; all witnesses fully verified
+w4_o3_core_bin: 568 recognized tables / 739 names; all witnesses fully verified
+w4_o3_swap: 335 recognized tables / 410 names; all witnesses fully verified
+w4_o3_swap_bin: 638 recognized tables / 820 names; all witnesses fully verified
+w4_o4_full: 206 recognized tables / 273 names; all witnesses fully verified
+w4_o4_full_bin: 206 recognized tables / 315 names; all witnesses fully verified
+w8_o4: 485 recognized tables / 552 names; all witnesses fully verified
+w1_nand_jz: 64 shards in 1 verified archive(s)
+w1_nand_jz_bin: 64 shards in 1 verified archive(s)
+w1_nand_skz: 64 shards in 1 verified archive(s)
+w1_nand_skz_bin: 64 shards in 1 verified archive(s)
+w2_o1: 64 shards in 1 verified archive(s)
+w2_o1_bin: 64 shards in 1 verified archive(s)
+w2_o1_swap: 64 shards in 1 verified archive(s)
+w2_o1_swap_bin: 64 shards in 1 verified archive(s)
+w4_o2_add: 64 shards in 10 verified archive(s)
+w4_o2_add_bin: 64 shards in 62 verified archive(s)
+w4_o2_nand: 64 shards in 1 verified archive(s)
+w4_o2_nand_bin: 64 shards in 1 verified archive(s)
+w4_o3_arith: 64 shards in 1 verified archive(s)
+w4_o3_arith_bin: 64 shards in 3 verified archive(s)
+w4_o3_bool: 64 shards in 1 verified archive(s)
+w4_o3_bool_bin: 64 shards in 1 verified archive(s)
+w4_o3_core: 64 shards in 1 verified archive(s)
+w4_o3_core_bin: 64 shards in 5 verified archive(s)
+w4_o3_swap: 64 shards in 6 verified archive(s)
+w4_o3_swap_bin: 64 shards in 32 verified archive(s)
+w4_o4_full: 64 shards in 7 verified archive(s)
+w4_o4_full_bin: 64 shards in 7 verified archive(s)
+w8_o4: 64 shards in 1 verified archive(s)
+[claude/charming-rubin-pi8nzs 9d697ac] Publish witness archive w1_nand_jz_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w1_nand_jz_bin.part01.zip
+[claude/charming-rubin-pi8nzs 4867509] Publish witness archive w1_nand_skz_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w1_nand_skz_bin.part01.zip
+[claude/charming-rubin-pi8nzs 47f964c] Publish witness archive w2_o1_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w2_o1_bin.part01.zip
+[claude/charming-rubin-pi8nzs e35e5a8] Publish witness archive w2_o1_swap_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w2_o1_swap_bin.part01.zip
+[claude/charming-rubin-pi8nzs b97b95d] Publish witness archive w4_o2_add_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part01.zip
+[claude/charming-rubin-pi8nzs 6625a9a] Publish witness archive w4_o2_add_bin.part02.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part02.zip
+[claude/charming-rubin-pi8nzs 63e849c] Publish witness archive w4_o2_add_bin.part03.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part03.zip
+[claude/charming-rubin-pi8nzs 954baab] Publish witness archive w4_o2_add_bin.part04.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part04.zip
+[claude/charming-rubin-pi8nzs 145bcea] Publish witness archive w4_o2_add_bin.part05.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part05.zip
+[claude/charming-rubin-pi8nzs a4f32ee] Publish witness archive w4_o2_add_bin.part06.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part06.zip
+[claude/charming-rubin-pi8nzs 3fd6738] Publish witness archive w4_o2_add_bin.part07.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part07.zip
+[claude/charming-rubin-pi8nzs 51c0594] Publish witness archive w4_o2_add_bin.part08.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part08.zip
+[claude/charming-rubin-pi8nzs 2f411ac] Publish witness archive w4_o2_add_bin.part09.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part09.zip
+[claude/charming-rubin-pi8nzs 2072d68] Publish witness archive w4_o2_add_bin.part10.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part10.zip
+[claude/charming-rubin-pi8nzs 9ce3bfb] Publish witness archive w4_o2_add_bin.part11.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part11.zip
+[claude/charming-rubin-pi8nzs 976d103] Publish witness archive w4_o2_add_bin.part12.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part12.zip
+[claude/charming-rubin-pi8nzs cae627d] Publish witness archive w4_o2_add_bin.part13.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part13.zip
+[claude/charming-rubin-pi8nzs 3aff818] Publish witness archive w4_o2_add_bin.part14.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part14.zip
+[claude/charming-rubin-pi8nzs 4282f96] Publish witness archive w4_o2_add_bin.part15.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part15.zip
+[claude/charming-rubin-pi8nzs a85097f] Publish witness archive w4_o2_add_bin.part16.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part16.zip
+[claude/charming-rubin-pi8nzs ca07b29] Publish witness archive w4_o2_add_bin.part17.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part17.zip
+[claude/charming-rubin-pi8nzs 3861a56] Publish witness archive w4_o2_add_bin.part18.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part18.zip
+[claude/charming-rubin-pi8nzs f609b5a] Publish witness archive w4_o2_add_bin.part19.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part19.zip
+[claude/charming-rubin-pi8nzs 05ef6e2] Publish witness archive w4_o2_add_bin.part20.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part20.zip
+[claude/charming-rubin-pi8nzs b039775] Publish witness archive w4_o2_add_bin.part21.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part21.zip
+[claude/charming-rubin-pi8nzs de462ec] Publish witness archive w4_o2_add_bin.part22.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part22.zip
+[claude/charming-rubin-pi8nzs 20832a0] Publish witness archive w4_o2_add_bin.part23.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part23.zip
+[claude/charming-rubin-pi8nzs 25d7389] Publish witness archive w4_o2_add_bin.part24.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part24.zip
+[claude/charming-rubin-pi8nzs c13fa43] Publish witness archive w4_o2_add_bin.part25.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part25.zip
+[claude/charming-rubin-pi8nzs 28531db] Publish witness archive w4_o2_add_bin.part26.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part26.zip
+[claude/charming-rubin-pi8nzs 397e47f] Publish witness archive w4_o2_add_bin.part27.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part27.zip
+[claude/charming-rubin-pi8nzs c2175dc] Publish witness archive w4_o2_add_bin.part28.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part28.zip
+[claude/charming-rubin-pi8nzs b965b6d] Publish witness archive w4_o2_add_bin.part29.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part29.zip
+[claude/charming-rubin-pi8nzs bc4e847] Publish witness archive w4_o2_add_bin.part30.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part30.zip
+[claude/charming-rubin-pi8nzs 9614d78] Publish witness archive w4_o2_add_bin.part31.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part31.zip
+[claude/charming-rubin-pi8nzs 6be72b4] Publish witness archive w4_o2_add_bin.part32.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part32.zip
+[claude/charming-rubin-pi8nzs bff6620] Publish witness archive w4_o2_add_bin.part33.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part33.zip
+[claude/charming-rubin-pi8nzs 7a01ce5] Publish witness archive w4_o2_add_bin.part34.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part34.zip
+[claude/charming-rubin-pi8nzs 5c98a16] Publish witness archive w4_o2_add_bin.part35.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part35.zip
+[claude/charming-rubin-pi8nzs e42853d] Publish witness archive w4_o2_add_bin.part36.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part36.zip
+[claude/charming-rubin-pi8nzs 297e608] Publish witness archive w4_o2_add_bin.part37.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part37.zip
+[claude/charming-rubin-pi8nzs ab1f6de] Publish witness archive w4_o2_add_bin.part38.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part38.zip
+[claude/charming-rubin-pi8nzs 54f5b67] Publish witness archive w4_o2_add_bin.part39.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part39.zip
+[claude/charming-rubin-pi8nzs 46b45be] Publish witness archive w4_o2_add_bin.part40.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part40.zip
+[claude/charming-rubin-pi8nzs 7d3f867] Publish witness archive w4_o2_add_bin.part41.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part41.zip
+[claude/charming-rubin-pi8nzs fc4bf7f] Publish witness archive w4_o2_add_bin.part42.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part42.zip
+[claude/charming-rubin-pi8nzs 58085eb] Publish witness archive w4_o2_add_bin.part43.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part43.zip
+[claude/charming-rubin-pi8nzs b14eadc] Publish witness archive w4_o2_add_bin.part44.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part44.zip
+[claude/charming-rubin-pi8nzs b5f76d9] Publish witness archive w4_o2_add_bin.part45.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part45.zip
+[claude/charming-rubin-pi8nzs b2e40be] Publish witness archive w4_o2_add_bin.part46.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part46.zip
+[claude/charming-rubin-pi8nzs 4544406] Publish witness archive w4_o2_add_bin.part47.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part47.zip
+[claude/charming-rubin-pi8nzs 92aa503] Publish witness archive w4_o2_add_bin.part48.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part48.zip
+[claude/charming-rubin-pi8nzs 95b6414] Publish witness archive w4_o2_add_bin.part49.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part49.zip
+[claude/charming-rubin-pi8nzs 0fc0621] Publish witness archive w4_o2_add_bin.part50.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part50.zip
+[claude/charming-rubin-pi8nzs 64622f0] Publish witness archive w4_o2_add_bin.part51.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part51.zip
+[claude/charming-rubin-pi8nzs 7edbe14] Publish witness archive w4_o2_add_bin.part52.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part52.zip
+[claude/charming-rubin-pi8nzs 4262024] Publish witness archive w4_o2_add_bin.part53.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part53.zip
+[claude/charming-rubin-pi8nzs f9f7afc] Publish witness archive w4_o2_add_bin.part54.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part54.zip
+[claude/charming-rubin-pi8nzs a075837] Publish witness archive w4_o2_add_bin.part55.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part55.zip
+[claude/charming-rubin-pi8nzs 672395d] Publish witness archive w4_o2_add_bin.part56.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part56.zip
+[claude/charming-rubin-pi8nzs 5e09200] Publish witness archive w4_o2_add_bin.part57.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part57.zip
+[claude/charming-rubin-pi8nzs b83f4a6] Publish witness archive w4_o2_add_bin.part58.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part58.zip
+[claude/charming-rubin-pi8nzs ebf4f7d] Publish witness archive w4_o2_add_bin.part59.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part59.zip
+[claude/charming-rubin-pi8nzs 69dfb49] Publish witness archive w4_o2_add_bin.part60.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part60.zip
+[claude/charming-rubin-pi8nzs 0354868] Publish witness archive w4_o2_add_bin.part61.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part61.zip
+[claude/charming-rubin-pi8nzs ca547e4] Publish witness archive w4_o2_add_bin.part62.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_add_bin.part62.zip
+[claude/charming-rubin-pi8nzs fb2aa5e] Publish witness archive w4_o2_nand_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o2_nand_bin.part01.zip
+[claude/charming-rubin-pi8nzs d92cd31] Publish witness archive w4_o3_swap_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part01.zip
+[claude/charming-rubin-pi8nzs 8d0985e] Publish witness archive w4_o3_swap_bin.part02.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part02.zip
+[claude/charming-rubin-pi8nzs c414905] Publish witness archive w4_o3_swap_bin.part03.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part03.zip
+[claude/charming-rubin-pi8nzs 0291fd2] Publish witness archive w4_o3_swap_bin.part04.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part04.zip
+[claude/charming-rubin-pi8nzs 7da42cc] Publish witness archive w4_o3_swap_bin.part05.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part05.zip
+[claude/charming-rubin-pi8nzs 8e9c45d] Publish witness archive w4_o3_swap_bin.part06.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part06.zip
+[claude/charming-rubin-pi8nzs 4e07c9a] Publish witness archive w4_o3_swap_bin.part07.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part07.zip
+[claude/charming-rubin-pi8nzs ff0cb89] Publish witness archive w4_o3_swap_bin.part08.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part08.zip
+[claude/charming-rubin-pi8nzs 5a29eca] Publish witness archive w4_o3_swap_bin.part09.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part09.zip
+[claude/charming-rubin-pi8nzs 08709b7] Publish witness archive w4_o3_swap_bin.part10.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part10.zip
+[claude/charming-rubin-pi8nzs 9339608] Publish witness archive w4_o3_swap_bin.part11.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part11.zip
+[claude/charming-rubin-pi8nzs 33eaa38] Publish witness archive w4_o3_swap_bin.part12.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part12.zip
+[claude/charming-rubin-pi8nzs 3950c85] Publish witness archive w4_o3_swap_bin.part13.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part13.zip
+[claude/charming-rubin-pi8nzs 0cf256c] Publish witness archive w4_o3_swap_bin.part14.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part14.zip
+[claude/charming-rubin-pi8nzs 2016f6f] Publish witness archive w4_o3_swap_bin.part15.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part15.zip
+[claude/charming-rubin-pi8nzs 5f54203] Publish witness archive w4_o3_swap_bin.part16.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part16.zip
+[claude/charming-rubin-pi8nzs d671274] Publish witness archive w4_o3_swap_bin.part17.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part17.zip
+[claude/charming-rubin-pi8nzs 59ac848] Publish witness archive w4_o3_swap_bin.part18.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part18.zip
+[claude/charming-rubin-pi8nzs fa30d48] Publish witness archive w4_o3_swap_bin.part19.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part19.zip
+[claude/charming-rubin-pi8nzs e7b492b] Publish witness archive w4_o3_swap_bin.part20.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part20.zip
+[claude/charming-rubin-pi8nzs 3c80154] Publish witness archive w4_o3_swap_bin.part21.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part21.zip
+[claude/charming-rubin-pi8nzs 9c1a318] Publish witness archive w4_o3_swap_bin.part22.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part22.zip
+[claude/charming-rubin-pi8nzs 8e38951] Publish witness archive w4_o3_swap_bin.part23.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part23.zip
+[claude/charming-rubin-pi8nzs df7e147] Publish witness archive w4_o3_swap_bin.part24.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part24.zip
+[claude/charming-rubin-pi8nzs 24d98ca] Publish witness archive w4_o3_swap_bin.part25.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part25.zip
+[claude/charming-rubin-pi8nzs 72f98d9] Publish witness archive w4_o3_swap_bin.part26.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part26.zip
+[claude/charming-rubin-pi8nzs a14f400] Publish witness archive w4_o3_swap_bin.part27.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part27.zip
+[claude/charming-rubin-pi8nzs a97b834] Publish witness archive w4_o3_swap_bin.part28.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part28.zip
+[claude/charming-rubin-pi8nzs 2e12783] Publish witness archive w4_o3_swap_bin.part29.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part29.zip
+[claude/charming-rubin-pi8nzs a802c32] Publish witness archive w4_o3_swap_bin.part30.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part30.zip
+[claude/charming-rubin-pi8nzs 88f485f] Publish witness archive w4_o3_swap_bin.part31.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part31.zip
+[claude/charming-rubin-pi8nzs 43c92c0] Publish witness archive w4_o3_swap_bin.part32.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o3_swap_bin.part32.zip
+[claude/charming-rubin-pi8nzs c2d2dbc] Publish witness archive w4_o4_full_bin.part01.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part01.zip
+[claude/charming-rubin-pi8nzs 7e26f16] Publish witness archive w4_o4_full_bin.part02.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part02.zip
+[claude/charming-rubin-pi8nzs 51dab25] Publish witness archive w4_o4_full_bin.part03.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part03.zip
+[claude/charming-rubin-pi8nzs 9742c76] Publish witness archive w4_o4_full_bin.part04.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part04.zip
+[claude/charming-rubin-pi8nzs 624df8d] Publish witness archive w4_o4_full_bin.part05.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part05.zip
+[claude/charming-rubin-pi8nzs f5fdf09] Publish witness archive w4_o4_full_bin.part06.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part06.zip
+[claude/charming-rubin-pi8nzs bd21d55] Publish witness archive w4_o4_full_bin.part07.zip
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 results/witnesses/w4_o4_full_bin.part07.zip
+[claude/charming-rubin-pi8nzs b382e9b] Record completed and validated binary cluster experiment
+ 20 files changed, 266013 insertions(+), 11 deletions(-)
+ create mode 100644 results/exp03_binary_run.log
+ create mode 100644 results/exp03_completion.md
+ create mode 100644 results/exp03_w1_nand_jz_bin.json
+ create mode 100644 results/exp03_w1_nand_skz_bin.json
+ create mode 100644 results/exp03_w2_o1_bin.json
+ create mode 100644 results/exp03_w2_o1_swap_bin.json
+ create mode 100644 results/exp03_w4_o2_add_bin.json
+ create mode 100644 results/exp03_w4_o2_nand_bin.json
+ create mode 100644 results/exp03_w4_o3_swap_bin.json
+ create mode 100644 results/exp03_w4_o4_full_bin.json
+ create mode 100644 results/function-map/w1_nand_jz_bin.json
+ create mode 100644 results/function-map/w1_nand_skz_bin.json
+ create mode 100644 results/function-map/w2_o1_bin.json
+ create mode 100644 results/function-map/w2_o1_swap_bin.json
+ create mode 100644 results/function-map/w4_o2_add_bin.json
+ create mode 100644 results/function-map/w4_o4_full_bin.json
+COMPLETE: validated results copied to the cluster and pushed to GitHub.

@@ -3,6 +3,7 @@
   "runs": [
     {
       "run": "w1_nand_jz",
+      "experiment": "exp03",
       "result": "results/exp03_w1_nand_jz.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -82,6 +83,7 @@
     },
     {
       "run": "w1_nand_jz_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w1_nand_jz_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -161,6 +163,7 @@
     },
     {
       "run": "w1_nand_skz",
+      "experiment": "exp03",
       "result": "results/exp03_w1_nand_skz.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -240,6 +243,7 @@
     },
     {
       "run": "w1_nand_skz_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w1_nand_skz_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -319,6 +323,7 @@
     },
     {
       "run": "w2_o1",
+      "experiment": "exp03",
       "result": "results/exp03_w2_o1.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -398,6 +403,7 @@
     },
     {
       "run": "w2_o1_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w2_o1_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -477,6 +483,7 @@
     },
     {
       "run": "w2_o1_swap",
+      "experiment": "exp03",
       "result": "results/exp03_w2_o1_swap.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -556,6 +563,7 @@
     },
     {
       "run": "w2_o1_swap_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w2_o1_swap_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -635,6 +643,7 @@
     },
     {
       "run": "w4_o2_add",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o2_add.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -777,6 +786,7 @@
     },
     {
       "run": "w4_o2_add_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o2_add_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1283,6 +1293,7 @@
     },
     {
       "run": "w4_o2_nand",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o2_nand.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1362,6 +1373,7 @@
     },
     {
       "run": "w4_o2_nand_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o2_nand_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1441,6 +1453,7 @@
     },
     {
       "run": "w4_o3_arith",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_arith.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1520,6 +1533,7 @@
     },
     {
       "run": "w4_o3_arith_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_arith_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1613,6 +1627,7 @@
     },
     {
       "run": "w4_o3_bool",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_bool.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1692,6 +1707,7 @@
     },
     {
       "run": "w4_o3_bool_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_bool_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1771,6 +1787,7 @@
     },
     {
       "run": "w4_o3_core",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_core.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1850,6 +1867,7 @@
     },
     {
       "run": "w4_o3_core_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_core_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -1957,6 +1975,7 @@
     },
     {
       "run": "w4_o3_swap",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_swap.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -2071,6 +2090,7 @@
     },
     {
       "run": "w4_o3_swap_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o3_swap_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -2367,6 +2387,7 @@
     },
     {
       "run": "w4_o4_full",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o4_full.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -2488,6 +2509,7 @@
     },
     {
       "run": "w4_o4_full_bin",
+      "experiment": "exp03",
       "result": "results/exp03_w4_o4_full_bin.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -2609,6 +2631,7 @@
     },
     {
       "run": "w8_o4",
+      "experiment": "exp03",
       "result": "results/exp03_w8_o4.json",
       "programs": 4294967296,
       "shard_count": 64,
@@ -2682,6 +2705,2169 @@
             "results/shards/w8_o4_0061.bin",
             "results/shards/w8_o4_0062.bin",
             "results/shards/w8_o4_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_codex_shr_mul",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_codex_shr_mul.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_codex_shr_mul.part01.zip",
+          "bytes": 8445358,
+          "sha256": "f045758858e87ac62865be27e024046dd03a2b1b1d9b8e2f297688154e9b327a",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0000.bin",
+            "results/shards/w4_codex_shr_mul_0001.bin",
+            "results/shards/w4_codex_shr_mul_0002.bin",
+            "results/shards/w4_codex_shr_mul_0003.bin",
+            "results/shards/w4_codex_shr_mul_0004.bin",
+            "results/shards/w4_codex_shr_mul_0005.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part02.zip",
+          "bytes": 7773275,
+          "sha256": "623c54430bd7b64282e567217f9cb05adea4d4797b987f396114ad469ffd5134",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0006.bin",
+            "results/shards/w4_codex_shr_mul_0007.bin",
+            "results/shards/w4_codex_shr_mul_0008.bin",
+            "results/shards/w4_codex_shr_mul_0009.bin",
+            "results/shards/w4_codex_shr_mul_0010.bin",
+            "results/shards/w4_codex_shr_mul_0011.bin",
+            "results/shards/w4_codex_shr_mul_0012.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part03.zip",
+          "bytes": 9232632,
+          "sha256": "8f4108e8f38d881a21538d07bb909ada03e837157e4b10eb2ea99c2caa35fa47",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0013.bin",
+            "results/shards/w4_codex_shr_mul_0014.bin",
+            "results/shards/w4_codex_shr_mul_0015.bin",
+            "results/shards/w4_codex_shr_mul_0016.bin",
+            "results/shards/w4_codex_shr_mul_0017.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part04.zip",
+          "bytes": 7521795,
+          "sha256": "3952ddd66092f9728fce523b3bb9e24c01e0a17622f69254286dd0b1d150b036",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0018.bin",
+            "results/shards/w4_codex_shr_mul_0019.bin",
+            "results/shards/w4_codex_shr_mul_0020.bin",
+            "results/shards/w4_codex_shr_mul_0021.bin",
+            "results/shards/w4_codex_shr_mul_0022.bin",
+            "results/shards/w4_codex_shr_mul_0023.bin",
+            "results/shards/w4_codex_shr_mul_0024.bin",
+            "results/shards/w4_codex_shr_mul_0025.bin",
+            "results/shards/w4_codex_shr_mul_0026.bin",
+            "results/shards/w4_codex_shr_mul_0027.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part05.zip",
+          "bytes": 8994507,
+          "sha256": "d3138922f9613421f8912b0969b16deed04caa766e7ab26798a6bfed235d0e8c",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0028.bin",
+            "results/shards/w4_codex_shr_mul_0029.bin",
+            "results/shards/w4_codex_shr_mul_0030.bin",
+            "results/shards/w4_codex_shr_mul_0031.bin",
+            "results/shards/w4_codex_shr_mul_0032.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part06.zip",
+          "bytes": 8763424,
+          "sha256": "9c7c5032e6c2813d07e2a7bfbb9e8ea31662bb1b23f967b6f64a26ceb8a493e5",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0033.bin",
+            "results/shards/w4_codex_shr_mul_0034.bin",
+            "results/shards/w4_codex_shr_mul_0035.bin",
+            "results/shards/w4_codex_shr_mul_0036.bin",
+            "results/shards/w4_codex_shr_mul_0037.bin",
+            "results/shards/w4_codex_shr_mul_0038.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part07.zip",
+          "bytes": 7589461,
+          "sha256": "0abdc34b4f2e47f39556ddf5a1d1b70646aa2bd63d637b01f721279e23a0d761",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0039.bin",
+            "results/shards/w4_codex_shr_mul_0040.bin",
+            "results/shards/w4_codex_shr_mul_0041.bin",
+            "results/shards/w4_codex_shr_mul_0042.bin",
+            "results/shards/w4_codex_shr_mul_0043.bin",
+            "results/shards/w4_codex_shr_mul_0044.bin",
+            "results/shards/w4_codex_shr_mul_0045.bin",
+            "results/shards/w4_codex_shr_mul_0046.bin",
+            "results/shards/w4_codex_shr_mul_0047.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part08.zip",
+          "bytes": 7495764,
+          "sha256": "aaa53909925af9794c78f2f4db4b26aa84a4bac20359f2f2ff2b8aa8a20562c2",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0048.bin",
+            "results/shards/w4_codex_shr_mul_0049.bin",
+            "results/shards/w4_codex_shr_mul_0050.bin",
+            "results/shards/w4_codex_shr_mul_0051.bin"
+          ]
+        },
+        {
+          "file": "w4_codex_shr_mul.part09.zip",
+          "bytes": 8339167,
+          "sha256": "a73176cd087cb08041b0e42ecd2a22e55944116a1bb66dfe39fdf03eb6d8fb8a",
+          "shards": [
+            "results/shards/w4_codex_shr_mul_0052.bin",
+            "results/shards/w4_codex_shr_mul_0053.bin",
+            "results/shards/w4_codex_shr_mul_0054.bin",
+            "results/shards/w4_codex_shr_mul_0055.bin",
+            "results/shards/w4_codex_shr_mul_0056.bin",
+            "results/shards/w4_codex_shr_mul_0057.bin",
+            "results/shards/w4_codex_shr_mul_0058.bin",
+            "results/shards/w4_codex_shr_mul_0059.bin",
+            "results/shards/w4_codex_shr_mul_0060.bin",
+            "results/shards/w4_codex_shr_mul_0061.bin",
+            "results/shards/w4_codex_shr_mul_0062.bin",
+            "results/shards/w4_codex_shr_mul_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_i8_o3",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_i8_o3.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_i8_o3.part01.zip",
+          "bytes": 142863,
+          "sha256": "c5d06b1248aebf57bf93acfeb416f4c74fad0b5af8b31f5d919e04f6fe486c53",
+          "shards": [
+            "results/shards/w4_i8_o3_0000.bin",
+            "results/shards/w4_i8_o3_0001.bin",
+            "results/shards/w4_i8_o3_0002.bin",
+            "results/shards/w4_i8_o3_0003.bin",
+            "results/shards/w4_i8_o3_0004.bin",
+            "results/shards/w4_i8_o3_0005.bin",
+            "results/shards/w4_i8_o3_0006.bin",
+            "results/shards/w4_i8_o3_0007.bin",
+            "results/shards/w4_i8_o3_0008.bin",
+            "results/shards/w4_i8_o3_0009.bin",
+            "results/shards/w4_i8_o3_0010.bin",
+            "results/shards/w4_i8_o3_0011.bin",
+            "results/shards/w4_i8_o3_0012.bin",
+            "results/shards/w4_i8_o3_0013.bin",
+            "results/shards/w4_i8_o3_0014.bin",
+            "results/shards/w4_i8_o3_0015.bin",
+            "results/shards/w4_i8_o3_0016.bin",
+            "results/shards/w4_i8_o3_0017.bin",
+            "results/shards/w4_i8_o3_0018.bin",
+            "results/shards/w4_i8_o3_0019.bin",
+            "results/shards/w4_i8_o3_0020.bin",
+            "results/shards/w4_i8_o3_0021.bin",
+            "results/shards/w4_i8_o3_0022.bin",
+            "results/shards/w4_i8_o3_0023.bin",
+            "results/shards/w4_i8_o3_0024.bin",
+            "results/shards/w4_i8_o3_0025.bin",
+            "results/shards/w4_i8_o3_0026.bin",
+            "results/shards/w4_i8_o3_0027.bin",
+            "results/shards/w4_i8_o3_0028.bin",
+            "results/shards/w4_i8_o3_0029.bin",
+            "results/shards/w4_i8_o3_0030.bin",
+            "results/shards/w4_i8_o3_0031.bin",
+            "results/shards/w4_i8_o3_0032.bin",
+            "results/shards/w4_i8_o3_0033.bin",
+            "results/shards/w4_i8_o3_0034.bin",
+            "results/shards/w4_i8_o3_0035.bin",
+            "results/shards/w4_i8_o3_0036.bin",
+            "results/shards/w4_i8_o3_0037.bin",
+            "results/shards/w4_i8_o3_0038.bin",
+            "results/shards/w4_i8_o3_0039.bin",
+            "results/shards/w4_i8_o3_0040.bin",
+            "results/shards/w4_i8_o3_0041.bin",
+            "results/shards/w4_i8_o3_0042.bin",
+            "results/shards/w4_i8_o3_0043.bin",
+            "results/shards/w4_i8_o3_0044.bin",
+            "results/shards/w4_i8_o3_0045.bin",
+            "results/shards/w4_i8_o3_0046.bin",
+            "results/shards/w4_i8_o3_0047.bin",
+            "results/shards/w4_i8_o3_0048.bin",
+            "results/shards/w4_i8_o3_0049.bin",
+            "results/shards/w4_i8_o3_0050.bin",
+            "results/shards/w4_i8_o3_0051.bin",
+            "results/shards/w4_i8_o3_0052.bin",
+            "results/shards/w4_i8_o3_0053.bin",
+            "results/shards/w4_i8_o3_0054.bin",
+            "results/shards/w4_i8_o3_0055.bin",
+            "results/shards/w4_i8_o3_0056.bin",
+            "results/shards/w4_i8_o3_0057.bin",
+            "results/shards/w4_i8_o3_0058.bin",
+            "results/shards/w4_i8_o3_0059.bin",
+            "results/shards/w4_i8_o3_0060.bin",
+            "results/shards/w4_i8_o3_0061.bin",
+            "results/shards/w4_i8_o3_0062.bin",
+            "results/shards/w4_i8_o3_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_i8_o4",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_i8_o4.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_i8_o4.part01.zip",
+          "bytes": 346800,
+          "sha256": "de9d49d066b1f244edb3d5e5b4c681f0c555aafcfc68e7fa62b977d94edac184",
+          "shards": [
+            "results/shards/w4_i8_o4_0000.bin",
+            "results/shards/w4_i8_o4_0001.bin",
+            "results/shards/w4_i8_o4_0002.bin",
+            "results/shards/w4_i8_o4_0003.bin",
+            "results/shards/w4_i8_o4_0004.bin",
+            "results/shards/w4_i8_o4_0005.bin",
+            "results/shards/w4_i8_o4_0006.bin",
+            "results/shards/w4_i8_o4_0007.bin",
+            "results/shards/w4_i8_o4_0008.bin",
+            "results/shards/w4_i8_o4_0009.bin",
+            "results/shards/w4_i8_o4_0010.bin",
+            "results/shards/w4_i8_o4_0011.bin",
+            "results/shards/w4_i8_o4_0012.bin",
+            "results/shards/w4_i8_o4_0013.bin",
+            "results/shards/w4_i8_o4_0014.bin",
+            "results/shards/w4_i8_o4_0015.bin",
+            "results/shards/w4_i8_o4_0016.bin",
+            "results/shards/w4_i8_o4_0017.bin",
+            "results/shards/w4_i8_o4_0018.bin",
+            "results/shards/w4_i8_o4_0019.bin",
+            "results/shards/w4_i8_o4_0020.bin",
+            "results/shards/w4_i8_o4_0021.bin",
+            "results/shards/w4_i8_o4_0022.bin",
+            "results/shards/w4_i8_o4_0023.bin",
+            "results/shards/w4_i8_o4_0024.bin",
+            "results/shards/w4_i8_o4_0025.bin",
+            "results/shards/w4_i8_o4_0026.bin",
+            "results/shards/w4_i8_o4_0027.bin",
+            "results/shards/w4_i8_o4_0028.bin",
+            "results/shards/w4_i8_o4_0029.bin",
+            "results/shards/w4_i8_o4_0030.bin",
+            "results/shards/w4_i8_o4_0031.bin",
+            "results/shards/w4_i8_o4_0032.bin",
+            "results/shards/w4_i8_o4_0033.bin",
+            "results/shards/w4_i8_o4_0034.bin",
+            "results/shards/w4_i8_o4_0035.bin",
+            "results/shards/w4_i8_o4_0036.bin",
+            "results/shards/w4_i8_o4_0037.bin",
+            "results/shards/w4_i8_o4_0038.bin",
+            "results/shards/w4_i8_o4_0039.bin",
+            "results/shards/w4_i8_o4_0040.bin",
+            "results/shards/w4_i8_o4_0041.bin",
+            "results/shards/w4_i8_o4_0042.bin",
+            "results/shards/w4_i8_o4_0043.bin",
+            "results/shards/w4_i8_o4_0044.bin",
+            "results/shards/w4_i8_o4_0045.bin",
+            "results/shards/w4_i8_o4_0046.bin",
+            "results/shards/w4_i8_o4_0047.bin",
+            "results/shards/w4_i8_o4_0048.bin",
+            "results/shards/w4_i8_o4_0049.bin",
+            "results/shards/w4_i8_o4_0050.bin",
+            "results/shards/w4_i8_o4_0051.bin",
+            "results/shards/w4_i8_o4_0052.bin",
+            "results/shards/w4_i8_o4_0053.bin",
+            "results/shards/w4_i8_o4_0054.bin",
+            "results/shards/w4_i8_o4_0055.bin",
+            "results/shards/w4_i8_o4_0056.bin",
+            "results/shards/w4_i8_o4_0057.bin",
+            "results/shards/w4_i8_o4_0058.bin",
+            "results/shards/w4_i8_o4_0059.bin",
+            "results/shards/w4_i8_o4_0060.bin",
+            "results/shards/w4_i8_o4_0061.bin",
+            "results/shards/w4_i8_o4_0062.bin",
+            "results/shards/w4_i8_o4_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_adc",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_adc.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_adc.part01.zip",
+          "bytes": 10003055,
+          "sha256": "e4c34e43993df7af67ca085de77e7c63f51fdd64f9becee91ab6c61c35dc58a7",
+          "shards": [
+            "results/shards/w4_o2_adc_0000.bin",
+            "results/shards/w4_o2_adc_0001.bin",
+            "results/shards/w4_o2_adc_0002.bin",
+            "results/shards/w4_o2_adc_0003.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part02.zip",
+          "bytes": 7663150,
+          "sha256": "a0a5926477592158d403b0cd9ae451686289e94750027baa96c14b726b357626",
+          "shards": [
+            "results/shards/w4_o2_adc_0004.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part03.zip",
+          "bytes": 13684087,
+          "sha256": "2b042ddef864ceb8363c0e0720239339aca145518e91d795acdbc0a1262ccf7e",
+          "shards": [
+            "results/shards/w4_o2_adc_0005.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part04.zip",
+          "bytes": 7434480,
+          "sha256": "b95cadfefde32d65246e32cc25ae7524bdf6a3b37c0a9a4bcbc1ebecf6932635",
+          "shards": [
+            "results/shards/w4_o2_adc_0006.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part05.zip",
+          "bytes": 4275650,
+          "sha256": "c5c7ca894a48d61213849bae04f47056d45c8add39469dfd58fd49711513b0a1",
+          "shards": [
+            "results/shards/w4_o2_adc_0007.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part06.zip",
+          "bytes": 7661936,
+          "sha256": "2e7205f51d6943d3012e4c231d425aae3862a331a56830e6d6cffd59fc4728de",
+          "shards": [
+            "results/shards/w4_o2_adc_0008.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part07.zip",
+          "bytes": 13682664,
+          "sha256": "5d8e2691a897272797a4db55e51d3e3ef1cdb911bd0b244dbf38fd6a701c61f1",
+          "shards": [
+            "results/shards/w4_o2_adc_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part08.zip",
+          "bytes": 7433278,
+          "sha256": "db34cd5a4d6334a19f28a1acb3ccb1987d14bd2df73d67b1e983532aa7c7cba9",
+          "shards": [
+            "results/shards/w4_o2_adc_0010.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part09.zip",
+          "bytes": 4275036,
+          "sha256": "87fa4df6fb31e8d0d5933eb3a8229b4abdcc6320459463a516e9b71e706d4b43",
+          "shards": [
+            "results/shards/w4_o2_adc_0011.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part10.zip",
+          "bytes": 7665252,
+          "sha256": "d001ae0674073f2b8fbaf14968ffff8ff89153a4ac83493fca940f251537d7e6",
+          "shards": [
+            "results/shards/w4_o2_adc_0012.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part11.zip",
+          "bytes": 13682573,
+          "sha256": "7268dd6ce28bda120dc39e26e6c02e8f1a22554425d23b4f6f6b69795f652c28",
+          "shards": [
+            "results/shards/w4_o2_adc_0013.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part12.zip",
+          "bytes": 7428643,
+          "sha256": "c42688d355159834dec568ac6c96940fde4918ba4e9c26703e8bad84e214efb2",
+          "shards": [
+            "results/shards/w4_o2_adc_0014.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part13.zip",
+          "bytes": 8632482,
+          "sha256": "3c62257860351ee54b4df3ca755573064063c1be55a7b91375509b96887ee11e",
+          "shards": [
+            "results/shards/w4_o2_adc_0015.bin",
+            "results/shards/w4_o2_adc_0016.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part14.zip",
+          "bytes": 8824089,
+          "sha256": "9e76e83eca927b2bde32722ce34f6f83188f47dd172fb60c752f636bae4cb920",
+          "shards": [
+            "results/shards/w4_o2_adc_0017.bin",
+            "results/shards/w4_o2_adc_0018.bin",
+            "results/shards/w4_o2_adc_0019.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part15.zip",
+          "bytes": 12110816,
+          "sha256": "e851563ec7b7e6cb75a0099f4a1136fb3ac5ad735f4ee4629c484ddd08ed9864",
+          "shards": [
+            "results/shards/w4_o2_adc_0020.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part16.zip",
+          "bytes": 10193525,
+          "sha256": "d626c8cacc7848eebab394833642fdae4c7dfe59803666ac6fd18d05144df1f0",
+          "shards": [
+            "results/shards/w4_o2_adc_0021.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part17.zip",
+          "bytes": 8130875,
+          "sha256": "cd8917d5e70ae7b268e6688cdb3f0804484710ae8598fb1e274b37dab0e37a1b",
+          "shards": [
+            "results/shards/w4_o2_adc_0022.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part18.zip",
+          "bytes": 3483996,
+          "sha256": "d8787a33a79c885bbdabbce79bbb7904df141932cc3a77216c3db595fc356de1",
+          "shards": [
+            "results/shards/w4_o2_adc_0023.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part19.zip",
+          "bytes": 12109384,
+          "sha256": "7a4be3a155fb1935afa0328e51401b77ea01eba5193138faa68a8ba501965f43",
+          "shards": [
+            "results/shards/w4_o2_adc_0024.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part20.zip",
+          "bytes": 10198245,
+          "sha256": "30340f7dd5ff1af5b41fac3e72cb3570c817295de1a1274d941ca79e95307e02",
+          "shards": [
+            "results/shards/w4_o2_adc_0025.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part21.zip",
+          "bytes": 8131717,
+          "sha256": "2c0891ad47fb061c38faf12c3c39bdc013dd30f11d0e52cd7f0e4e8647df62c4",
+          "shards": [
+            "results/shards/w4_o2_adc_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part22.zip",
+          "bytes": 3484709,
+          "sha256": "bb185b8a40e386e3ef2456e0bd4ce508c2b7daf1f40f4cfc1ca8532ce10c6afb",
+          "shards": [
+            "results/shards/w4_o2_adc_0027.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part23.zip",
+          "bytes": 12110720,
+          "sha256": "a525aa15e5aeb9dbf57bc95dfc6b0e9b1a42caf2a70702b313487f50aabce19c",
+          "shards": [
+            "results/shards/w4_o2_adc_0028.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part24.zip",
+          "bytes": 10202778,
+          "sha256": "764bec28069c9b01f71f56af2974f8a2dbc2b5594f84d2d7e631c38c6480087d",
+          "shards": [
+            "results/shards/w4_o2_adc_0029.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part25.zip",
+          "bytes": 8131254,
+          "sha256": "b5c7165eae32a7976fbe60bbc32b6e2a264c58404764735909e636678d160fd1",
+          "shards": [
+            "results/shards/w4_o2_adc_0030.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part26.zip",
+          "bytes": 6707293,
+          "sha256": "f4f682108a6612126683b0eab59368c212b6dfd9d70bb0960ff2f0aa11844b79",
+          "shards": [
+            "results/shards/w4_o2_adc_0031.bin",
+            "results/shards/w4_o2_adc_0032.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part27.zip",
+          "bytes": 6646853,
+          "sha256": "17ce5e215bd7762a12e9281507a56926717ed126bd5702507a75834107727e8f",
+          "shards": [
+            "results/shards/w4_o2_adc_0033.bin",
+            "results/shards/w4_o2_adc_0034.bin",
+            "results/shards/w4_o2_adc_0035.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part28.zip",
+          "bytes": 5595824,
+          "sha256": "ca7fe166d6f7627b1e93fcbab96e79ece47e789a9aef267f4f172e9baca30a7d",
+          "shards": [
+            "results/shards/w4_o2_adc_0036.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part29.zip",
+          "bytes": 8728522,
+          "sha256": "af95fb714b5aa66314f0668d94d857eb77c30266d56c2158fddba4490aa6367d",
+          "shards": [
+            "results/shards/w4_o2_adc_0037.bin",
+            "results/shards/w4_o2_adc_0038.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part30.zip",
+          "bytes": 7453420,
+          "sha256": "67b29ec47ee94eff2d0802328a5e81623462c9c44a93e81c04af3f4963de28cc",
+          "shards": [
+            "results/shards/w4_o2_adc_0039.bin",
+            "results/shards/w4_o2_adc_0040.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part31.zip",
+          "bytes": 8729139,
+          "sha256": "3e7f1d2c5673cdb0a7165991418023e61a6d205227f3b38225c29121050ed26e",
+          "shards": [
+            "results/shards/w4_o2_adc_0041.bin",
+            "results/shards/w4_o2_adc_0042.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part32.zip",
+          "bytes": 7444338,
+          "sha256": "59ebae6db7689aec746e7b7ad54ab1f10f4d36db37534f3e01e033e4cedbd76c",
+          "shards": [
+            "results/shards/w4_o2_adc_0043.bin",
+            "results/shards/w4_o2_adc_0044.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part33.zip",
+          "bytes": 8705222,
+          "sha256": "ed82ffab2bf4b30a1acfacec2be15faef703b44f8c05f6976c3e13cda762f577",
+          "shards": [
+            "results/shards/w4_o2_adc_0045.bin",
+            "results/shards/w4_o2_adc_0046.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part34.zip",
+          "bytes": 6218312,
+          "sha256": "067454b2857b7e3245932c4ac2f1ba685ea4d2b933a001b31f5d5dfc4d87b008",
+          "shards": [
+            "results/shards/w4_o2_adc_0047.bin",
+            "results/shards/w4_o2_adc_0048.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part35.zip",
+          "bytes": 8752217,
+          "sha256": "0cd7e23a396666fb990e050d6187541aa7b3140b775b2287bd5915d60148355d",
+          "shards": [
+            "results/shards/w4_o2_adc_0049.bin",
+            "results/shards/w4_o2_adc_0050.bin",
+            "results/shards/w4_o2_adc_0051.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part36.zip",
+          "bytes": 9524655,
+          "sha256": "801f34df9441a25ad67c003c838bbdd027a1ba655ce11eb4b47cf1c118849e84",
+          "shards": [
+            "results/shards/w4_o2_adc_0052.bin",
+            "results/shards/w4_o2_adc_0053.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part37.zip",
+          "bytes": 7974736,
+          "sha256": "41eb061c76cf8d2ccf4c85b2a0b71ca3965e662d4bb319311a7556072ad364d0",
+          "shards": [
+            "results/shards/w4_o2_adc_0054.bin",
+            "results/shards/w4_o2_adc_0055.bin",
+            "results/shards/w4_o2_adc_0056.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part38.zip",
+          "bytes": 8765246,
+          "sha256": "0fd29ef926e0009e87ae084a657951cafe94bb159e8e9c43766f66f88bcb5577",
+          "shards": [
+            "results/shards/w4_o2_adc_0057.bin",
+            "results/shards/w4_o2_adc_0058.bin",
+            "results/shards/w4_o2_adc_0059.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part39.zip",
+          "bytes": 9513213,
+          "sha256": "a00594f5177d498e34abf3377e5a980cd2df3ed39f8a0f7daa30050d1582db1b",
+          "shards": [
+            "results/shards/w4_o2_adc_0060.bin",
+            "results/shards/w4_o2_adc_0061.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_adc.part40.zip",
+          "bytes": 3605778,
+          "sha256": "5f0e2796232060a7c50eaf1cf87bb298f3e1bb928ca2ce1ee4440f97071b1df7",
+          "shards": [
+            "results/shards/w4_o2_adc_0062.bin",
+            "results/shards/w4_o2_adc_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_add_jc",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_add_jc.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_add_jc.part01.zip",
+          "bytes": 7575831,
+          "sha256": "3811fd31607df795b0d7980aa4d1b83768630c78434b6d60eb206ae9ed9765b9",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0000.bin",
+            "results/shards/w4_o2_add_jc_0001.bin",
+            "results/shards/w4_o2_add_jc_0002.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part02.zip",
+          "bytes": 2456935,
+          "sha256": "e22be15737bb73416e8e747ab59f37080adde02affdc051f060263de719fa543",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0003.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part03.zip",
+          "bytes": 8223866,
+          "sha256": "5dba053f6370e02a13f67388fe625a957a6950f1153424a0ec91abef55161c98",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0004.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part04.zip",
+          "bytes": 11171018,
+          "sha256": "66e135193127f368528d6135ff5b698c00d5af7a687dac0ea51bf0651a15a47f",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0005.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part05.zip",
+          "bytes": 7682994,
+          "sha256": "c89cdfa271a2a88cb246055f6eb288ddc48034c17266d2835c9a73ea325270fa",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0006.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part06.zip",
+          "bytes": 9289968,
+          "sha256": "2d01c8e12ec3fd8a65c489472f9596b2bef03097831ac038d1e44e2e2e970210",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0007.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part07.zip",
+          "bytes": 8229393,
+          "sha256": "aa01d5a5cc341157e7c24d2581cec370b0f2151bbf568aedba718a7b7e101608",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0008.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part08.zip",
+          "bytes": 11173465,
+          "sha256": "6a9172ffc8238f76c280eb73d648befbc989a7d17df923b61dff90b61cb9af34",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part09.zip",
+          "bytes": 7682846,
+          "sha256": "2338ca582e914e1e18f4230d073c5ae77bd68743b3b433318a01407aef8dc131",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0010.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part10.zip",
+          "bytes": 9297346,
+          "sha256": "09236daed49b7780cfb78d77d11fa7bc002fd11c653c6687f8db5f0a94274408",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0011.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part11.zip",
+          "bytes": 8238882,
+          "sha256": "a9db91f07e4e4ba4fbbd99a367feb680d96e357689cb9087c64a32a54b9a1fce",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0012.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part12.zip",
+          "bytes": 11186548,
+          "sha256": "6788f56749c84b61b6310c4296c9004cae84be49efa60e7ad19f850e6b9b3e47",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0013.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part13.zip",
+          "bytes": 7681464,
+          "sha256": "e8be724fcfdad1401b48bf8d424b73621066c35a55504fe6b04d466f038e213f",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0014.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part14.zip",
+          "bytes": 9310282,
+          "sha256": "a672135032596b8c392dbe97c65432355a8d80dfdda35fd0f2db3754dbff1cc4",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0015.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part15.zip",
+          "bytes": 8085663,
+          "sha256": "15c38f4904ee0d41447ab5625f4d35145e01092510a1ca89a02930279897a8d0",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0016.bin",
+            "results/shards/w4_o2_add_jc_0017.bin",
+            "results/shards/w4_o2_add_jc_0018.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part16.zip",
+          "bytes": 3304327,
+          "sha256": "adaf3e46f8a5d806a874c97866a4a72a49a78beb23e29adb5f8de27862758525",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0019.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part17.zip",
+          "bytes": 10031049,
+          "sha256": "a1ab51bbe861c4a4a88b8ba5ea539b9459546a9e265b829b3ef9f4e70635d2fe",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0020.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part18.zip",
+          "bytes": 7013217,
+          "sha256": "edf1a59c050bf89becb0593ea85db57acbfc6d131ff3f8e0827f3c96fd6c22c1",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0021.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part19.zip",
+          "bytes": 6379722,
+          "sha256": "d70b9a82549790d448efc328959a6b6103152bdfd1c9043aa7343e1fdfda0942",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0022.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part20.zip",
+          "bytes": 8746522,
+          "sha256": "116a7e8816d4d34b2696b43a6d006c6311c852057d5e9e741d3d5cab709e6cb5",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0023.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part21.zip",
+          "bytes": 10032278,
+          "sha256": "9eae752139971f7c143cabdc15b2a454250b281b5eb508249ad092187a8f9428",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0024.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part22.zip",
+          "bytes": 7018569,
+          "sha256": "d2faa67d12bdd5f5cfc3df61eac6eebb8c65c7539248b544d207511d26a7900a",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0025.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part23.zip",
+          "bytes": 6379484,
+          "sha256": "0a816cda7f978cacda4d3ea31e189feb9f410ba00cb0e2df10fd404608e7d2ee",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part24.zip",
+          "bytes": 8746810,
+          "sha256": "a24faa9894412d08bb16d147fd3473d7c218a7fc711acefb2cc39b4f23a275b9",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0027.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part25.zip",
+          "bytes": 10044804,
+          "sha256": "0742e92339f59cd3811c6377b7ee8c088904d5ae728c94e61b981c918e5bb195",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0028.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part26.zip",
+          "bytes": 7028288,
+          "sha256": "2c2ffb5ecbe2c32236766cef7ca37de919b7ac25f9efb3d0e45e8710e4b5348d",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0029.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part27.zip",
+          "bytes": 6382201,
+          "sha256": "2d475ab5f4f9494986a345848a33bf9edede8bc162b3a26859d78806c35ce819",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0030.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part28.zip",
+          "bytes": 8760687,
+          "sha256": "7d02c3a79cf7217dfbee2c72aa542a3d95393f75db976e119a318988e7d2d233",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0031.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part29.zip",
+          "bytes": 7474217,
+          "sha256": "04764790ef6f46511590641304cb737ab05a09dc4b689496417bcde2be538781",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0032.bin",
+            "results/shards/w4_o2_add_jc_0033.bin",
+            "results/shards/w4_o2_add_jc_0034.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part30.zip",
+          "bytes": 9563382,
+          "sha256": "ac61272fe92b33401c3c541f60480b404c1550037695322fc49be784719c9c2b",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0035.bin",
+            "results/shards/w4_o2_add_jc_0036.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part31.zip",
+          "bytes": 8368520,
+          "sha256": "76aa69a9208b41c50a039a5b8ef67d144648b6031bd5a012e08d1cf76f8a0b22",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0037.bin",
+            "results/shards/w4_o2_add_jc_0038.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part32.zip",
+          "bytes": 6187226,
+          "sha256": "23d3e1de12e042d7e56630f2dd3caa3e35a60c4a84ef4a20cff3ee92112d16ba",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0039.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part33.zip",
+          "bytes": 6803810,
+          "sha256": "9b7232c5f7ef0608be5d5bbb9471acfb162d593c1786da16d23751838bd20f4a",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0040.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part34.zip",
+          "bytes": 8366573,
+          "sha256": "fa3dc97e65cd9a9bc002f76789824d277876c8eaa8f5c0f28be196779a38814e",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0041.bin",
+            "results/shards/w4_o2_add_jc_0042.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part35.zip",
+          "bytes": 6183450,
+          "sha256": "c31af709c8fae6858065911f9b465990c71a507540bcdd4ead7d68f1ec02b9ca",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0043.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part36.zip",
+          "bytes": 6801461,
+          "sha256": "2a9b37624486cfeb76ec99a351213527d1af0da9099f63de984bfb69d4aa4667",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0044.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part37.zip",
+          "bytes": 8358240,
+          "sha256": "1ace661808188ccf103d98dca0299516580819685acc9a8c4ae55e64dc13e111",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0045.bin",
+            "results/shards/w4_o2_add_jc_0046.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part38.zip",
+          "bytes": 8985928,
+          "sha256": "83d6f03b8a3792e6b07bc918451881d8874cae3d36ff84062ef681c49ef9e651",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0047.bin",
+            "results/shards/w4_o2_add_jc_0048.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part39.zip",
+          "bytes": 7239165,
+          "sha256": "b7393eec647440ebe566eece4a0beef41d9a564550118735da318cd7d69283ba",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0049.bin",
+            "results/shards/w4_o2_add_jc_0050.bin",
+            "results/shards/w4_o2_add_jc_0051.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part40.zip",
+          "bytes": 8487228,
+          "sha256": "3167c1f4f36546c655271e355e96527c8e405d0e4b8ceb1e2e042e0094136c36",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0052.bin",
+            "results/shards/w4_o2_add_jc_0053.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part41.zip",
+          "bytes": 9320291,
+          "sha256": "41ae7431ca5c20edb4bdd58987e86a3f581943ae045aa1074f9f1e18a3c422b0",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0054.bin",
+            "results/shards/w4_o2_add_jc_0055.bin",
+            "results/shards/w4_o2_add_jc_0056.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part42.zip",
+          "bytes": 8708088,
+          "sha256": "e4a934d0649e3bcad48f6ac1cb98ac3049e059170722ee7df296846f8ce55ea1",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0057.bin",
+            "results/shards/w4_o2_add_jc_0058.bin",
+            "results/shards/w4_o2_add_jc_0059.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part43.zip",
+          "bytes": 7769467,
+          "sha256": "a12a7efd102dc7b3147398a6f5e7669103ac175a68b313a9111241fe94704528",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0060.bin",
+            "results/shards/w4_o2_add_jc_0061.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jc.part44.zip",
+          "bytes": 5079284,
+          "sha256": "568b68251c362f4db87d1ba8282384cebacb4b05ac635a0b3191b94998e1e20d",
+          "shards": [
+            "results/shards/w4_o2_add_jc_0062.bin",
+            "results/shards/w4_o2_add_jc_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_add_jz",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_add_jz.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_add_jz.part01.zip",
+          "bytes": 5983397,
+          "sha256": "eb3781f740ca8e5fe412eb8a5c5184f622722a213ecfb108ca0023009c276825",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0000.bin",
+            "results/shards/w4_o2_add_jz_0001.bin",
+            "results/shards/w4_o2_add_jz_0002.bin",
+            "results/shards/w4_o2_add_jz_0003.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part02.zip",
+          "bytes": 4688393,
+          "sha256": "ee91585fb61a9c5ab10f190d345f334273d87eecba90322f7b0fedebae962754",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0004.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part03.zip",
+          "bytes": 6079651,
+          "sha256": "c34d309753e2092b8261ffc95405deac07d0a0c359e36f8cc7eee4234142083d",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0005.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part04.zip",
+          "bytes": 5295161,
+          "sha256": "ac9ee94a20c94c83133a6965f64b25bf2b6692be88dfc255c46f6ca2ab073cfb",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0006.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part05.zip",
+          "bytes": 6435793,
+          "sha256": "61ed9439f6c5defe952a8e1558a2a7fc7202c7e4c8bf421203965f2e88fb7dbc",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0007.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part06.zip",
+          "bytes": 4690606,
+          "sha256": "346b6eb446558bb311a09fd48a8eccec8ec1e7e17db1056ba01e4cfaca890d40",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0008.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part07.zip",
+          "bytes": 6078424,
+          "sha256": "308a0dfe074101169fa87335cccfd029b74ca5a2738fc9f424d27054685dd06a",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part08.zip",
+          "bytes": 5294484,
+          "sha256": "196fa8dd3e7bf9bf12ad953c3f21454c47e1a02a5ef418aa8d69de36a828f4b1",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0010.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part09.zip",
+          "bytes": 6437823,
+          "sha256": "a091bf088a577f28d70cfc67aa97f2ea97952b59fbdf709e44b29234501a5684",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0011.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part10.zip",
+          "bytes": 4689488,
+          "sha256": "b10f5122ba3c89108c9be4a4ce01e6d5ccba3c9637165f7711638cbd6e080de7",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0012.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part11.zip",
+          "bytes": 6076154,
+          "sha256": "f97ee09dffb2acd73f8890c9568f8b66ee54b8373313eee00b4227c6a98c5ef7",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0013.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part12.zip",
+          "bytes": 5285567,
+          "sha256": "23f978a3ee65b00bfb7c0543723a4dc255e4eccde6e631625cc6647965daab1a",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0014.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part13.zip",
+          "bytes": 9452097,
+          "sha256": "6f9c5de40b83ee257409da22b11302726bd1d655a15854d3ae1325278153adb3",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0015.bin",
+            "results/shards/w4_o2_add_jz_0016.bin",
+            "results/shards/w4_o2_add_jz_0017.bin",
+            "results/shards/w4_o2_add_jz_0018.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part14.zip",
+          "bytes": 8044596,
+          "sha256": "3e33f55a5f38877a2daa015bf0edfd6f110106d0ee21a9b16d6bb20cbb9a0bd3",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0019.bin",
+            "results/shards/w4_o2_add_jz_0020.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part15.zip",
+          "bytes": 8951931,
+          "sha256": "5671d0659dc4551ab836636889b6f79652c06e5ab56e311906524b16931fd7b3",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0021.bin",
+            "results/shards/w4_o2_add_jz_0022.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part16.zip",
+          "bytes": 5262507,
+          "sha256": "b21613bd939df975f661dd3200f2cd360e4090ec6443ef7bed9f88bf59038d74",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0023.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part17.zip",
+          "bytes": 6868308,
+          "sha256": "8fbee9709fd90a37d329fab87d4a229e2500bea83358290f13b1db4c123aef05",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0024.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part18.zip",
+          "bytes": 8957748,
+          "sha256": "ed59f43b4d763260b7747fac3c80674be773505d7a38c3889a84f2fc4b3017c7",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0025.bin",
+            "results/shards/w4_o2_add_jz_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part19.zip",
+          "bytes": 5263392,
+          "sha256": "0c481c0c790daf94d24f861e30b65c46e0d24798352bc8497f0c28d2e5174f95",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0027.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part20.zip",
+          "bytes": 6864662,
+          "sha256": "53c9666cdcca77cc09be080ef34b9c85fda3d7465f8ac9836de301f7bbf96f76",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0028.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part21.zip",
+          "bytes": 8952631,
+          "sha256": "d24ebc92699e56f2a983a36727006490936ce7c099274b247a152fbde9c0d8c3",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0029.bin",
+            "results/shards/w4_o2_add_jz_0030.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part22.zip",
+          "bytes": 9996499,
+          "sha256": "d201562bc416e67e5e11bc41c69839d4b86448df0c968be897350abfadf1430f",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0031.bin",
+            "results/shards/w4_o2_add_jz_0032.bin",
+            "results/shards/w4_o2_add_jz_0033.bin",
+            "results/shards/w4_o2_add_jz_0034.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part23.zip",
+          "bytes": 9986353,
+          "sha256": "956ebe375c22047ddaaa271e4f53760f99982521612d75b5a5a453fa9dce5bfd",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0035.bin",
+            "results/shards/w4_o2_add_jz_0036.bin",
+            "results/shards/w4_o2_add_jz_0037.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part24.zip",
+          "bytes": 5488960,
+          "sha256": "71b5953a2b0bccc6718559fc5a6c43719745030f68d238f5e5be6b8be6d5c6e5",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0038.bin",
+            "results/shards/w4_o2_add_jz_0039.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part25.zip",
+          "bytes": 8376958,
+          "sha256": "c90598048ed62274df81d65783b43c944462df5de96f3d7ea155abe42faceba2",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0040.bin",
+            "results/shards/w4_o2_add_jz_0041.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part26.zip",
+          "bytes": 5489295,
+          "sha256": "ebf98a690de0a52c4b1ee851f91e0fe885b9122e2bd7a4cf8078e53d046771d8",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0042.bin",
+            "results/shards/w4_o2_add_jz_0043.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part27.zip",
+          "bytes": 8348855,
+          "sha256": "748d237ecb5f19534b3b3598ad167064dc8d24b387c533ee77f14063416a76df",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0044.bin",
+            "results/shards/w4_o2_add_jz_0045.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part28.zip",
+          "bytes": 9988415,
+          "sha256": "6431a5833ff1bfe8466aa04d6b9a093a3efaf8085a50f4844af7d0e60b4435f4",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0046.bin",
+            "results/shards/w4_o2_add_jz_0047.bin",
+            "results/shards/w4_o2_add_jz_0048.bin",
+            "results/shards/w4_o2_add_jz_0049.bin",
+            "results/shards/w4_o2_add_jz_0050.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part29.zip",
+          "bytes": 9513540,
+          "sha256": "1fab6b2a841d76ff0b7fc6ebdef7ac19479069a29b950757de50c501c44b7755",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0051.bin",
+            "results/shards/w4_o2_add_jz_0052.bin",
+            "results/shards/w4_o2_add_jz_0053.bin",
+            "results/shards/w4_o2_add_jz_0054.bin",
+            "results/shards/w4_o2_add_jz_0055.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part30.zip",
+          "bytes": 7866293,
+          "sha256": "b8d1929e8dfd5ccfe7af46c44a5cf11fccf86b5c5e55d62ba5a07c66ec294d85",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0056.bin",
+            "results/shards/w4_o2_add_jz_0057.bin",
+            "results/shards/w4_o2_add_jz_0058.bin",
+            "results/shards/w4_o2_add_jz_0059.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_jz.part31.zip",
+          "bytes": 8068786,
+          "sha256": "2e51623e91ab9dcf40fa1c1d6873bdf19368488b2d6c5f1d4f2eb974df253ff1",
+          "shards": [
+            "results/shards/w4_o2_add_jz_0060.bin",
+            "results/shards/w4_o2_add_jz_0061.bin",
+            "results/shards/w4_o2_add_jz_0062.bin",
+            "results/shards/w4_o2_add_jz_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_add_sknz",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_add_sknz.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_add_sknz.part01.zip",
+          "bytes": 9734164,
+          "sha256": "1b9fbe9bbaeb3f48aa073fbd037ce2be5415bd8def2e1e4c3ebb3a59ad11bd87",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0000.bin",
+            "results/shards/w4_o2_add_sknz_0001.bin",
+            "results/shards/w4_o2_add_sknz_0002.bin",
+            "results/shards/w4_o2_add_sknz_0003.bin",
+            "results/shards/w4_o2_add_sknz_0004.bin",
+            "results/shards/w4_o2_add_sknz_0005.bin",
+            "results/shards/w4_o2_add_sknz_0006.bin",
+            "results/shards/w4_o2_add_sknz_0007.bin",
+            "results/shards/w4_o2_add_sknz_0008.bin",
+            "results/shards/w4_o2_add_sknz_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_sknz.part02.zip",
+          "bytes": 10037033,
+          "sha256": "db91b0f51f297f9eb90f573692b5d04894876296c9b65d48338cf27bb2d9e341",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0010.bin",
+            "results/shards/w4_o2_add_sknz_0011.bin",
+            "results/shards/w4_o2_add_sknz_0012.bin",
+            "results/shards/w4_o2_add_sknz_0013.bin",
+            "results/shards/w4_o2_add_sknz_0014.bin",
+            "results/shards/w4_o2_add_sknz_0015.bin",
+            "results/shards/w4_o2_add_sknz_0016.bin",
+            "results/shards/w4_o2_add_sknz_0017.bin",
+            "results/shards/w4_o2_add_sknz_0018.bin",
+            "results/shards/w4_o2_add_sknz_0019.bin",
+            "results/shards/w4_o2_add_sknz_0020.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_sknz.part03.zip",
+          "bytes": 8766795,
+          "sha256": "f76072e9a4c5b2ac1440b76ef67d89afae2bd044f886e024763f6cfb8c36e8dd",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0021.bin",
+            "results/shards/w4_o2_add_sknz_0022.bin",
+            "results/shards/w4_o2_add_sknz_0023.bin",
+            "results/shards/w4_o2_add_sknz_0024.bin",
+            "results/shards/w4_o2_add_sknz_0025.bin",
+            "results/shards/w4_o2_add_sknz_0026.bin",
+            "results/shards/w4_o2_add_sknz_0027.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_sknz.part04.zip",
+          "bytes": 9881205,
+          "sha256": "9f9076f0e470c1e14d9ea6c39dc091ea266471f0d53c1699b4e25459fea3ae1d",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0028.bin",
+            "results/shards/w4_o2_add_sknz_0029.bin",
+            "results/shards/w4_o2_add_sknz_0030.bin",
+            "results/shards/w4_o2_add_sknz_0031.bin",
+            "results/shards/w4_o2_add_sknz_0032.bin",
+            "results/shards/w4_o2_add_sknz_0033.bin",
+            "results/shards/w4_o2_add_sknz_0034.bin",
+            "results/shards/w4_o2_add_sknz_0035.bin",
+            "results/shards/w4_o2_add_sknz_0036.bin",
+            "results/shards/w4_o2_add_sknz_0037.bin",
+            "results/shards/w4_o2_add_sknz_0038.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_sknz.part05.zip",
+          "bytes": 9750604,
+          "sha256": "825c9eafe2966c6b49b82e6bd1d19aabd4e0efe22807430e6d6f16acb8e914df",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0039.bin",
+            "results/shards/w4_o2_add_sknz_0040.bin",
+            "results/shards/w4_o2_add_sknz_0041.bin",
+            "results/shards/w4_o2_add_sknz_0042.bin",
+            "results/shards/w4_o2_add_sknz_0043.bin",
+            "results/shards/w4_o2_add_sknz_0044.bin",
+            "results/shards/w4_o2_add_sknz_0045.bin",
+            "results/shards/w4_o2_add_sknz_0046.bin",
+            "results/shards/w4_o2_add_sknz_0047.bin",
+            "results/shards/w4_o2_add_sknz_0048.bin",
+            "results/shards/w4_o2_add_sknz_0049.bin",
+            "results/shards/w4_o2_add_sknz_0050.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_add_sknz.part06.zip",
+          "bytes": 9205026,
+          "sha256": "7c714a9ab646e265ce408a15da2e5a7d79b2e1d1cc20cf3d5fa407259f561c2d",
+          "shards": [
+            "results/shards/w4_o2_add_sknz_0051.bin",
+            "results/shards/w4_o2_add_sknz_0052.bin",
+            "results/shards/w4_o2_add_sknz_0053.bin",
+            "results/shards/w4_o2_add_sknz_0054.bin",
+            "results/shards/w4_o2_add_sknz_0055.bin",
+            "results/shards/w4_o2_add_sknz_0056.bin",
+            "results/shards/w4_o2_add_sknz_0057.bin",
+            "results/shards/w4_o2_add_sknz_0058.bin",
+            "results/shards/w4_o2_add_sknz_0059.bin",
+            "results/shards/w4_o2_add_sknz_0060.bin",
+            "results/shards/w4_o2_add_sknz_0061.bin",
+            "results/shards/w4_o2_add_sknz_0062.bin",
+            "results/shards/w4_o2_add_sknz_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_nocond",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_nocond.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_nocond.part01.zip",
+          "bytes": 9268848,
+          "sha256": "3a2e4a22733bbb2f877f263047f258c447ecb916bae696b4889e2f650da7bf76",
+          "shards": [
+            "results/shards/w4_o2_nocond_0000.bin",
+            "results/shards/w4_o2_nocond_0001.bin",
+            "results/shards/w4_o2_nocond_0002.bin",
+            "results/shards/w4_o2_nocond_0003.bin",
+            "results/shards/w4_o2_nocond_0004.bin",
+            "results/shards/w4_o2_nocond_0005.bin",
+            "results/shards/w4_o2_nocond_0006.bin",
+            "results/shards/w4_o2_nocond_0007.bin",
+            "results/shards/w4_o2_nocond_0008.bin",
+            "results/shards/w4_o2_nocond_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_nocond.part02.zip",
+          "bytes": 9451051,
+          "sha256": "d81e6dbb0d4e456fef1bf15ca37756c81654076ef35bd13c6b6205a9312f4662",
+          "shards": [
+            "results/shards/w4_o2_nocond_0010.bin",
+            "results/shards/w4_o2_nocond_0011.bin",
+            "results/shards/w4_o2_nocond_0012.bin",
+            "results/shards/w4_o2_nocond_0013.bin",
+            "results/shards/w4_o2_nocond_0014.bin",
+            "results/shards/w4_o2_nocond_0015.bin",
+            "results/shards/w4_o2_nocond_0016.bin",
+            "results/shards/w4_o2_nocond_0017.bin",
+            "results/shards/w4_o2_nocond_0018.bin",
+            "results/shards/w4_o2_nocond_0019.bin",
+            "results/shards/w4_o2_nocond_0020.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_nocond.part03.zip",
+          "bytes": 9568313,
+          "sha256": "7d4075e5f034e94c902d2fada4c58f2d464fda7fc5869b80f05c52707eb54c42",
+          "shards": [
+            "results/shards/w4_o2_nocond_0021.bin",
+            "results/shards/w4_o2_nocond_0022.bin",
+            "results/shards/w4_o2_nocond_0023.bin",
+            "results/shards/w4_o2_nocond_0024.bin",
+            "results/shards/w4_o2_nocond_0025.bin",
+            "results/shards/w4_o2_nocond_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_nocond.part04.zip",
+          "bytes": 8527627,
+          "sha256": "7313222ff4cde563015a94ef05c79b3535a80ca4dd67cc7df0f29d8417b8820b",
+          "shards": [
+            "results/shards/w4_o2_nocond_0027.bin",
+            "results/shards/w4_o2_nocond_0028.bin",
+            "results/shards/w4_o2_nocond_0029.bin",
+            "results/shards/w4_o2_nocond_0030.bin",
+            "results/shards/w4_o2_nocond_0031.bin",
+            "results/shards/w4_o2_nocond_0032.bin",
+            "results/shards/w4_o2_nocond_0033.bin",
+            "results/shards/w4_o2_nocond_0034.bin",
+            "results/shards/w4_o2_nocond_0035.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_nocond.part05.zip",
+          "bytes": 8434425,
+          "sha256": "d83e5cc4a033c77e0aa202f703f01d29770b05b9d2bbdf70df86ea6fb52de4e9",
+          "shards": [
+            "results/shards/w4_o2_nocond_0036.bin",
+            "results/shards/w4_o2_nocond_0037.bin",
+            "results/shards/w4_o2_nocond_0038.bin",
+            "results/shards/w4_o2_nocond_0039.bin",
+            "results/shards/w4_o2_nocond_0040.bin",
+            "results/shards/w4_o2_nocond_0041.bin",
+            "results/shards/w4_o2_nocond_0042.bin",
+            "results/shards/w4_o2_nocond_0043.bin",
+            "results/shards/w4_o2_nocond_0044.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_nocond.part06.zip",
+          "bytes": 8327114,
+          "sha256": "994677232f926214238b00249a5aa4054e4241083ad396cd1e66d0e4f0a033d2",
+          "shards": [
+            "results/shards/w4_o2_nocond_0045.bin",
+            "results/shards/w4_o2_nocond_0046.bin",
+            "results/shards/w4_o2_nocond_0047.bin",
+            "results/shards/w4_o2_nocond_0048.bin",
+            "results/shards/w4_o2_nocond_0049.bin",
+            "results/shards/w4_o2_nocond_0050.bin",
+            "results/shards/w4_o2_nocond_0051.bin",
+            "results/shards/w4_o2_nocond_0052.bin",
+            "results/shards/w4_o2_nocond_0053.bin",
+            "results/shards/w4_o2_nocond_0054.bin",
+            "results/shards/w4_o2_nocond_0055.bin",
+            "results/shards/w4_o2_nocond_0056.bin",
+            "results/shards/w4_o2_nocond_0057.bin",
+            "results/shards/w4_o2_nocond_0058.bin",
+            "results/shards/w4_o2_nocond_0059.bin",
+            "results/shards/w4_o2_nocond_0060.bin",
+            "results/shards/w4_o2_nocond_0061.bin",
+            "results/shards/w4_o2_nocond_0062.bin",
+            "results/shards/w4_o2_nocond_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_rol",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_rol.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_rol.part01.zip",
+          "bytes": 9235172,
+          "sha256": "ce9c12775b3528fc6a16f442daaff1411119fc7e977b2524b839832151c56173",
+          "shards": [
+            "results/shards/w4_o2_rol_0000.bin",
+            "results/shards/w4_o2_rol_0001.bin",
+            "results/shards/w4_o2_rol_0002.bin",
+            "results/shards/w4_o2_rol_0003.bin",
+            "results/shards/w4_o2_rol_0004.bin",
+            "results/shards/w4_o2_rol_0005.bin",
+            "results/shards/w4_o2_rol_0006.bin",
+            "results/shards/w4_o2_rol_0007.bin",
+            "results/shards/w4_o2_rol_0008.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part02.zip",
+          "bytes": 9777525,
+          "sha256": "79419ed9fa359cd22c2f8bb2f70beaebea142813480936249b825ce23b2c3cb6",
+          "shards": [
+            "results/shards/w4_o2_rol_0009.bin",
+            "results/shards/w4_o2_rol_0010.bin",
+            "results/shards/w4_o2_rol_0011.bin",
+            "results/shards/w4_o2_rol_0012.bin",
+            "results/shards/w4_o2_rol_0013.bin",
+            "results/shards/w4_o2_rol_0014.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part03.zip",
+          "bytes": 8942684,
+          "sha256": "d980e3c271567beac353ced0f5c4e22e675f71e50dda20983f177621b0e8034b",
+          "shards": [
+            "results/shards/w4_o2_rol_0015.bin",
+            "results/shards/w4_o2_rol_0016.bin",
+            "results/shards/w4_o2_rol_0017.bin",
+            "results/shards/w4_o2_rol_0018.bin",
+            "results/shards/w4_o2_rol_0019.bin",
+            "results/shards/w4_o2_rol_0020.bin",
+            "results/shards/w4_o2_rol_0021.bin",
+            "results/shards/w4_o2_rol_0022.bin",
+            "results/shards/w4_o2_rol_0023.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part04.zip",
+          "bytes": 9688505,
+          "sha256": "2b10ca5ac3e1819add51809df2b8f952eb769b3d87c780e455f12f5d6c8d1810",
+          "shards": [
+            "results/shards/w4_o2_rol_0024.bin",
+            "results/shards/w4_o2_rol_0025.bin",
+            "results/shards/w4_o2_rol_0026.bin",
+            "results/shards/w4_o2_rol_0027.bin",
+            "results/shards/w4_o2_rol_0028.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part05.zip",
+          "bytes": 9542022,
+          "sha256": "b99baaf7dfa1945dab6a13f8115628131f56012f822237fb973eb0b9ffe0b326",
+          "shards": [
+            "results/shards/w4_o2_rol_0029.bin",
+            "results/shards/w4_o2_rol_0030.bin",
+            "results/shards/w4_o2_rol_0031.bin",
+            "results/shards/w4_o2_rol_0032.bin",
+            "results/shards/w4_o2_rol_0033.bin",
+            "results/shards/w4_o2_rol_0034.bin",
+            "results/shards/w4_o2_rol_0035.bin",
+            "results/shards/w4_o2_rol_0036.bin",
+            "results/shards/w4_o2_rol_0037.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part06.zip",
+          "bytes": 9472232,
+          "sha256": "7a348b085b3c996a87d4be32e9a8090d3beed01d083e1caffbbbaf418eabd5f2",
+          "shards": [
+            "results/shards/w4_o2_rol_0038.bin",
+            "results/shards/w4_o2_rol_0039.bin",
+            "results/shards/w4_o2_rol_0040.bin",
+            "results/shards/w4_o2_rol_0041.bin",
+            "results/shards/w4_o2_rol_0042.bin",
+            "results/shards/w4_o2_rol_0043.bin",
+            "results/shards/w4_o2_rol_0044.bin",
+            "results/shards/w4_o2_rol_0045.bin",
+            "results/shards/w4_o2_rol_0046.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part07.zip",
+          "bytes": 9640816,
+          "sha256": "653da109974c653a4a9303e3b2221e097d00ad7494484861fdf0e4d616acdde4",
+          "shards": [
+            "results/shards/w4_o2_rol_0047.bin",
+            "results/shards/w4_o2_rol_0048.bin",
+            "results/shards/w4_o2_rol_0049.bin",
+            "results/shards/w4_o2_rol_0050.bin",
+            "results/shards/w4_o2_rol_0051.bin",
+            "results/shards/w4_o2_rol_0052.bin",
+            "results/shards/w4_o2_rol_0053.bin",
+            "results/shards/w4_o2_rol_0054.bin",
+            "results/shards/w4_o2_rol_0055.bin",
+            "results/shards/w4_o2_rol_0056.bin",
+            "results/shards/w4_o2_rol_0057.bin",
+            "results/shards/w4_o2_rol_0058.bin",
+            "results/shards/w4_o2_rol_0059.bin",
+            "results/shards/w4_o2_rol_0060.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_rol.part08.zip",
+          "bytes": 1957851,
+          "sha256": "f91f5916dd5e882ce230ac4c2b1836d8682659c6f3fa32725d2fa91a2a98f0a5",
+          "shards": [
+            "results/shards/w4_o2_rol_0061.bin",
+            "results/shards/w4_o2_rol_0062.bin",
+            "results/shards/w4_o2_rol_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_shr",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_shr.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_shr.part01.zip",
+          "bytes": 9222055,
+          "sha256": "d52b23d7c1e86bfabf169623b5780d80e1da8533e2e6295521410e1509be2042",
+          "shards": [
+            "results/shards/w4_o2_shr_0000.bin",
+            "results/shards/w4_o2_shr_0001.bin",
+            "results/shards/w4_o2_shr_0002.bin",
+            "results/shards/w4_o2_shr_0003.bin",
+            "results/shards/w4_o2_shr_0004.bin",
+            "results/shards/w4_o2_shr_0005.bin",
+            "results/shards/w4_o2_shr_0006.bin",
+            "results/shards/w4_o2_shr_0007.bin",
+            "results/shards/w4_o2_shr_0008.bin",
+            "results/shards/w4_o2_shr_0009.bin",
+            "results/shards/w4_o2_shr_0010.bin",
+            "results/shards/w4_o2_shr_0011.bin",
+            "results/shards/w4_o2_shr_0012.bin",
+            "results/shards/w4_o2_shr_0013.bin",
+            "results/shards/w4_o2_shr_0014.bin",
+            "results/shards/w4_o2_shr_0015.bin",
+            "results/shards/w4_o2_shr_0016.bin",
+            "results/shards/w4_o2_shr_0017.bin",
+            "results/shards/w4_o2_shr_0018.bin",
+            "results/shards/w4_o2_shr_0019.bin",
+            "results/shards/w4_o2_shr_0020.bin",
+            "results/shards/w4_o2_shr_0021.bin",
+            "results/shards/w4_o2_shr_0022.bin",
+            "results/shards/w4_o2_shr_0023.bin",
+            "results/shards/w4_o2_shr_0024.bin",
+            "results/shards/w4_o2_shr_0025.bin",
+            "results/shards/w4_o2_shr_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_shr.part02.zip",
+          "bytes": 8525149,
+          "sha256": "695fd3e041594c015c846cd88a4587cb613f26540dbf1e242f56a0203e36e9a3",
+          "shards": [
+            "results/shards/w4_o2_shr_0027.bin",
+            "results/shards/w4_o2_shr_0028.bin",
+            "results/shards/w4_o2_shr_0029.bin",
+            "results/shards/w4_o2_shr_0030.bin",
+            "results/shards/w4_o2_shr_0031.bin",
+            "results/shards/w4_o2_shr_0032.bin",
+            "results/shards/w4_o2_shr_0033.bin",
+            "results/shards/w4_o2_shr_0034.bin",
+            "results/shards/w4_o2_shr_0035.bin",
+            "results/shards/w4_o2_shr_0036.bin",
+            "results/shards/w4_o2_shr_0037.bin",
+            "results/shards/w4_o2_shr_0038.bin",
+            "results/shards/w4_o2_shr_0039.bin",
+            "results/shards/w4_o2_shr_0040.bin",
+            "results/shards/w4_o2_shr_0041.bin",
+            "results/shards/w4_o2_shr_0042.bin",
+            "results/shards/w4_o2_shr_0043.bin",
+            "results/shards/w4_o2_shr_0044.bin",
+            "results/shards/w4_o2_shr_0045.bin",
+            "results/shards/w4_o2_shr_0046.bin",
+            "results/shards/w4_o2_shr_0047.bin",
+            "results/shards/w4_o2_shr_0048.bin",
+            "results/shards/w4_o2_shr_0049.bin",
+            "results/shards/w4_o2_shr_0050.bin",
+            "results/shards/w4_o2_shr_0051.bin",
+            "results/shards/w4_o2_shr_0052.bin",
+            "results/shards/w4_o2_shr_0053.bin",
+            "results/shards/w4_o2_shr_0054.bin",
+            "results/shards/w4_o2_shr_0055.bin",
+            "results/shards/w4_o2_shr_0056.bin",
+            "results/shards/w4_o2_shr_0057.bin",
+            "results/shards/w4_o2_shr_0058.bin",
+            "results/shards/w4_o2_shr_0059.bin",
+            "results/shards/w4_o2_shr_0060.bin",
+            "results/shards/w4_o2_shr_0061.bin",
+            "results/shards/w4_o2_shr_0062.bin",
+            "results/shards/w4_o2_shr_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_sub",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_sub.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_sub.part01.zip",
+          "bytes": 10197092,
+          "sha256": "8cfa83161cfb544f3ac556260b63159962d55173e3dfe9e693ced39d4078db16",
+          "shards": [
+            "results/shards/w4_o2_sub_0000.bin",
+            "results/shards/w4_o2_sub_0001.bin",
+            "results/shards/w4_o2_sub_0002.bin",
+            "results/shards/w4_o2_sub_0003.bin",
+            "results/shards/w4_o2_sub_0004.bin",
+            "results/shards/w4_o2_sub_0005.bin",
+            "results/shards/w4_o2_sub_0006.bin",
+            "results/shards/w4_o2_sub_0007.bin",
+            "results/shards/w4_o2_sub_0008.bin",
+            "results/shards/w4_o2_sub_0009.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_sub.part02.zip",
+          "bytes": 8293925,
+          "sha256": "82616b72b5edd1a1145e8c25d0143b913d20d32bccd8fe5caf9d7264aac486a1",
+          "shards": [
+            "results/shards/w4_o2_sub_0010.bin",
+            "results/shards/w4_o2_sub_0011.bin",
+            "results/shards/w4_o2_sub_0012.bin",
+            "results/shards/w4_o2_sub_0013.bin",
+            "results/shards/w4_o2_sub_0014.bin",
+            "results/shards/w4_o2_sub_0015.bin",
+            "results/shards/w4_o2_sub_0016.bin",
+            "results/shards/w4_o2_sub_0017.bin",
+            "results/shards/w4_o2_sub_0018.bin",
+            "results/shards/w4_o2_sub_0019.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_sub.part03.zip",
+          "bytes": 10268553,
+          "sha256": "404eb7ecd19e3b66d5921d5c53f1421bb218a647664ae5980cb0a8aeed582e01",
+          "shards": [
+            "results/shards/w4_o2_sub_0020.bin",
+            "results/shards/w4_o2_sub_0021.bin",
+            "results/shards/w4_o2_sub_0022.bin",
+            "results/shards/w4_o2_sub_0023.bin",
+            "results/shards/w4_o2_sub_0024.bin",
+            "results/shards/w4_o2_sub_0025.bin",
+            "results/shards/w4_o2_sub_0026.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_sub.part04.zip",
+          "bytes": 10006388,
+          "sha256": "b30dad3ac5cb32ab95fd083288bc12d1a670595fde19334f6b2274f02abf179c",
+          "shards": [
+            "results/shards/w4_o2_sub_0027.bin",
+            "results/shards/w4_o2_sub_0028.bin",
+            "results/shards/w4_o2_sub_0029.bin",
+            "results/shards/w4_o2_sub_0030.bin",
+            "results/shards/w4_o2_sub_0031.bin",
+            "results/shards/w4_o2_sub_0032.bin",
+            "results/shards/w4_o2_sub_0033.bin",
+            "results/shards/w4_o2_sub_0034.bin",
+            "results/shards/w4_o2_sub_0035.bin",
+            "results/shards/w4_o2_sub_0036.bin",
+            "results/shards/w4_o2_sub_0037.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_sub.part05.zip",
+          "bytes": 9976865,
+          "sha256": "11f347e07bd67f0352ab3f9c29b533d44a55c163b08cfe3308272661dbc83089",
+          "shards": [
+            "results/shards/w4_o2_sub_0038.bin",
+            "results/shards/w4_o2_sub_0039.bin",
+            "results/shards/w4_o2_sub_0040.bin",
+            "results/shards/w4_o2_sub_0041.bin",
+            "results/shards/w4_o2_sub_0042.bin",
+            "results/shards/w4_o2_sub_0043.bin",
+            "results/shards/w4_o2_sub_0044.bin",
+            "results/shards/w4_o2_sub_0045.bin",
+            "results/shards/w4_o2_sub_0046.bin",
+            "results/shards/w4_o2_sub_0047.bin",
+            "results/shards/w4_o2_sub_0048.bin",
+            "results/shards/w4_o2_sub_0049.bin",
+            "results/shards/w4_o2_sub_0050.bin",
+            "results/shards/w4_o2_sub_0051.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_sub.part06.zip",
+          "bytes": 7495619,
+          "sha256": "f9335bb4d211c7587566bb22a7badbbe58d1cce544ee25786c54e61381f3f676",
+          "shards": [
+            "results/shards/w4_o2_sub_0052.bin",
+            "results/shards/w4_o2_sub_0053.bin",
+            "results/shards/w4_o2_sub_0054.bin",
+            "results/shards/w4_o2_sub_0055.bin",
+            "results/shards/w4_o2_sub_0056.bin",
+            "results/shards/w4_o2_sub_0057.bin",
+            "results/shards/w4_o2_sub_0058.bin",
+            "results/shards/w4_o2_sub_0059.bin",
+            "results/shards/w4_o2_sub_0060.bin",
+            "results/shards/w4_o2_sub_0061.bin",
+            "results/shards/w4_o2_sub_0062.bin",
+            "results/shards/w4_o2_sub_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_xor",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_xor.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_xor.part01.zip",
+          "bytes": 9174001,
+          "sha256": "272af406e89e3441ebafe13780934e64c367e4b34f11f8f4e369a14e735afbda",
+          "shards": [
+            "results/shards/w4_o2_xor_0000.bin",
+            "results/shards/w4_o2_xor_0001.bin",
+            "results/shards/w4_o2_xor_0002.bin",
+            "results/shards/w4_o2_xor_0003.bin",
+            "results/shards/w4_o2_xor_0004.bin",
+            "results/shards/w4_o2_xor_0005.bin",
+            "results/shards/w4_o2_xor_0006.bin",
+            "results/shards/w4_o2_xor_0007.bin",
+            "results/shards/w4_o2_xor_0008.bin",
+            "results/shards/w4_o2_xor_0009.bin",
+            "results/shards/w4_o2_xor_0010.bin",
+            "results/shards/w4_o2_xor_0011.bin",
+            "results/shards/w4_o2_xor_0012.bin",
+            "results/shards/w4_o2_xor_0013.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor.part02.zip",
+          "bytes": 9246340,
+          "sha256": "652b6d627be9a5fb7dd2880e8a8eeaedd3ea4e845c55777e92db042a1c9288e3",
+          "shards": [
+            "results/shards/w4_o2_xor_0014.bin",
+            "results/shards/w4_o2_xor_0015.bin",
+            "results/shards/w4_o2_xor_0016.bin",
+            "results/shards/w4_o2_xor_0017.bin",
+            "results/shards/w4_o2_xor_0018.bin",
+            "results/shards/w4_o2_xor_0019.bin",
+            "results/shards/w4_o2_xor_0020.bin",
+            "results/shards/w4_o2_xor_0021.bin",
+            "results/shards/w4_o2_xor_0022.bin",
+            "results/shards/w4_o2_xor_0023.bin",
+            "results/shards/w4_o2_xor_0024.bin",
+            "results/shards/w4_o2_xor_0025.bin",
+            "results/shards/w4_o2_xor_0026.bin",
+            "results/shards/w4_o2_xor_0027.bin",
+            "results/shards/w4_o2_xor_0028.bin",
+            "results/shards/w4_o2_xor_0029.bin",
+            "results/shards/w4_o2_xor_0030.bin",
+            "results/shards/w4_o2_xor_0031.bin",
+            "results/shards/w4_o2_xor_0032.bin",
+            "results/shards/w4_o2_xor_0033.bin",
+            "results/shards/w4_o2_xor_0034.bin",
+            "results/shards/w4_o2_xor_0035.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor.part03.zip",
+          "bytes": 9605689,
+          "sha256": "8388e10ea26979bbfa6299f8cf8164d3c9ca44e698cdf8bad281de9326f2adc5",
+          "shards": [
+            "results/shards/w4_o2_xor_0036.bin",
+            "results/shards/w4_o2_xor_0037.bin",
+            "results/shards/w4_o2_xor_0038.bin",
+            "results/shards/w4_o2_xor_0039.bin",
+            "results/shards/w4_o2_xor_0040.bin",
+            "results/shards/w4_o2_xor_0041.bin",
+            "results/shards/w4_o2_xor_0042.bin",
+            "results/shards/w4_o2_xor_0043.bin",
+            "results/shards/w4_o2_xor_0044.bin",
+            "results/shards/w4_o2_xor_0045.bin",
+            "results/shards/w4_o2_xor_0046.bin",
+            "results/shards/w4_o2_xor_0047.bin",
+            "results/shards/w4_o2_xor_0048.bin",
+            "results/shards/w4_o2_xor_0049.bin",
+            "results/shards/w4_o2_xor_0050.bin",
+            "results/shards/w4_o2_xor_0051.bin",
+            "results/shards/w4_o2_xor_0052.bin",
+            "results/shards/w4_o2_xor_0053.bin",
+            "results/shards/w4_o2_xor_0054.bin",
+            "results/shards/w4_o2_xor_0055.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor.part04.zip",
+          "bytes": 2900840,
+          "sha256": "b959a23dd6d3e878452c42511df4a327da3944b8956c86ed6d58575d469e008d",
+          "shards": [
+            "results/shards/w4_o2_xor_0056.bin",
+            "results/shards/w4_o2_xor_0057.bin",
+            "results/shards/w4_o2_xor_0058.bin",
+            "results/shards/w4_o2_xor_0059.bin",
+            "results/shards/w4_o2_xor_0060.bin",
+            "results/shards/w4_o2_xor_0061.bin",
+            "results/shards/w4_o2_xor_0062.bin",
+            "results/shards/w4_o2_xor_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_o2_xor_shr",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_o2_xor_shr.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_o2_xor_shr.part01.zip",
+          "bytes": 9359949,
+          "sha256": "1e7aa23a5e9b16361ed6feb611c04f779491b186c292834e9b71a0c6a521ed89",
+          "shards": [
+            "results/shards/w4_o2_xor_shr_0000.bin",
+            "results/shards/w4_o2_xor_shr_0001.bin",
+            "results/shards/w4_o2_xor_shr_0002.bin",
+            "results/shards/w4_o2_xor_shr_0003.bin",
+            "results/shards/w4_o2_xor_shr_0004.bin",
+            "results/shards/w4_o2_xor_shr_0005.bin",
+            "results/shards/w4_o2_xor_shr_0006.bin",
+            "results/shards/w4_o2_xor_shr_0007.bin",
+            "results/shards/w4_o2_xor_shr_0008.bin",
+            "results/shards/w4_o2_xor_shr_0009.bin",
+            "results/shards/w4_o2_xor_shr_0010.bin",
+            "results/shards/w4_o2_xor_shr_0011.bin",
+            "results/shards/w4_o2_xor_shr_0012.bin",
+            "results/shards/w4_o2_xor_shr_0013.bin",
+            "results/shards/w4_o2_xor_shr_0014.bin",
+            "results/shards/w4_o2_xor_shr_0015.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor_shr.part02.zip",
+          "bytes": 9603090,
+          "sha256": "01d4c2c97178d9f87126db0ddc6020ee40ee51acb28d1a2563122db2ddb45bd5",
+          "shards": [
+            "results/shards/w4_o2_xor_shr_0016.bin",
+            "results/shards/w4_o2_xor_shr_0017.bin",
+            "results/shards/w4_o2_xor_shr_0018.bin",
+            "results/shards/w4_o2_xor_shr_0019.bin",
+            "results/shards/w4_o2_xor_shr_0020.bin",
+            "results/shards/w4_o2_xor_shr_0021.bin",
+            "results/shards/w4_o2_xor_shr_0022.bin",
+            "results/shards/w4_o2_xor_shr_0023.bin",
+            "results/shards/w4_o2_xor_shr_0024.bin",
+            "results/shards/w4_o2_xor_shr_0025.bin",
+            "results/shards/w4_o2_xor_shr_0026.bin",
+            "results/shards/w4_o2_xor_shr_0027.bin",
+            "results/shards/w4_o2_xor_shr_0028.bin",
+            "results/shards/w4_o2_xor_shr_0029.bin",
+            "results/shards/w4_o2_xor_shr_0030.bin",
+            "results/shards/w4_o2_xor_shr_0031.bin",
+            "results/shards/w4_o2_xor_shr_0032.bin",
+            "results/shards/w4_o2_xor_shr_0033.bin",
+            "results/shards/w4_o2_xor_shr_0034.bin",
+            "results/shards/w4_o2_xor_shr_0035.bin",
+            "results/shards/w4_o2_xor_shr_0036.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor_shr.part03.zip",
+          "bytes": 9251781,
+          "sha256": "4ea4a9bae1101437b29210dc4831c19a3b926fe0ff7d11d1bedc2d8b36bfb1ee",
+          "shards": [
+            "results/shards/w4_o2_xor_shr_0037.bin",
+            "results/shards/w4_o2_xor_shr_0038.bin",
+            "results/shards/w4_o2_xor_shr_0039.bin",
+            "results/shards/w4_o2_xor_shr_0040.bin",
+            "results/shards/w4_o2_xor_shr_0041.bin",
+            "results/shards/w4_o2_xor_shr_0042.bin",
+            "results/shards/w4_o2_xor_shr_0043.bin",
+            "results/shards/w4_o2_xor_shr_0044.bin",
+            "results/shards/w4_o2_xor_shr_0045.bin",
+            "results/shards/w4_o2_xor_shr_0046.bin",
+            "results/shards/w4_o2_xor_shr_0047.bin",
+            "results/shards/w4_o2_xor_shr_0048.bin",
+            "results/shards/w4_o2_xor_shr_0049.bin",
+            "results/shards/w4_o2_xor_shr_0050.bin",
+            "results/shards/w4_o2_xor_shr_0051.bin",
+            "results/shards/w4_o2_xor_shr_0052.bin",
+            "results/shards/w4_o2_xor_shr_0053.bin",
+            "results/shards/w4_o2_xor_shr_0054.bin",
+            "results/shards/w4_o2_xor_shr_0055.bin",
+            "results/shards/w4_o2_xor_shr_0056.bin",
+            "results/shards/w4_o2_xor_shr_0057.bin"
+          ]
+        },
+        {
+          "file": "w4_o2_xor_shr.part04.zip",
+          "bytes": 1506268,
+          "sha256": "f19f7baec131af950fd872de7d49cc1da870b2999438b4e3a54b6f4acb734037",
+          "shards": [
+            "results/shards/w4_o2_xor_shr_0058.bin",
+            "results/shards/w4_o2_xor_shr_0059.bin",
+            "results/shards/w4_o2_xor_shr_0060.bin",
+            "results/shards/w4_o2_xor_shr_0061.bin",
+            "results/shards/w4_o2_xor_shr_0062.bin",
+            "results/shards/w4_o2_xor_shr_0063.bin"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "w4_prop_combined",
+      "experiment": "exp05",
+      "result": "results/exp05_w4_prop_combined.json",
+      "programs": 4294967296,
+      "shard_count": 64,
+      "archives": [
+        {
+          "file": "w4_prop_combined.part01.zip",
+          "bytes": 8377396,
+          "sha256": "b06a790e981ca46dbc61ccf3b61fe010f83cb953a66c91d3f04b1006de604da7",
+          "shards": [
+            "results/shards/w4_prop_combined_0000.bin",
+            "results/shards/w4_prop_combined_0001.bin",
+            "results/shards/w4_prop_combined_0002.bin",
+            "results/shards/w4_prop_combined_0003.bin",
+            "results/shards/w4_prop_combined_0004.bin",
+            "results/shards/w4_prop_combined_0005.bin",
+            "results/shards/w4_prop_combined_0006.bin",
+            "results/shards/w4_prop_combined_0007.bin",
+            "results/shards/w4_prop_combined_0008.bin",
+            "results/shards/w4_prop_combined_0009.bin",
+            "results/shards/w4_prop_combined_0010.bin",
+            "results/shards/w4_prop_combined_0011.bin",
+            "results/shards/w4_prop_combined_0012.bin",
+            "results/shards/w4_prop_combined_0013.bin",
+            "results/shards/w4_prop_combined_0014.bin",
+            "results/shards/w4_prop_combined_0015.bin",
+            "results/shards/w4_prop_combined_0016.bin",
+            "results/shards/w4_prop_combined_0017.bin",
+            "results/shards/w4_prop_combined_0018.bin",
+            "results/shards/w4_prop_combined_0019.bin",
+            "results/shards/w4_prop_combined_0020.bin",
+            "results/shards/w4_prop_combined_0021.bin",
+            "results/shards/w4_prop_combined_0022.bin",
+            "results/shards/w4_prop_combined_0023.bin",
+            "results/shards/w4_prop_combined_0024.bin",
+            "results/shards/w4_prop_combined_0025.bin",
+            "results/shards/w4_prop_combined_0026.bin",
+            "results/shards/w4_prop_combined_0027.bin",
+            "results/shards/w4_prop_combined_0028.bin",
+            "results/shards/w4_prop_combined_0029.bin",
+            "results/shards/w4_prop_combined_0030.bin",
+            "results/shards/w4_prop_combined_0031.bin",
+            "results/shards/w4_prop_combined_0032.bin",
+            "results/shards/w4_prop_combined_0033.bin",
+            "results/shards/w4_prop_combined_0034.bin",
+            "results/shards/w4_prop_combined_0035.bin",
+            "results/shards/w4_prop_combined_0036.bin",
+            "results/shards/w4_prop_combined_0037.bin",
+            "results/shards/w4_prop_combined_0038.bin",
+            "results/shards/w4_prop_combined_0039.bin",
+            "results/shards/w4_prop_combined_0040.bin",
+            "results/shards/w4_prop_combined_0041.bin",
+            "results/shards/w4_prop_combined_0042.bin",
+            "results/shards/w4_prop_combined_0043.bin",
+            "results/shards/w4_prop_combined_0044.bin",
+            "results/shards/w4_prop_combined_0045.bin",
+            "results/shards/w4_prop_combined_0046.bin",
+            "results/shards/w4_prop_combined_0047.bin",
+            "results/shards/w4_prop_combined_0048.bin",
+            "results/shards/w4_prop_combined_0049.bin",
+            "results/shards/w4_prop_combined_0050.bin",
+            "results/shards/w4_prop_combined_0051.bin",
+            "results/shards/w4_prop_combined_0052.bin",
+            "results/shards/w4_prop_combined_0053.bin",
+            "results/shards/w4_prop_combined_0054.bin",
+            "results/shards/w4_prop_combined_0055.bin",
+            "results/shards/w4_prop_combined_0056.bin",
+            "results/shards/w4_prop_combined_0057.bin",
+            "results/shards/w4_prop_combined_0058.bin",
+            "results/shards/w4_prop_combined_0059.bin",
+            "results/shards/w4_prop_combined_0060.bin",
+            "results/shards/w4_prop_combined_0061.bin",
+            "results/shards/w4_prop_combined_0062.bin",
+            "results/shards/w4_prop_combined_0063.bin"
           ]
         }
       ]

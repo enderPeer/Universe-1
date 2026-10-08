@@ -1,7 +1,7 @@
 """Recognize named finite-word functions and verify every match by execution.
 
 Run from any directory: python fast/map_functions.py [--only RUN]
-Reads only completed exp03 results and their original, extracted binary shards.
+Reads only completed exp03 (or, with --experiment exp05, exp05) results and their original, extracted binary shards.
 """
 import argparse
 import hashlib
@@ -142,7 +142,7 @@ def catalog(width, binary):
 
 def recognize(path, candidates):
     data = json.loads(path.read_text())
-    tag = path.stem.removeprefix('exp03_')
+    tag = path.stem.split('_', 1)[1]
     grouped = {}
     for name, expression, table in candidates:
         table_key = key(table, data['W'])
@@ -250,7 +250,7 @@ def write_summary(out):
                         hits.append(f"{r['run']} `{match['program_hex']}`")
             lines.append(f"| {name} | {'; '.join(hits) if hits else 'Not found in the mapped completed runs'} |")
     lines += ['', '## Reproduce / extend', '',
-              'Run `python fast/map_functions.py` after extracting witness archives into `results/shards/`. `--only RUN` maps one completed sweep. The script snapshots completed result files at startup; rerun as new sweeps finish.', '',
+              'Run `python fast/map_functions.py` (exp03) or `python fast/map_functions.py --experiment exp05` after extracting witness archives into `results/shards/`. `--only RUN` maps one completed sweep. The script snapshots completed result files at startup; rerun as new sweeps finish.', '',
               'The catalog includes constants, affine arithmetic, bit masks, shifts, rotations, Gray transforms, population counts, comparisons, modular arithmetic, selected number-theoretic functions, and all 16 bitwise Boolean functions. Affine coefficients are exhaustive at W<=4 and explicitly sampled at W=8.', '',
               'Per-run JSON includes formulas, aliases, full truth tables, decoded instructions, witness IDs, source shards, and termination statistics. All input values are enumerated in increasing order; binary tables use x outer / y inner. Hash matches are independently verified by complete execution.', '']
     (out/'README.md').write_text('\n'.join(lines), encoding='utf-8')
@@ -259,13 +259,14 @@ def write_summary(out):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--only')
+    parser.add_argument('--experiment', choices=['exp03', 'exp05'], default='exp03')
     args = parser.parse_args()
     out = ROOT/'results/function-map'
     out.mkdir(exist_ok=True)
     cache = {}
-    sources = sorted((ROOT/'results').glob('exp03_*.json'))
+    sources = sorted((ROOT/'results').glob(f'{args.experiment}_*.json'))
     for path in sources:
-        if args.only and path.stem != 'exp03_'+args.only: continue
+        if args.only and path.stem != f'{args.experiment}_'+args.only: continue
         data = json.loads(path.read_text())
         if 'distinct_operators' not in data: continue
         mode = data['W'], data['binary']

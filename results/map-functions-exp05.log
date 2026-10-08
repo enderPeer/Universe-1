@@ -1,0 +1,15 @@
+w4_codex_shr_mul: 345 recognized tables / 419 names; all witnesses fully verified
+w4_i8_o3: 109 recognized tables / 181 names; all witnesses fully verified
+w4_i8_o4: 163 recognized tables / 235 names; all witnesses fully verified
+w4_o2_adc: 275 recognized tables / 350 names; all witnesses fully verified
+w4_o2_add_jc: 337 recognized tables / 410 names; all witnesses fully verified
+w4_o2_add_jz: 330 recognized tables / 403 names; all witnesses fully verified
+w4_o2_add_sknz: 316 recognized tables / 388 names; all witnesses fully verified
+w4_o2_nocond: 337 recognized tables / 411 names; all witnesses fully verified
+w4_o2_rol: 324 recognized tables / 399 names; all witnesses fully verified
+w4_o2_shr: 55 recognized tables / 90 names; all witnesses fully verified
+w4_o2_sub: 315 recognized tables / 387 names; all witnesses fully verified
+w4_o2_xor: 17 recognized tables / 49 names; all witnesses fully verified
+w4_o2_xor_shr: 60 recognized tables / 96 names; all witnesses fully verified
+w4_prop_combined: 313 recognized tables / 385 names; all witnesses fully verified
+exit 0

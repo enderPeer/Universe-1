@@ -1,0 +1,15 @@
+w4_codex_shr_mul: 192 sampled witnesses agree with Python
+w4_i8_o3: 192 sampled witnesses agree with Python
+w4_i8_o4: 192 sampled witnesses agree with Python
+w4_o2_adc: 192 sampled witnesses agree with Python
+w4_o2_add_jc: 192 sampled witnesses agree with Python
+w4_o2_add_jz: 192 sampled witnesses agree with Python
+w4_o2_add_sknz: 192 sampled witnesses agree with Python
+w4_o2_nocond: 192 sampled witnesses agree with Python
+w4_o2_rol: 192 sampled witnesses agree with Python
+w4_o2_shr: 192 sampled witnesses agree with Python
+w4_o2_sub: 192 sampled witnesses agree with Python
+w4_o2_xor: 192 sampled witnesses agree with Python
+w4_o2_xor_shr: 184 sampled witnesses agree with Python
+w4_prop_combined: 192 sampled witnesses agree with Python
+TOTAL: 2680 sampled witnesses agree

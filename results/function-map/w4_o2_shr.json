@@ -1,0 +1,4655 @@
+{
+ "run": "w4_o2_shr",
+ "W": 4,
+ "binary": false,
+ "isa": [
+  "SWAP",
+  "ADD",
+  "SHR",
+  "SKZ"
+ ],
+ "geometry": {
+  "a": 2,
+  "p": 3,
+  "I": 4,
+  "opcode_bits": 2
+ },
+ "source_result_sha256": "5e2f2dde358809a46a2ca92cccb6aa32889f509208eb75c23ae276ffe1e9cd2f",
+ "source_distinct_operators": 331839,
+ "source_shards": 64,
+ "catalog_labels": 427,
+ "catalog_distinct_tables": 352,
+ "matched_distinct_tables": 55,
+ "matched_labels": 90,
+ "matches": [
+  {
+   "aliases": [
+    {
+     "name": "identity",
+     "expression": "x"
+    },
+    {
+     "name": "add_0",
+     "expression": "(x + 0) mod N"
+    },
+    {
+     "name": "xor_0",
+     "expression": "x XOR 0"
+    },
+    {
+     "name": "or_0",
+     "expression": "x OR 0"
+    },
+    {
+     "name": "multiply_1",
+     "expression": "1*x mod N"
+    },
+    {
+     "name": "and_15",
+     "expression": "x AND 15"
+    },
+    {
+     "name": "affine_1_0",
+     "expression": "(1*x + 0) mod N"
+    },
+    {
+     "name": "rotate_left_4",
+     "expression": "rotate W-bit x left by 4"
+    },
+    {
+     "name": "rotate_right_4",
+     "expression": "rotate W-bit x right by 4"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "key_low": 18364758544493064720,
+   "key_high": 0,
+   "program_id": 0,
+   "program_hex": "0x00000000",
+   "instruction_words": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "constant_0",
+     "expression": "0"
+    },
+    {
+     "name": "multiply_0",
+     "expression": "0*x mod N"
+    },
+    {
+     "name": "and_0",
+     "expression": "x AND 0"
+    },
+    {
+     "name": "less_than_0",
+     "expression": "1 if x<0 else 0 (unsigned)"
+    },
+    {
+     "name": "affine_0_0",
+     "expression": "(0*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_4",
+     "expression": "(x << 4) mod N"
+    },
+    {
+     "name": "shift_right_4",
+     "expression": "x >> 4 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 0,
+   "key_high": 0,
+   "program_id": 4,
+   "program_hex": "0x00000004",
+   "instruction_words": [
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_13",
+     "expression": "13*x mod N"
+    },
+    {
+     "name": "affine_13_0",
+     "expression": "(13*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    13,
+    10,
+    7,
+    4,
+    1,
+    14,
+    11,
+    8,
+    5,
+    2,
+    15,
+    12,
+    9,
+    6,
+    3
+   ],
+   "key_low": 3935286637375027920,
+   "key_high": 0,
+   "program_id": 21,
+   "program_hex": "0x00000015",
+   "instruction_words": [
+    5,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_14",
+     "expression": "x AND 14"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    2,
+    2,
+    4,
+    4,
+    6,
+    6,
+    8,
+    8,
+    10,
+    10,
+    12,
+    12,
+    14,
+    14
+   ],
+   "key_low": 17207315779083837952,
+   "key_high": 0,
+   "program_id": 72,
+   "program_hex": "0x00000048",
+   "instruction_words": [
+    8,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "ADD 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_2",
+     "expression": "2*x mod N"
+    },
+    {
+     "name": "affine_2_0",
+     "expression": "(2*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_1",
+     "expression": "(x << 1) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "key_low": 17052990081610572832,
+   "key_high": 0,
+   "program_id": 81,
+   "program_hex": "0x00000051",
+   "instruction_words": [
+    1,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_7",
+     "expression": "x AND 7"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "key_low": 8526495040805286416,
+   "key_high": 0,
+   "program_id": 132,
+   "program_hex": "0x00000084",
+   "instruction_words": [
+    4,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "SHR",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_8",
+     "expression": "8*x mod N"
+    },
+    {
+     "name": "affine_8_0",
+     "expression": "(8*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_3",
+     "expression": "(x << 3) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    8,
+    0,
+    8,
+    0,
+    8,
+    0,
+    8,
+    0,
+    8,
+    0,
+    8,
+    0,
+    8,
+    0,
+    8
+   ],
+   "key_low": 9259542123273814144,
+   "key_high": 0,
+   "program_id": 293,
+   "program_hex": "0x00000125",
+   "instruction_words": [
+    5,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SWAP 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 8,
+    "budget": 8
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_9",
+     "expression": "9*x mod N"
+    },
+    {
+     "name": "affine_9_0",
+     "expression": "(9*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    9,
+    2,
+    11,
+    4,
+    13,
+    6,
+    15,
+    8,
+    1,
+    10,
+    3,
+    12,
+    5,
+    14,
+    7
+   ],
+   "key_low": 9105216425531060880,
+   "key_high": 0,
+   "program_id": 294,
+   "program_hex": "0x00000126",
+   "instruction_words": [
+    6,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 2",
+    "SWAP 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 8,
+    "budget": 8
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_6",
+     "expression": "6*x mod N"
+    },
+    {
+     "name": "affine_6_0",
+     "expression": "(6*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    6,
+    12,
+    2,
+    8,
+    14,
+    4,
+    10,
+    0,
+    6,
+    12,
+    2,
+    8,
+    14,
+    4,
+    10
+   ],
+   "key_low": 11882796410412215392,
+   "key_high": 0,
+   "program_id": 340,
+   "program_hex": "0x00000154",
+   "instruction_words": [
+    4,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_3",
+     "expression": "3*x mod N"
+    },
+    {
+     "name": "affine_3_0",
+     "expression": "(3*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    2,
+    5,
+    8,
+    11,
+    14,
+    1,
+    4,
+    7,
+    10,
+    13
+   ],
+   "key_low": 15741240374581827120,
+   "key_high": 0,
+   "program_id": 1313,
+   "program_hex": "0x00000521",
+   "instruction_words": [
+    1,
+    2,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "SWAP 2",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 8,
+    "budget": 8
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_11",
+     "expression": "11*x mod N"
+    },
+    {
+     "name": "affine_11_0",
+     "expression": "(11*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    11,
+    6,
+    1,
+    12,
+    7,
+    2,
+    13,
+    8,
+    3,
+    14,
+    9,
+    4,
+    15,
+    10,
+    5
+   ],
+   "key_low": 6554037324617619120,
+   "key_high": 0,
+   "program_id": 1345,
+   "program_hex": "0x00000541",
+   "instruction_words": [
+    1,
+    4,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 0",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_7",
+     "expression": "7*x mod N"
+    },
+    {
+     "name": "affine_7_0",
+     "expression": "(7*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    7,
+    14,
+    5,
+    12,
+    3,
+    10,
+    1,
+    8,
+    15,
+    6,
+    13,
+    4,
+    11,
+    2,
+    9
+   ],
+   "key_low": 10571310586425794160,
+   "key_high": 0,
+   "program_id": 3153,
+   "program_hex": "0x00000c51",
+   "instruction_words": [
+    1,
+    5,
+    12,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 1",
+    "SKZ",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_4",
+     "expression": "4*x mod N"
+    },
+    {
+     "name": "affine_4_0",
+     "expression": "(4*x + 0) mod N"
+    },
+    {
+     "name": "shift_left_2",
+     "expression": "(x << 2) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    4,
+    8,
+    12,
+    0,
+    4,
+    8,
+    12,
+    0,
+    4,
+    8,
+    12,
+    0,
+    4,
+    8,
+    12
+   ],
+   "key_low": 14429753386658220096,
+   "key_high": 0,
+   "program_id": 4693,
+   "program_hex": "0x00001255",
+   "instruction_words": [
+    5,
+    5,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "ADD 1",
+    "SWAP 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_14",
+     "expression": "14*x mod N"
+    },
+    {
+     "name": "affine_14_0",
+     "expression": "(14*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    14,
+    12,
+    10,
+    8,
+    6,
+    4,
+    2,
+    0,
+    14,
+    12,
+    10,
+    8,
+    6,
+    4,
+    2
+   ],
+   "key_low": 2623536861626805472,
+   "key_high": 0,
+   "program_id": 4708,
+   "program_hex": "0x00001264",
+   "instruction_words": [
+    4,
+    6,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "ADD 2",
+    "SWAP 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_12",
+     "expression": "12*x mod N"
+    },
+    {
+     "name": "affine_12_0",
+     "expression": "(12*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    12,
+    8,
+    4,
+    0,
+    12,
+    8,
+    4,
+    0,
+    12,
+    8,
+    4,
+    0,
+    12,
+    8,
+    4
+   ],
+   "key_low": 5242269956950739136,
+   "key_high": 0,
+   "program_id": 4710,
+   "program_hex": "0x00001266",
+   "instruction_words": [
+    6,
+    6,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 2",
+    "ADD 2",
+    "SWAP 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "shift_right_1",
+     "expression": "x >> 1 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7
+   ],
+   "key_low": 8603657889541918976,
+   "key_high": 0,
+   "program_id": 5320,
+   "program_hex": "0x000014c8",
+   "instruction_words": [
+    8,
+    12,
+    4,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SKZ",
+    "ADD 0",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_5",
+     "expression": "5*x mod N"
+    },
+    {
+     "name": "affine_5_0",
+     "expression": "(5*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    5,
+    10,
+    15,
+    4,
+    9,
+    14,
+    3,
+    8,
+    13,
+    2,
+    7,
+    12,
+    1,
+    6,
+    11
+   ],
+   "key_low": 13122489687339235920,
+   "key_high": 0,
+   "program_id": 5461,
+   "program_hex": "0x00001555",
+   "instruction_words": [
+    5,
+    5,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "ADD 1",
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "shift_right_2",
+     "expression": "x >> 2 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3
+   ],
+   "key_low": 3689330049457127424,
+   "key_high": 0,
+   "program_id": 5512,
+   "program_hex": "0x00001588",
+   "instruction_words": [
+    8,
+    8,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SHR",
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_12",
+     "expression": "x AND 12"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    8,
+    8,
+    8,
+    8,
+    12,
+    12,
+    12,
+    12
+   ],
+   "key_low": 14757320197828509696,
+   "key_high": 0,
+   "program_id": 17544,
+   "program_hex": "0x00004488",
+   "instruction_words": [
+    8,
+    8,
+    4,
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SHR",
+    "ADD 0",
+    "ADD 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_6",
+     "expression": "x AND 6"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    2,
+    2,
+    4,
+    4,
+    6,
+    6,
+    0,
+    0,
+    2,
+    2,
+    4,
+    4,
+    6,
+    6
+   ],
+   "key_low": 7369052275396059648,
+   "key_high": 0,
+   "program_id": 18564,
+   "program_hex": "0x00004884",
+   "instruction_words": [
+    4,
+    8,
+    8,
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "SHR",
+    "SHR",
+    "ADD 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "multiply_10",
+     "expression": "10*x mod N"
+    },
+    {
+     "name": "affine_10_0",
+     "expression": "(10*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    10,
+    4,
+    14,
+    8,
+    2,
+    12,
+    6,
+    0,
+    10,
+    4,
+    14,
+    8,
+    2,
+    12,
+    6
+   ],
+   "key_low": 7793730532825162912,
+   "key_high": 0,
+   "program_id": 20868,
+   "program_hex": "0x00005184",
+   "instruction_words": [
+    4,
+    8,
+    1,
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "SHR",
+    "SWAP 1",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "negation",
+     "expression": "-x mod N"
+    },
+    {
+     "name": "multiply_15",
+     "expression": "15*x mod N"
+    },
+    {
+     "name": "affine_15_0",
+     "expression": "(15*x + 0) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    15,
+    14,
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "key_low": 1311768467463790320,
+   "key_high": 0,
+   "program_id": 21953,
+   "program_hex": "0x000055c1",
+   "instruction_words": [
+    1,
+    12,
+    5,
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "SKZ",
+    "ADD 1",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_3",
+     "expression": "x AND 3"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3
+   ],
+   "key_low": 3607438346664555024,
+   "key_high": 0,
+   "program_id": 34884,
+   "program_hex": "0x00008844",
+   "instruction_words": [
+    4,
+    4,
+    8,
+    8,
+    0,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "ADD 0",
+    "SHR",
+    "SHR",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "shift_right_3",
+     "expression": "x >> 3 (unsigned)"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "key_low": 1229782937960972288,
+   "key_high": 0,
+   "program_id": 88200,
+   "program_hex": "0x00015888",
+   "instruction_words": [
+    8,
+    8,
+    8,
+    5,
+    1,
+    0,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SHR",
+    "SHR",
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_8",
+     "expression": "x AND 8"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "key_low": 9838263503687778304,
+   "key_high": 0,
+   "program_id": 1333384,
+   "program_hex": "0x00145888",
+   "instruction_words": [
+    8,
+    8,
+    8,
+    5,
+    4,
+    1,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SHR",
+    "SHR",
+    "ADD 1",
+    "ADD 0",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_2",
+     "expression": "x AND 2"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2
+   ],
+   "key_low": 2449995581255328256,
+   "key_high": 0,
+   "program_id": 1345620,
+   "program_hex": "0x00148854",
+   "instruction_words": [
+    4,
+    5,
+    8,
+    8,
+    4,
+    1,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "ADD 1",
+    "SHR",
+    "SHR",
+    "ADD 0",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_1",
+     "expression": "1 if x=1 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 16,
+   "key_high": 0,
+   "program_id": 1448130,
+   "program_hex": "0x001618c2",
+   "instruction_words": [
+    2,
+    12,
+    8,
+    1,
+    6,
+    1,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SKZ",
+    "SHR",
+    "SWAP 1",
+    "ADD 2",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_1",
+     "expression": "x AND 1"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ],
+   "key_low": 1157442765409226768,
+   "key_high": 0,
+   "program_id": 1594436,
+   "program_hex": "0x00185444",
+   "instruction_words": [
+    4,
+    4,
+    4,
+    5,
+    8,
+    1,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 0",
+    "ADD 0",
+    "ADD 0",
+    "ADD 1",
+    "SHR",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_11",
+     "expression": "1 if x=11 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 17592186044416,
+   "key_high": 0,
+   "program_id": 1623602,
+   "program_hex": "0x0018c632",
+   "instruction_words": [
+    2,
+    3,
+    6,
+    12,
+    8,
+    1,
+    0,
+    0
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SWAP 3",
+    "ADD 2",
+    "SKZ",
+    "SHR",
+    "SWAP 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_4",
+     "expression": "x AND 4"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4
+   ],
+   "key_low": 4919056694140731392,
+   "key_high": 0,
+   "program_id": 4278405,
+   "program_hex": "0x00414885",
+   "instruction_words": [
+    5,
+    8,
+    8,
+    4,
+    1,
+    4,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SHR",
+    "SHR",
+    "ADD 0",
+    "SWAP 1",
+    "ADD 0",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "rotate_left_1",
+     "expression": "rotate W-bit x left by 1"
+    },
+    {
+     "name": "rotate_right_3",
+     "expression": "rotate W-bit x right by 3"
+    }
+   ],
+   "truth_table": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15
+   ],
+   "key_low": 18282773019571545120,
+   "key_high": 0,
+   "program_id": 5802005,
+   "program_hex": "0x00588815",
+   "instruction_words": [
+    5,
+    1,
+    8,
+    8,
+    8,
+    5,
+    0,
+    0
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SWAP 1",
+    "SHR",
+    "SHR",
+    "SHR",
+    "ADD 1",
+    "SWAP 0",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "signed_shift_right_3",
+     "expression": "signed_W(x) >> 3, encoded mod N"
+    },
+    {
+     "name": "signed_shift_right_4",
+     "expression": "signed_W(x) >> 4, encoded mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+   ],
+   "key_low": 18446744069414584320,
+   "key_high": 0,
+   "program_id": 22381960,
+   "program_hex": "0x01558588",
+   "instruction_words": [
+    8,
+    8,
+    5,
+    8,
+    5,
+    5,
+    1,
+    0
+   ],
+   "disassembly": [
+    "SHR",
+    "SHR",
+    "ADD 1",
+    "SHR",
+    "ADD 1",
+    "ADD 1",
+    "SWAP 1",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "signed_abs",
+     "expression": "abs(signed_W(x)) mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "key_low": 1311768466852950544,
+   "key_high": 0,
+   "program_id": 29698113,
+   "program_hex": "0x01c52841",
+   "instruction_words": [
+    1,
+    4,
+    8,
+    2,
+    5,
+    12,
+    1,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 0",
+    "SHR",
+    "SWAP 2",
+    "ADD 1",
+    "SKZ",
+    "SWAP 1",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0000.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_15",
+     "expression": "1 if x=15 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "key_low": 1152921504606846976,
+   "key_high": 0,
+   "program_id": 85755265,
+   "program_hex": "0x051c8581",
+   "instruction_words": [
+    1,
+    8,
+    5,
+    8,
+    12,
+    1,
+    5,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "SHR",
+    "ADD 1",
+    "SHR",
+    "SKZ",
+    "SWAP 1",
+    "ADD 1",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0001.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "signed_shift_right_2",
+     "expression": "signed_W(x) >> 2, encoded mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    14,
+    14,
+    14,
+    14,
+    15,
+    15,
+    15,
+    15
+   ],
+   "key_low": 18446725304988794880,
+   "key_high": 0,
+   "program_id": 86382726,
+   "program_hex": "0x05261886",
+   "instruction_words": [
+    6,
+    8,
+    8,
+    1,
+    6,
+    2,
+    5,
+    0
+   ],
+   "disassembly": [
+    "ADD 2",
+    "SHR",
+    "SHR",
+    "SWAP 1",
+    "ADD 2",
+    "SWAP 2",
+    "ADD 1",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0001.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "rotate_left_2",
+     "expression": "rotate W-bit x left by 2"
+    },
+    {
+     "name": "rotate_right_2",
+     "expression": "rotate W-bit x right by 2"
+    }
+   ],
+   "truth_table": [
+    0,
+    4,
+    8,
+    12,
+    1,
+    5,
+    9,
+    13,
+    2,
+    6,
+    10,
+    14,
+    3,
+    7,
+    11,
+    15
+   ],
+   "key_low": 18119083436115347520,
+   "key_high": 0,
+   "program_id": 88479874,
+   "program_hex": "0x05461882",
+   "instruction_words": [
+    2,
+    8,
+    8,
+    1,
+    6,
+    4,
+    5,
+    0
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SHR",
+    "SHR",
+    "SWAP 1",
+    "ADD 2",
+    "ADD 0",
+    "ADD 1",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0001.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_13",
+     "expression": "1 if x=13 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "key_low": 4503599627370496,
+   "key_high": 0,
+   "program_id": 135605264,
+   "program_hex": "0x08152c10",
+   "instruction_words": [
+    0,
+    1,
+    12,
+    2,
+    5,
+    1,
+    8,
+    0
+   ],
+   "disassembly": [
+    "SWAP 0",
+    "SWAP 1",
+    "SKZ",
+    "SWAP 2",
+    "ADD 1",
+    "SWAP 1",
+    "SHR",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0002.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_12",
+     "expression": "1 if x=12 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "key_low": 281474976710656,
+   "key_high": 0,
+   "program_id": 135617617,
+   "program_hex": "0x08155c51",
+   "instruction_words": [
+    1,
+    5,
+    12,
+    5,
+    5,
+    1,
+    8,
+    0
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 1",
+    "SKZ",
+    "ADD 1",
+    "ADD 1",
+    "SWAP 1",
+    "SHR",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0002.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_7",
+     "expression": "1 if x=7 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 268435456,
+   "key_high": 0,
+   "program_id": 142941196,
+   "program_hex": "0x08851c0c",
+   "instruction_words": [
+    12,
+    0,
+    12,
+    1,
+    5,
+    8,
+    8,
+    0
+   ],
+   "disassembly": [
+    "SKZ",
+    "SWAP 0",
+    "SKZ",
+    "SWAP 1",
+    "ADD 1",
+    "SHR",
+    "SHR",
+    "SWAP 0"
+   ],
+   "source_shard": "w4_o2_shr_0002.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_14",
+     "expression": "1 if x=14 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "key_low": 72057594037927936,
+   "key_high": 0,
+   "program_id": 305711186,
+   "program_hex": "0x1238c852",
+   "instruction_words": [
+    2,
+    5,
+    8,
+    12,
+    8,
+    3,
+    2,
+    1
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "ADD 1",
+    "SHR",
+    "SKZ",
+    "SHR",
+    "SWAP 3",
+    "SWAP 2",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0004.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_9",
+     "expression": "1 if x=9 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 68719476736,
+   "key_high": 0,
+   "program_id": 307546194,
+   "program_hex": "0x1254c852",
+   "instruction_words": [
+    2,
+    5,
+    8,
+    12,
+    4,
+    5,
+    2,
+    1
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "ADD 1",
+    "SHR",
+    "SKZ",
+    "ADD 0",
+    "ADD 1",
+    "SWAP 2",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0004.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_6",
+     "expression": "1 if x=6 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 16777216,
+   "key_high": 0,
+   "program_id": 309430371,
+   "program_hex": "0x12718863",
+   "instruction_words": [
+    3,
+    6,
+    8,
+    8,
+    1,
+    7,
+    2,
+    1
+   ],
+   "disassembly": [
+    "SWAP 3",
+    "ADD 2",
+    "SHR",
+    "SHR",
+    "SWAP 1",
+    "ADD 3",
+    "SWAP 2",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0004.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 14,
+    "budget": 2
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_8",
+     "expression": "1 if x=8 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 4294967296,
+   "key_high": 0,
+   "program_id": 344490694,
+   "program_hex": "0x148882c6",
+   "instruction_words": [
+    6,
+    12,
+    2,
+    8,
+    8,
+    8,
+    4,
+    1
+   ],
+   "disassembly": [
+    "ADD 2",
+    "SKZ",
+    "SWAP 2",
+    "SHR",
+    "SHR",
+    "SHR",
+    "ADD 0",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0005.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_10",
+     "expression": "1 if x=10 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 1099511627776,
+   "key_high": 0,
+   "program_id": 353141026,
+   "program_hex": "0x150c8122",
+   "instruction_words": [
+    2,
+    2,
+    1,
+    8,
+    12,
+    0,
+    5,
+    1
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SWAP 2",
+    "SWAP 1",
+    "SHR",
+    "SKZ",
+    "SWAP 0",
+    "ADD 1",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0005.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_5",
+     "expression": "1 if x=5 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 1048576,
+   "key_high": 0,
+   "program_id": 370416770,
+   "program_hex": "0x16141c82",
+   "instruction_words": [
+    2,
+    8,
+    12,
+    1,
+    4,
+    1,
+    6,
+    1
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SHR",
+    "SKZ",
+    "SWAP 1",
+    "ADD 0",
+    "SWAP 1",
+    "ADD 2",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0005.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "is_nonzero",
+     "expression": "1 if x != 0 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "key_low": 1229782938247303440,
+   "key_high": 0,
+   "program_id": 378026023,
+   "program_hex": "0x16883827",
+   "instruction_words": [
+    7,
+    2,
+    8,
+    3,
+    8,
+    8,
+    6,
+    1
+   ],
+   "disassembly": [
+    "ADD 3",
+    "SWAP 2",
+    "SHR",
+    "SWAP 3",
+    "SHR",
+    "SHR",
+    "ADD 2",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0005.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_2",
+     "expression": "1 if x=2 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 256,
+   "key_high": 0,
+   "program_id": 478503218,
+   "program_hex": "0x1c856132",
+   "instruction_words": [
+    2,
+    3,
+    1,
+    6,
+    5,
+    8,
+    12,
+    1
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SWAP 3",
+    "SWAP 1",
+    "ADD 2",
+    "ADD 1",
+    "SHR",
+    "SKZ",
+    "SWAP 1"
+   ],
+   "source_shard": "w4_o2_shr_0007.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_10",
+     "expression": "x AND 10"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    2,
+    2,
+    8,
+    8,
+    10,
+    10,
+    8,
+    8,
+    10,
+    10
+   ],
+   "key_low": 12288259084943106560,
+   "key_high": 0,
+   "program_id": 1163036801,
+   "program_hex": "0x45528881",
+   "instruction_words": [
+    1,
+    8,
+    8,
+    8,
+    2,
+    5,
+    5,
+    4
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "SHR",
+    "SHR",
+    "SHR",
+    "SWAP 2",
+    "ADD 1",
+    "ADD 1",
+    "ADD 0"
+   ],
+   "source_shard": "w4_o2_shr_0017.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_3",
+     "expression": "1 if x=3 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 4096,
+   "key_high": 0,
+   "program_id": 1213514065,
+   "program_hex": "0x4854c151",
+   "instruction_words": [
+    1,
+    5,
+    1,
+    12,
+    4,
+    5,
+    8,
+    4
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 1",
+    "SWAP 1",
+    "SKZ",
+    "ADD 0",
+    "ADD 1",
+    "SHR",
+    "ADD 0"
+   ],
+   "source_shard": "w4_o2_shr_0018.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "floor_log2_zero_is_zero",
+     "expression": "floor(log2(x)); define output 0 at x=0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "key_low": 3689348814455574784,
+   "key_high": 0,
+   "program_id": 1372070277,
+   "program_hex": "0x51c82185",
+   "instruction_words": [
+    5,
+    8,
+    1,
+    2,
+    8,
+    12,
+    1,
+    5
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SHR",
+    "SWAP 1",
+    "SWAP 2",
+    "SHR",
+    "SKZ",
+    "SWAP 1",
+    "ADD 1"
+   ],
+   "source_shard": "w4_o2_shr_0020.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "signed_shift_right_1",
+     "expression": "signed_W(x) >> 1, encoded mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    12,
+    12,
+    13,
+    13,
+    14,
+    14,
+    15,
+    15
+   ],
+   "key_low": 18441921393229697280,
+   "key_high": 0,
+   "program_id": 1415652741,
+   "program_hex": "0x54612585",
+   "instruction_words": [
+    5,
+    8,
+    5,
+    2,
+    1,
+    6,
+    4,
+    5
+   ],
+   "disassembly": [
+    "ADD 1",
+    "SHR",
+    "ADD 1",
+    "SWAP 2",
+    "SWAP 1",
+    "ADD 2",
+    "ADD 0",
+    "ADD 1"
+   ],
+   "source_shard": "w4_o2_shr_0021.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "and_5",
+     "expression": "x AND 5"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    5,
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    5
+   ],
+   "key_low": 6076499459549958160,
+   "key_high": 0,
+   "program_id": 1428719636,
+   "program_hex": "0x55288814",
+   "instruction_words": [
+    4,
+    1,
+    8,
+    8,
+    8,
+    2,
+    5,
+    5
+   ],
+   "disassembly": [
+    "ADD 0",
+    "SWAP 1",
+    "SHR",
+    "SHR",
+    "SHR",
+    "SWAP 2",
+    "ADD 1",
+    "ADD 1"
+   ],
+   "source_shard": "w4_o2_shr_0021.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "cube",
+     "expression": "x^3 mod N"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    8,
+    11,
+    0,
+    13,
+    8,
+    7,
+    0,
+    9,
+    8,
+    3,
+    0,
+    5,
+    8,
+    15
+   ],
+   "key_low": 17892863512696371216,
+   "key_high": 0,
+   "program_id": 2169619494,
+   "program_hex": "0x8151c426",
+   "instruction_words": [
+    6,
+    2,
+    4,
+    12,
+    1,
+    5,
+    1,
+    8
+   ],
+   "disassembly": [
+    "ADD 2",
+    "SWAP 2",
+    "ADD 0",
+    "SKZ",
+    "SWAP 1",
+    "ADD 1",
+    "SWAP 1",
+    "SHR"
+   ],
+   "source_shard": "w4_o2_shr_0032.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "lowest_set_bit",
+     "expression": "x AND (-x), masked to W bits"
+    }
+   ],
+   "truth_table": [
+    0,
+    1,
+    2,
+    1,
+    4,
+    1,
+    2,
+    1,
+    8,
+    1,
+    2,
+    1,
+    4,
+    1,
+    2,
+    1
+   ],
+   "key_low": 1302686086808736272,
+   "key_high": 0,
+   "program_id": 2290424897,
+   "program_hex": "0x88851c41",
+   "instruction_words": [
+    1,
+    4,
+    12,
+    1,
+    5,
+    8,
+    8,
+    8
+   ],
+   "disassembly": [
+    "SWAP 1",
+    "ADD 0",
+    "SKZ",
+    "SWAP 1",
+    "ADD 1",
+    "SHR",
+    "SHR",
+    "SHR"
+   ],
+   "source_shard": "w4_o2_shr_0034.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  },
+  {
+   "aliases": [
+    {
+     "name": "equal_4",
+     "expression": "1 if x=4 else 0"
+    }
+   ],
+   "truth_table": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "key_low": 65536,
+   "key_high": 0,
+   "program_id": 3246818690,
+   "program_hex": "0xc1868582",
+   "instruction_words": [
+    2,
+    8,
+    5,
+    8,
+    6,
+    8,
+    1,
+    12
+   ],
+   "disassembly": [
+    "SWAP 2",
+    "SHR",
+    "ADD 1",
+    "SHR",
+    "ADD 2",
+    "SHR",
+    "SWAP 1",
+    "SKZ"
+   ],
+   "source_shard": "w4_o2_shr_0048.bin",
+   "reference_verified_inputs": 16,
+   "termination_counts": {
+    "loop": 16
+   },
+   "mean_budget_or_halt_steps": 256.0,
+   "max_budget_or_halt_steps": 256
+  }
+ ],
+ "not_found_in_this_run": [
+  {
+   "name": "bitwise_not",
+   "expression": "~x masked to W bits"
+  },
+  {
+   "name": "increment",
+   "expression": "(x + 1) mod N"
+  },
+  {
+   "name": "decrement",
+   "expression": "(x - 1) mod N"
+  },
+  {
+   "name": "square",
+   "expression": "x^2 mod N"
+  },
+  {
+   "name": "integer_sqrt",
+   "expression": "floor(sqrt(x))"
+  },
+  {
+   "name": "popcount",
+   "expression": "number of set bits in x, reduced mod N"
+  },
+  {
+   "name": "parity",
+   "expression": "popcount(x) mod 2"
+  },
+  {
+   "name": "bit_reverse",
+   "expression": "reverse the W bits of x"
+  },
+  {
+   "name": "gray_encode",
+   "expression": "x XOR (x >> 1)"
+  },
+  {
+   "name": "gray_decode",
+   "expression": "inverse reflected Gray-code transform"
+  },
+  {
+   "name": "signed_signum",
+   "expression": "sign(signed_W(x)) encoded mod N"
+  },
+  {
+   "name": "is_zero",
+   "expression": "1 if x = 0 else 0"
+  },
+  {
+   "name": "is_power_of_two",
+   "expression": "1 if x is a positive power of two else 0"
+  },
+  {
+   "name": "clear_lowest_set_bit",
+   "expression": "x AND (x-1)"
+  },
+  {
+   "name": "leading_zeros_mod_N",
+   "expression": "W - bit_length(x), reduced mod N"
+  },
+  {
+   "name": "trailing_zeros_mod_N",
+   "expression": "trailing-zero count; x=0 maps to W mod N"
+  },
+  {
+   "name": "equal_0",
+   "expression": "1 if x=0 else 0"
+  },
+  {
+   "name": "constant_1",
+   "expression": "1"
+  },
+  {
+   "name": "add_1",
+   "expression": "(x + 1) mod N"
+  },
+  {
+   "name": "xor_1",
+   "expression": "x XOR 1"
+  },
+  {
+   "name": "or_1",
+   "expression": "x OR 1"
+  },
+  {
+   "name": "less_than_1",
+   "expression": "1 if x<1 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_2",
+   "expression": "2"
+  },
+  {
+   "name": "add_2",
+   "expression": "(x + 2) mod N"
+  },
+  {
+   "name": "xor_2",
+   "expression": "x XOR 2"
+  },
+  {
+   "name": "or_2",
+   "expression": "x OR 2"
+  },
+  {
+   "name": "less_than_2",
+   "expression": "1 if x<2 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_3",
+   "expression": "3"
+  },
+  {
+   "name": "add_3",
+   "expression": "(x + 3) mod N"
+  },
+  {
+   "name": "xor_3",
+   "expression": "x XOR 3"
+  },
+  {
+   "name": "or_3",
+   "expression": "x OR 3"
+  },
+  {
+   "name": "less_than_3",
+   "expression": "1 if x<3 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_4",
+   "expression": "4"
+  },
+  {
+   "name": "add_4",
+   "expression": "(x + 4) mod N"
+  },
+  {
+   "name": "xor_4",
+   "expression": "x XOR 4"
+  },
+  {
+   "name": "or_4",
+   "expression": "x OR 4"
+  },
+  {
+   "name": "less_than_4",
+   "expression": "1 if x<4 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_5",
+   "expression": "5"
+  },
+  {
+   "name": "add_5",
+   "expression": "(x + 5) mod N"
+  },
+  {
+   "name": "xor_5",
+   "expression": "x XOR 5"
+  },
+  {
+   "name": "or_5",
+   "expression": "x OR 5"
+  },
+  {
+   "name": "less_than_5",
+   "expression": "1 if x<5 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_6",
+   "expression": "6"
+  },
+  {
+   "name": "add_6",
+   "expression": "(x + 6) mod N"
+  },
+  {
+   "name": "xor_6",
+   "expression": "x XOR 6"
+  },
+  {
+   "name": "or_6",
+   "expression": "x OR 6"
+  },
+  {
+   "name": "less_than_6",
+   "expression": "1 if x<6 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_7",
+   "expression": "7"
+  },
+  {
+   "name": "add_7",
+   "expression": "(x + 7) mod N"
+  },
+  {
+   "name": "xor_7",
+   "expression": "x XOR 7"
+  },
+  {
+   "name": "or_7",
+   "expression": "x OR 7"
+  },
+  {
+   "name": "less_than_7",
+   "expression": "1 if x<7 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_8",
+   "expression": "8"
+  },
+  {
+   "name": "add_8",
+   "expression": "(x + 8) mod N"
+  },
+  {
+   "name": "xor_8",
+   "expression": "x XOR 8"
+  },
+  {
+   "name": "or_8",
+   "expression": "x OR 8"
+  },
+  {
+   "name": "less_than_8",
+   "expression": "1 if x<8 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_9",
+   "expression": "9"
+  },
+  {
+   "name": "add_9",
+   "expression": "(x + 9) mod N"
+  },
+  {
+   "name": "xor_9",
+   "expression": "x XOR 9"
+  },
+  {
+   "name": "and_9",
+   "expression": "x AND 9"
+  },
+  {
+   "name": "or_9",
+   "expression": "x OR 9"
+  },
+  {
+   "name": "less_than_9",
+   "expression": "1 if x<9 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_10",
+   "expression": "10"
+  },
+  {
+   "name": "add_10",
+   "expression": "(x + 10) mod N"
+  },
+  {
+   "name": "xor_10",
+   "expression": "x XOR 10"
+  },
+  {
+   "name": "or_10",
+   "expression": "x OR 10"
+  },
+  {
+   "name": "less_than_10",
+   "expression": "1 if x<10 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_11",
+   "expression": "11"
+  },
+  {
+   "name": "add_11",
+   "expression": "(x + 11) mod N"
+  },
+  {
+   "name": "xor_11",
+   "expression": "x XOR 11"
+  },
+  {
+   "name": "and_11",
+   "expression": "x AND 11"
+  },
+  {
+   "name": "or_11",
+   "expression": "x OR 11"
+  },
+  {
+   "name": "less_than_11",
+   "expression": "1 if x<11 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_12",
+   "expression": "12"
+  },
+  {
+   "name": "add_12",
+   "expression": "(x + 12) mod N"
+  },
+  {
+   "name": "xor_12",
+   "expression": "x XOR 12"
+  },
+  {
+   "name": "or_12",
+   "expression": "x OR 12"
+  },
+  {
+   "name": "less_than_12",
+   "expression": "1 if x<12 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_13",
+   "expression": "13"
+  },
+  {
+   "name": "add_13",
+   "expression": "(x + 13) mod N"
+  },
+  {
+   "name": "xor_13",
+   "expression": "x XOR 13"
+  },
+  {
+   "name": "and_13",
+   "expression": "x AND 13"
+  },
+  {
+   "name": "or_13",
+   "expression": "x OR 13"
+  },
+  {
+   "name": "less_than_13",
+   "expression": "1 if x<13 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_14",
+   "expression": "14"
+  },
+  {
+   "name": "add_14",
+   "expression": "(x + 14) mod N"
+  },
+  {
+   "name": "xor_14",
+   "expression": "x XOR 14"
+  },
+  {
+   "name": "or_14",
+   "expression": "x OR 14"
+  },
+  {
+   "name": "less_than_14",
+   "expression": "1 if x<14 else 0 (unsigned)"
+  },
+  {
+   "name": "constant_15",
+   "expression": "15"
+  },
+  {
+   "name": "add_15",
+   "expression": "(x + 15) mod N"
+  },
+  {
+   "name": "xor_15",
+   "expression": "x XOR 15"
+  },
+  {
+   "name": "or_15",
+   "expression": "x OR 15"
+  },
+  {
+   "name": "less_than_15",
+   "expression": "1 if x<15 else 0 (unsigned)"
+  },
+  {
+   "name": "affine_0_1",
+   "expression": "(0*x + 1) mod N"
+  },
+  {
+   "name": "affine_0_2",
+   "expression": "(0*x + 2) mod N"
+  },
+  {
+   "name": "affine_0_3",
+   "expression": "(0*x + 3) mod N"
+  },
+  {
+   "name": "affine_0_4",
+   "expression": "(0*x + 4) mod N"
+  },
+  {
+   "name": "affine_0_5",
+   "expression": "(0*x + 5) mod N"
+  },
+  {
+   "name": "affine_0_6",
+   "expression": "(0*x + 6) mod N"
+  },
+  {
+   "name": "affine_0_7",
+   "expression": "(0*x + 7) mod N"
+  },
+  {
+   "name": "affine_0_8",
+   "expression": "(0*x + 8) mod N"
+  },
+  {
+   "name": "affine_0_9",
+   "expression": "(0*x + 9) mod N"
+  },
+  {
+   "name": "affine_0_10",
+   "expression": "(0*x + 10) mod N"
+  },
+  {
+   "name": "affine_0_11",
+   "expression": "(0*x + 11) mod N"
+  },
+  {
+   "name": "affine_0_12",
+   "expression": "(0*x + 12) mod N"
+  },
+  {
+   "name": "affine_0_13",
+   "expression": "(0*x + 13) mod N"
+  },
+  {
+   "name": "affine_0_14",
+   "expression": "(0*x + 14) mod N"
+  },
+  {
+   "name": "affine_0_15",
+   "expression": "(0*x + 15) mod N"
+  },
+  {
+   "name": "affine_1_1",
+   "expression": "(1*x + 1) mod N"
+  },
+  {
+   "name": "affine_1_2",
+   "expression": "(1*x + 2) mod N"
+  },
+  {
+   "name": "affine_1_3",
+   "expression": "(1*x + 3) mod N"
+  },
+  {
+   "name": "affine_1_4",
+   "expression": "(1*x + 4) mod N"
+  },
+  {
+   "name": "affine_1_5",
+   "expression": "(1*x + 5) mod N"
+  },
+  {
+   "name": "affine_1_6",
+   "expression": "(1*x + 6) mod N"
+  },
+  {
+   "name": "affine_1_7",
+   "expression": "(1*x + 7) mod N"
+  },
+  {
+   "name": "affine_1_8",
+   "expression": "(1*x + 8) mod N"
+  },
+  {
+   "name": "affine_1_9",
+   "expression": "(1*x + 9) mod N"
+  },
+  {
+   "name": "affine_1_10",
+   "expression": "(1*x + 10) mod N"
+  },
+  {
+   "name": "affine_1_11",
+   "expression": "(1*x + 11) mod N"
+  },
+  {
+   "name": "affine_1_12",
+   "expression": "(1*x + 12) mod N"
+  },
+  {
+   "name": "affine_1_13",
+   "expression": "(1*x + 13) mod N"
+  },
+  {
+   "name": "affine_1_14",
+   "expression": "(1*x + 14) mod N"
+  },
+  {
+   "name": "affine_1_15",
+   "expression": "(1*x + 15) mod N"
+  },
+  {
+   "name": "affine_2_1",
+   "expression": "(2*x + 1) mod N"
+  },
+  {
+   "name": "affine_2_2",
+   "expression": "(2*x + 2) mod N"
+  },
+  {
+   "name": "affine_2_3",
+   "expression": "(2*x + 3) mod N"
+  },
+  {
+   "name": "affine_2_4",
+   "expression": "(2*x + 4) mod N"
+  },
+  {
+   "name": "affine_2_5",
+   "expression": "(2*x + 5) mod N"
+  },
+  {
+   "name": "affine_2_6",
+   "expression": "(2*x + 6) mod N"
+  },
+  {
+   "name": "affine_2_7",
+   "expression": "(2*x + 7) mod N"
+  },
+  {
+   "name": "affine_2_8",
+   "expression": "(2*x + 8) mod N"
+  },
+  {
+   "name": "affine_2_9",
+   "expression": "(2*x + 9) mod N"
+  },
+  {
+   "name": "affine_2_10",
+   "expression": "(2*x + 10) mod N"
+  },
+  {
+   "name": "affine_2_11",
+   "expression": "(2*x + 11) mod N"
+  },
+  {
+   "name": "affine_2_12",
+   "expression": "(2*x + 12) mod N"
+  },
+  {
+   "name": "affine_2_13",
+   "expression": "(2*x + 13) mod N"
+  },
+  {
+   "name": "affine_2_14",
+   "expression": "(2*x + 14) mod N"
+  },
+  {
+   "name": "affine_2_15",
+   "expression": "(2*x + 15) mod N"
+  },
+  {
+   "name": "affine_3_1",
+   "expression": "(3*x + 1) mod N"
+  },
+  {
+   "name": "affine_3_2",
+   "expression": "(3*x + 2) mod N"
+  },
+  {
+   "name": "affine_3_3",
+   "expression": "(3*x + 3) mod N"
+  },
+  {
+   "name": "affine_3_4",
+   "expression": "(3*x + 4) mod N"
+  },
+  {
+   "name": "affine_3_5",
+   "expression": "(3*x + 5) mod N"
+  },
+  {
+   "name": "affine_3_6",
+   "expression": "(3*x + 6) mod N"
+  },
+  {
+   "name": "affine_3_7",
+   "expression": "(3*x + 7) mod N"
+  },
+  {
+   "name": "affine_3_8",
+   "expression": "(3*x + 8) mod N"
+  },
+  {
+   "name": "affine_3_9",
+   "expression": "(3*x + 9) mod N"
+  },
+  {
+   "name": "affine_3_10",
+   "expression": "(3*x + 10) mod N"
+  },
+  {
+   "name": "affine_3_11",
+   "expression": "(3*x + 11) mod N"
+  },
+  {
+   "name": "affine_3_12",
+   "expression": "(3*x + 12) mod N"
+  },
+  {
+   "name": "affine_3_13",
+   "expression": "(3*x + 13) mod N"
+  },
+  {
+   "name": "affine_3_14",
+   "expression": "(3*x + 14) mod N"
+  },
+  {
+   "name": "affine_3_15",
+   "expression": "(3*x + 15) mod N"
+  },
+  {
+   "name": "affine_4_1",
+   "expression": "(4*x + 1) mod N"
+  },
+  {
+   "name": "affine_4_2",
+   "expression": "(4*x + 2) mod N"
+  },
+  {
+   "name": "affine_4_3",
+   "expression": "(4*x + 3) mod N"
+  },
+  {
+   "name": "affine_4_4",
+   "expression": "(4*x + 4) mod N"
+  },
+  {
+   "name": "affine_4_5",
+   "expression": "(4*x + 5) mod N"
+  },
+  {
+   "name": "affine_4_6",
+   "expression": "(4*x + 6) mod N"
+  },
+  {
+   "name": "affine_4_7",
+   "expression": "(4*x + 7) mod N"
+  },
+  {
+   "name": "affine_4_8",
+   "expression": "(4*x + 8) mod N"
+  },
+  {
+   "name": "affine_4_9",
+   "expression": "(4*x + 9) mod N"
+  },
+  {
+   "name": "affine_4_10",
+   "expression": "(4*x + 10) mod N"
+  },
+  {
+   "name": "affine_4_11",
+   "expression": "(4*x + 11) mod N"
+  },
+  {
+   "name": "affine_4_12",
+   "expression": "(4*x + 12) mod N"
+  },
+  {
+   "name": "affine_4_13",
+   "expression": "(4*x + 13) mod N"
+  },
+  {
+   "name": "affine_4_14",
+   "expression": "(4*x + 14) mod N"
+  },
+  {
+   "name": "affine_4_15",
+   "expression": "(4*x + 15) mod N"
+  },
+  {
+   "name": "affine_5_1",
+   "expression": "(5*x + 1) mod N"
+  },
+  {
+   "name": "affine_5_2",
+   "expression": "(5*x + 2) mod N"
+  },
+  {
+   "name": "affine_5_3",
+   "expression": "(5*x + 3) mod N"
+  },
+  {
+   "name": "affine_5_4",
+   "expression": "(5*x + 4) mod N"
+  },
+  {
+   "name": "affine_5_5",
+   "expression": "(5*x + 5) mod N"
+  },
+  {
+   "name": "affine_5_6",
+   "expression": "(5*x + 6) mod N"
+  },
+  {
+   "name": "affine_5_7",
+   "expression": "(5*x + 7) mod N"
+  },
+  {
+   "name": "affine_5_8",
+   "expression": "(5*x + 8) mod N"
+  },
+  {
+   "name": "affine_5_9",
+   "expression": "(5*x + 9) mod N"
+  },
+  {
+   "name": "affine_5_10",
+   "expression": "(5*x + 10) mod N"
+  },
+  {
+   "name": "affine_5_11",
+   "expression": "(5*x + 11) mod N"
+  },
+  {
+   "name": "affine_5_12",
+   "expression": "(5*x + 12) mod N"
+  },
+  {
+   "name": "affine_5_13",
+   "expression": "(5*x + 13) mod N"
+  },
+  {
+   "name": "affine_5_14",
+   "expression": "(5*x + 14) mod N"
+  },
+  {
+   "name": "affine_5_15",
+   "expression": "(5*x + 15) mod N"
+  },
+  {
+   "name": "affine_6_1",
+   "expression": "(6*x + 1) mod N"
+  },
+  {
+   "name": "affine_6_2",
+   "expression": "(6*x + 2) mod N"
+  },
+  {
+   "name": "affine_6_3",
+   "expression": "(6*x + 3) mod N"
+  },
+  {
+   "name": "affine_6_4",
+   "expression": "(6*x + 4) mod N"
+  },
+  {
+   "name": "affine_6_5",
+   "expression": "(6*x + 5) mod N"
+  },
+  {
+   "name": "affine_6_6",
+   "expression": "(6*x + 6) mod N"
+  },
+  {
+   "name": "affine_6_7",
+   "expression": "(6*x + 7) mod N"
+  },
+  {
+   "name": "affine_6_8",
+   "expression": "(6*x + 8) mod N"
+  },
+  {
+   "name": "affine_6_9",
+   "expression": "(6*x + 9) mod N"
+  },
+  {
+   "name": "affine_6_10",
+   "expression": "(6*x + 10) mod N"
+  },
+  {
+   "name": "affine_6_11",
+   "expression": "(6*x + 11) mod N"
+  },
+  {
+   "name": "affine_6_12",
+   "expression": "(6*x + 12) mod N"
+  },
+  {
+   "name": "affine_6_13",
+   "expression": "(6*x + 13) mod N"
+  },
+  {
+   "name": "affine_6_14",
+   "expression": "(6*x + 14) mod N"
+  },
+  {
+   "name": "affine_6_15",
+   "expression": "(6*x + 15) mod N"
+  },
+  {
+   "name": "affine_7_1",
+   "expression": "(7*x + 1) mod N"
+  },
+  {
+   "name": "affine_7_2",
+   "expression": "(7*x + 2) mod N"
+  },
+  {
+   "name": "affine_7_3",
+   "expression": "(7*x + 3) mod N"
+  },
+  {
+   "name": "affine_7_4",
+   "expression": "(7*x + 4) mod N"
+  },
+  {
+   "name": "affine_7_5",
+   "expression": "(7*x + 5) mod N"
+  },
+  {
+   "name": "affine_7_6",
+   "expression": "(7*x + 6) mod N"
+  },
+  {
+   "name": "affine_7_7",
+   "expression": "(7*x + 7) mod N"
+  },
+  {
+   "name": "affine_7_8",
+   "expression": "(7*x + 8) mod N"
+  },
+  {
+   "name": "affine_7_9",
+   "expression": "(7*x + 9) mod N"
+  },
+  {
+   "name": "affine_7_10",
+   "expression": "(7*x + 10) mod N"
+  },
+  {
+   "name": "affine_7_11",
+   "expression": "(7*x + 11) mod N"
+  },
+  {
+   "name": "affine_7_12",
+   "expression": "(7*x + 12) mod N"
+  },
+  {
+   "name": "affine_7_13",
+   "expression": "(7*x + 13) mod N"
+  },
+  {
+   "name": "affine_7_14",
+   "expression": "(7*x + 14) mod N"
+  },
+  {
+   "name": "affine_7_15",
+   "expression": "(7*x + 15) mod N"
+  },
+  {
+   "name": "affine_8_1",
+   "expression": "(8*x + 1) mod N"
+  },
+  {
+   "name": "affine_8_2",
+   "expression": "(8*x + 2) mod N"
+  },
+  {
+   "name": "affine_8_3",
+   "expression": "(8*x + 3) mod N"
+  },
+  {
+   "name": "affine_8_4",
+   "expression": "(8*x + 4) mod N"
+  },
+  {
+   "name": "affine_8_5",
+   "expression": "(8*x + 5) mod N"
+  },
+  {
+   "name": "affine_8_6",
+   "expression": "(8*x + 6) mod N"
+  },
+  {
+   "name": "affine_8_7",
+   "expression": "(8*x + 7) mod N"
+  },
+  {
+   "name": "affine_8_8",
+   "expression": "(8*x + 8) mod N"
+  },
+  {
+   "name": "affine_8_9",
+   "expression": "(8*x + 9) mod N"
+  },
+  {
+   "name": "affine_8_10",
+   "expression": "(8*x + 10) mod N"
+  },
+  {
+   "name": "affine_8_11",
+   "expression": "(8*x + 11) mod N"
+  },
+  {
+   "name": "affine_8_12",
+   "expression": "(8*x + 12) mod N"
+  },
+  {
+   "name": "affine_8_13",
+   "expression": "(8*x + 13) mod N"
+  },
+  {
+   "name": "affine_8_14",
+   "expression": "(8*x + 14) mod N"
+  },
+  {
+   "name": "affine_8_15",
+   "expression": "(8*x + 15) mod N"
+  },
+  {
+   "name": "affine_9_1",
+   "expression": "(9*x + 1) mod N"
+  },
+  {
+   "name": "affine_9_2",
+   "expression": "(9*x + 2) mod N"
+  },
+  {
+   "name": "affine_9_3",
+   "expression": "(9*x + 3) mod N"
+  },
+  {
+   "name": "affine_9_4",
+   "expression": "(9*x + 4) mod N"
+  },
+  {
+   "name": "affine_9_5",
+   "expression": "(9*x + 5) mod N"
+  },
+  {
+   "name": "affine_9_6",
+   "expression": "(9*x + 6) mod N"
+  },
+  {
+   "name": "affine_9_7",
+   "expression": "(9*x + 7) mod N"
+  },
+  {
+   "name": "affine_9_8",
+   "expression": "(9*x + 8) mod N"
+  },
+  {
+   "name": "affine_9_9",
+   "expression": "(9*x + 9) mod N"
+  },
+  {
+   "name": "affine_9_10",
+   "expression": "(9*x + 10) mod N"
+  },
+  {
+   "name": "affine_9_11",
+   "expression": "(9*x + 11) mod N"
+  },
+  {
+   "name": "affine_9_12",
+   "expression": "(9*x + 12) mod N"
+  },
+  {
+   "name": "affine_9_13",
+   "expression": "(9*x + 13) mod N"
+  },
+  {
+   "name": "affine_9_14",
+   "expression": "(9*x + 14) mod N"
+  },
+  {
+   "name": "affine_9_15",
+   "expression": "(9*x + 15) mod N"
+  },
+  {
+   "name": "affine_10_1",
+   "expression": "(10*x + 1) mod N"
+  },
+  {
+   "name": "affine_10_2",
+   "expression": "(10*x + 2) mod N"
+  },
+  {
+   "name": "affine_10_3",
+   "expression": "(10*x + 3) mod N"
+  },
+  {
+   "name": "affine_10_4",
+   "expression": "(10*x + 4) mod N"
+  },
+  {
+   "name": "affine_10_5",
+   "expression": "(10*x + 5) mod N"
+  },
+  {
+   "name": "affine_10_6",
+   "expression": "(10*x + 6) mod N"
+  },
+  {
+   "name": "affine_10_7",
+   "expression": "(10*x + 7) mod N"
+  },
+  {
+   "name": "affine_10_8",
+   "expression": "(10*x + 8) mod N"
+  },
+  {
+   "name": "affine_10_9",
+   "expression": "(10*x + 9) mod N"
+  },
+  {
+   "name": "affine_10_10",
+   "expression": "(10*x + 10) mod N"
+  },
+  {
+   "name": "affine_10_11",
+   "expression": "(10*x + 11) mod N"
+  },
+  {
+   "name": "affine_10_12",
+   "expression": "(10*x + 12) mod N"
+  },
+  {
+   "name": "affine_10_13",
+   "expression": "(10*x + 13) mod N"
+  },
+  {
+   "name": "affine_10_14",
+   "expression": "(10*x + 14) mod N"
+  },
+  {
+   "name": "affine_10_15",
+   "expression": "(10*x + 15) mod N"
+  },
+  {
+   "name": "affine_11_1",
+   "expression": "(11*x + 1) mod N"
+  },
+  {
+   "name": "affine_11_2",
+   "expression": "(11*x + 2) mod N"
+  },
+  {
+   "name": "affine_11_3",
+   "expression": "(11*x + 3) mod N"
+  },
+  {
+   "name": "affine_11_4",
+   "expression": "(11*x + 4) mod N"
+  },
+  {
+   "name": "affine_11_5",
+   "expression": "(11*x + 5) mod N"
+  },
+  {
+   "name": "affine_11_6",
+   "expression": "(11*x + 6) mod N"
+  },
+  {
+   "name": "affine_11_7",
+   "expression": "(11*x + 7) mod N"
+  },
+  {
+   "name": "affine_11_8",
+   "expression": "(11*x + 8) mod N"
+  },
+  {
+   "name": "affine_11_9",
+   "expression": "(11*x + 9) mod N"
+  },
+  {
+   "name": "affine_11_10",
+   "expression": "(11*x + 10) mod N"
+  },
+  {
+   "name": "affine_11_11",
+   "expression": "(11*x + 11) mod N"
+  },
+  {
+   "name": "affine_11_12",
+   "expression": "(11*x + 12) mod N"
+  },
+  {
+   "name": "affine_11_13",
+   "expression": "(11*x + 13) mod N"
+  },
+  {
+   "name": "affine_11_14",
+   "expression": "(11*x + 14) mod N"
+  },
+  {
+   "name": "affine_11_15",
+   "expression": "(11*x + 15) mod N"
+  },
+  {
+   "name": "affine_12_1",
+   "expression": "(12*x + 1) mod N"
+  },
+  {
+   "name": "affine_12_2",
+   "expression": "(12*x + 2) mod N"
+  },
+  {
+   "name": "affine_12_3",
+   "expression": "(12*x + 3) mod N"
+  },
+  {
+   "name": "affine_12_4",
+   "expression": "(12*x + 4) mod N"
+  },
+  {
+   "name": "affine_12_5",
+   "expression": "(12*x + 5) mod N"
+  },
+  {
+   "name": "affine_12_6",
+   "expression": "(12*x + 6) mod N"
+  },
+  {
+   "name": "affine_12_7",
+   "expression": "(12*x + 7) mod N"
+  },
+  {
+   "name": "affine_12_8",
+   "expression": "(12*x + 8) mod N"
+  },
+  {
+   "name": "affine_12_9",
+   "expression": "(12*x + 9) mod N"
+  },
+  {
+   "name": "affine_12_10",
+   "expression": "(12*x + 10) mod N"
+  },
+  {
+   "name": "affine_12_11",
+   "expression": "(12*x + 11) mod N"
+  },
+  {
+   "name": "affine_12_12",
+   "expression": "(12*x + 12) mod N"
+  },
+  {
+   "name": "affine_12_13",
+   "expression": "(12*x + 13) mod N"
+  },
+  {
+   "name": "affine_12_14",
+   "expression": "(12*x + 14) mod N"
+  },
+  {
+   "name": "affine_12_15",
+   "expression": "(12*x + 15) mod N"
+  },
+  {
+   "name": "affine_13_1",
+   "expression": "(13*x + 1) mod N"
+  },
+  {
+   "name": "affine_13_2",
+   "expression": "(13*x + 2) mod N"
+  },
+  {
+   "name": "affine_13_3",
+   "expression": "(13*x + 3) mod N"
+  },
+  {
+   "name": "affine_13_4",
+   "expression": "(13*x + 4) mod N"
+  },
+  {
+   "name": "affine_13_5",
+   "expression": "(13*x + 5) mod N"
+  },
+  {
+   "name": "affine_13_6",
+   "expression": "(13*x + 6) mod N"
+  },
+  {
+   "name": "affine_13_7",
+   "expression": "(13*x + 7) mod N"
+  },
+  {
+   "name": "affine_13_8",
+   "expression": "(13*x + 8) mod N"
+  },
+  {
+   "name": "affine_13_9",
+   "expression": "(13*x + 9) mod N"
+  },
+  {
+   "name": "affine_13_10",
+   "expression": "(13*x + 10) mod N"
+  },
+  {
+   "name": "affine_13_11",
+   "expression": "(13*x + 11) mod N"
+  },
+  {
+   "name": "affine_13_12",
+   "expression": "(13*x + 12) mod N"
+  },
+  {
+   "name": "affine_13_13",
+   "expression": "(13*x + 13) mod N"
+  },
+  {
+   "name": "affine_13_14",
+   "expression": "(13*x + 14) mod N"
+  },
+  {
+   "name": "affine_13_15",
+   "expression": "(13*x + 15) mod N"
+  },
+  {
+   "name": "affine_14_1",
+   "expression": "(14*x + 1) mod N"
+  },
+  {
+   "name": "affine_14_2",
+   "expression": "(14*x + 2) mod N"
+  },
+  {
+   "name": "affine_14_3",
+   "expression": "(14*x + 3) mod N"
+  },
+  {
+   "name": "affine_14_4",
+   "expression": "(14*x + 4) mod N"
+  },
+  {
+   "name": "affine_14_5",
+   "expression": "(14*x + 5) mod N"
+  },
+  {
+   "name": "affine_14_6",
+   "expression": "(14*x + 6) mod N"
+  },
+  {
+   "name": "affine_14_7",
+   "expression": "(14*x + 7) mod N"
+  },
+  {
+   "name": "affine_14_8",
+   "expression": "(14*x + 8) mod N"
+  },
+  {
+   "name": "affine_14_9",
+   "expression": "(14*x + 9) mod N"
+  },
+  {
+   "name": "affine_14_10",
+   "expression": "(14*x + 10) mod N"
+  },
+  {
+   "name": "affine_14_11",
+   "expression": "(14*x + 11) mod N"
+  },
+  {
+   "name": "affine_14_12",
+   "expression": "(14*x + 12) mod N"
+  },
+  {
+   "name": "affine_14_13",
+   "expression": "(14*x + 13) mod N"
+  },
+  {
+   "name": "affine_14_14",
+   "expression": "(14*x + 14) mod N"
+  },
+  {
+   "name": "affine_14_15",
+   "expression": "(14*x + 15) mod N"
+  },
+  {
+   "name": "affine_15_1",
+   "expression": "(15*x + 1) mod N"
+  },
+  {
+   "name": "affine_15_2",
+   "expression": "(15*x + 2) mod N"
+  },
+  {
+   "name": "affine_15_3",
+   "expression": "(15*x + 3) mod N"
+  },
+  {
+   "name": "affine_15_4",
+   "expression": "(15*x + 4) mod N"
+  },
+  {
+   "name": "affine_15_5",
+   "expression": "(15*x + 5) mod N"
+  },
+  {
+   "name": "affine_15_6",
+   "expression": "(15*x + 6) mod N"
+  },
+  {
+   "name": "affine_15_7",
+   "expression": "(15*x + 7) mod N"
+  },
+  {
+   "name": "affine_15_8",
+   "expression": "(15*x + 8) mod N"
+  },
+  {
+   "name": "affine_15_9",
+   "expression": "(15*x + 9) mod N"
+  },
+  {
+   "name": "affine_15_10",
+   "expression": "(15*x + 10) mod N"
+  },
+  {
+   "name": "affine_15_11",
+   "expression": "(15*x + 11) mod N"
+  },
+  {
+   "name": "affine_15_12",
+   "expression": "(15*x + 12) mod N"
+  },
+  {
+   "name": "affine_15_13",
+   "expression": "(15*x + 13) mod N"
+  },
+  {
+   "name": "affine_15_14",
+   "expression": "(15*x + 14) mod N"
+  },
+  {
+   "name": "affine_15_15",
+   "expression": "(15*x + 15) mod N"
+  },
+  {
+   "name": "rotate_right_1",
+   "expression": "rotate W-bit x right by 1"
+  },
+  {
+   "name": "rotate_left_3",
+   "expression": "rotate W-bit x left by 3"
+  }
+ ]
+}

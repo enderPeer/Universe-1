@@ -3,6 +3,7 @@
 Run from the repository root after a sweep. Checks up to 3 records from every
 shard of each completed result, using a fixed seed for reproducibility.
 """
+import argparse
 import json
 import random
 import struct
@@ -13,12 +14,13 @@ from sim.machine import Config, Machine
 
 
 rng = random.Random(7132)
+parser=argparse.ArgumentParser(); parser.add_argument('--experiment',choices=['exp03','exp05'],default='exp03'); args=parser.parse_args()
 total = 0
-for result in sorted(Path("results").glob("exp03_*.json")):
+for result in sorted(Path("results").glob(f"{args.experiment}_*.json")):
     data = json.loads(result.read_text())
     if "distinct_operators" not in data:
         continue
-    tag = result.stem.removeprefix("exp03_")
+    tag = result.stem.removeprefix(args.experiment+'_')
     cfg = Config(W=data["W"], a=data["a"], p=data["p"], I=data["I"])
     machine = Machine(cfg, tuple(data["isa"]))
     checked = 0

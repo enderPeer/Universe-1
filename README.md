@@ -30,6 +30,8 @@ See [access and synchronization details](docs/04_shared_workspace.md).
 
 - [Exhaustive sweep results](results/exp03_summary.md)
 - [Validation, run details, and exact data locations](results/exp03_validation.md)
+- [exp05: 14 candidate ISAs, unary sweeps](results/exp05_summary.md) and [their validation and what they say](results/exp05_validation.md)
+- [Life ensemble: nine 1024^2 worlds for 200,000 ticks, analysis](results/life/ANALYSIS.md)
 - [Downloadable witness shards and Rust-compatible binary format](results/witnesses/README.md)
 - [Named mathematical functions with verified witness programs](results/function-map/README.md)
 - [Completed depth-4 cluster translation run, timings and next-ISA proposal](translate/CLUSTER_RUN.md)

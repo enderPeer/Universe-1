@@ -1,0 +1,17 @@
+w1_nand_jz: 4 recognized tables / 48 names; all witnesses fully verified
+w1_nand_skz: 4 recognized tables / 48 names; all witnesses fully verified
+w2_o1: 3 recognized tables / 19 names; all witnesses fully verified
+w2_o1_swap: 2 recognized tables / 16 names; all witnesses fully verified
+w4_o2_add: 324 recognized tables / 396 names; all witnesses fully verified
+w4_o2_nand: 4 recognized tables / 22 names; all witnesses fully verified
+w4_o2_nand_bin: 16 recognized tables / 68 names; all witnesses fully verified
+w4_o3_arith: 49 recognized tables / 84 names; all witnesses fully verified
+w4_o3_arith_bin: 97 recognized tables / 173 names; all witnesses fully verified
+w4_o3_bool: 4 recognized tables / 22 names; all witnesses fully verified
+w4_o3_bool_bin: 18 recognized tables / 72 names; all witnesses fully verified
+w4_o3_core: 280 recognized tables / 351 names; all witnesses fully verified
+w4_o3_core_bin: 568 recognized tables / 739 names; all witnesses fully verified
+w4_o3_swap: 335 recognized tables / 410 names; all witnesses fully verified
+w4_o3_swap_bin: 638 recognized tables / 820 names; all witnesses fully verified
+w4_o4_full: 206 recognized tables / 273 names; all witnesses fully verified
+w8_o4: 485 recognized tables / 552 names; all witnesses fully verified

@@ -1,0 +1,10 @@
+swap_s2: done on knecht24 RTX 3060 #2 in 175s
+swap_s1: done on knecht24 RTX 3060 #1 in 180s
+swap_rc64: done on falke64 R9700 #1 in 444s
+champ_s1: done on adler40 RTX 4090 in 501s
+champ_s2: done on adler40 RTX 4080 in 531s
+swap_mu512: done on falke64 R9700 #0 in 997s
+champ_s3: done on knecht24 RTX 3060 #0 in 1501s
+swap_mu32: done on specht32 RX 9060 XT in 1701s
+swap_s3: done on specht32 RX 9070 XT in 1739s
+9/9 runs complete

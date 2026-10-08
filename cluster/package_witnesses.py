@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results/witnesses"
 OUT.mkdir(exist_ok=True)
 entries = []
-for result in sorted((ROOT / "results").glob("exp03_*.json")):
+for result in sorted((ROOT / "results").glob("exp0[35]_*.json")):
     data = json.loads(result.read_text())
     if "programs_covered" not in data:
         continue
-    tag = result.stem.removeprefix("exp03_")
+    experiment,tag = result.stem.split('_',1)
     files = sorted((ROOT / "results/shards").glob(f"{tag}_[0-9][0-9][0-9][0-9].bin"))
     ranges = []
     for path in files:
@@ -62,7 +62,7 @@ for result in sorted((ROOT / "results").glob("exp03_*.json")):
         archives.append({'file': archive.name, 'bytes': archive.stat().st_size,
                          'sha256': hashlib.sha256(archive.read_bytes()).hexdigest(),
                          'shards': expected})
-    entries.append({'run': tag, 'result': result.relative_to(ROOT).as_posix(),
+    entries.append({'run': tag, 'experiment':experiment, 'result': result.relative_to(ROOT).as_posix(),
                     'programs': cursor, 'shard_count': len(files), 'archives': archives})
     print(f"{tag}: {len(files)} shards in {len(archives)} verified archive(s)", flush=True)
 (OUT / 'manifest.json').write_text(json.dumps({'format': 'u1-shards-v1', 'runs': entries}, indent=2) + '\n')

@@ -1,0 +1,8 @@
+w1_nand_jz_bin 4 operators; 74 bytes
+w1_nand_skz_bin 4 operators; 74 bytes
+w2_o1_bin 2131 operators; 17090 bytes
+w2_o1_swap_bin 8 operators; 106 bytes
+w4_o2_nand_bin 17827 operators; 142660 bytes
+w4_o4_full_bin 977928 operators; 7823480 bytes
+w4_o3_swap_bin 7690892 operators; 61527184 bytes
+w4_o2_add_bin 24684247 operators; 197474020 bytes
