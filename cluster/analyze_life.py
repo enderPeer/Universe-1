@@ -51,6 +51,7 @@ def disassemble(machine, genome):
 report = {}; curves = {}
 for name, p in runs:
     d = LIFE / name
+    if not (d / 'final.bin').exists() or name not in status: print(f'{name}: not run yet, skipped'); continue
     rows = list(csv.DictReader((d / 'stats.csv').read_text().splitlines()))
     rows = [{k: float(v) for k, v in r.items()} for r in rows]
     m = re.search(r'done (\d+) ticks in ([0-9.]+)s', (d / 'run.log').read_text(errors='replace'))
@@ -92,9 +93,11 @@ from PIL import Image
 import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 thumbs = []
 for name, _ in runs:
+    if name not in report: continue
     im = Image.open(LIFE / name / 'final.ppm'); im.save(LIFE / name / 'final.png', optimize=True)
     thumbs.append((name, im.resize((336, 336), Image.BOX)))
-montage = Image.new('RGB', (3 * 340, 3 * 356), (24, 24, 24))
+cols = 3; rws = (len(thumbs) + cols - 1) // cols
+montage = Image.new('RGB', (cols * 340, rws * 356), (24, 24, 24))
 from PIL import ImageDraw
 draw = ImageDraw.Draw(montage)
 for i, (name, im) in enumerate(thumbs):
@@ -145,7 +148,8 @@ for name, r in report.items():
              f"{r['top_phenotype_share']:.1%} | {r['trigger_state_fraction']:.1%} | {r['mean_age']:.0f} |")
 L += ['', '![final grids](final_montage.png)', '', 'Per-run full-resolution renders: `<run>/final.png` (hue = hash of genome, dark = empty, brightness = state).',
       'Final grids (`final.bin`, 8 MB each, genome[] then meta[] as little-endian u32) stay on the coordinator and the producing nodes.', '',
-      '## Findings (ensemble of 2026-10-07)', '',
+      '## Findings (ensemble of 2026-10-07; jc_s1 added 2026-10-08)', '',
+      '- **jc_s1 (SWAP,ADD,NAND,JC, the exp05 operator-count winner) behaves like a champion world.** 87 % fill, diversity 237 k -> 64 k, two genome families hold 20 % of the cells and reproduce on 44 % of inputs with neighbour-dependent outcomes for all 16 states; the dominant genome uses JC (`ADD 3; JC 2; ...`), its runner-up is the same program without the jump. 405 ticks/s on the RTX 4090 while writing a frame every 100 ticks; video `jc_s1/jc_s1_512_small.mp4`, key frames `jc_s1/keyframes.png`.',
       '- **No extinction.** Every world filled to 80-100 % within 2,000 ticks and stayed there; the lowest live count after tick 1,000 was 29 % (champion runs, during the first turnover wave).',
       '- **The two ISAs evolve differently.** Champion worlds (no HALT: every genome costs 16) lose diversity steadily (270 k -> 51-58 k genomes) and are dominated by a few genome families: the top three genomes hold 9-25 % of the cells and the largest phenotype 15-22 %. Swap worlds (HALT available) keep 225-240 k genomes; every abundant genome halts on all 256 inputs in 7-8 steps (cost 1), so cost is flat and the top genome holds under 1 % (2 % in swap_s3). Selection there acts on the trigger table, not on cost.',
       '- **Neighbour-dependent strategies dominate.** In 22 of the 27 listed top genomes the outcome depends on the neighbour state for all 16 own states; the champion winners reproduce on 44-48 % of inputs. champ_s3 is the exception: three one-instruction variants of one genome (a neutral network on the first instruction) reproduce on only 5 % of inputs yet hold 15 % of the cells, which suggests a protective, rarely reproducing strategy can beat prolific ones.',

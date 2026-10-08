@@ -17,3 +17,6 @@ life/u1life.spv
 life/u1life_emu
 results/life/*/final.bin
 results/catalog/*.tsv
+results/life/*/t[0-9]*.ppm
+results/life/*/*_1024.mp4
+results/life/*/*_512.mp4

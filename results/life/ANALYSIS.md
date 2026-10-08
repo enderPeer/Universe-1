@@ -17,6 +17,7 @@ this report: `cluster/analyze_life.py`. Phenotypes below use the Python referenc
 | swap_mu32 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 32 | 128 | 8 | specht32 RX 9060 XT | 1700 | 118 | 123 | 1,039,320 (99.1%) | 1,016,041 | no |
 | swap_mu512 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 512 | 128 | 8 | falke64 R9700 #0 | 996 | 201 | 211 | 884,981 (84.4%) | 791,731 | no |
 | swap_rc64 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 64 | 8 | falke64 R9700 #1 | 444 | 451 | 473 | 1,046,089 (99.8%) | 1,043,366 | no |
+| jc_s1 | SWAP,ADD,NAND,JC | 1 | 128 | 128 | 20 | adler40 RTX 4090 | 494 | 405 | 425 | 916,979 (87.4%) | 215,352 | no |
 
 GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall time in RUNS.md adds the copy-back.
 
@@ -33,6 +34,7 @@ GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall t
 | swap_mu32 | 52,579 | 717,907 | 370,772 | 272,681 | 223,535 | 229,298 | 717,907 | 218,010 | 18,739 | 198.8 |
 | swap_mu512 | 52,579 | 95,433 | 70,997 | 98,961 | 103,858 | 93,516 | 105,374 | 53,784 | 14,657 | 202.4 |
 | swap_rc64 | 52,579 | 324,911 | 183,627 | 92,456 | 74,605 | 62,614 | 324,911 | 61,556 | 44,999 | 198.4 |
+| jc_s1 | 52,579 | 92,695 | 163,068 | 90,733 | 76,158 | 63,826 | 236,784 | 63,826 | 10,029 | 184.8 |
 
 ![curves](curves.png)
 
@@ -71,6 +73,9 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | swap_rc64 | `0xe9859c37` | 0.3% | 0.50 | 16 | 1.00 | 8 | 1.0 | `ADD 1; LDI 1; INC 0; ROL 1; NAND 1; ROL 0; ROL 1; HALT 0` |
 | swap_rc64 | `0xe9859d37` | 0.2% | 0.50 | 16 | 1.00 | 8 | 1.0 | `ADD 1; LDI 1; INC 1; ROL 1; NAND 1; ROL 0; ROL 1; HALT 0` |
 | swap_rc64 | `0xe8859c37` | 0.2% | 0.50 | 16 | 1.00 | 8 | 1.0 | `ADD 1; LDI 1; INC 0; ROL 1; NAND 1; ROL 0; ROL 0; HALT 0` |
+| jc_s1 | `0x23a492e7` | 10.5% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 3; JC 2; SWAP 2; NAND 1; ADD 0; NAND 2; SWAP 3; SWAP 2` |
+| jc_s1 | `0x023a4927` | 9.4% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 3; SWAP 2; NAND 1; ADD 0; NAND 2; SWAP 3; SWAP 2; SWAP 0` |
+| jc_s1 | `0x45441d28` | 2.9% | 0.28 | 16 | 0.00 | 256 | 16.0 | `NAND 0; SWAP 2; JC 1; SWAP 1; ADD 0; ADD 0; ADD 1; ADD 0` |
 
 | run | top-3 share | top-N share | distinct phenotypes in top-N | largest phenotype share | cells in state 15 | mean age |
 |---|---:|---:|---:|---:|---:|---:|
@@ -83,14 +88,16 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | swap_mu32 | 0.1% | 2.4% | 2 | 2.0% | 5.3% | 260 |
 | swap_mu512 | 0.8% | 9.3% | 20 | 2.5% | 5.0% | 190 |
 | swap_rc64 | 0.8% | 15.1% | 4 | 8.9% | 5.4% | 244 |
+| jc_s1 | 22.9% | 50.5% | 41 | 23.4% | 6.6% | 233 |
 
 ![final grids](final_montage.png)
 
 Per-run full-resolution renders: `<run>/final.png` (hue = hash of genome, dark = empty, brightness = state).
 Final grids (`final.bin`, 8 MB each, genome[] then meta[] as little-endian u32) stay on the coordinator and the producing nodes.
 
-## Findings (ensemble of 2026-10-07)
+## Findings (ensemble of 2026-10-07; jc_s1 added 2026-10-08)
 
+- **jc_s1 (SWAP,ADD,NAND,JC, the exp05 operator-count winner) behaves like a champion world.** 87 % fill, diversity 237 k -> 64 k, two genome families hold 20 % of the cells and reproduce on 44 % of inputs with neighbour-dependent outcomes for all 16 states; the dominant genome uses JC (`ADD 3; JC 2; ...`), its runner-up is the same program without the jump. 405 ticks/s on the RTX 4090 while writing a frame every 100 ticks; video `jc_s1/jc_s1_512_small.mp4`, key frames `jc_s1/keyframes.png`.
 - **No extinction.** Every world filled to 80-100 % within 2,000 ticks and stayed there; the lowest live count after tick 1,000 was 29 % (champion runs, during the first turnover wave).
 - **The two ISAs evolve differently.** Champion worlds (no HALT: every genome costs 16) lose diversity steadily (270 k -> 51-58 k genomes) and are dominated by a few genome families: the top three genomes hold 9-25 % of the cells and the largest phenotype 15-22 %. Swap worlds (HALT available) keep 225-240 k genomes; every abundant genome halts on all 256 inputs in 7-8 steps (cost 1), so cost is flat and the top genome holds under 1 % (2 % in swap_s3). Selection there acts on the trigger table, not on cost.
 - **Neighbour-dependent strategies dominate.** In 22 of the 27 listed top genomes the outcome depends on the neighbour state for all 16 own states; the champion winners reproduce on 44-48 % of inputs. champ_s3 is the exception: three one-instruction variants of one genome (a neutral network on the first instruction) reproduce on only 5 % of inputs yet hold 15 % of the cells, which suggests a protective, rarely reproducing strategy can beat prolific ones.
