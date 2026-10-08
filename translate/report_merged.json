@@ -1,4 +1,1302 @@
 {
+ "w4_codex_shr_mul/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x33417"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x51"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0xe341"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "bitrev((rol(x,3)))",
+   "bitrev(x)"
+  ],
+  "programs": [
+   "0x72338881",
+   "0x721781"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x133c"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/gray": {
+  "name": "gray",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xe7831"
+  ],
+  "max_steps": 5,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/gray.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/ungray": {
+  "name": "ungray",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x7871"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/ungray.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "parity(x)"
+  ],
+  "programs": [
+   "0x813ac1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(abs(x))*5",
+   "x*13"
+  ],
+  "programs": [
+   "0x32c78271",
+   "0x13"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/abs_signed.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0xe888"
+  ],
+  "max_steps": 4,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x3881333"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x3c14"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x31c41"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(popcount(x))==1"
+  ],
+  "programs": [
+   "0x83a521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x18143133"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "14-x",
+   "(14-x)/3"
+  ],
+  "programs": [
+   "0x15137",
+   "0x831c1400"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/div3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*x"
+  ],
+  "programs": [
+   "0xea"
+  ],
+  "max_steps": 2,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/cube": {
+  "name": "cube",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xeba31"
+  ],
+  "max_steps": 5,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/cube.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/bitrev": {
+  "name": "bitrev",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "bitrev(x)"
+  ],
+  "programs": [
+   "0x721781"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/bitrev.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/clz": {
+  "name": "clz",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(clz(x))+12",
+   "x+4"
+  ],
+  "programs": [
+   "0x814a1c44",
+   "0x1a413"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/clz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/ctz": {
+  "name": "ctz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x71351"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x45341"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x44c8c1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/fill_right.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x35221"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_codex_shr_mul/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/lerp_half": {
+  "name": "lerp_half",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0xe38431"
+  ],
+  "max_steps": 6,
+  "halts": true,
+  "file": "translate/out/w4_codex_shr_mul/lerp_half.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_codex_shr_mul/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 18.632655115000034
+ },
+ "w4_o2_adc/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x18235"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x5a13"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,3)"
+  ],
+  "programs": [
+   "0x1858"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0xc125362"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/popcount": {
+  "name": "popcount",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "popcount(x)"
+  ],
+  "programs": [
+   "0x410c61"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/popcount.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "parity(x)"
+  ],
+  "programs": [
+   "0x14268c62"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x5827873"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/abs_signed.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x15894"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x165"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x5a18"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(popcount(x))==1"
+  ],
+  "programs": [
+   "0x48927a3"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x16b5b383"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-x",
+   "(-x)/3"
+  ],
+  "programs": [
+   "0x15181",
+   "0x1258508c"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/div3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/square": {
+  "name": "square",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/bitrev": {
+  "name": "bitrev",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol(x,2)",
+   "bitrev((rol(x,2)))"
+  ],
+  "programs": [
+   "0x165",
+   "0x1a292844"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/bitrev.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(lowbit(x))",
+   "popcount((!x))"
+  ],
+  "programs": [
+   "0x92351",
+   "0x84160c18"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/ctz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x52961c"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x12696a27"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/fill_right.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x5846a1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/lerp_half": {
+  "name": "lerp_half",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x81585"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_adc/lerp_half.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
+ "w4_o2_adc/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 82.56825060699998
+ },
  "w4_o2_add/a_plus_5": {
   "name": "a_plus_5",
   "ok": true,
@@ -997,6 +2295,1258 @@
   "names_refreshed": true,
   "map_wall_seconds": 1002.2062675410016
  },
+ "w4_o2_add_jc/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x128616"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x+15",
+   "rol((x+1),3)"
+  ],
+  "programs": [
+   "0x16a2",
+   "0x81f6d412"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/popcount": {
+  "name": "popcount",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(popcount(x))+10",
+   "x+6"
+  ],
+  "programs": [
+   "0x12bf61c4",
+   "0x1682"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/popcount.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "parity(x)"
+  ],
+  "programs": [
+   "0x4f959418"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x1d2541"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/abs_signed.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0xe1848"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol(x,1)",
+   "rol(x,1)"
+  ],
+  "programs": [
+   "0x95e8541",
+   "0x95e8541"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x15d92"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x1581e"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(popcount(x))==1"
+  ],
+  "programs": [
+   "0x1e4282"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x449f8268"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x/3)+10",
+   "x+6"
+  ],
+  "programs": [
+   "0x54a1bd62",
+   "0x1682"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/div3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!(x*x)",
+   "!x"
+  ],
+  "programs": [
+   "0x1a6a8426",
+   "0x91"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/bitrev": {
+  "name": "bitrev",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/clz": {
+  "name": "clz",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(clz(x))+2",
+   "(max(x,1))+14"
+  ],
+  "programs": [
+   "0x419f48c5",
+   "0x4d915"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/clz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(lowbit(x))+15",
+   "unnamed",
+   "clz((!x))"
+  ],
+  "programs": [
+   "0x1952e",
+   "0x125c",
+   "0x19f55c4"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/ctz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x12a53f"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x148c814"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/fill_right.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x59441"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jc/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jc/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 70.81616075600004
+ },
+ "w4_o2_add_jz/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x128616"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/rotl3": {
+  "name": "rotl3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x*9)&14",
+   "parity((6-x))"
+  ],
+  "programs": [
+   "0xf51880",
+   "0xd12b7c38"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x191e9185"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/abs_signed.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x5491ea2f"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "!(rol(x,1))",
+   "!(rol(x,1))"
+  ],
+  "programs": [
+   "0x12d05218",
+   "0x12d05218"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x5e1a1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x15af1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "max((!x),1)",
+   "(popcount(x))==3"
+  ],
+  "programs": [
+   "0xc815",
+   "0x9e2b6803"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x9f2d7323"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/div3": {
+  "name": "div3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*x"
+  ],
+  "programs": [
+   "0x5812753f"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/cube": {
+  "name": "cube",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(x*5)^4",
+   "unnamed",
+   "unnamed"
+  ],
+  "programs": [
+   "0x854a218",
+   "0x51f2",
+   "0x521f"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/cube.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/bitrev": {
+  "name": "bitrev",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(ctz(x))",
+   "-x"
+  ],
+  "programs": [
+   "0x1951114f",
+   "0x1d15"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/ctz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x1a2937"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x5ada2181"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/fill_right.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x59441"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/triangular": {
+  "name": "triangular",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x1f1815f5"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_add_jz/triangular.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 46.37050270899999
+ },
+ "w4_o2_add_jz/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 46.37050270899999
+ },
  "w4_o2_nand/a_plus_5": {
   "name": "a_plus_5",
   "ok": false,
@@ -1602,6 +4152,2196 @@
   "composition_max_stages": 3,
   "names_refreshed": true,
   "map_wall_seconds": 1.5787662090006052
+ },
+ "w4_o2_nocond/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x128616"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol(x,1)",
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x5ccc15",
+   "0x5461cc2"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x*11)^9",
+   "(x+1)<8"
+  ],
+  "programs": [
+   "0x54c18273",
+   "0x1c5a5328"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/abs_signed": {
+  "name": "abs_signed",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x15ccc"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x5461cc2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x52ccc918"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x852ccc91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(popcount(x))==1"
+  ],
+  "programs": [
+   "0xc8549841"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x%3"
+  ],
+  "programs": [
+   "0x1863c277"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/div3": {
+  "name": "div3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/3"
+  ],
+  "programs": [
+   "0x12c37858"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/div3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x*x)^14",
+   "x^14"
+  ],
+  "programs": [
+   "0x9a279413",
+   "0x1a84c2"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/bitrev": {
+  "name": "bitrev",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/ctz": {
+  "name": "ctz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x1a2937"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/fill_right": {
+  "name": "fill_right",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x1a93c2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/fill_right.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x59441"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/lerp_half": {
+  "name": "lerp_half",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x512c9b15"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_nocond/lerp_half.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_nocond/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 14.98197975200003
+ },
+ "w4_o2_rol/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x128616"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x16a2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,3)"
+  ],
+  "programs": [
+   "0x12cb93"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x*11)^14",
+   "(-x)/8"
+  ],
+  "programs": [
+   "0x155694b2",
+   "0x558c5a1"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/abs_signed": {
+  "name": "abs_signed",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0xc4451c"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x9231c"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x1919c15"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol((x+15),3)",
+   "(rol(x,1))%15"
+  ],
+  "programs": [
+   "0x16a2c",
+   "0x81a2a3c"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(4-x)^2",
+   "unnamed",
+   "(x&5)<1"
+  ],
+  "programs": [
+   "0x854642a1",
+   "0x1c55",
+   "0x1266ca63"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/mod3": {
+  "name": "mod3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/div3": {
+  "name": "div3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x*x)^14",
+   "x^14"
+  ],
+  "programs": [
+   "0x9a279413",
+   "0x524918"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/bitrev": {
+  "name": "bitrev",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "bitrev((rol(x,1)))",
+   "rol(x,1)"
+  ],
+  "programs": [
+   "0x9a3c42b1",
+   "0x19a28c"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/bitrev.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/ctz": {
+  "name": "ctz",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "(lowbit(x))+12",
+   "unnamed",
+   "(x+2)&7"
+  ],
+  "programs": [
+   "0x51681592",
+   "0xc51",
+   "0x524a4cc1"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/ctz.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x1a2937"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x89581"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/fill_right": {
+  "name": "fill_right",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x59441"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_rol/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_rol/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 17.819246776
+ },
+ "w4_o2_shr/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/not_b": {
+  "name": "not_b",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "rol(x,2)",
+   "rol(x,1)"
+  ],
+  "programs": [
+   "0x5461882",
+   "0x588815"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/popcount": {
+  "name": "popcount",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(popcount(x))",
+   "-x"
+  ],
+  "programs": [
+   "0x812c2561",
+   "0x55c1"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/popcount.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "x*9",
+   "parity((x/2))"
+  ],
+  "programs": [
+   "0x126",
+   "0x55888158"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/abs_signed": {
+  "name": "abs_signed",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "abs(x)"
+  ],
+  "programs": [
+   "0x1c52841"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/abs_signed.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x15888"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x5461882"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/sat_inc": {
+  "name": "sat_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/sat_dec": {
+  "name": "sat_dec",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(popcount(x))",
+   "x/15"
+  ],
+  "programs": [
+   "0x812c2561",
+   "0x51c8581"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/mod3": {
+  "name": "mod3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/div3": {
+  "name": "div3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "rol((x*2),1)",
+   "unnamed",
+   "(x/4)*(x/4)"
+  ],
+  "programs": [
+   "0x55588814",
+   "0x521c",
+   "0x5481588"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/cube": {
+  "name": "cube",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x8151c426"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/cube.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/bitrev": {
+  "name": "bitrev",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/ctz": {
+  "name": "ctz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x88851c41"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/fill_right": {
+  "name": "fill_right",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "sar((x*4))",
+   "sar(x)"
+  ],
+  "programs": [
+   "0x1568244",
+   "0x54612585"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_shr/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_shr/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 6.508550408000019
+ },
+ "w4_o2_xor_shr/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/not_b": {
+  "name": "not_b",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/rotl3": {
+  "name": "rotl3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,3)"
+  ],
+  "programs": [
+   "0x9461c29"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/rotl3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x521"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/gray": {
+  "name": "gray",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x12abc3"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/gray.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/ungray": {
+  "name": "ungray",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x9c91"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/ungray.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "parity(x)"
+  ],
+  "programs": [
+   "0x962a2c1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/abs_signed": {
+  "name": "abs_signed",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x/8"
+  ],
+  "programs": [
+   "0x15ccc"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "rol(x,2)"
+  ],
+  "programs": [
+   "0x5461cc2"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/nibble_swap.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/sat_inc": {
+  "name": "sat_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/sat_dec": {
+  "name": "sat_dec",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/is_pow2": {
+  "name": "is_pow2",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/mod3": {
+  "name": "mod3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/div3": {
+  "name": "div3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/square": {
+  "name": "square",
+  "ok": true,
+  "stages": 3,
+  "stage_names": [
+   "rol((x*2),1)",
+   "unnamed",
+   "(x/4)*(x/4)"
+  ],
+  "programs": [
+   "0x123c93b4",
+   "0x5191",
+   "0x54c15cc"
+  ],
+  "max_steps": 768,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/square.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/bitrev": {
+  "name": "bitrev",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "bitrev(x)"
+  ],
+  "programs": [
+   "0x9419c1"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/bitrev.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/ctz": {
+  "name": "ctz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(lowbit(x))",
+   "-x"
+  ],
+  "programs": [
+   "0x19c58195",
+   "0x155a2"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/fill_right": {
+  "name": "fill_right",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x1c551945"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_o2_xor_shr/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
+ },
+ "w4_o2_xor_shr/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 7.795774598999969
  },
  "w4_o3_arith/a_plus_5": {
   "name": "a_plus_5",
@@ -5463,5 +10203,529 @@
   "composition_max_stages": 3,
   "names_refreshed": true,
   "map_wall_seconds": 28.950210848997813
+ },
+ "w4_prop_combined/a_plus_5": {
+  "name": "a_plus_5",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+5"
+  ],
+  "programs": [
+   "0x142143"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/a_plus_5.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/not_b": {
+  "name": "not_b",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "!x"
+  ],
+  "programs": [
+   "0x51"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/not_b.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/a_minus_1": {
+  "name": "a_minus_1",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x+15"
+  ],
+  "programs": [
+   "0x1f13"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/a_minus_1.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/rotl3": {
+  "name": "rotl3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/times3": {
+  "name": "times3",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "x*3"
+  ],
+  "programs": [
+   "0x1336"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/times3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/gray": {
+  "name": "gray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/ungray": {
+  "name": "ungray",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/popcount": {
+  "name": "popcount",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/parity": {
+  "name": "parity",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "-(parity(x))",
+   "x!=0"
+  ],
+  "programs": [
+   "0x6164351",
+   "0xf6"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/parity.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/abs_signed": {
+  "name": "abs_signed",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/sign_bit": {
+  "name": "sign_bit",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(x|3)+1",
+   "(x%6)<1"
+  ],
+  "programs": [
+   "0x45122413",
+   "0x1fd3636"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/sign_bit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/nibble_swap": {
+  "name": "nibble_swap",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/sat_inc": {
+  "name": "sat_inc",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(min(x,14))+1"
+  ],
+  "programs": [
+   "0x3614"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/sat_inc.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/sat_dec": {
+  "name": "sat_dec",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "(x+15)%15"
+  ],
+  "programs": [
+   "0x31641"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/sat_dec.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/is_pow2": {
+  "name": "is_pow2",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "(min(x,9))%9",
+   "parity((x%7))"
+  ],
+  "programs": [
+   "0x162d3f61",
+   "0x111f136"
+  ],
+  "max_steps": 512,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/is_pow2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/mod3": {
+  "name": "mod3",
+  "ok": true,
+  "stages": 2,
+  "stage_names": [
+   "1-(x%3)",
+   "1-x"
+  ],
+  "programs": [
+   "0x3343d636",
+   "0x832f14"
+  ],
+  "max_steps": 262,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/mod3.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/div3": {
+  "name": "div3",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/square": {
+  "name": "square",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/cube": {
+  "name": "cube",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/bitrev": {
+  "name": "bitrev",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/clz": {
+  "name": "clz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/ctz": {
+  "name": "ctz",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/lowbit": {
+  "name": "lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "lowbit(x)"
+  ],
+  "programs": [
+   "0x3f1351"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/clear_lowbit": {
+  "name": "clear_lowbit",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x45341"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/clear_lowbit.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/fill_right": {
+  "name": "fill_right",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/bcd_inc": {
+  "name": "bcd_inc",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/sign_extend2": {
+  "name": "sign_extend2",
+  "ok": true,
+  "stages": 1,
+  "stage_names": [
+   "unnamed"
+  ],
+  "programs": [
+   "0x35221"
+  ],
+  "max_steps": 256,
+  "halts": false,
+  "file": "translate/out/w4_prop_combined/sign_extend2.rs",
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "compiled": true,
+  "test_ok": true,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/lerp_half": {
+  "name": "lerp_half",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/triangular": {
+  "name": "triangular",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
+ },
+ "w4_prop_combined/collatz_step": {
+  "name": "collatz_step",
+  "ok": false,
+  "search_depth": 3,
+  "basis_extra": 64,
+  "node": "vm",
+  "source_commit": "87185a8",
+  "binary_composition": false,
+  "composition_max_stages": 3,
+  "names_refreshed": false,
+  "map_wall_seconds": 5.007477444000074
  }
 }
