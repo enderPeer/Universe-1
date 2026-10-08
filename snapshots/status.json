@@ -3,7 +3,7 @@
   "completed_sweeps": 23,
   "expected_supported_sweeps": 23,
   "publication": "complete",
-  "published_source_revision": "51941afbb6a4035e78f45a1a1acbac8cbc652b2a",
+  "published_source_revision": "f267d54eb211aaea135e69b9b1d08db5a7e84b4d",
   "cluster_share": "ender@192.168.178.171:/home/ender/universe-1-share",
   "worker_data": "/home/ender/universe-1/results/shards/",
   "coordinator_data": "C:/Users/end/Desktop/u1/results/shards/",
