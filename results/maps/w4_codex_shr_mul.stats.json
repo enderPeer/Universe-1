@@ -1,0 +1,1 @@
+{"isa":"SWAP,ADD,NAND,XOR,SHR,MUL,SKZ,HALT","W":4,"a":2,"p":3,"I":4,"binary":false,"operators":3038671,"all_inputs_halt":13617,"named_found":4612,"vocabulary_size":12161,"classes":{"named":4612,"other":3016549,"permutation":12426,"predicate":5084},"max_steps_histogram":{"1":0,"2-3":13,"4-7":1924,"8-15":10481,"16-31":1143,"32-63":55,"64-127":1,"128-255":0,"256":3025054}}

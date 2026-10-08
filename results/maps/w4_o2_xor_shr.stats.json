@@ -1,0 +1,1 @@
+{"isa":"SWAP,ADD,XOR,SHR","W":4,"a":2,"p":3,"I":4,"binary":false,"operators":500264,"all_inputs_halt":0,"named_found":944,"vocabulary_size":12161,"classes":{"named":944,"other":496650,"permutation":1927,"predicate":743},"max_steps_histogram":{"1":0,"2-3":0,"4-7":0,"8-15":0,"16-31":0,"32-63":0,"64-127":0,"128-255":0,"256":500264}}
