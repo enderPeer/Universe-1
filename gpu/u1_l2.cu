@@ -1,12 +1,13 @@
-// Universe-1 exp06b kernel (CUDA): layout L2 (von Neumann). Code and data share one memory of 2^a words; the 2^p program words are
-// loaded at M[0..2^p-1], fetch reads M[PC], so programs can rewrite themselves. Semantics = sim/machine_l2.py.
-// Per program: the unary truth table A(x) at step 256 (or HALT), x = 0..15 -> same shard format as u1_cuda (distinct keys, min
-// program); and, on the x = 0 run, the self-modification statistics (lessons of the Dimension42 NANO sweeps):
-//   copy score = code words found position-wise in the copy window M[2^p..2^(p+1)-1] (pre-filled with code+1, so a match needs a
-//   write): best over all steps and at the end; step of the first full copy and whether the code was still intact then; whether the
-//   code was ever changed / differs at the end; walker = at least 4 writes into code that changed only the operand field.
-// Output: <out> (function shard) and <out>.copy (text: histograms and counts, plus up to --max-copiers full copiers with flags).
-// usage: u1_l2 --gpu g --W 4 --a 4 --p 3 --I 4 --isa LD,ST,LDIND,STIND,INCM,ADD,JNZ,HALT --lo L --hi H --out file [--cap-log2 22] [--max-copiers 100000]
+// Universe-1 exp06b/exp06c kernel (CUDA): layout L2 (von Neumann). Code and data share one memory of 2^a words of W bits; the 2^p
+// program words (I = W bits each) are loaded at M[0..2^p-1], fetch reads M[PC], so programs can rewrite themselves. Semantics =
+// sim/machine_l2.py. Per program: the unary truth table A(x) at step 256 (or HALT) -> same shard format as u1_cuda (skipped with
+// --copy-only); and, on the x = 0 run, the self-modification statistics (lessons of the Dimension42 NANO sweeps):
+//   copy score = the largest number of code words found position-wise at any non-overlapping offset k in [2^p, 2^a - 2^p]
+//   (the region beyond the code is pre-filled with code[i mod 2^p]+1, so a full copy needs writes; partial matches can pre-exist at offsets not divisible by 2^p): best over all steps and at the end;
+//   step and offset of the first full copy and whether the code was still intact then; whether the code was ever changed / differs
+//   at the end; walker = at least 4 writes into code that changed only the operand field. A copier needs >= 2 nonzero code words.
+// Output: <out> (function shard, unless --copy-only) and <out>.copy (text: histograms, counts, up to --max-copiers copiers with flags).
+// usage: u1_l2 --gpu g --W 4 --a 4 --p 3 --I 4 --isa LDIND,STIND,INCM,JNZ --lo L --hi H --out file [--cap-log2 22] [--max-copiers 100000] [--copy-only]
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -25,34 +26,40 @@ static const char *PNAME[P_COUNT] = {
   "ADD","ADC","SUB","INC","DEC","NEG","SHL","SHR","ROL","ROR","RCL","MUL","SWAP",
   "JMP","JZ","JNZ","JC","SKZ","SKNZ","INCM","DECM","LDIND","STIND" };
 
-struct Cfg { int W, a, p, I, o, nins, nM, nin; unsigned mask, amask, pmask, opmask; };
+struct Cfg { int W, a, p, I, o, nins, nM, nin, copy_only; unsigned mask, amask, pmask, opmask; };
 __constant__ Cfg C;
 __constant__ unsigned char ISA[256];
 #define MAX_STEPS 256
-#define MAXM 16
+#define MAXM 32
 #define EMPTY 0xFFFFFFFFFFFFFFFFull
 
 __device__ __forceinline__ ull mix(ull x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdULL; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ULL; x ^= x >> 33; return x; }
 
-struct Stats { int best, final, first_full, intact, ever_mod, final_mod, walker_writes; };
-struct St { unsigned A, Z, Cf, PC; unsigned char M[MAXM]; unsigned char code[8]; Stats *S; int t; };
+struct Stats { int best, final, first_full, intact, ever_mod, final_mod, walker_writes, offset; };
+#define NOFF 17   // window offsets k = nins .. nM - nins (17 for a = 5, 1 for a = 4)
+struct St { unsigned A, Z, Cf, PC; unsigned char M[MAXM]; unsigned char code[8]; signed char cnt[NOFF]; Stats *S; int t; };
 __device__ __forceinline__ unsigned rd(St &s, unsigned addr) { return s.M[addr & C.amask]; }
-__device__ __forceinline__ int score(St &s) { int sc = 0; for (int k = 0; k < C.nins; k++) sc += s.M[C.nins + k] == s.code[k]; return sc; }
+__device__ __forceinline__ int score(St &s, int *where) { int best = 0, bk = C.nins; for (int k = C.nins; k + C.nins <= C.nM; k++) { int sc = s.cnt[k - C.nins]; if (sc > best) { best = sc; bk = k; } } if (where) *where = bk; return best; }
 __device__ __forceinline__ void wr(St &s, unsigned addr, unsigned v) {
   addr &= C.amask; v &= C.mask; unsigned old = s.M[addr]; s.M[addr] = (unsigned char)v;
   if (!s.S) return;
   if (addr < (unsigned)C.nins) { if (old != v) { s.S->ever_mod = 1; if ((old >> (C.I - C.o)) == (v >> (C.I - C.o))) s.S->walker_writes++; } }
-  else { int sc = score(s); if (sc > s.S->best) { s.S->best = sc; if (sc == C.nins) { s.S->first_full = s.t + 1; int ok = 1; for (int k = 0; k < C.nins; k++) ok &= s.M[k] == s.code[k]; s.S->intact = ok; } } }
+  else {
+    int klo = (int)addr - C.nins + 1; if (klo < C.nins) klo = C.nins; int khi = (int)addr; if (khi > C.nM - C.nins) khi = C.nM - C.nins;
+    for (int k = klo; k <= khi; k++) { int j = (int)addr - k; s.cnt[k - C.nins] += (int)(v == s.code[j]) - (int)(old == s.code[j]);
+      int sc = s.cnt[k - C.nins]; if (sc > s.S->best) { s.S->best = sc; if (sc == C.nins) { s.S->first_full = s.t + 1; s.S->offset = k; int ok = 1; for (int q = 0; q < C.nins; q++) ok &= s.M[q] == s.code[q]; s.S->intact = ok; } } }
+  }
 }
 __device__ __forceinline__ void setA(St &s, unsigned v) { s.A = v & C.mask; s.Z = (s.A == 0); }
 
-// runs program pb with A = x (y into M[nins] if have_y); S != nullptr collects the exp06b statistics; returns final A
-__device__ unsigned run(ull pb, unsigned x, unsigned y, int have_y, Stats *S) {
+// runs program pb with A = x; S != nullptr collects the exp06b statistics; returns final A
+__device__ unsigned run(ull pb, unsigned x, Stats *S) {
   St s; s.A = x & C.mask; s.Z = (s.A == 0); s.Cf = 0; s.PC = 0; s.S = S; s.t = 0;
-  for (int i = 0; i < C.nM; i++) s.M[i] = 0;
-  for (int k = 0; k < C.nins; k++) { unsigned char c = (unsigned char)((pb >> (k * C.I)) & ((1u << C.I) - 1)); s.code[k] = c; s.M[k] = c; s.M[C.nins + k] = (c + 1) & C.mask; }
-  if (have_y) s.M[C.nins] = y & C.mask;
-  if (S) { S->best = S->final = S->first_full = S->intact = S->ever_mod = S->final_mod = S->walker_writes = 0; }
+  for (int k = 0; k < C.nins; k++) s.code[k] = (unsigned char)((pb >> (k * C.I)) & ((1u << C.I) - 1));
+  for (int i = 0; i < C.nM; i++) s.M[i] = (unsigned char)((s.code[i % C.nins] + 1) & C.mask);   // beyond the code: code+1 pattern, differs from the code at every offset position
+  for (int k = 0; k < C.nins; k++) s.M[k] = s.code[k];
+  if (S) { S->best = S->final = S->first_full = S->intact = S->ever_mod = S->final_mod = S->walker_writes = 0; S->offset = C.nins;
+    for (int k = C.nins; k + C.nins <= C.nM; k++) { int sc = 0; for (int j = 0; j < C.nins; j++) sc += s.M[k + j] == s.code[j]; s.cnt[k - C.nins] = (signed char)sc; if (sc > S->best) { S->best = sc; S->offset = k; } } }
   int halted = 0;
   for (int t = 0; t < MAX_STEPS && !halted; t++) {
     s.t = t;
@@ -98,7 +105,7 @@ __device__ unsigned run(ull pb, unsigned x, unsigned y, int have_y, Stats *S) {
     case P_STIND: wr(s, rd(s, op), s.A); break;
     }
   }
-  if (S) { S->final = score(s); int same = 1; for (int k = 0; k < C.nins; k++) same &= s.M[k] == s.code[k]; S->final_mod = !same; }
+  if (S) { S->final = score(s, nullptr); int same = 1; for (int k = 0; k < C.nins; k++) same &= s.M[k] == s.code[k]; S->final_mod = !same; }
   return s.A;
 }
 
@@ -111,14 +118,14 @@ __device__ void table_key(const unsigned char *tbl, ull &lo, ull &hi) {
 // counters: cnt[0..15] final-score histogram, cnt[16..31] best-score histogram, cnt[32] ever_mod, cnt[33] final_mod, cnt[34] walkers,
 // cnt[35] full copiers ever, cnt[36] full copiers at the end, cnt[37] intact copiers, cnt[64..320] first-full-copy step histogram;
 // cmin[0..15] min program per final score, cmin[16..31] per best score, cmin[32] min intact copier.
-// copiers[]: (program, first_full | intact << 9 | persists << 10) pairs for full copiers (ever), up to max_copiers. misc: sentinel key + overflow + copier count.
+// copiers[]: (program low 32 bits, first_full | intact << 9 | persists << 10 | offset << 11 | program high bits << 16) for full copiers.
 __global__ void sweep(ull lo, ull count, ull *keys, ull *his, unsigned *progs, unsigned cap_log2, unsigned *misc, unsigned *cnt, unsigned *cmin, unsigned *copiers, unsigned max_copiers) {
   ull i = blockIdx.x * (ull)blockDim.x + threadIdx.x;
   if (i >= count) return;
-  ull pb = lo + i; unsigned prog = (unsigned)pb;
-  unsigned char tbl[16]; Stats S;
-  for (int x = 0; x < C.nin; x++) tbl[x] = run(pb, x, 0, 0, nullptr);
-  run(pb, 0, 0, 0, &S);
+  ull pb = lo + i; unsigned prog = (unsigned)pb, hi32 = (unsigned)(pb >> 32);
+  unsigned char tbl[32]; Stats S;
+  if (!C.copy_only) for (int x = 0; x < C.nin; x++) tbl[x] = run(pb, x, nullptr);
+  run(pb, 0, &S);
   int nz = 0; for (int k = 0; k < C.nins; k++) nz += ((pb >> (k * C.I)) & ((1u << C.I) - 1)) != 0;   // NANO rule: a copier needs at least 2 nonzero code words
   atomicAdd(&cnt[S.final], 1u); atomicMin(&cmin[S.final], prog); atomicAdd(&cnt[16 + S.best], 1u); atomicMin(&cmin[16 + S.best], prog);
   if (S.ever_mod) atomicAdd(&cnt[32], 1u); if (S.final_mod) atomicAdd(&cnt[33], 1u); if (S.walker_writes >= 4) atomicAdd(&cnt[34], 1u);
@@ -126,8 +133,9 @@ __global__ void sweep(ull lo, ull count, ull *keys, ull *his, unsigned *progs, u
     atomicAdd(&cnt[35], 1u); atomicAdd(&cnt[64 + S.first_full], 1u);
     if (S.final == C.nins) atomicAdd(&cnt[36], 1u);
     if (S.intact) { atomicAdd(&cnt[37], 1u); atomicMin(&cmin[32], prog); }
-    unsigned slot = atomicAdd(&misc[3], 1u); if (slot < max_copiers) { copiers[2 * slot] = prog; copiers[2 * slot + 1] = (unsigned)S.first_full | ((unsigned)S.intact << 9) | ((unsigned)(S.final == C.nins) << 10); }
+    unsigned slot = atomicAdd(&misc[3], 1u); if (slot < max_copiers) { copiers[2 * slot] = prog; copiers[2 * slot + 1] = (unsigned)S.first_full | ((unsigned)S.intact << 9) | ((unsigned)(S.final == C.nins) << 10) | ((unsigned)S.offset << 11) | (hi32 << 16); }
   }
+  if (C.copy_only) return;
   ull klo, khi; table_key(tbl, klo, khi);
   if (klo == EMPTY) { atomicMin(&misc[0], prog); misc[1] = 1; return; }
   ull mask = (1ull << cap_log2) - 1, h = mix(klo ^ mix(khi)) & mask;
@@ -148,11 +156,12 @@ int main(int argc, char **argv) {
     else if (ARG("--isa")) isa_s = argv[++i]; else if (ARG("--out")) out = argv[++i]; else if (ARG("--gpu")) gpu = atoi(argv[++i]);
     else if (ARG("--cap-log2")) cap_log2 = atoi(argv[++i]); else if (ARG("--max-copiers")) max_copiers = atoi(argv[++i]);
     else if (ARG("--lo")) { lo = strtoull(argv[++i], 0, 0); have = 1; } else if (ARG("--hi")) { hi = strtoull(argv[++i], 0, 0); have = 1; }
+    else if (!strcmp(argv[i], "--copy-only")) c.copy_only = 1;
     else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
   if (!isa_s || !out) { fprintf(stderr, "need --isa and --out\n"); return 2; }
   c.mask = (1u << c.W) - 1; c.amask = (1u << c.a) - 1; c.pmask = (1u << c.p) - 1; c.nins = 1 << c.p; c.nM = 1 << c.a; c.nin = 1 << c.W;
-  if (c.nM > MAXM || 2 * c.nins > c.nM || c.nins > 8 || c.I != c.W || c.nin * c.W > 128) { fprintf(stderr, "limits: a<=4, 2*2^p <= 2^a, 2^p <= 8, I == W <= 4\n"); return 2; }
+  if (c.nM > MAXM || 2 * c.nins > c.nM || c.nins > 8 || c.I != c.W || c.W > 8 || (!c.copy_only && c.nin * c.W > 128)) { fprintf(stderr, "limits: a<=5, 2*2^p <= 2^a, 2^p <= 8, I == W (<= 4 unless --copy-only)\n"); return 2; }
   unsigned char isa[256]; int nisa = 0; char buf[2048]; strncpy(buf, isa_s, sizeof buf - 1); buf[sizeof buf - 1] = 0;
   for (char *t = strtok(buf, ","); t; t = strtok(nullptr, ",")) { int id = -1; for (int k = 0; k < P_COUNT; k++) if (!strcmp(t, PNAME[k])) id = k;
     if (id < 0) { fprintf(stderr, "unknown primitive %s\n", t); return 2; } isa[nisa++] = id; }
@@ -161,6 +170,7 @@ int main(int argc, char **argv) {
   if (c.o > c.I) { fprintf(stderr, "opcode bits > I\n"); return 2; }
   c.opmask = (1u << (c.I - c.o)) - 1;
   int pbits = c.nins * c.I; ull total = pbits >= 64 ? UINT64_MAX : (1ull << pbits); if (!have) { lo = 0; hi = total; }
+  if (c.copy_only) cap_log2 = 10;
 
   cudaSetDevice(gpu); cudaDeviceProp prop; cudaGetDeviceProperties(&prop, gpu);
   cudaMemcpyToSymbol(C, &c, sizeof c); cudaMemcpyToSymbol(ISA, isa, 256);
@@ -187,21 +197,27 @@ int main(int argc, char **argv) {
   cudaMemcpy(progs.data(), d_progs, cap * 4, cudaMemcpyDeviceToHost); cudaMemcpy(misc, d_misc, 16, cudaMemcpyDeviceToHost);
   cudaMemcpy(cnt.data(), d_cnt, NCNT * 4, cudaMemcpyDeviceToHost); cudaMemcpy(cmin.data(), d_cmin, NMIN * 4, cudaMemcpyDeviceToHost);
   unsigned ncop = misc[3] < max_copiers ? misc[3] : max_copiers; std::vector<unsigned> cop(2 * (size_t)ncop); if (ncop) cudaMemcpy(cop.data(), d_cop, (size_t)ncop * 8, cudaMemcpyDeviceToHost);
-  if (misc[2]) { fprintf(stderr, "ERROR hash table overflow (%u programs dropped); rerun with --cap-log2 %u or a smaller range\n", misc[2], cap_log2 + 1); return 1; }
-  ull n = misc[1] ? 1 : 0; for (ull i = 0; i < cap; i++) n += keys[i] != EMPTY;
-  FILE *f = fopen(out, "wb"); if (!f) { perror(out); return 1; }
-  unsigned hdr[8] = { 0x55314231u, (unsigned)c.W, (unsigned)c.a, (unsigned)c.p, (unsigned)c.I, (unsigned)c.o, 0u, (unsigned)nisa };
-  fwrite(hdr, 4, 8, f); fwrite(&lo, 8, 1, f); fwrite(&hi, 8, 1, f); fwrite(&n, 8, 1, f); fwrite(isa, 1, nisa, f);
-  for (ull i = 0; i < cap; i++) if (keys[i] != EMPTY) { fwrite(&keys[i], 8, 1, f); fwrite(&his[i], 8, 1, f); fwrite(&progs[i], 4, 1, f); }
-  if (misc[1]) { ull k = EMPTY, h = 0; fwrite(&k, 8, 1, f); fwrite(&h, 8, 1, f); fwrite(&misc[0], 4, 1, f); }
-  fclose(f);
+  if (!c.copy_only && misc[2]) { fprintf(stderr, "ERROR hash table overflow (%u programs dropped); rerun with --cap-log2 %u or a smaller range\n", misc[2], cap_log2 + 1); return 1; }
+  ull processed = 0; for (int sc = 0; sc <= c.nins; sc++) processed += cnt[sc];
+  if (processed != hi - lo) { fprintf(stderr, "ERROR %llu of %llu programs accounted for\n", processed, hi - lo); return 1; }
+  ull n = 0;
+  if (!c.copy_only) {
+    n = misc[1] ? 1 : 0; for (ull i = 0; i < cap; i++) n += keys[i] != EMPTY;
+    FILE *f = fopen(out, "wb"); if (!f) { perror(out); return 1; }
+    unsigned hdr[8] = { 0x55314231u, (unsigned)c.W, (unsigned)c.a, (unsigned)c.p, (unsigned)c.I, (unsigned)c.o, 0u, (unsigned)nisa };
+    fwrite(hdr, 4, 8, f); fwrite(&lo, 8, 1, f); fwrite(&hi, 8, 1, f); fwrite(&n, 8, 1, f); fwrite(isa, 1, nisa, f);
+    for (ull i = 0; i < cap; i++) if (keys[i] != EMPTY) { fwrite(&keys[i], 8, 1, f); fwrite(&his[i], 8, 1, f); fwrite(&progs[i], 4, 1, f); }
+    if (misc[1]) { ull k = EMPTY, h = 0; fwrite(&k, 8, 1, f); fwrite(&h, 8, 1, f); fwrite(&misc[0], 4, 1, f); }
+    fclose(f);
+  }
   std::string cp = std::string(out) + ".copy"; FILE *g = fopen(cp.c_str(), "w"); if (!g) { perror(cp.c_str()); return 1; }
-  fprintf(g, "layout L2 isa %s programs [%llu,%llu) copy window M[%d..%d] stats run x=0\n", isa_s, lo, hi, c.nins, 2 * c.nins - 1);
+  fprintf(g, "layout L2 W %d a %d p %d I %d isa %s programs [%llu,%llu) copy offsets %d..%d stats run x=0%s\n", c.W, c.a, c.p, c.I, isa_s, lo, hi, c.nins, c.nM - c.nins, c.copy_only ? " copy-only" : "");
   for (int sc = 0; sc <= c.nins; sc++) fprintf(g, "final %d count %u min_program 0x%08x\n", sc, cnt[sc], cmin[sc]);
   for (int sc = 0; sc <= c.nins; sc++) fprintf(g, "best %d count %u min_program 0x%08x\n", sc, cnt[16 + sc], cmin[16 + sc]);
   fprintf(g, "ever_mod %u final_mod %u walkers %u copiers_ever %u copiers_final %u copiers_intact %u min_intact_copier 0x%08x\n", cnt[32], cnt[33], cnt[34], cnt[35], cnt[36], cnt[37], cmin[32]);
   fprintf(g, "first_full_hist"); for (int t = 0; t <= MAX_STEPS; t++) if (cnt[64 + t]) fprintf(g, " %d:%u", t, cnt[64 + t]); fprintf(g, "\n");
-  fprintf(g, "listed %u\n", ncop); for (unsigned i = 0; i < ncop; i++) fprintf(g, "copier 0x%08x first %u intact %u persists %u\n", cop[2 * i], cop[2 * i + 1] & 511, (cop[2 * i + 1] >> 9) & 1, (cop[2 * i + 1] >> 10) & 1);
+  fprintf(g, "listed %u\n", ncop);
+  for (unsigned i = 0; i < ncop; i++) { ull full = ((ull)(cop[2 * i + 1] >> 16) << 32) | cop[2 * i]; fprintf(g, "copier 0x%010llx first %u intact %u persists %u offset %u\n", full, cop[2 * i + 1] & 511, (cop[2 * i + 1] >> 9) & 1, (cop[2 * i + 1] >> 10) & 1, (cop[2 * i + 1] >> 11) & 31); }
   fclose(g);
   fprintf(stderr, "L2 W=%d a=%d p=%d I=%d o=%d isa=%s programs=[%llu,%llu) distinct=%llu copiers_ever=%u intact=%u %.2fs (%.1f Mprog/s) %s\n", c.W, c.a, c.p, c.I, c.o, isa_s, lo, hi, n, cnt[35], cnt[37], secs, (hi - lo) / secs / 1e6, prop.name);
   printf("%llu\n", n);

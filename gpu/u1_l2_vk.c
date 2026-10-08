@@ -9,8 +9,9 @@
 #include <vulkan/vulkan.h>
 #define CK(x) do { VkResult r_ = (x); if (r_ != VK_SUCCESS) { fprintf(stderr, "ERROR %s failed: %d\n", #x, r_); exit(1); } } while (0)
 typedef unsigned long long ull;
-typedef struct { uint32_t W, a, p, I, o, nins, nM, nin, cap_log2, lo_lo, lo_hi, count, max_copiers; } Push;
-#define SUB (1ull << 23)
+typedef struct { uint32_t W, a, p, I, o, nins, nM, nin, cap_log2, lo_lo, lo_hi, count, max_copiers, copy_only; } Push;
+/* Programs per submit: small enough to stay below the amdgpu compute watchdog (device lost on the RX 9060 XT at 2^23). */
+#define SUB_LOG2_DEFAULT 20
 #define EMPTY 0xFFFFFFFFFFFFFFFFull
 #define NCNT (64 + 256 + 2)
 #define NMIN 40
@@ -38,18 +39,20 @@ static VkBuffer make_buffer(VkDeviceSize size, void **map) {
 }
 int main(int argc, char **argv) {
   Push P; memset(&P, 0, sizeof P); P.W = 4; P.a = 4; P.p = 3; P.I = 4; P.cap_log2 = 22; P.max_copiers = 100000;
-  const char *isa_s = NULL, *out = NULL; int gpu = 0; ull lo = 0, hi = 0; int have = 0;
+  const char *isa_s = NULL, *out = NULL; int gpu = 0; ull lo = 0, hi = 0; int have = 0; int sub_log2 = SUB_LOG2_DEFAULT;
   for (int i = 1; i < argc; i++) {
     #define ARG(n) (!strcmp(argv[i], n) && i + 1 < argc)
-    if (ARG("--W")) P.W = atoi(argv[++i]); else if (ARG("--a")) P.a = atoi(argv[++i]); else if (ARG("--p")) P.p = atoi(argv[++i]); else if (ARG("--I")) P.I = atoi(argv[++i]);
+    if (ARG("--sub-log2")) sub_log2 = atoi(argv[++i]); else if (ARG("--W")) P.W = atoi(argv[++i]); else if (ARG("--a")) P.a = atoi(argv[++i]); else if (ARG("--p")) P.p = atoi(argv[++i]); else if (ARG("--I")) P.I = atoi(argv[++i]);
     else if (ARG("--isa")) isa_s = argv[++i]; else if (ARG("--out")) out = argv[++i]; else if (ARG("--gpu")) gpu = atoi(argv[++i]);
     else if (ARG("--cap-log2")) P.cap_log2 = atoi(argv[++i]); else if (ARG("--max-copiers")) P.max_copiers = atoi(argv[++i]);
     else if (ARG("--lo")) { lo = strtoull(argv[++i], 0, 0); have = 1; } else if (ARG("--hi")) { hi = strtoull(argv[++i], 0, 0); have = 1; }
+    else if (!strcmp(argv[i], "--copy-only")) P.copy_only = 1;
     else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
   if (!isa_s || !out) { fprintf(stderr, "need --isa and --out\n"); return 2; }
   P.nins = 1u << P.p; P.nM = 1u << P.a; P.nin = 1u << P.W;
-  if (P.nM > 16 || 2 * P.nins > P.nM || P.nins > 8 || P.I != P.W || P.W > 4) { fprintf(stderr, "limits: a<=4, 2*2^p <= 2^a, 2^p <= 8, I == W <= 4\n"); return 2; }
+  if (P.nM > 32 || 2 * P.nins > P.nM || P.nins > 8 || P.I != P.W || P.W > 8 || (!P.copy_only && P.nin * P.W > 128)) { fprintf(stderr, "limits: a<=5, 2*2^p <= 2^a, 2^p <= 8, I == W (<= 4 unless --copy-only)\n"); return 2; }
+  if (P.copy_only) P.cap_log2 = 10;
   uint32_t isa[256]; unsigned char isa8[256]; int nisa = 0; char buf[2048]; strncpy(buf, isa_s, sizeof buf - 1); buf[sizeof buf - 1] = 0;
   for (char *t = strtok(buf, ","); t; t = strtok(NULL, ",")) { int id = -1; for (int k = 0; k < P_COUNT; k++) if (!strcmp(t, PNAME[k])) id = k;
     if (id < 0) { fprintf(stderr, "unknown primitive %s\n", t); return 2; } isa[nisa] = id; isa8[nisa++] = id; }
@@ -106,6 +109,7 @@ int main(int argc, char **argv) {
   VkFenceCreateInfo fci = { VK_STRUCTURE_TYPE_FENCE_CREATE_INFO, NULL, 0 }; VkFence fence; CK(vkCreateFence(dev, &fci, NULL, &fence));
 
   double t0 = now();
+  const ull SUB = 1ull << sub_log2;
   for (ull off = lo; off < hi; off += SUB) {
     ull n = hi - off < SUB ? hi - off : SUB;
     P.lo_lo = (uint32_t)off; P.lo_hi = (uint32_t)(off >> 32); P.count = (uint32_t)n;
@@ -121,24 +125,28 @@ int main(int argc, char **argv) {
   }
   double secs = now() - t0;
   uint64_t *keys = maps[0], *his = maps[1]; uint32_t *progs = maps[2], *misc = maps[3], *cnt = maps[5], *cmin = maps[6], *cop = maps[7];
-  if (misc[2]) { fprintf(stderr, "ERROR hash table overflow (%u dropped); rerun with --cap-log2 %u\n", misc[2], P.cap_log2 + 1); return 1; }
+  if (!P.copy_only && misc[2]) { fprintf(stderr, "ERROR hash table overflow (%u dropped); rerun with --cap-log2 %u\n", misc[2], P.cap_log2 + 1); return 1; }
   ull processed = 0; for (int sc = 0; sc <= (int)P.nins; sc++) processed += cnt[sc];
   if (processed != hi - lo) { fprintf(stderr, "ERROR %llu of %llu programs accounted for (dropped GPU work?)\n", processed, hi - lo); return 1; }
-  ull n = misc[1] ? 1 : 0; for (ull i = 0; i < cap; i++) n += keys[i] != EMPTY;
-  FILE *fo = fopen(out, "wb"); if (!fo) { perror(out); return 1; }
-  uint32_t hdr[8] = { 0x55314231u, P.W, P.a, P.p, P.I, P.o, 0u, (uint32_t)nisa };
-  fwrite(hdr, 4, 8, fo); fwrite(&lo, 8, 1, fo); fwrite(&hi, 8, 1, fo); fwrite(&n, 8, 1, fo); fwrite(isa8, 1, nisa, fo);
-  for (ull i = 0; i < cap; i++) if (keys[i] != EMPTY) { fwrite(&keys[i], 8, 1, fo); fwrite(&his[i], 8, 1, fo); fwrite(&progs[i], 4, 1, fo); }
-  if (misc[1]) { ull k = EMPTY, h = 0; fwrite(&k, 8, 1, fo); fwrite(&h, 8, 1, fo); fwrite(&misc[0], 4, 1, fo); }
-  fclose(fo);
+  ull n = 0;
+  if (!P.copy_only) {
+    n = misc[1] ? 1 : 0; for (ull i = 0; i < cap; i++) n += keys[i] != EMPTY;
+    FILE *fo = fopen(out, "wb"); if (!fo) { perror(out); return 1; }
+    uint32_t hdr[8] = { 0x55314231u, P.W, P.a, P.p, P.I, P.o, 0u, (uint32_t)nisa };
+    fwrite(hdr, 4, 8, fo); fwrite(&lo, 8, 1, fo); fwrite(&hi, 8, 1, fo); fwrite(&n, 8, 1, fo); fwrite(isa8, 1, nisa, fo);
+    for (ull i = 0; i < cap; i++) if (keys[i] != EMPTY) { fwrite(&keys[i], 8, 1, fo); fwrite(&his[i], 8, 1, fo); fwrite(&progs[i], 4, 1, fo); }
+    if (misc[1]) { ull k = EMPTY, h = 0; fwrite(&k, 8, 1, fo); fwrite(&h, 8, 1, fo); fwrite(&misc[0], 4, 1, fo); }
+    fclose(fo);
+  }
   uint32_t ncop = misc[3] < P.max_copiers ? misc[3] : P.max_copiers;
   char cpn[4096]; snprintf(cpn, sizeof cpn, "%s.copy", out); FILE *g = fopen(cpn, "w"); if (!g) { perror(cpn); return 1; }
-  fprintf(g, "layout L2 isa %s programs [%llu,%llu) copy window M[%u..%u] stats run x=0\n", isa_s, lo, hi, P.nins, 2 * P.nins - 1);
+  fprintf(g, "layout L2 W %u a %u p %u I %u isa %s programs [%llu,%llu) copy offsets %u..%u stats run x=0%s\n", P.W, P.a, P.p, P.I, isa_s, lo, hi, P.nins, P.nM - P.nins, P.copy_only ? " copy-only" : "");
   for (int sc = 0; sc <= (int)P.nins; sc++) fprintf(g, "final %d count %u min_program 0x%08x\n", sc, cnt[sc], cmin[sc]);
   for (int sc = 0; sc <= (int)P.nins; sc++) fprintf(g, "best %d count %u min_program 0x%08x\n", sc, cnt[16 + sc], cmin[16 + sc]);
   fprintf(g, "ever_mod %u final_mod %u walkers %u copiers_ever %u copiers_final %u copiers_intact %u min_intact_copier 0x%08x\n", cnt[32], cnt[33], cnt[34], cnt[35], cnt[36], cnt[37], cmin[32]);
   fprintf(g, "first_full_hist"); for (int t = 0; t <= 256; t++) if (cnt[64 + t]) fprintf(g, " %d:%u", t, cnt[64 + t]); fprintf(g, "\n");
-  fprintf(g, "listed %u\n", ncop); for (uint32_t i = 0; i < ncop; i++) fprintf(g, "copier 0x%08x first %u intact %u persists %u\n", cop[2 * i], cop[2 * i + 1] & 511, (cop[2 * i + 1] >> 9) & 1, (cop[2 * i + 1] >> 10) & 1);
+  fprintf(g, "listed %u\n", ncop);
+  for (uint32_t i = 0; i < ncop; i++) { ull full = ((ull)(cop[2 * i + 1] >> 16) << 32) | cop[2 * i]; fprintf(g, "copier 0x%010llx first %u intact %u persists %u offset %u\n", full, cop[2 * i + 1] & 511, (cop[2 * i + 1] >> 9) & 1, (cop[2 * i + 1] >> 10) & 1, (cop[2 * i + 1] >> 11) & 31); }
   fclose(g);
   fprintf(stderr, "L2 W=%u a=%u p=%u I=%u o=%u isa=%s programs=[%llu,%llu) distinct=%llu copiers_ever=%u intact=%u %.2fs (%.1f Mprog/s) %s\n", P.W, P.a, P.p, P.I, P.o, isa_s, lo, hi, n, cnt[35], cnt[37], secs, (hi - lo) / secs / 1e6, props.deviceName);
   printf("%llu\n", n);

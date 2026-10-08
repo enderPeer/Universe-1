@@ -1,5 +1,5 @@
 #version 450
-// Universe-1 exp06b, Vulkan compute (AMD cards): layout L2 (von Neumann), same semantics, statistics and outputs as gpu/u1_l2.cu.
+// Universe-1 exp06b/exp06c, Vulkan compute (AMD cards): layout L2 (von Neumann), same semantics, statistics and outputs as gpu/u1_l2.cu.
 #extension GL_EXT_shader_explicit_arithmetic_types_int64 : require
 #extension GL_EXT_shader_atomic_int64 : require
 layout(local_size_x = 256) in;
@@ -10,34 +10,41 @@ layout(std430, binding = 3) buffer Misc { uint misc[]; };      // 0 sentinel pro
 layout(std430, binding = 4) buffer Isa { uint isa[]; };
 layout(std430, binding = 5) buffer Cnt { uint cnt[]; };        // 0..15 final score, 16..31 best score, 32 ever_mod, 33 final_mod, 34 walkers, 35 copiers ever, 36 copiers final, 37 intact, 64.. first-copy step
 layout(std430, binding = 6) buffer Cmin { uint cmin[]; };      // 0..15 min program per final score, 16..31 per best score, 32 min intact copier
-layout(std430, binding = 7) buffer Cop { uint copiers[]; };    // pairs (program, first | intact << 9 | persists << 10)
-layout(push_constant) uniform Push { uint W, a, p, I, o, nins, nM, nin, cap_log2, lo_lo, lo_hi, count, max_copiers; } pc;
+layout(std430, binding = 7) buffer Cop { uint copiers[]; };    // pairs (program low 32, first | intact << 9 | persists << 10 | offset << 11 | high bits << 16)
+layout(push_constant) uniform Push { uint W, a, p, I, o, nins, nM, nin, cap_log2, lo_lo, lo_hi, count, max_copiers, copy_only; } pc;
 
 const uint P_NOP=0u,P_HALT=1u,P_LD=2u,P_ST=3u,P_LDI=4u,P_CLR=5u,P_SET=6u,P_NOT=7u,P_AND=8u,P_OR=9u,P_XOR=10u,
   P_NAND=11u,P_NOR=12u,P_XNOR=13u,P_ADD=14u,P_ADC=15u,P_SUB=16u,P_INC=17u,P_DEC=18u,P_NEG=19u,P_SHL=20u,P_SHR=21u,
   P_ROL=22u,P_ROR=23u,P_RCL=24u,P_MUL=25u,P_SWAP=26u,P_JMP=27u,P_JZ=28u,P_JNZ=29u,P_JC=30u,P_SKZ=31u,P_SKNZ=32u,
   P_INCM=33u,P_DECM=34u,P_LDIND=35u,P_STIND=36u;
 const uint64_t EMPTY = 0xFFFFFFFFFFFFFFFFul;
+shared uint sh_cnt[64]; shared uint sh_min[40];   // per-workgroup aggregation of the histograms (global atomics on a few addresses would serialise 2^40 threads)
 
 uint64_t mix(uint64_t x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdul; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ul; x ^= x >> 33; return x; }
 
-uint A, Z, Cf, PC, T; uint M[16]; uint code[8]; bool doStats; int s_best, s_final, s_first, s_intact, s_ever, s_fmod, s_walk;
+uint A, Z, Cf, PC, T; uint M[32]; uint code[8]; int wcnt[17]; bool doStats; int s_best, s_final, s_first, s_intact, s_ever, s_fmod, s_walk, s_off;
 uint mask, amask, pmask, opmask;
 uint rd(uint addr) { return M[addr & amask]; }
-int score() { int sc = 0; for (uint k = 0u; k < pc.nins; k++) sc += int(M[pc.nins + k] == code[k]); return sc; }
+int score_best(out uint where) { int best = 0; where = pc.nins; for (uint k = pc.nins; k + pc.nins <= pc.nM; k++) { int sc = wcnt[k - pc.nins]; if (sc > best) { best = sc; where = k; } } return best; }
 void wr(uint addr, uint v) {
   addr &= amask; v &= mask; uint old = M[addr]; M[addr] = v;
   if (!doStats) return;
   if (addr < pc.nins) { if (old != v) { s_ever = 1; if ((old >> (pc.I - pc.o)) == (v >> (pc.I - pc.o))) s_walk++; } }
-  else { int sc = score(); if (sc > s_best) { s_best = sc; if (uint(sc) == pc.nins) { s_first = int(T) + 1; int ok = 1; for (uint k = 0u; k < pc.nins; k++) ok &= int(M[k] == code[k]); s_intact = ok; } } }
+  else {
+    int klo = int(addr) - int(pc.nins) + 1; if (klo < int(pc.nins)) klo = int(pc.nins); int khi = int(addr); if (khi > int(pc.nM) - int(pc.nins)) khi = int(pc.nM) - int(pc.nins);
+    for (int k = klo; k <= khi; k++) { int j = int(addr) - k; wcnt[k - int(pc.nins)] += int(v == code[j]) - int(old == code[j]);
+      int sc = wcnt[k - int(pc.nins)]; if (sc > s_best) { s_best = sc; if (uint(sc) == pc.nins) { s_first = int(T) + 1; s_off = k; int ok = 1; for (uint q = 0u; q < pc.nins; q++) ok &= int(M[q] == code[q]); s_intact = ok; } } }
+  }
 }
 void setA(uint v) { A = v & mask; Z = uint(A == 0u); }
 
 uint run(uint64_t pb, uint x, bool stats) {
   A = x & mask; Z = uint(A == 0u); Cf = 0u; PC = 0u; doStats = stats; T = 0u;
-  for (uint i = 0u; i < pc.nM; i++) M[i] = 0u;
-  for (uint k = 0u; k < pc.nins; k++) { uint c = uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u); code[k] = c; M[k] = c; M[pc.nins + k] = (c + 1u) & mask; }
-  if (stats) { s_best = 0; s_final = 0; s_first = 0; s_intact = 0; s_ever = 0; s_fmod = 0; s_walk = 0; }
+  for (uint k = 0u; k < pc.nins; k++) code[k] = uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u);
+  for (uint i = 0u; i < pc.nM; i++) M[i] = (code[i % pc.nins] + 1u) & mask;
+  for (uint k = 0u; k < pc.nins; k++) M[k] = code[k];
+  if (stats) { s_best = 0; s_final = 0; s_first = 0; s_intact = 0; s_ever = 0; s_fmod = 0; s_walk = 0; s_off = int(pc.nins);
+    for (uint k = pc.nins; k + pc.nins <= pc.nM; k++) { int sc = 0; for (uint j = 0u; j < pc.nins; j++) sc += int(M[k + j] == code[j]); wcnt[k - pc.nins] = sc; if (sc > s_best) { s_best = sc; s_off = int(k); } } }
   bool halted = false;
   for (uint t = 0u; t < 256u && !halted; t++) {
     T = t;
@@ -67,28 +74,36 @@ uint run(uint64_t pb, uint x, bool stats) {
     else if (o == P_INCM) wr(op, rd(op) + 1u); else if (o == P_DECM) wr(op, rd(op) - 1u);
     else if (o == P_LDIND) setA(rd(rd(op))); else if (o == P_STIND) wr(rd(op), A);
   }
-  if (stats) { s_final = score(); int same = 1; for (uint k = 0u; k < pc.nins; k++) same &= int(M[k] == code[k]); s_fmod = 1 - same; }
+  if (stats) { uint w; s_final = score_best(w); int same = 1; for (uint k = 0u; k < pc.nins; k++) same &= int(M[k] == code[k]); s_fmod = 1 - same; }
   return A;
 }
 
 void main() {
-  uint idx = gl_GlobalInvocationID.x;
-  if (idx >= pc.count) return;
+  uint lid = gl_LocalInvocationID.x;
+  if (lid < 64u) sh_cnt[lid] = 0u; if (lid < 40u) sh_min[lid] = 0xFFFFFFFFu;
+  barrier();
+  uint idx = gl_GlobalInvocationID.x; bool valid = idx < pc.count;
   mask = (1u << pc.W) - 1u; amask = (1u << pc.a) - 1u; pmask = (1u << pc.p) - 1u; opmask = (1u << (pc.I - pc.o)) - 1u;
-  uint64_t pb = ((uint64_t(pc.lo_hi) << 32) | uint64_t(pc.lo_lo)) + uint64_t(idx); uint prog = uint(pb);
-  uint tbl[16];
-  for (uint x = 0u; x < pc.nin; x++) tbl[x] = run(pb, x, false);
-  run(pb, 0u, true);
-  uint nz = 0u; for (uint k = 0u; k < pc.nins; k++) nz += uint((uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u)) != 0u);
-  atomicAdd(cnt[uint(s_final)], 1u); atomicMin(cmin[uint(s_final)], prog); atomicAdd(cnt[16u + uint(s_best)], 1u); atomicMin(cmin[16u + uint(s_best)], prog);
-  if (s_ever != 0) atomicAdd(cnt[32], 1u); if (s_fmod != 0) atomicAdd(cnt[33], 1u); if (s_walk >= 4) atomicAdd(cnt[34], 1u);
-  if (uint(s_best) == pc.nins && nz >= 2u) {
-    atomicAdd(cnt[35], 1u); atomicAdd(cnt[64u + uint(s_first)], 1u);
-    if (uint(s_final) == pc.nins) atomicAdd(cnt[36], 1u);
-    if (s_intact != 0) { atomicAdd(cnt[37], 1u); atomicMin(cmin[32], prog); }
-    uint slot = atomicAdd(misc[3], 1u);
-    if (slot < pc.max_copiers) { copiers[2u * slot] = prog; copiers[2u * slot + 1u] = uint(s_first) | (uint(s_intact) << 9) | (uint(uint(s_final) == pc.nins) << 10); }
+  uint64_t pb = ((uint64_t(pc.lo_hi) << 32) | uint64_t(pc.lo_lo)) + uint64_t(idx); uint prog = uint(pb), hi32 = uint(pb >> 32);
+  uint tbl[32];
+  if (valid) {
+    if (pc.copy_only == 0u) for (uint x = 0u; x < pc.nin; x++) tbl[x] = run(pb, x, false);
+    run(pb, 0u, true);
+    uint nz = 0u; for (uint k = 0u; k < pc.nins; k++) nz += uint((uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u)) != 0u);
+    atomicAdd(sh_cnt[uint(s_final)], 1u); atomicMin(sh_min[uint(s_final)], prog); atomicAdd(sh_cnt[16u + uint(s_best)], 1u); atomicMin(sh_min[16u + uint(s_best)], prog);
+    if (s_ever != 0) atomicAdd(sh_cnt[32], 1u); if (s_fmod != 0) atomicAdd(sh_cnt[33], 1u); if (s_walk >= 4) atomicAdd(sh_cnt[34], 1u);
+    if (uint(s_best) == pc.nins && nz >= 2u) {
+      atomicAdd(cnt[35], 1u); atomicAdd(cnt[64u + uint(s_first)], 1u);
+      if (uint(s_final) == pc.nins) atomicAdd(cnt[36], 1u);
+      if (s_intact != 0) { atomicAdd(cnt[37], 1u); atomicMin(cmin[32], prog); }
+      uint slot = atomicAdd(misc[3], 1u);
+      if (slot < pc.max_copiers) { copiers[2u * slot] = prog; copiers[2u * slot + 1u] = uint(s_first) | (uint(s_intact) << 9) | (uint(uint(s_final) == pc.nins) << 10) | (uint(s_off) << 11) | (hi32 << 16); }
+    }
   }
+  barrier();
+  if (lid < 35u && sh_cnt[lid] != 0u) atomicAdd(cnt[lid], sh_cnt[lid]);
+  if (lid < 32u && sh_min[lid] != 0xFFFFFFFFu) atomicMin(cmin[lid], sh_min[lid]);
+  if (!valid || pc.copy_only != 0u) return;
   uint64_t klo = 0ul, khi = 0ul;
   for (uint i = 0u; i < pc.nin; i++) { uint sh = i * pc.W; if (sh < 64u) { klo |= uint64_t(tbl[i]) << sh; if (sh + pc.W > 64u) khi |= uint64_t(tbl[i]) >> (64u - sh); } else khi |= uint64_t(tbl[i]) << (sh - 64u); }
   if (klo == EMPTY) { atomicMin(misc[0], prog); misc[1] = 1u; return; }
