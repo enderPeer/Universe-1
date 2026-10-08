@@ -1,0 +1,3793 @@
+{
+ "name": "l2c_crawl_w5_a5",
+ "layout": "L2",
+ "W": 5,
+ "a": 5,
+ "p": 3,
+ "I": 5,
+ "isa": [
+  "LDIND",
+  "STIND",
+  "INCM",
+  "JNZ"
+ ],
+ "programs": 274877906944,
+ "program_range": [
+  412316860416,
+  687194767360
+ ],
+ "copy_only": true,
+ "distinct_unary_functions": null,
+ "final_score_counts": {
+  "0": 197751809919,
+  "1": 72246855381,
+  "2": 4633190716,
+  "3": 225462032,
+  "4": 14791581,
+  "5": 3870478,
+  "6": 1883166,
+  "7": 43257,
+  "8": 414
+ },
+ "best_score_counts": {
+  "0": 182892488256,
+  "1": 84679900268,
+  "2": 6905712012,
+  "3": 364300256,
+  "4": 24986063,
+  "5": 6627535,
+  "6": 3742169,
+  "7": 148535,
+  "8": 1850
+ },
+ "final_score_min_program": {
+  "0": "0x0000000000",
+  "1": "0x0000000000",
+  "2": "0x0000000000",
+  "3": "0x0000000006",
+  "4": "0x000000000f",
+  "5": "0x0000000012",
+  "6": "0x000000010f",
+  "7": "0x0000047681",
+  "8": "0x000280786c"
+ },
+ "best_score_min_program": {
+  "0": "0x0000000000",
+  "1": "0x0000000000",
+  "2": "0x0000000000",
+  "3": "0x0000000006",
+  "4": "0x000000000f",
+  "5": "0x0000000012",
+  "6": "0x000000010f",
+  "7": "0x0000047681",
+  "8": "0x000070d0a0"
+ },
+ "ever_mod": 242468291879,
+ "final_mod": 239553296352,
+ "walkers": 177860048622,
+ "copiers_ever": 1850,
+ "copiers_final": 414,
+ "copiers_intact": 0,
+ "min_intact_copier": null,
+ "first_full_copy_step_histogram": {
+  "38": 33,
+  "39": 71,
+  "40": 69,
+  "41": 37,
+  "42": 32,
+  "43": 32,
+  "45": 96,
+  "46": 103,
+  "47": 70,
+  "48": 42,
+  "50": 34,
+  "51": 3,
+  "52": 6,
+  "53": 8,
+  "54": 11,
+  "55": 9,
+  "56": 7,
+  "57": 8,
+  "58": 16,
+  "59": 3,
+  "60": 4,
+  "61": 14,
+  "62": 7,
+  "63": 9,
+  "64": 14,
+  "65": 1,
+  "66": 3,
+  "67": 8,
+  "68": 14,
+  "69": 11,
+  "70": 8,
+  "71": 15,
+  "72": 71,
+  "73": 14,
+  "74": 5,
+  "75": 6,
+  "76": 5,
+  "77": 9,
+  "78": 3,
+  "79": 3,
+  "80": 14,
+  "81": 17,
+  "82": 3,
+  "83": 6,
+  "84": 6,
+  "85": 1,
+  "86": 4,
+  "87": 4,
+  "88": 7,
+  "89": 2,
+  "91": 2,
+  "92": 4,
+  "93": 5,
+  "94": 5,
+  "95": 7,
+  "96": 3,
+  "97": 3,
+  "99": 2,
+  "100": 5,
+  "101": 4,
+  "102": 5,
+  "103": 6,
+  "104": 3,
+  "105": 2,
+  "106": 2,
+  "108": 1,
+  "109": 2,
+  "110": 2,
+  "111": 1,
+  "112": 4,
+  "113": 1,
+  "114": 2,
+  "117": 3,
+  "118": 3,
+  "119": 4,
+  "120": 7,
+  "121": 5,
+  "122": 2,
+  "123": 11,
+  "124": 4,
+  "125": 9,
+  "126": 9,
+  "127": 4,
+  "128": 5,
+  "129": 5,
+  "130": 9,
+  "131": 3,
+  "132": 6,
+  "133": 4,
+  "134": 1,
+  "135": 3,
+  "136": 3,
+  "137": 4,
+  "138": 8,
+  "139": 3,
+  "141": 2,
+  "142": 7,
+  "143": 11,
+  "144": 9,
+  "145": 2,
+  "146": 4,
+  "147": 6,
+  "148": 12,
+  "150": 5,
+  "151": 3,
+  "152": 3,
+  "153": 4,
+  "154": 5,
+  "155": 7,
+  "156": 7,
+  "158": 24,
+  "159": 20,
+  "160": 52,
+  "161": 4,
+  "162": 1,
+  "163": 18,
+  "164": 11,
+  "165": 40,
+  "166": 65,
+  "167": 8,
+  "168": 7,
+  "169": 4,
+  "170": 1,
+  "171": 1,
+  "172": 2,
+  "173": 2,
+  "174": 4,
+  "175": 1,
+  "176": 1,
+  "177": 1,
+  "179": 2,
+  "180": 1,
+  "181": 3,
+  "183": 6,
+  "184": 3,
+  "186": 17,
+  "188": 14,
+  "189": 12,
+  "190": 1,
+  "191": 3,
+  "192": 2,
+  "193": 3,
+  "194": 1,
+  "195": 2,
+  "196": 1,
+  "197": 10,
+  "198": 6,
+  "199": 25,
+  "201": 1,
+  "202": 1,
+  "203": 1,
+  "205": 1,
+  "208": 1,
+  "210": 2,
+  "211": 1,
+  "212": 1,
+  "213": 1,
+  "214": 1,
+  "215": 2,
+  "216": 1,
+  "218": 1,
+  "220": 3,
+  "221": 2,
+  "222": 1,
+  "223": 2,
+  "224": 2,
+  "226": 1,
+  "227": 1,
+  "228": 2,
+  "229": 1,
+  "230": 1,
+  "231": 2,
+  "232": 2,
+  "233": 2,
+  "234": 5,
+  "235": 4,
+  "236": 61,
+  "237": 63,
+  "238": 27,
+  "239": 3,
+  "243": 3,
+  "244": 3,
+  "245": 3,
+  "246": 1,
+  "247": 1,
+  "249": 1,
+  "250": 4,
+  "252": 3,
+  "253": 1
+ },
+ "copy_offset_histogram": {
+  "8": 244,
+  "9": 405,
+  "10": 277,
+  "11": 122,
+  "12": 80,
+  "13": 58,
+  "14": 93,
+  "15": 95,
+  "16": 96,
+  "17": 52,
+  "18": 39,
+  "19": 1,
+  "20": 12,
+  "21": 15,
+  "22": 71,
+  "23": 160,
+  "24": 30
+ },
+ "copiers_listed": 1850,
+ "copiers_sample": [
+  {
+   "program": "0x60330b1909",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x60330b20ca",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x60336440cf",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x603368190f",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0x6060988121",
+   "first_step": 53,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6088cf0a54",
+   "first_step": 127,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x60a2980100",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x60a514f19b",
+   "first_step": 174,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0x60bd3e8a54",
+   "first_step": 245,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x60bd3e8a92",
+   "first_step": 245,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x60bd3f0a54",
+   "first_step": 210,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x60bd3f0a92",
+   "first_step": 210,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x60e0988121",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x60e0a01e40",
+   "first_step": 61,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x614a5ea2b4",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614a5ea695",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614a5ed155",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614a5ed2aa",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614a5ed514",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614a5ed689",
+   "first_step": 126,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x614aca7ab4",
+   "first_step": 127,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x61529ed115",
+   "first_step": 117,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x61529ed514",
+   "first_step": 117,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x61564ed2aa",
+   "first_step": 224,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x6160988121",
+   "first_step": 96,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x617956726b",
+   "first_step": 142,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x617959336a",
+   "first_step": 197,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x617b567173",
+   "first_step": 91,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x61910359c8",
+   "first_step": 95,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x61916740c9",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x61ac8740c9",
+   "first_step": 61,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x61b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x61b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x61b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x61b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x61b3035916",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 23
+  },
+  {
+   "program": "0x61b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x61b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x61b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x61b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x61b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x61b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x61b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x61b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x61b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x61b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x61b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x61b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x61b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x61b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x61b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x61f363baec",
+   "first_step": 168,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61f36b9dcc",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x61f37b1dcc",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x6219045ce9",
+   "first_step": 52,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6224a0220a",
+   "first_step": 69,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6262804100",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6295282801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6299282801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a0a92801",
+   "first_step": 72,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a1262801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a1272801",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a12e2801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a1d92801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a5072801",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62a5d82801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62bd282801",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x62e7067000",
+   "first_step": 58,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x631118062a",
+   "first_step": 55,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6320865ce9",
+   "first_step": 53,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0x63217620e9",
+   "first_step": 51,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x632f0620e9",
+   "first_step": 52,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6333045cf7",
+   "first_step": 244,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x63330ba0f7",
+   "first_step": 243,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x63337820f7",
+   "first_step": 243,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x63815440a8",
+   "first_step": 71,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6382ced191",
+   "first_step": 59,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x63c53e8a54",
+   "first_step": 239,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x63c53e8a92",
+   "first_step": 239,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x640070d0a0",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6400711680",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x64007a04a0",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x64007a04ad",
+   "first_step": 121,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6400988121",
+   "first_step": 88,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6406988121",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6406a01e40",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x641ece8280",
+   "first_step": 100,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6428ceb000",
+   "first_step": 88,
+   "intact": 0,
+   "persists": 1,
+   "offset": 12
+  },
+  {
+   "program": "0x6444980100",
+   "first_step": 64,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6450c84421",
+   "first_step": 118,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6502ceb991",
+   "first_step": 72,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0x6502cef591",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0x6502cf7591",
+   "first_step": 142,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6506864d88",
+   "first_step": 81,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6520c57400",
+   "first_step": 104,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6520cea000",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x66415440af",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x664a8854a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x664a8854ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x664a8ac0a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x664a8ac0ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x664b0454a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x664b0454ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0x664b0aa0a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x664b0aa0ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x664b5440a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x664b5440ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x664b5820a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x664b5820ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0x6650bbc0ec",
+   "first_step": 162,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6650bbc0f9",
+   "first_step": 198,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x665103dd2b",
+   "first_step": 228,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x6651088429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x665108842a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6651180429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x665118042a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x66568bc0ee",
+   "first_step": 161,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6659045ce9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66590ba0e9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6660445089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666044508c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x66604a2089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66604a208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x6660745cec",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66607ba0ec",
+   "first_step": 183,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x6660888429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666088842a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6660b45ced",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6660bba0ed",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6660bba0f9",
+   "first_step": 231,
+   "intact": 0,
+   "persists": 0,
+   "offset": 18
+  },
+  {
+   "program": "0x6661140429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666114042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x666121090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x666121090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x666131a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666131a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x666288040f",
+   "first_step": 144,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x6662880429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x666288042a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6663040429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666304042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x666501090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x666501090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x666701a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666701a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x666804408f",
+   "first_step": 58,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0x6668444089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x666844408c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6668482089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666848208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x666e7820ec",
+   "first_step": 183,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x666e8640e9",
+   "first_step": 143,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x666eb440ec",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x666f0430e9",
+   "first_step": 69,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x666f0620e9",
+   "first_step": 76,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x668288c030",
+   "first_step": 95,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x6683044431",
+   "first_step": 189,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x668308a028",
+   "first_step": 148,
+   "intact": 0,
+   "persists": 0,
+   "offset": 21
+  },
+  {
+   "program": "0x668314402c",
+   "first_step": 154,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x6683144030",
+   "first_step": 94,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x6683182031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x668e885cac",
+   "first_step": 135,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x668e8bc0ac",
+   "first_step": 135,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x668f7440ac",
+   "first_step": 134,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x669018442c",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x6690184431",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x669018472c",
+   "first_step": 161,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x669018c02c",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x669018c031",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x669018c32c",
+   "first_step": 161,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x669100c431",
+   "first_step": 246,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x6691088429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x669108842a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0x669108842c",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x669110c02c",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x669110c030",
+   "first_step": 96,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x669118040f",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x6691180429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x669118042a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0x669118042c",
+   "first_step": 156,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x6693104120",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66a014442c",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a0144431",
+   "first_step": 249,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66a014470c",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a018a02c",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a018a031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 1,
+   "offset": 18
+  },
+  {
+   "program": "0x66a018a30c",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a0745cec",
+   "first_step": 154,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66a07ba0ec",
+   "first_step": 153,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66a088840f",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x66a0888429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66a088842a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x66a1102561",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x66a110a00f",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66a110a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x66a110a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x66a110a02c",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a1140429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66a114042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x66a173a04b",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66a173a06c",
+   "first_step": 138,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x66a173a0ab",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66a1741d4c",
+   "first_step": 154,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66a2182030",
+   "first_step": 208,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x66a280c030",
+   "first_step": 95,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x66a288040f",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66a2880429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x66a288042a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0x66a2904140",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66a3002561",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x66a300a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x66a300a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x66a300a02c",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0x66a304040f",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x66a3040429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x66a304042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x66af03a04b",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66af03a06c",
+   "first_step": 138,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x66af03a08b",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x66af041d4c",
+   "first_step": 154,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0x683368190b",
+   "first_step": 231,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x684e3355b1",
+   "first_step": 106,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x684f5119b1",
+   "first_step": 114,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6853088121",
+   "first_step": 54,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6853180121",
+   "first_step": 54,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6899e92eab",
+   "first_step": 169,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x68d3088121",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x68d3180121",
+   "first_step": 96,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x68d5001e40",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x68dbe1b2b3",
+   "first_step": 61,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x68dbe1cd95",
+   "first_step": 75,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x68dbe1d593",
+   "first_step": 61,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x68dbe1d66c",
+   "first_step": 68,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x68e886cd88",
+   "first_step": 81,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x68e9e1be75",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x68e9e1beb3",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x68e9e1cdf5",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x68e9e1ceaf",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x68e9e1d5f3",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x68e9e1d66f",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x690eda54ec",
+   "first_step": 82,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x690edad0ec",
+   "first_step": 82,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6926d7f174",
+   "first_step": 198,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x698d83bad7",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x698d83baf6",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x698d8b9dd6",
+   "first_step": 192,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69906859c8",
+   "first_step": 56,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x69906b41c8",
+   "first_step": 56,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x69910359c8",
+   "first_step": 56,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x69916740c9",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x69ac8740c9",
+   "first_step": 61,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x69b2685908",
+   "first_step": 151,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x69b26b4108",
+   "first_step": 151,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x69b28342cd",
+   "first_step": 250,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x69b2835a0d",
+   "first_step": 250,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x69b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x69b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x69b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x69b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x69b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x69b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0x69b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x69b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x69b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x69b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x69b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x69b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x69b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x69b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x69c38b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c38b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c38bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c58b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c58b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c58bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c78b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c78b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c78bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c98b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c98b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69c98bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cb8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cb8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cb8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cd8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cd8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cd8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69cf0ab400",
+   "first_step": 75,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0x69cf8adced",
+   "first_step": 166,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69cf8b1dd7",
+   "first_step": 192,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69cf8b5cee",
+   "first_step": 191,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69cf8bd4ed",
+   "first_step": 166,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69cf8bd8ee",
+   "first_step": 191,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x69d18b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d18b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d18bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d38b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d38b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d38bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d58b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d58b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d58bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d78b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d78b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d78bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d98b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d98b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69d98bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69db8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69db8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69db8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69dd8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69dd8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69dd8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69df8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69df8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69df8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e18b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e18b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e18bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e38b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e38b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e38bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e58b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e58b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e58bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e78b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e78b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e78bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e98b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e98b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69e98bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69eb8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69eb8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69eb8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ed8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ed8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ed8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ef8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ef8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ef8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f18b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f18b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f18bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f2eb5ce9",
+   "first_step": 235,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f2eb5cee",
+   "first_step": 235,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f2ebd8e9",
+   "first_step": 235,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f2ebd8ee",
+   "first_step": 235,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bae8",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bae9",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baea",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baeb",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baec",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baed",
+   "first_step": 168,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69f363baee",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baef",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baf7",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baf8",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baf9",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bafa",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bafb",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bafc",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bafd",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363bafe",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f363baff",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dc8",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dc9",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dca",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dcb",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dcc",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dcd",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69f36b9dce",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dcf",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dd8",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dd9",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dda",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9ddb",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9ddc",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9ddd",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9dde",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f36b9ddf",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37758e9",
+   "first_step": 234,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37758ee",
+   "first_step": 234,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dc8",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dc9",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dca",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dcb",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dcc",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dcd",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0x69f37b1dce",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dcf",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dd8",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dd9",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dda",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1ddb",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1ddc",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1ddd",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1dde",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f37b1ddf",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f38b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f38b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f38bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f58b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f58b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f58bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f78b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f78b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f78bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f98b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f98b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69f98bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fb8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fb8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fb8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fd8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fd8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69fd8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ff8b1dd7",
+   "first_step": 237,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ff8b5cee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x69ff8bd8ee",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x6a17340511",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6a51104120",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0x6aa1203760",
+   "first_step": 57,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6b3283c2ee",
+   "first_step": 125,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6b3283c2ef",
+   "first_step": 125,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6b3283de0e",
+   "first_step": 125,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6b3283de0f",
+   "first_step": 125,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6b32885cee",
+   "first_step": 130,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6b328bc0ee",
+   "first_step": 130,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6b33041ef0",
+   "first_step": 124,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0x6b337440ee",
+   "first_step": 129,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0x6b55092800",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6b55282800",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6b60d45ce9",
+   "first_step": 53,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6b60dba0e9",
+   "first_step": 53,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6b6130a068",
+   "first_step": 76,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6b73045cf7",
+   "first_step": 239,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x6b730ba0f7",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x6b737820f7",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0x6c15eaa800",
+   "first_step": 73,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6c17ea8160",
+   "first_step": 119,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x6c9510a95b",
+   "first_step": 243,
+   "intact": 0,
+   "persists": 1,
+   "offset": 22
+  },
+  {
+   "program": "0x6ca624004b",
+   "first_step": 147,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6ce0b6f000",
+   "first_step": 58,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6d55e54000",
+   "first_step": 76,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6e4a8854a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e4a8854ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x6e4a8ac0a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e4a8ac0ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x6e4b0454a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e4b0454ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6e4b0aa0a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e4b0aa0ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6e4b5440a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e4b5440ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0x6e4b5820a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e4b5820ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0x6e51088429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e5108842a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6e51180429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e5118042a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0x6e5176c0e9",
+   "first_step": 144,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0x6e5883c2f7",
+   "first_step": 143,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x6e5883de17",
+   "first_step": 143,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0x6e58885ced",
+   "first_step": 155,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6e588bc0ed",
+   "first_step": 155,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6e597440ed",
+   "first_step": 154,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6e597820ee",
+   "first_step": 153,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0x6e60445089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e6044508c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x6e604a2089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e604a208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0x6e6086dce9",
+   "first_step": 76,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e60888429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e6088842a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e608bb4e9",
+   "first_step": 69,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e60d45ce9",
+   "first_step": 83,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e60dba0e9",
+   "first_step": 83,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e61140429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0x6e6114042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0x6e6121090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  }
+ ],
+ "intact_copiers_sample": [],
+ "wall_seconds": 5278.068820714951,
+ "programs_per_second": 208317031.30901268,
+ "gpus": [
+  0,
+  1
+ ],
+ "engine": "gpu/u1_l2_vk"
+}

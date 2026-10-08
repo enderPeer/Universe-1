@@ -84,7 +84,7 @@ remainder, less-than as 0/1, carry, absolute difference. Table: `exp09/w4_o2_add
 | LDI,LDIND,STIND,INCM,DECM,NAND,SKNZ,HALT | 16 | 2^32 | 20,286,084 | 70 % | 0 | 0 | 0 |
 | LDIND,STIND,INCM,JNZ (crawler, 2-bit operands) | 16 | 2^32 | 200,738,959 | 89 % | 141 | 16 | 0 |
 | crawler | 32 | 2^32 | copy-only | 89 % | 141 | 16 | 0 |
-| crawler, 5-bit words (5-byte programs) | 32 | 2^40 | copy-only | running | | | |
+| crawler, 5-bit words (5-byte programs) | 32 | 2^40 | copy-only | 87 % | 21,818 | 7,482 | **3** (self-healing, code intact at the moment of copy) |
 
 Report: `exp06b_summary.md`, figures `exp06b/*.png`. Code as data multiplies the function count by 43 to 184; the first Universe-1
 self-copiers exist only in the crawler ISA and none keeps its original code intact (the NANO pattern).

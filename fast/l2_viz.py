@@ -35,7 +35,7 @@ def summary(path):
     r = json.loads(Path(path).read_text()); name = r['name']; n = 1 << r['p']; isa = ','.join(r['isa']); P = r['programs']; cfg = ConfigL2(W=r.get('W', 4), a=r['a'], p=r['p'], I=r['I'])
     fig = plt.figure(figsize=(16, 9)); gs = fig.add_gridspec(2, 3, height_ratios=[1, 1.3])
     ax = fig.add_subplot(gs[0, 0]); bc = [r['best_score_counts'][str(s)] for s in range(n + 1)]; fc = [r['final_score_counts'][str(s)] for s in range(n + 1)]
-    ax.bar(np.arange(n + 1) - .2, np.maximum(bc, .5), .4, label='best over steps'); ax.bar(np.arange(n + 1) + .2, np.maximum(fc, .5), .4, label='at the end'); ax.set_yscale('log'); ax.set_xlabel('code words found in the copy window'); ax.set_title('copy score (all 2^32 programs)'); ax.legend(fontsize=8)
+    ax.bar(np.arange(n + 1) - .2, np.maximum(bc, .5), .4, label='best over steps'); ax.bar(np.arange(n + 1) + .2, np.maximum(fc, .5), .4, label='at the end'); ax.set_yscale('log'); ax.set_xlabel('code words found in the copy window'); ax.set_title(f'copy score (all {P:,} programs)'); ax.legend(fontsize=8)
     ax = fig.add_subplot(gs[0, 1]); labels = ['code ever changed', 'code differs at end', 'walkers', 'full copy ever', 'copy persists', 'copy with code intact']
     vals = [r['ever_mod'], r['final_mod'], r['walkers'], r['copiers_ever'], r['copiers_final'], r['copiers_intact']]
     ax.barh(labels, [100 * v / P for v in vals]); ax.set_xscale('symlog', linthresh=1e-6); ax.set_xlabel('% of programs')
@@ -47,8 +47,11 @@ def summary(path):
     picks = []
     if r['intact_copiers_sample']: picks.append(('first copier with intact code', int(r['intact_copiers_sample'][0]['program'], 16)))
     if r['copiers_sample']: picks.append(('first full copier', int(r['copiers_sample'][0]['program'], 16)))
-    for s in range(n, 0, -1):
-        if str(s) in r['best_score_min_program'] and len(picks) < 3 and all(int(r['best_score_min_program'][str(s)], 16) != pg for _, pg in picks): picks.append((f'first program with best score {s}/{n}', int(r['best_score_min_program'][str(s)], 16)))
+    if P <= (1 << 32):   # per-score minimum programs are stored as 32-bit ids; beyond 2^32 only the copier lists carry full ids
+        for s in range(n, 0, -1):
+            if str(s) in r['best_score_min_program'] and len(picks) < 3 and all(int(r['best_score_min_program'][str(s)], 16) != pg for _, pg in picks): picks.append((f'first program with best score {s}/{n}', int(r['best_score_min_program'][str(s)], 16)))
+    for c in r.get('copiers_sample', [])[1:]:
+        if len(picks) < 3 and c['persists'] and all(int(c['program'], 16) != pg for _, pg in picks): picks.append(('a persisting copier', int(c['program'], 16)))
     for i, (lab, prog) in enumerate(picks[:3]):
         ax = fig.add_subplot(gs[1, i]); spacetime(ax, isa, prog, 128, cfg); ax.set_title(lab + '\n' + ax.get_title(), fontsize=8)
     fn_ = 'copy-only' if r['distinct_unary_functions'] is None else f'{r["distinct_unary_functions"]:,} unary functions at step 256'

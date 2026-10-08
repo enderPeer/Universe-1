@@ -1,0 +1,3840 @@
+{
+ "name": "l2c_crawl_w5_a5",
+ "layout": "L2",
+ "W": 5,
+ "a": 5,
+ "p": 3,
+ "I": 5,
+ "isa": [
+  "LDIND",
+  "STIND",
+  "INCM",
+  "JNZ"
+ ],
+ "programs": 412316860416,
+ "program_range": [
+  687194767360,
+  1099511627776
+ ],
+ "copy_only": true,
+ "distinct_unary_functions": null,
+ "final_score_counts": {
+  "0": 322507209946,
+  "1": 85974836097,
+  "2": 3674808288,
+  "3": 142527802,
+  "4": 10913464,
+  "5": 4128872,
+  "6": 2326947,
+  "7": 105814,
+  "8": 3186
+ },
+ "best_score_counts": {
+  "0": 306809817051,
+  "1": 100275107618,
+  "2": 4999428077,
+  "3": 205724498,
+  "4": 15848127,
+  "5": 6125457,
+  "6": 4455532,
+  "7": 343975,
+  "8": 10081
+ },
+ "final_score_min_program": {
+  "0": "0x0000000000",
+  "1": "0x0000000000",
+  "2": "0x0000000000",
+  "3": "0x0000000012",
+  "4": "0x0000000007",
+  "5": "0x000000010f",
+  "6": "0x00000001a0",
+  "7": "0x0000044089",
+  "8": "0x0000343400"
+ },
+ "best_score_min_program": {
+  "0": "0x0000000000",
+  "1": "0x0000000000",
+  "2": "0x0000000000",
+  "3": "0x0000000012",
+  "4": "0x0000000007",
+  "5": "0x0000000015",
+  "6": "0x00000001a0",
+  "7": "0x0000044088",
+  "8": "0x0000343400"
+ },
+ "ever_mod": 358919100103,
+ "final_mod": 354470884953,
+ "walkers": 232807796709,
+ "copiers_ever": 10081,
+ "copiers_final": 3186,
+ "copiers_intact": 3,
+ "min_intact_copier": "0x00344f2e8d",
+ "first_full_copy_step_histogram": {
+  "34": 1,
+  "38": 48,
+  "39": 124,
+  "40": 314,
+  "41": 254,
+  "42": 262,
+  "43": 91,
+  "44": 207,
+  "45": 224,
+  "46": 633,
+  "47": 606,
+  "48": 432,
+  "49": 239,
+  "50": 90,
+  "51": 245,
+  "52": 717,
+  "53": 772,
+  "54": 574,
+  "55": 331,
+  "56": 173,
+  "57": 24,
+  "58": 170,
+  "59": 45,
+  "60": 33,
+  "61": 37,
+  "62": 28,
+  "63": 18,
+  "64": 22,
+  "65": 21,
+  "66": 21,
+  "67": 25,
+  "68": 12,
+  "69": 21,
+  "70": 32,
+  "71": 33,
+  "72": 23,
+  "73": 13,
+  "74": 7,
+  "75": 31,
+  "76": 13,
+  "77": 18,
+  "78": 11,
+  "79": 12,
+  "80": 10,
+  "81": 21,
+  "82": 27,
+  "83": 36,
+  "84": 13,
+  "85": 3,
+  "87": 10,
+  "88": 8,
+  "89": 11,
+  "90": 10,
+  "91": 4,
+  "92": 4,
+  "93": 7,
+  "94": 32,
+  "95": 38,
+  "96": 52,
+  "97": 27,
+  "98": 24,
+  "99": 4,
+  "100": 43,
+  "101": 38,
+  "102": 17,
+  "103": 7,
+  "104": 5,
+  "105": 3,
+  "106": 8,
+  "107": 8,
+  "108": 17,
+  "109": 13,
+  "110": 6,
+  "111": 28,
+  "112": 31,
+  "113": 28,
+  "114": 17,
+  "115": 50,
+  "116": 25,
+  "117": 34,
+  "118": 9,
+  "119": 29,
+  "120": 68,
+  "121": 14,
+  "122": 4,
+  "123": 7,
+  "124": 10,
+  "125": 8,
+  "126": 11,
+  "127": 7,
+  "128": 9,
+  "129": 12,
+  "130": 10,
+  "131": 5,
+  "132": 16,
+  "133": 17,
+  "134": 7,
+  "135": 11,
+  "136": 5,
+  "137": 8,
+  "138": 5,
+  "139": 5,
+  "141": 12,
+  "142": 5,
+  "143": 16,
+  "144": 13,
+  "145": 23,
+  "146": 9,
+  "147": 74,
+  "148": 28,
+  "149": 10,
+  "150": 11,
+  "151": 8,
+  "152": 4,
+  "153": 8,
+  "154": 8,
+  "155": 18,
+  "156": 9,
+  "157": 4,
+  "158": 24,
+  "159": 28,
+  "160": 33,
+  "161": 10,
+  "162": 6,
+  "163": 29,
+  "164": 27,
+  "165": 39,
+  "166": 18,
+  "167": 92,
+  "168": 14,
+  "169": 14,
+  "170": 4,
+  "171": 12,
+  "172": 9,
+  "173": 23,
+  "174": 18,
+  "175": 13,
+  "176": 3,
+  "177": 30,
+  "178": 4,
+  "179": 6,
+  "180": 5,
+  "181": 6,
+  "182": 4,
+  "183": 1,
+  "184": 28,
+  "185": 6,
+  "186": 36,
+  "187": 42,
+  "188": 34,
+  "189": 121,
+  "190": 145,
+  "191": 140,
+  "192": 108,
+  "193": 9,
+  "194": 7,
+  "195": 12,
+  "196": 18,
+  "197": 7,
+  "198": 8,
+  "199": 6,
+  "200": 19,
+  "201": 14,
+  "202": 5,
+  "203": 5,
+  "204": 14,
+  "205": 7,
+  "206": 2,
+  "207": 9,
+  "208": 13,
+  "209": 4,
+  "210": 3,
+  "211": 18,
+  "212": 5,
+  "213": 4,
+  "215": 10,
+  "216": 5,
+  "217": 5,
+  "218": 2,
+  "219": 1,
+  "220": 5,
+  "221": 6,
+  "222": 30,
+  "223": 87,
+  "224": 9,
+  "225": 59,
+  "226": 35,
+  "227": 52,
+  "228": 23,
+  "229": 8,
+  "230": 21,
+  "231": 5,
+  "232": 7,
+  "233": 5,
+  "234": 8,
+  "235": 2,
+  "236": 2,
+  "237": 2,
+  "238": 4,
+  "239": 10,
+  "240": 10,
+  "241": 1,
+  "242": 5,
+  "243": 1,
+  "244": 7,
+  "245": 5,
+  "246": 4,
+  "247": 9,
+  "248": 3,
+  "249": 2,
+  "250": 4,
+  "251": 6,
+  "252": 2,
+  "253": 6,
+  "254": 2,
+  "255": 27
+ },
+ "copy_offset_histogram": {
+  "8": 527,
+  "9": 1542,
+  "10": 2032,
+  "11": 1362,
+  "12": 1004,
+  "13": 769,
+  "14": 664,
+  "15": 427,
+  "16": 333,
+  "17": 474,
+  "18": 158,
+  "19": 36,
+  "20": 162,
+  "21": 157,
+  "22": 222,
+  "23": 38,
+  "24": 174
+ },
+ "copiers_listed": 10081,
+ "copiers_sample": [
+  {
+   "program": "0xa020deb000",
+   "first_step": 253,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa10244c59a",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa114473bb2",
+   "first_step": 106,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa115e92fb2",
+   "first_step": 253,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xa11fd6726b",
+   "first_step": 101,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa124473f8a",
+   "first_step": 83,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa14abb1793",
+   "first_step": 171,
+   "intact": 0,
+   "persists": 0,
+   "offset": 20
+  },
+  {
+   "program": "0xa15afed58f",
+   "first_step": 107,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa17eff552c",
+   "first_step": 190,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa1b2881acf",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa1b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa1b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa1b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa1b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa1b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa1b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa1b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa1b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xa1b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa1b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa1b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa1b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa1b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa1b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa1b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa1b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa1b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa1b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa1b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa1b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa1b36820da",
+   "first_step": 248,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa21c0f11b5",
+   "first_step": 135,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa2200fd48d",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 1,
+   "offset": 17
+  },
+  {
+   "program": "0xa23c860511",
+   "first_step": 137,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa2884dcf92",
+   "first_step": 217,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa2c841f113",
+   "first_step": 221,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa2c841f269",
+   "first_step": 220,
+   "intact": 1,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa3033eb831",
+   "first_step": 243,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa484fe818e",
+   "first_step": 121,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xa488073f8a",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xa4c207f88b",
+   "first_step": 152,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa4c280786c",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c680134c",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c680308c",
+   "first_step": 149,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c680318c",
+   "first_step": 149,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c680334c",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c6803b4c",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c6803f4c",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4c6806f4c",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa4f2885cf7",
+   "first_step": 90,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa4f28bc0f7",
+   "first_step": 90,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa4f3041ef8",
+   "first_step": 89,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa4f37440f7",
+   "first_step": 89,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa533045cf7",
+   "first_step": 204,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa5330ba0f7",
+   "first_step": 203,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa5337820f7",
+   "first_step": 203,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa5500bf88d",
+   "first_step": 141,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa5500f110d",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa5500f208d",
+   "first_step": 71,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa64a8854a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa64a8854ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa64a8ac0a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa64a8ac0ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa64b0454a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa64b0454ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0xa64b0aa0a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa64b0aa0ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0xa64b5440a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa64b5440ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa64b5820a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa64b5820ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0xa651088429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa65108842a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa651180429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa65118042a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa660445089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66044508c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 12
+  },
+  {
+   "program": "0xa6604a2089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa6604a208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 12
+  },
+  {
+   "program": "0xa660888429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66088842a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa661140429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66114042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa66121090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa66121090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa66131a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66131a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa662880429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa66288042a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa662880430",
+   "first_step": 121,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa663040429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66304042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa66501090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa66501090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa66701a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66701a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa668444089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa66844408c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xa668482089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa66848208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa683044431",
+   "first_step": 189,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa68308a028",
+   "first_step": 148,
+   "intact": 0,
+   "persists": 0,
+   "offset": 21
+  },
+  {
+   "program": "0xa683182031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa690184431",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa69018c031",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa691088429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xa69108842a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xa69110c038",
+   "first_step": 196,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa691180429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa69118042a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa6a018a031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 1,
+   "offset": 18
+  },
+  {
+   "program": "0xa6a0888429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa6a088842a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xa6a110a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa6a110a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa6a1140429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa6a114042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xa6a2880429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xa6a288042a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xa6a300a008",
+   "first_step": 147,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xa6a300a00a",
+   "first_step": 67,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa6a300a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa6a300a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xa6a3040429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa6a304042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xa80b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa84b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa88b14955a",
+   "first_step": 121,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa8cb14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa8dca1f9b3",
+   "first_step": 148,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa90b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa9124f268d",
+   "first_step": 105,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9124f3689",
+   "first_step": 103,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9124f514d",
+   "first_step": 104,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9124f51aa",
+   "first_step": 103,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f21b4",
+   "first_step": 65,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f268d",
+   "first_step": 59,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f3514",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f3689",
+   "first_step": 69,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f514d",
+   "first_step": 58,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa91c4f51aa",
+   "first_step": 63,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9344f2e8d",
+   "first_step": 197,
+   "intact": 1,
+   "persists": 1,
+   "offset": 22
+  },
+  {
+   "program": "0xa94b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa94b273f8a",
+   "first_step": 78,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xa94bcf516c",
+   "first_step": 213,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xa95498ad9a",
+   "first_step": 179,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa95498ad9b",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa98b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa98df434d6",
+   "first_step": 113,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa98df69916",
+   "first_step": 114,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa98df69ac9",
+   "first_step": 114,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xa9b2881acf",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa9b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa9b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa9b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa9b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa9b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa9b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xa9b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa9b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa9b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa9b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xa9b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xa9b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xa9b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xa9b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xa9b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xa9b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xa9cb14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaa0b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaa11d68511",
+   "first_step": 135,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xaa4b14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaacb14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaad7e83400",
+   "first_step": 54,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xab4bcf516c",
+   "first_step": 220,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xab75e108b2",
+   "first_step": 118,
+   "intact": 0,
+   "persists": 0,
+   "offset": 21
+  },
+  {
+   "program": "0xab81f2a1d6",
+   "first_step": 115,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xab81f2b916",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xab81f2bac9",
+   "first_step": 119,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xab81f415d6",
+   "first_step": 110,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xabcb14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xac00343400",
+   "first_step": 129,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xac00343401",
+   "first_step": 123,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0xac0036b400",
+   "first_step": 129,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xac0036b401",
+   "first_step": 123,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0xacc0f7f8ab",
+   "first_step": 109,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xad00ff38ac",
+   "first_step": 151,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xad0b5479a4",
+   "first_step": 155,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xad100f110d",
+   "first_step": 70,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xad100f208d",
+   "first_step": 71,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xad328b9e17",
+   "first_step": 85,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0xad33741e17",
+   "first_step": 84,
+   "intact": 0,
+   "persists": 0,
+   "offset": 23
+  },
+  {
+   "program": "0xad73045cf7",
+   "first_step": 199,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xad730ba0f7",
+   "first_step": 198,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xad737820f7",
+   "first_step": 198,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xae2ef10b52",
+   "first_step": 239,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xae4a8854a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae4a8854ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xae4a8ac0a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae4a8ac0ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xae4b0454a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae4b0454ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xae4b0aa0a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae4b0aa0ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xae4b5440a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae4b5440ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xae4b5820a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae4b5820ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xae51088429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae5108842a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae51180429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae5118042a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae60445089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6044508c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 12
+  },
+  {
+   "program": "0xae604a2089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae604a208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xae60888429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6088842a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae61140429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6114042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae6121090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae6121090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xae6131a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6131a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae62880429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae6288042a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae63040429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6304042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae6501090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae6501090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xae6701a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6701a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xae68444089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae6844408c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xae68482089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xae6848208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xae83044431",
+   "first_step": 189,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xae8308a028",
+   "first_step": 148,
+   "intact": 0,
+   "persists": 0,
+   "offset": 21
+  },
+  {
+   "program": "0xae83182031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xae90184431",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xae9018c031",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xae91088429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xae9108842a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xae9110c038",
+   "first_step": 196,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xae91180429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xae9118042a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xaea018a031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 1,
+   "offset": 18
+  },
+  {
+   "program": "0xaea0888429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xaea088842a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xaea110a008",
+   "first_step": 147,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xaea110a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaea110a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xaea1140429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xaea114042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xaea280c038",
+   "first_step": 195,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xaea2880429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xaea288042a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xaea300a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xaea300a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xaea3040429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xaea304042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xafcb14955a",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb012df9a8c",
+   "first_step": 114,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb01cef9994",
+   "first_step": 118,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb01effb286",
+   "first_step": 111,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb01effd0cc",
+   "first_step": 117,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb09cf88441",
+   "first_step": 225,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb18d14995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1930aa0c9",
+   "first_step": 62,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb19714995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb19f14995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a086bcc9",
+   "first_step": 60,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb1a264995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a293195b",
+   "first_step": 110,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a2932d5b",
+   "first_step": 113,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a2b4995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a2e4995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a2f4995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1a3d4995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1abf3558d",
+   "first_step": 207,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xb1b26442cf",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb1b2645a0f",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb1b2685916",
+   "first_step": 155,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb1b26b220f",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xb1b26b4116",
+   "first_step": 155,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb1b2881acf",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb1b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb1b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb1b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb1b3041ad8",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xb1b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb1b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb1b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb1b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb1b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb1b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb1b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb1b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb1b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb1b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb1b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb1b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb1b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb1b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb1b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb1b36820da",
+   "first_step": 238,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xb1bbf3558d",
+   "first_step": 205,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xb1bd14995a",
+   "first_step": 133,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb1e9675ec7",
+   "first_step": 253,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xb201f454ae",
+   "first_step": 78,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb201faa0ae",
+   "first_step": 71,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb250870531",
+   "first_step": 129,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb251f70200",
+   "first_step": 115,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb25c870531",
+   "first_step": 129,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb27c870531",
+   "first_step": 128,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb27ee48200",
+   "first_step": 106,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb2be174000",
+   "first_step": 71,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb2fee0414b",
+   "first_step": 66,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb3c08fd4ae",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c0afd4ae",
+   "first_step": 135,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c0bfd4ae",
+   "first_step": 178,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c0cfd4ae",
+   "first_step": 190,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c0ffd4ae",
+   "first_step": 175,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c14fd4ae",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c18fd4ae",
+   "first_step": 178,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c19fd4ae",
+   "first_step": 178,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1bfd4ae",
+   "first_step": 175,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1cfd4ae",
+   "first_step": 175,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1dfd4ae",
+   "first_step": 175,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1efd4ae",
+   "first_step": 175,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa942e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa944e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa946e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa948e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa94ae",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa94ce",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa94ee",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa950e",
+   "first_step": 215,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa952e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa956e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa958e",
+   "first_step": 209,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa95ee",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fa974e",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1faa0ae",
+   "first_step": 215,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1faa8ae",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fab0ae",
+   "first_step": 209,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fab4ae",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1fabcae",
+   "first_step": 207,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1faecae",
+   "first_step": 211,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3c1ffd4ae",
+   "first_step": 190,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3d00fd08e",
+   "first_step": 190,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3d40fd08e",
+   "first_step": 138,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3d60fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3da0fd08e",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3dc0fd08e",
+   "first_step": 200,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3de0fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3f00fd08e",
+   "first_step": 187,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3f20fd08e",
+   "first_step": 187,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3f60fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3f80fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3fa0fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3fc0fd08e",
+   "first_step": 184,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3fe0fd08e",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3fe297d6e",
+   "first_step": 172,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3fea0c7ee",
+   "first_step": 168,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb3ff21036e",
+   "first_step": 208,
+   "intact": 0,
+   "persists": 1,
+   "offset": 16
+  },
+  {
+   "program": "0xb43e283800",
+   "first_step": 80,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb43f013800",
+   "first_step": 87,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb5beb83800",
+   "first_step": 194,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb5bf063800",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb5bf073000",
+   "first_step": 193,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb64a8854a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb64a8854ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0xb64a8ac0a9",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb64a8ac0ad",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0xb64b0454a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb64b0454ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xb64b0aa0a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb64b0aa0ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xb64b5440a9",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb64b5440ad",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 14
+  },
+  {
+   "program": "0xb64b5820a9",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb64b5820ad",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 1,
+   "offset": 13
+  },
+  {
+   "program": "0xb651088429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb65108842a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb651180429",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb65118042a",
+   "first_step": 48,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb660445089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66044508c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 1,
+   "offset": 12
+  },
+  {
+   "program": "0xb6604a2089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb6604a208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb660888429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66088842a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb661140429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66114042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb66121090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb66121090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb66131a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66131a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb662880429",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb66288042a",
+   "first_step": 47,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb663040429",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66304042a",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb66501090a",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb66501090b",
+   "first_step": 50,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb66701a069",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66701a06b",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb668444089",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb66844408c",
+   "first_step": 46,
+   "intact": 0,
+   "persists": 0,
+   "offset": 13
+  },
+  {
+   "program": "0xb668482089",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb66848208c",
+   "first_step": 45,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb683044431",
+   "first_step": 189,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xb68308a028",
+   "first_step": 148,
+   "intact": 0,
+   "persists": 0,
+   "offset": 21
+  },
+  {
+   "program": "0xb683182031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xb690184431",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xb69018c031",
+   "first_step": 186,
+   "intact": 0,
+   "persists": 0,
+   "offset": 17
+  },
+  {
+   "program": "0xb691088429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb69108842a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xb691180429",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb69118042a",
+   "first_step": 41,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xb6a018a031",
+   "first_step": 188,
+   "intact": 0,
+   "persists": 1,
+   "offset": 18
+  },
+  {
+   "program": "0xb6a0888429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xb6a088842a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb6a110a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb6a110a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb6a1140429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 9
+  },
+  {
+   "program": "0xb6a114042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb6a2880429",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb6a288042a",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xb6a300a029",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb6a300a02b",
+   "first_step": 43,
+   "intact": 0,
+   "persists": 0,
+   "offset": 12
+  },
+  {
+   "program": "0xb6a3040429",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb6a304042a",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb6be583800",
+   "first_step": 234,
+   "intact": 0,
+   "persists": 1,
+   "offset": 20
+  },
+  {
+   "program": "0xb6bf02b800",
+   "first_step": 234,
+   "intact": 0,
+   "persists": 1,
+   "offset": 20
+  },
+  {
+   "program": "0xb8728bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb8b28bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb8f28bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb9328bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb9728bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 1,
+   "offset": 10
+  },
+  {
+   "program": "0xb97303a2ef",
+   "first_step": 236,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb9b2881acf",
+   "first_step": 165,
+   "intact": 0,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xb9b28858c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b28858c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb9b28858ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb9b28b40c7",
+   "first_step": 160,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b28b40c9",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb9b28b40ce",
+   "first_step": 40,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb9b28bc0e9",
+   "first_step": 120,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb9b3041ad8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 0,
+   "offset": 24
+  },
+  {
+   "program": "0xb9b30458c8",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b30458c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb9b30458ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb9b30458d6",
+   "first_step": 164,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb9b30b190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 1,
+   "offset": 11
+  },
+  {
+   "program": "0xb9b30b190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb9b30b20c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b30b20c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb9b30b20ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb9b30b20d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb9b36440c7",
+   "first_step": 159,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b36440c9",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 10
+  },
+  {
+   "program": "0xb9b36440ce",
+   "first_step": 39,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb9b368190a",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 11
+  },
+  {
+   "program": "0xb9b368190e",
+   "first_step": 42,
+   "intact": 0,
+   "persists": 0,
+   "offset": 15
+  },
+  {
+   "program": "0xb9b36820c8",
+   "first_step": 158,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9b36820c9",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 9
+  },
+  {
+   "program": "0xb9b36820ce",
+   "first_step": 38,
+   "intact": 0,
+   "persists": 0,
+   "offset": 14
+  },
+  {
+   "program": "0xb9b36820d6",
+   "first_step": 163,
+   "intact": 0,
+   "persists": 0,
+   "offset": 22
+  },
+  {
+   "program": "0xb9c38b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9c58b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9c78b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9c98b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9cb8b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9cd8b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9cf6722e8",
+   "first_step": 72,
+   "intact": 0,
+   "persists": 0,
+   "offset": 8
+  },
+  {
+   "program": "0xb9cf8a9db7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9cf8b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  },
+  {
+   "program": "0xb9d18b1dd7",
+   "first_step": 167,
+   "intact": 0,
+   "persists": 1,
+   "offset": 8
+  }
+ ],
+ "intact_copiers_sample": [
+  {
+   "program": "0xa2c841f269",
+   "first_step": 220,
+   "persists": 0,
+   "offset": 16
+  },
+  {
+   "program": "0xa9344f2e8d",
+   "first_step": 197,
+   "persists": 1,
+   "offset": 22
+  },
+  {
+   "program": "0xd9b17359e8",
+   "first_step": 196,
+   "persists": 1,
+   "offset": 21
+  }
+ ],
+ "wall_seconds": 6044.962455749512,
+ "programs_per_second": 181888909.29011935,
+ "gpus": [
+  0,
+  1,
+  2
+ ],
+ "engine": "gpu/u1_l2"
+}
