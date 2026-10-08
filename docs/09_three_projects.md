@@ -105,7 +105,10 @@ Across the three projects, the experiments that would change what we know, in or
 8. **Neural experiments on Universe-1 data** (transfer of the NANO adder result): a transformer that writes 32-bit programs for a
    given truth table at a given step, trained on the every-step witnesses; the function-at-step library is the largest exact
    supervised set any of the projects has produced (267 M champion, 876 M JC).
-9. **Universe-7 toward 48 bits**: beyond 2^22 the screen hash needs the same chunked GPU enumeration as NANO; the law-search
+9. **exp11, the Avida replicator enumeration on this cluster** (`docs/10_avida_comparison.md`): a GPU interpreter of Avida's
+   26-instruction heads set, validated by reproducing the published 914 length-8 replicators and the empty length-7 space, then
+   lengths 9 and 10, which Avida never enumerated; replicator density per genome bit for a machine built for copying versus ours.
+10. **Universe-7 toward 48 bits**: beyond 2^22 the screen hash needs the same chunked GPU enumeration as NANO; the law-search
    method could also be applied to Universe-1 (choose the ISA to maximise distinct functions, which exp05 did by hand).
 
 Status of the running jobs at the time of writing: Universe-1 champion binary every-step map 12 of 13 passes merged
