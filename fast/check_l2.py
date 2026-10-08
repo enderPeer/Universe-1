@@ -24,7 +24,7 @@ for prog in range(lo, hi):
     S = m.stats(prog)
     final[S['final']] += 1; best[S['best']] += 1; fmin[S['final']] = min(fmin.get(S['final'], prog), prog); bmin[S['best']] = min(bmin.get(S['best'], prog), prog)
     ever += S['ever_mod']; fmod += S['final_mod']; walkers += S['walker']
-    if S['best'] == nins:
+    if S['copier']:
         cop_ever += 1; first[S['first_full']] += 1; cop_final += S['final'] == nins
         if S['intact']: cop_intact += 1; imin = prog if imin is None else min(imin, prog)
 assert set(gpu) == set(ref), f'key sets differ: {len(gpu)} vs {len(ref)}'

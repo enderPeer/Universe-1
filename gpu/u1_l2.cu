@@ -119,9 +119,10 @@ __global__ void sweep(ull lo, ull count, ull *keys, ull *his, unsigned *progs, u
   unsigned char tbl[16]; Stats S;
   for (int x = 0; x < C.nin; x++) tbl[x] = run(pb, x, 0, 0, nullptr);
   run(pb, 0, 0, 0, &S);
+  int nz = 0; for (int k = 0; k < C.nins; k++) nz += ((pb >> (k * C.I)) & ((1u << C.I) - 1)) != 0;   // NANO rule: a copier needs at least 2 nonzero code words
   atomicAdd(&cnt[S.final], 1u); atomicMin(&cmin[S.final], prog); atomicAdd(&cnt[16 + S.best], 1u); atomicMin(&cmin[16 + S.best], prog);
   if (S.ever_mod) atomicAdd(&cnt[32], 1u); if (S.final_mod) atomicAdd(&cnt[33], 1u); if (S.walker_writes >= 4) atomicAdd(&cnt[34], 1u);
-  if (S.best == C.nins) {
+  if (S.best == C.nins && nz >= 2) {
     atomicAdd(&cnt[35], 1u); atomicAdd(&cnt[64 + S.first_full], 1u);
     if (S.final == C.nins) atomicAdd(&cnt[36], 1u);
     if (S.intact) { atomicAdd(&cnt[37], 1u); atomicMin(&cmin[32], prog); }

@@ -113,9 +113,77 @@ class MachineL2:
             elif name == 'STIND': wr(rd(op), A)
             else: raise ValueError(name)
         if stats:
-            S['final'] = score(); S['final_mod'] = int(M[:n] != code); S['walker'] = int(S['walker_writes'] >= 4)
+            S['final'] = score(); S['final_mod'] = int(M[:n] != code); S['walker'] = int(S['walker_writes'] >= 4); S['nonzero'] = sum(c != 0 for c in code)
+            S['copier'] = int(S['best'] == n and S['nonzero'] >= 2)   # NANO rule: at least 2 nonzero code words
             return st, steps, reason, S
         return st, steps, reason
+
+    def trace(self, program: int, init_A: int = 0, max_steps: int = MAX_STEPS):
+        """Per-step snapshots for visualisation: list of (PC before the step, A before the step, memory after the step)."""
+        snaps = []; orig = self.run
+        cfg = self.cfg; mask, amask, pmask, W = cfg.mask, cfg.amask, cfg.pmask, cfg.W; n = 1 << cfg.p
+        st = StateL2(A=init_A & mask, M=self.load(program)); st.Z = int(st.A == 0); M = st.M
+        for t in range(max_steps):
+            pc0, a0 = st.PC, st.A
+            ins = M[st.PC & pmask]; opc = ins >> (cfg.I - self.o); op = ins & self.opmask; name = self.isa[opc]
+            # re-use run() semantics by stepping a one-step machine: simplest is to run the full step logic via a nested call
+            nxt = self._step(st, name, op)
+            snaps.append((pc0, a0, list(M), name, op))
+            if nxt == 'halt': break
+        return snaps
+
+    def _step(self, st, name, op):
+        cfg = self.cfg; mask, amask, pmask, W = cfg.mask, cfg.amask, cfg.pmask, cfg.W; M = st.M
+        def rd(addr): return M[addr & amask]
+        def wr(addr, v): M[addr & amask] = v & mask
+        def setA(v, carry=None):
+            st.A = v & mask; st.Z = int(st.A == 0)
+            if carry is not None: st.C = int(carry)
+        st.PC = (st.PC + 1) & pmask; A = st.A
+        if name == 'NOP': pass
+        elif name == 'HALT': st.H = 1; return 'halt'
+        elif name == 'LD': setA(rd(op))
+        elif name == 'ST': wr(op, A)
+        elif name == 'LDI': setA(op)
+        elif name == 'CLR': setA(0)
+        elif name == 'SET': setA(mask)
+        elif name == 'NOT': setA(~A)
+        elif name == 'AND': setA(A & rd(op))
+        elif name == 'OR': setA(A | rd(op))
+        elif name == 'XOR': setA(A ^ rd(op))
+        elif name == 'NAND': setA(~(A & rd(op)))
+        elif name == 'NOR': setA(~(A | rd(op)))
+        elif name == 'XNOR': setA(~(A ^ rd(op)))
+        elif name == 'ADD': v = A + rd(op); setA(v, v > mask)
+        elif name == 'ADC': v = A + rd(op) + st.C; setA(v, v > mask)
+        elif name == 'SUB': v = A - rd(op); setA(v, v < 0)
+        elif name == 'INC': v = A + 1; setA(v, v > mask)
+        elif name == 'DEC': v = A - 1; setA(v, v < 0)
+        elif name == 'NEG': setA(-A, A != 0)
+        elif name == 'SHL': setA(A << 1, (A >> (W - 1)) & 1)
+        elif name == 'SHR': setA(A >> 1, A & 1)
+        elif name == 'ROL': setA((A << 1) | (A >> (W - 1)))
+        elif name == 'ROR': setA((A >> 1) | ((A & 1) << (W - 1)))
+        elif name == 'RCL': setA((A << 1) | st.C, (A >> (W - 1)) & 1)
+        elif name == 'MUL': setA(A * rd(op))
+        elif name == 'SWAP': tt = rd(op); wr(op, A); setA(tt)
+        elif name == 'JMP': st.PC = op & pmask
+        elif name == 'JZ':
+            if st.Z: st.PC = op & pmask
+        elif name == 'JNZ':
+            if not st.Z: st.PC = op & pmask
+        elif name == 'JC':
+            if st.C: st.PC = op & pmask
+        elif name == 'SKZ':
+            if st.Z: st.PC = (st.PC + 1) & pmask
+        elif name == 'SKNZ':
+            if not st.Z: st.PC = (st.PC + 1) & pmask
+        elif name == 'INCM': wr(op, rd(op) + 1)
+        elif name == 'DECM': wr(op, rd(op) - 1)
+        elif name == 'LDIND': setA(rd(rd(op)))
+        elif name == 'STIND': wr(rd(op), A)
+        else: raise ValueError(name)
+        return 'ok'
 
     def table_unary(self, program: int, max_steps: int = MAX_STEPS) -> Tuple[int, ...]:
         return tuple(self.run(program, init_A=x, max_steps=max_steps)[0].A for x in range(1 << self.cfg.W))
