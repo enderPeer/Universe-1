@@ -28,7 +28,7 @@ __constant__ Cfg C;
 __constant__ unsigned char ISA[256];
 #define MAX_STEPS 512     // exp10: the clock runs to 512; T-hi selects how far a pass simulates
 #define MAXM 16
-#define MAXTBL 1024      // checkpoints x table entries held per thread (64 x 16 unary, 4 x 256 binary)
+#define MAXTBL 4096      // checkpoints x table entries held per thread (64 x 16 unary, 16 x 256 binary)
 #define EMPTY 0xFFFFFFFFFFFFFFFFull
 
 __device__ __forceinline__ ull mix(ull x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdULL; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ULL; x ^= x >> 33; return x; }
