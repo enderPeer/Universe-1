@@ -98,5 +98,15 @@
     "source_commit": "78f28bf+ppm",
     "wall_seconds": 493.5,
     "note": "run directly on adler40 GPU 0 with frames every 100 ticks for the video"
+  },
+  "jc_s2": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4080",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,JC --N 1024 --seed 2 --ticks 200000 --report-every 1000 --income 20",
+    "source_commit": "acf7e16",
+    "wall_seconds": 531.0,
+    "note": "first run as the world-model cross-world test set (dump-every 1000); rerun with frames for the video"
   }
 }

@@ -3,6 +3,8 @@
 //        --a 2 --p 3 --I 4 --income 20 --trigger 15 --repro-cost 128 --max-energy 255 --mu-bits 128 --max-age 1024
 //        --death-rate 512 --start-energy 64 --out-dir dir --dump-final --load dump.bin --ppm-every 0]
 // --ppm-every k writes out-dir/t%08llu.ppm every k ticks (same files as the CPU reference), e.g. for a video.
+// --dump-every k writes out-dir/d%08llu.bin (final.bin format: genome[] then meta[]) at ticks t and t+1 for every t % k == 0,
+// i.e. consecutive grid pairs for learning the world rule.
 // Build: nvcc -O3 -arch=native -o u1life_cuda u1life.cu ; emulation: g++ -O2 -x c++ -include ../gpu/cuda_shim.h -o u1life_emu u1life.cu
 #include <cstdio>
 #include <cstdlib>
@@ -117,7 +119,7 @@ static void write_ppm(const std::string &path, const std::vector<unsigned> &g, c
 
 int main(int argc, char **argv) {
   Cfg c; memset(&c, 0, sizeof c); c.W = 4; c.a = 2; c.p = 3; c.I = 4; Par pr; pr.n = 256; pr.income = 20; pr.trigger = 15; pr.repro_cost = 128; pr.max_energy = 255; pr.max_age = 1024; pr.start_energy = 64; pr.seed = 1; pr.mu_bits = 128; pr.death_rate = 512;
-  double density = 0.05; ull ticks = 10000, report = 100; const char *isa_s = "SWAP,ADD,NAND,SKZ"; std::string out_dir = "."; const char *load = nullptr; int gpu = 0, dump_final = 0; ull ppm_every = 0;
+  double density = 0.05; ull ticks = 10000, report = 100; const char *isa_s = "SWAP,ADD,NAND,SKZ"; std::string out_dir = "."; const char *load = nullptr; int gpu = 0, dump_final = 0; ull ppm_every = 0, dump_every = 0;
   for (int i = 1; i < argc; i++) {
     #define ARG(nm) (!strcmp(argv[i], nm) && i + 1 < argc)
     if (ARG("--gpu")) gpu = atoi(argv[++i]); else if (ARG("--N")) pr.n = atoi(argv[++i]); else if (ARG("--seed")) pr.seed = strtoull(argv[++i], 0, 0);
@@ -126,7 +128,7 @@ int main(int argc, char **argv) {
     else if (ARG("--income")) pr.income = atoi(argv[++i]); else if (ARG("--trigger")) pr.trigger = atoi(argv[++i]); else if (ARG("--repro-cost")) pr.repro_cost = atoi(argv[++i]);
     else if (ARG("--max-energy")) pr.max_energy = atoi(argv[++i]); else if (ARG("--mu-bits")) pr.mu_bits = strtoull(argv[++i], 0, 0); else if (ARG("--max-age")) pr.max_age = atoi(argv[++i]);
     else if (ARG("--death-rate")) pr.death_rate = strtoull(argv[++i], 0, 0); else if (ARG("--start-energy")) pr.start_energy = atoi(argv[++i]); else if (ARG("--out-dir")) out_dir = argv[++i];
-    else if (ARG("--ppm-every")) ppm_every = strtoull(argv[++i], 0, 0); else if (ARG("--load")) load = argv[++i]; else if (!strcmp(argv[i], "--dump-final")) dump_final = 1; else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
+    else if (ARG("--ppm-every")) ppm_every = strtoull(argv[++i], 0, 0); else if (ARG("--dump-every")) dump_every = strtoull(argv[++i], 0, 0); else if (ARG("--load")) load = argv[++i]; else if (!strcmp(argv[i], "--dump-final")) dump_final = 1; else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
   unsigned char isa[256]; int nisa = 0; char buf[1024]; strncpy(buf, isa_s, 1023); buf[1023] = 0;
   for (char *t = strtok(buf, ","); t; t = strtok(nullptr, ",")) { int id = -1; for (int k = 0; k < P_COUNT; k++) if (!strcmp(t, PNAME[k])) id = k; if (id < 0) { fprintf(stderr, "unknown primitive %s\n", t); return 2; } isa[nisa++] = id; }
@@ -152,7 +154,9 @@ int main(int argc, char **argv) {
   auto t0 = std::chrono::steady_clock::now(); ull births = 0, deaths = 0;
   for (ull t = 0; t <= ticks; t++) {
     bool do_report = t % report == 0 || t == ticks, do_ppm = ppm_every && t % ppm_every == 0 && t != ticks;
-    if (do_report || do_ppm) { cudaMemcpy(g.data(), d_g, nn * 4, cudaMemcpyDeviceToHost); cudaMemcpy(m.data(), d_m, nn * 4, cudaMemcpyDeviceToHost); }
+    bool do_dump = dump_every && (t % dump_every == 0 || (t > 0 && (t - 1) % dump_every == 0));
+    if (do_report || do_ppm || do_dump) { cudaMemcpy(g.data(), d_g, nn * 4, cudaMemcpyDeviceToHost); cudaMemcpy(m.data(), d_m, nn * 4, cudaMemcpyDeviceToHost); }
+    if (do_dump) { char nm[32]; snprintf(nm, sizeof nm, "/d%08llu.bin", t); FILE *f = fopen((out_dir + nm).c_str(), "wb"); if (!f) { perror(nm); return 1; } fwrite(g.data(), 4, nn, f); fwrite(m.data(), 4, nn, f); fclose(f); }
     if (do_ppm) { char nm[32]; snprintf(nm, sizeof nm, "/t%08llu.ppm", t); write_ppm(out_dir + nm, g, m, pr.n); }
     if (do_report) {
       ull alive = 0; double es = 0; std::vector<unsigned> gs; for (ull i = 0; i < nn; i++) if (alv(m[i])) { alive++; es += m[i] >> 16; gs.push_back(g[i]); }

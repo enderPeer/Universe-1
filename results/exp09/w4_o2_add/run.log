@@ -1,0 +1,47 @@
+2026-10-08T10:48:48 exp09 w4_o2_add isa=SWAP,ADD,NAND,SKZ chunks=64 x 2^26, passes=[(1, 64), (65, 128), (129, 192), (193, 256)], gpus=[0, 1, 2]
+2026-10-08T10:49:08 pass T=[1,64]: 8/64 chunks (20s) last: 469762048,536870912) T=[1,64] records=3167197 4.94s (13.6 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:49:27 pass T=[1,64]: 16/64 chunks (39s) last: 06632960,1073741824) T=[1,64] records=3167197 4.93s (13.6 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:49:41 pass T=[1,64]: 24/64 chunks (53s) last: 43503872,1610612736) T=[1,64] records=3049750 4.75s (14.1 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:50:00 pass T=[1,64]: 32/64 chunks (71s) last: 80374784,2147483648) T=[1,64] records=3049750 4.81s (14.0 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:50:18 pass T=[1,64]: 40/64 chunks (89s) last: 17245696,2684354560) T=[1,64] records=2441739 4.68s (14.3 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:50:33 pass T=[1,64]: 48/64 chunks (105s) last: 54116608,3221225472) T=[1,64] records=2441739 4.76s (14.1 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:50:51 pass T=[1,64]: 56/64 chunks (122s) last: 690987520,3758096384) T=[1,64] records=933833 4.56s (14.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:51:06 pass T=[1,64]: 64/64 chunks (137s) last: 227858432,4294967296) T=[1,64] records=933833 4.47s (15.0 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:52:55 pass T=[1,64] done: sweep 137s, merge 109s, 59,262,041 records
+2026-10-08T10:53:21 pass T=[65,128]: 8/64 chunks (26s) last: 69762048,536870912) T=[65,128] records=6318767 6.89s (9.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:53:46 pass T=[65,128]: 16/64 chunks (52s) last: 6632960,1073741824) T=[65,128] records=6318767 6.94s (9.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:54:07 pass T=[65,128]: 24/64 chunks (72s) last: 3503872,1610612736) T=[65,128] records=5384475 7.10s (9.5 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:54:30 pass T=[65,128]: 32/64 chunks (96s) last: 0374784,2147483648) T=[65,128] records=5384475 6.95s (9.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:54:50 pass T=[65,128]: 40/64 chunks (115s) last: 136832,2617245696) T=[65,128] records=6431454 6.64s (10.1 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:55:14 pass T=[65,128]: 48/64 chunks (139s) last: 116608,3221225472) T=[65,128] records=4409628 6.33s (10.6 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:55:37 pass T=[65,128]: 56/64 chunks (162s) last: 987520,3758096384) T=[65,128] records=1578225 6.48s (10.4 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:55:57 pass T=[65,128]: 64/64 chunks (182s) last: 858432,4294967296) T=[65,128] records=1578225 6.66s (10.1 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T10:59:21 pass T=[65,128] done: sweep 182s, merge 204s, 124,025,950 records
+2026-10-08T10:59:56 pass T=[129,192]: 8/64 chunks (35s) last: 9762048,536870912) T=[129,192] records=6525764 9.97s (6.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:00:31 pass T=[129,192]: 16/64 chunks (69s) last: 32960,1073741824) T=[129,192] records=6525764 10.01s (6.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:00:58 pass T=[129,192]: 24/64 chunks (97s) last: 03872,1610612736) T=[129,192] records=5499875 10.07s (6.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:01:28 pass T=[129,192]: 32/64 chunks (127s) last: 374784,2147483648) T=[129,192] records=5499875 9.84s (6.8 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:01:55 pass T=[129,192]: 40/64 chunks (154s) last: 245696,2684354560) T=[129,192] records=4396694 9.01s (7.4 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:02:27 pass T=[129,192]: 48/64 chunks (186s) last: 116608,3221225472) T=[129,192] records=4396694 9.02s (7.4 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:02:56 pass T=[129,192]: 56/64 chunks (215s) last: 987520,3758096384) T=[129,192] records=1613684 9.13s (7.4 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:03:24 pass T=[129,192]: 64/64 chunks (243s) last: 858432,4294967296) T=[129,192] records=1613684 9.36s (7.2 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:06:44 pass T=[129,192] done: sweep 243s, merge 200s, 126,085,553 records
+2026-10-08T11:07:28 pass T=[193,256]: 8/64 chunks (44s) last: 762048,536870912) T=[193,256] records=6607656 13.11s (5.1 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:08:11 pass T=[193,256]: 16/64 chunks (87s) last: 41824,1140850688) T=[193,256] records=3133539 12.33s (5.4 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:08:44 pass T=[193,256]: 24/64 chunks (121s) last: 03872,1610612736) T=[193,256] records=5543022 13.03s (5.2 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:09:23 pass T=[193,256]: 32/64 chunks (159s) last: 74784,2147483648) T=[193,256] records=5543022 12.83s (5.2 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:09:58 pass T=[193,256]: 40/64 chunks (195s) last: 45696,2684354560) T=[193,256] records=4415612 11.77s (5.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:10:37 pass T=[193,256]: 48/64 chunks (234s) last: 16608,3221225472) T=[193,256] records=4415612 11.81s (5.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:11:13 pass T=[193,256]: 56/64 chunks (269s) last: 87520,3758096384) T=[193,256] records=1620626 11.84s (5.7 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:11:47 pass T=[193,256]: 64/64 chunks (303s) last: 58432,4294967296) T=[193,256] records=1620626 12.05s (5.6 Mprog/s) NVIDIA GeForce RTX 3060
+2026-10-08T11:15:05 pass T=[193,256] done: sweep 303s, merge 198s, 126,704,351 records
+2026-10-08T11:15:05 building the union over all T
+2026-10-08T11:15:06 union after T=32: 3,915,365 functions
+2026-10-08T11:15:19 union after T=64: 22,345,905 functions
+2026-10-08T11:15:40 union after T=96: 44,400,745 functions
+2026-10-08T11:16:17 union after T=128: 65,911,085 functions
+2026-10-08T11:17:04 union after T=160: 86,254,824 functions
+2026-10-08T11:17:59 union after T=192: 105,773,092 functions
+2026-10-08T11:19:00 union after T=224: 124,386,082 functions
+2026-10-08T11:20:07 union after T=256: 142,263,973 functions
+2026-10-08T11:20:10 done: union 142,263,973 functions; summary in /home/ender/universe-1/results/exp09/w4_o2_add

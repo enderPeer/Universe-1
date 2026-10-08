@@ -18,6 +18,7 @@ this report: `cluster/analyze_life.py`. Phenotypes below use the Python referenc
 | swap_mu512 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 512 | 128 | 8 | falke64 R9700 #0 | 996 | 201 | 211 | 884,981 (84.4%) | 791,731 | no |
 | swap_rc64 | SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT | 1 | 128 | 64 | 8 | falke64 R9700 #1 | 444 | 451 | 473 | 1,046,089 (99.8%) | 1,043,366 | no |
 | jc_s1 | SWAP,ADD,NAND,JC | 1 | 128 | 128 | 20 | adler40 RTX 4090 | 494 | 405 | 425 | 916,979 (87.4%) | 215,352 | no |
+| jc_s2 | SWAP,ADD,NAND,JC | 2 | 128 | 128 | 20 | adler40 RTX 4080 | 531 | 377 | 395 | 928,638 (88.6%) | 194,467 | no |
 
 GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall time in RUNS.md adds the copy-back.
 
@@ -35,6 +36,7 @@ GPU seconds are the engine's own `done ... ticks in ...s`; the dispatcher wall t
 | swap_mu512 | 52,579 | 95,433 | 70,997 | 98,961 | 103,858 | 93,516 | 105,374 | 53,784 | 14,657 | 202.4 |
 | swap_rc64 | 52,579 | 324,911 | 183,627 | 92,456 | 74,605 | 62,614 | 324,911 | 61,556 | 44,999 | 198.4 |
 | jc_s1 | 52,579 | 92,695 | 163,068 | 90,733 | 76,158 | 63,826 | 236,784 | 63,826 | 10,029 | 184.8 |
+| jc_s2 | 52,104 | 84,056 | 161,396 | 103,362 | 83,580 | 71,090 | 242,090 | 70,891 | 10,700 | 180.9 |
 
 ![curves](curves.png)
 
@@ -76,6 +78,9 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | jc_s1 | `0x23a492e7` | 10.5% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 3; JC 2; SWAP 2; NAND 1; ADD 0; NAND 2; SWAP 3; SWAP 2` |
 | jc_s1 | `0x023a4927` | 9.4% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 3; SWAP 2; NAND 1; ADD 0; NAND 2; SWAP 3; SWAP 2; SWAP 0` |
 | jc_s1 | `0x45441d28` | 2.9% | 0.28 | 16 | 0.00 | 256 | 16.0 | `NAND 0; SWAP 2; JC 1; SWAP 1; ADD 0; ADD 0; ADD 1; ADD 0` |
+| jc_s2 | `0x32b4936d` | 12.1% | 0.44 | 16 | 0.00 | 256 | 16.0 | `JC 1; ADD 2; SWAP 3; NAND 1; ADD 0; NAND 3; SWAP 2; SWAP 3` |
+| jc_s2 | `0x2a493206` | 5.2% | 0.44 | 16 | 0.00 | 256 | 16.0 | `ADD 2; SWAP 0; SWAP 2; SWAP 3; NAND 1; ADD 0; NAND 2; SWAP 2` |
+| jc_s2 | `0xb6a49273` | 4.0% | 0.41 | 16 | 0.00 | 256 | 16.0 | `SWAP 3; ADD 3; SWAP 2; NAND 1; ADD 0; NAND 2; ADD 2; NAND 3` |
 
 | run | top-3 share | top-N share | distinct phenotypes in top-N | largest phenotype share | cells in state 15 | mean age |
 |---|---:|---:|---:|---:|---:|---:|
@@ -89,6 +94,7 @@ fraction of inputs that reach HALT (the champion ISA has none, so every genome c
 | swap_mu512 | 0.8% | 9.3% | 20 | 2.5% | 5.0% | 190 |
 | swap_rc64 | 0.8% | 15.1% | 4 | 8.9% | 5.4% | 244 |
 | jc_s1 | 22.9% | 50.5% | 41 | 23.4% | 6.6% | 233 |
+| jc_s2 | 21.2% | 48.3% | 42 | 19.4% | 7.6% | 227 |
 
 ![final grids](final_montage.png)
 

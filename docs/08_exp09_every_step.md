@@ -1,5 +1,7 @@
 # exp09: map every step of every program (the time axis of the champion ISA)
 
+**Status 2026-10-08: done for the champion ISA (unary)**, see `results/exp09_summary.md` and `results/exp09_validation.md`: 142,263,973 functions over T = 1..256, 77.8x the step-256 map. Kernel `gpu/u1_multi.cu`, driver `cluster/exp09_node.py`.
+
 ## Why
 A program is a trajectory; the maps so far record only its state at step 256. On a 2 M-program sample,
 reading 32 checkpoints gave 16.5x more distinct functions than step 256 alone (`docs/07`, section 3).
