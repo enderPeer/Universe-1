@@ -1,0 +1,6643 @@
+{
+ "steps_analysed": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92,
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119,
+  120,
+  121,
+  122,
+  123,
+  124,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131,
+  132,
+  133,
+  134,
+  135,
+  136,
+  137,
+  138,
+  139,
+  140,
+  141,
+  142,
+  143,
+  144,
+  145,
+  146,
+  147,
+  148,
+  149,
+  150,
+  151,
+  152,
+  153,
+  154,
+  155,
+  156,
+  157,
+  158,
+  159,
+  160,
+  161,
+  162,
+  163,
+  164,
+  165,
+  166,
+  209,
+  210,
+  211,
+  212,
+  213,
+  214,
+  215,
+  216,
+  217,
+  218,
+  219,
+  220,
+  221,
+  222,
+  223,
+  224,
+  225,
+  226,
+  227,
+  228,
+  229,
+  230,
+  231,
+  232,
+  233,
+  234,
+  235,
+  236,
+  237,
+  238,
+  239,
+  240
+ ],
+ "per_T": {
+  "1": 8,
+  "2": 42,
+  "3": 273,
+  "4": 1973,
+  "5": 15100,
+  "6": 110559,
+  "7": 395713,
+  "8": 604702,
+  "9": 787744,
+  "10": 1259621,
+  "11": 2036386,
+  "12": 3050785,
+  "13": 4208419,
+  "14": 5169738,
+  "15": 5817704,
+  "16": 6078091,
+  "17": 7263465,
+  "18": 8777633,
+  "19": 10518750,
+  "20": 12129711,
+  "21": 13184588,
+  "22": 13636016,
+  "23": 13746239,
+  "24": 13693126,
+  "25": 15846615,
+  "26": 17651055,
+  "27": 19101150,
+  "28": 19765585,
+  "29": 20084080,
+  "30": 19801370,
+  "31": 19378845,
+  "32": 18946132,
+  "33": 21661978,
+  "34": 23106395,
+  "35": 23719700,
+  "36": 24053124,
+  "37": 23870885,
+  "38": 23187806,
+  "39": 22500758,
+  "40": 21807484,
+  "41": 24680145,
+  "42": 25535761,
+  "43": 26124784,
+  "44": 26277256,
+  "45": 25682811,
+  "46": 24849087,
+  "47": 24015334,
+  "48": 23100127,
+  "49": 25530912,
+  "50": 26647162,
+  "51": 27285304,
+  "52": 27092074,
+  "53": 26421950,
+  "54": 25538913,
+  "55": 24594762,
+  "56": 23484781,
+  "57": 26080540,
+  "58": 27158650,
+  "59": 27433893,
+  "60": 26958056,
+  "61": 26297011,
+  "62": 25425769,
+  "63": 24457522,
+  "64": 23495553,
+  "65": 26073210,
+  "66": 26974336,
+  "67": 27158009,
+  "68": 26937303,
+  "69": 26408988,
+  "70": 25508668,
+  "71": 24702363,
+  "72": 23820748,
+  "73": 26317767,
+  "74": 27209487,
+  "75": 27328997,
+  "76": 27150812,
+  "77": 26432951,
+  "78": 25728245,
+  "79": 25040579,
+  "80": 24184126,
+  "81": 26663555,
+  "82": 27383605,
+  "83": 27555678,
+  "84": 27149051,
+  "85": 26633268,
+  "86": 26076718,
+  "87": 25324411,
+  "88": 24369410,
+  "89": 26792678,
+  "90": 27304155,
+  "91": 27342568,
+  "92": 27133088,
+  "93": 26800402,
+  "94": 26221058,
+  "95": 25429738,
+  "96": 24453210,
+  "97": 26584630,
+  "98": 27057502,
+  "99": 27405188,
+  "100": 27384064,
+  "101": 27066817,
+  "102": 26456053,
+  "103": 25629308,
+  "104": 24611287,
+  "105": 26441862,
+  "106": 27262075,
+  "107": 27637111,
+  "108": 27479402,
+  "109": 27111941,
+  "110": 26466086,
+  "111": 25592377,
+  "112": 24362537,
+  "113": 26328720,
+  "114": 27238510,
+  "115": 27447911,
+  "116": 27302902,
+  "117": 26888092,
+  "118": 26196764,
+  "119": 25215884,
+  "120": 24059430,
+  "121": 26263139,
+  "122": 27043858,
+  "123": 27215892,
+  "124": 27049216,
+  "125": 26611146,
+  "126": 25743553,
+  "127": 24883365,
+  "128": 23944331,
+  "129": 26203516,
+  "130": 26916850,
+  "131": 27112171,
+  "132": 26961827,
+  "133": 26395829,
+  "134": 25785694,
+  "135": 25047696,
+  "136": 24214043,
+  "137": 26455911,
+  "138": 27080145,
+  "139": 27274470,
+  "140": 26971451,
+  "141": 26641784,
+  "142": 26135398,
+  "143": 25438968,
+  "144": 24585572,
+  "145": 26729402,
+  "146": 27378325,
+  "147": 27436308,
+  "148": 27360212,
+  "149": 27158630,
+  "150": 26534352,
+  "151": 25845259,
+  "152": 24936415,
+  "153": 27063002,
+  "154": 27485182,
+  "155": 27725131,
+  "156": 27750951,
+  "157": 27369277,
+  "158": 26816920,
+  "159": 26133374,
+  "160": 25120075,
+  "161": 26915159,
+  "162": 27574210,
+  "163": 27959203,
+  "164": 27936894,
+  "165": 27503072,
+  "166": 26976507,
+  "209": 27004815,
+  "210": 27254622,
+  "211": 27588438,
+  "212": 27812734,
+  "213": 27690643,
+  "214": 27159075,
+  "215": 26343763,
+  "216": 25260807,
+  "217": 26879511,
+  "218": 27481407,
+  "219": 27972775,
+  "220": 28058604,
+  "221": 27820828,
+  "222": 27153778,
+  "223": 26236699,
+  "224": 24997242,
+  "225": 26698009,
+  "226": 27526773,
+  "227": 27892218,
+  "228": 27908057,
+  "229": 27636084,
+  "230": 26944343,
+  "231": 25991780,
+  "232": 24809718,
+  "233": 26687151,
+  "234": 27483346,
+  "235": 27800932,
+  "236": 27854390,
+  "237": 27484751,
+  "238": 26653374,
+  "239": 25826698,
+  "240": 24687991
+ },
+ "catalog_tables": 740,
+ "named": [
+  {
+   "names": [
+    "affine_7_12_of_y"
+   ],
+   "expression": "(7*y + 12) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_4_of_y"
+   ],
+   "expression": "(2*y + 4) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_6_of_y"
+   ],
+   "expression": "(4*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_3_of_y"
+   ],
+   "expression": "(11*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_4_of_x"
+   ],
+   "expression": "x AND 4 (ignore y)",
+   "minT": 8,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_6_of_x"
+   ],
+   "expression": "(10*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_3_of_y"
+   ],
+   "expression": "(4*y + 3) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_11_of_y"
+   ],
+   "expression": "y AND 11 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_7_of_x"
+   ],
+   "expression": "(14*x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_2_of_x"
+   ],
+   "expression": "(7*x + 2) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_12_of_y"
+   ],
+   "expression": "y OR 12 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_3_of_y"
+   ],
+   "expression": "y OR 3 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_6_of_x"
+   ],
+   "expression": "x AND 6 (ignore y)",
+   "minT": 8,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_12_of_y"
+   ],
+   "expression": "(15*y + 12) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_13_of_x"
+   ],
+   "expression": "(5*x + 13) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_2_of_y"
+   ],
+   "expression": "1 if y=2 else 0 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_11_of_y"
+   ],
+   "expression": "(14*y + 11) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_10_of_x"
+   ],
+   "expression": "(15*x + 10) mod N (ignore y)",
+   "minT": 10,
+   "nT": 189,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_5_of_x"
+   ],
+   "expression": "x XOR 5 (ignore y)",
+   "minT": 24,
+   "nT": 171,
+   "at_256": false
+  },
+  {
+   "names": [
+    "cube_of_x"
+   ],
+   "expression": "x^3 mod N (ignore y)",
+   "minT": 62,
+   "nT": 4,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_3_of_y"
+   ],
+   "expression": "(12*y + 3) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_0_of_x",
+    "constant_0_of_y",
+    "multiply_0_of_x",
+    "multiply_0_of_y",
+    "and_0_of_x",
+    "and_0_of_y",
+    "less_than_0_of_x",
+    "less_than_0_of_y",
+    "affine_0_0_of_x",
+    "affine_0_0_of_y",
+    "shift_left_4_of_x",
+    "shift_left_4_of_y",
+    "shift_right_4_of_x",
+    "shift_right_4_of_y",
+    "bitwise_boolean_0000"
+   ],
+   "expression": "0 (ignore y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_12_of_y"
+   ],
+   "expression": "(11*y + 12) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_7_of_y"
+   ],
+   "expression": "(12*y + 7) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_7_of_x"
+   ],
+   "expression": "(6*x + 7) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_1_of_y"
+   ],
+   "expression": "(8*y + 1) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_8_of_y"
+   ],
+   "expression": "(3*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_7_of_y",
+    "affine_7_0_of_y"
+   ],
+   "expression": "7*y mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_5_of_x"
+   ],
+   "expression": "(12*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_8_of_y"
+   ],
+   "expression": "(7*y + 8) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_14_of_y"
+   ],
+   "expression": "(4*y + 14) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_13_of_y"
+   ],
+   "expression": "(9*y + 13) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_6_of_y"
+   ],
+   "expression": "(6*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_10_of_y"
+   ],
+   "expression": "y AND 10 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_12_of_x"
+   ],
+   "expression": "(8*x + 12) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_4_of_x"
+   ],
+   "expression": "(15*x + 4) mod N (ignore y)",
+   "minT": 10,
+   "nT": 189,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_15_of_x"
+   ],
+   "expression": "(9*x + 15) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_14_of_x"
+   ],
+   "expression": "x OR 14 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_3_of_y"
+   ],
+   "expression": "y AND 3 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_11_of_x"
+   ],
+   "expression": "(14*x + 11) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_13_of_y"
+   ],
+   "expression": "(14*y + 13) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_14_of_x"
+   ],
+   "expression": "(15*x + 14) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_1_of_x"
+   ],
+   "expression": "(13*x + 1) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_9_of_y"
+   ],
+   "expression": "(3*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_4_of_x"
+   ],
+   "expression": "(8*x + 4) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_7_of_x"
+   ],
+   "expression": "(3*x + 7) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_3_of_x"
+   ],
+   "expression": "(13*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor",
+    "bitwise_boolean_0110"
+   ],
+   "expression": "x XOR y",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_13_of_x"
+   ],
+   "expression": "(4*x + 13) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_13_of_x"
+   ],
+   "expression": "(14*x + 13) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_3_of_x"
+   ],
+   "expression": "(2*x + 3) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_equal_unsigned_mask"
+   ],
+   "expression": "less_equal: unsigned inputs, true=15, false=0",
+   "minT": 226,
+   "nT": 8,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_7_of_x"
+   ],
+   "expression": "(8*x + 7) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_3_of_x"
+   ],
+   "expression": "(9*x + 3) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_11_of_x"
+   ],
+   "expression": "(11*x + 11) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_9_of_x"
+   ],
+   "expression": "x AND 9 (ignore y)",
+   "minT": 12,
+   "nT": 166,
+   "at_256": false
+  },
+  {
+   "names": [
+    "rotate_right_1_of_x",
+    "rotate_left_3_of_x"
+   ],
+   "expression": "rotate W-bit x right by 1 (ignore y)",
+   "minT": 118,
+   "nT": 2,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_4_of_y"
+   ],
+   "expression": "(8*y + 4) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_15_of_y"
+   ],
+   "expression": "(2*y + 15) mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_7_of_x",
+    "affine_7_0_of_x"
+   ],
+   "expression": "7*x mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_7_of_x"
+   ],
+   "expression": "(2*x + 7) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_13_of_x"
+   ],
+   "expression": "1 if x<13 else 0 (unsigned) (ignore y)",
+   "minT": 26,
+   "nT": 78,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_13_of_x"
+   ],
+   "expression": "(8*x + 13) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_10_of_x"
+   ],
+   "expression": "(3*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_5_of_x"
+   ],
+   "expression": "x AND 5 (ignore y)",
+   "minT": 12,
+   "nT": 176,
+   "at_256": false
+  },
+  {
+   "names": [
+    "saturating_subtract"
+   ],
+   "expression": "max(x-y,0)",
+   "minT": 135,
+   "nT": 1,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_6_of_x"
+   ],
+   "expression": "x OR 6 (ignore y)",
+   "minT": 11,
+   "nT": 186,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_14_of_y"
+   ],
+   "expression": "1 if y<14 else 0 (unsigned) (ignore x)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_14_of_x"
+   ],
+   "expression": "(3*x + 14) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_10_of_y"
+   ],
+   "expression": "(8*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_4_of_y"
+   ],
+   "expression": "1 if y<4 else 0 (unsigned) (ignore x)",
+   "minT": 35,
+   "nT": 81,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_2_of_x"
+   ],
+   "expression": "(6*x + 2) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_5_of_y"
+   ],
+   "expression": "(15*y + 5) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_3_of_x"
+   ],
+   "expression": "1 if x=3 else 0 (ignore y)",
+   "minT": 13,
+   "nT": 177,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_5_of_y",
+    "affine_5_0_of_y"
+   ],
+   "expression": "5*y mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_9_of_x"
+   ],
+   "expression": "(3*x + 9) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_8_of_y"
+   ],
+   "expression": "(11*y + 8) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_10_of_y"
+   ],
+   "expression": "(2*y + 10) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_2_of_y"
+   ],
+   "expression": "(13*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_8_of_x",
+    "affine_8_0_of_x",
+    "shift_left_3_of_x"
+   ],
+   "expression": "8*x mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_6_of_y"
+   ],
+   "expression": "(3*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_14_of_y"
+   ],
+   "expression": "(14*y + 14) mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_11_of_y"
+   ],
+   "expression": "(4*y + 11) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_3_of_x"
+   ],
+   "expression": "1 if x<3 else 0 (unsigned) (ignore y)",
+   "minT": 25,
+   "nT": 146,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_5_of_y"
+   ],
+   "expression": "y XOR 5 (ignore x)",
+   "minT": 16,
+   "nT": 183,
+   "at_256": false
+  },
+  {
+   "names": [
+    "rotate_left_1_of_x",
+    "rotate_right_3_of_x"
+   ],
+   "expression": "rotate W-bit x left by 1 (ignore y)",
+   "minT": 223,
+   "nT": 5,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_15_of_y"
+   ],
+   "expression": "(8*y + 15) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_6_of_y"
+   ],
+   "expression": "(15*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_2_of_x"
+   ],
+   "expression": "x XOR 2 (ignore y)",
+   "minT": 19,
+   "nT": 180,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_10_of_x"
+   ],
+   "expression": "(5*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_8_of_x"
+   ],
+   "expression": "(4*x + 8) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_12_of_y"
+   ],
+   "expression": "(9*y + 12) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_9_of_x",
+    "affine_1_9_of_x"
+   ],
+   "expression": "(x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_8_of_x"
+   ],
+   "expression": "(14*x + 8) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_15_of_x"
+   ],
+   "expression": "1 if x<15 else 0 (unsigned) (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_7_of_x"
+   ],
+   "expression": "(13*x + 7) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_10_of_x",
+    "constant_10_of_y",
+    "affine_0_10_of_x",
+    "affine_0_10_of_y"
+   ],
+   "expression": "10 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_11_of_x",
+    "affine_11_0_of_x"
+   ],
+   "expression": "11*x mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_3_of_x"
+   ],
+   "expression": "(4*x + 3) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_11_of_y"
+   ],
+   "expression": "y XOR 11 (ignore x)",
+   "minT": 15,
+   "nT": 184,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_1_of_x"
+   ],
+   "expression": "(4*x + 1) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_6_of_x"
+   ],
+   "expression": "(15*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_15_of_x"
+   ],
+   "expression": "(3*x + 15) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_7_of_y"
+   ],
+   "expression": "(6*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_5_of_x"
+   ],
+   "expression": "(3*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_13_of_y"
+   ],
+   "expression": "1 if y=13 else 0 (ignore x)",
+   "minT": 10,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_1_of_y"
+   ],
+   "expression": "1 if y=1 else 0 (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_3_of_y"
+   ],
+   "expression": "(8*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_1_of_y"
+   ],
+   "expression": "y AND 1 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_1_of_x"
+   ],
+   "expression": "1 if x=1 else 0 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "lowest_set_bit_of_y"
+   ],
+   "expression": "y AND (-y), masked to W bits (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_4_of_y"
+   ],
+   "expression": "(13*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_10_of_y",
+    "affine_1_10_of_y"
+   ],
+   "expression": "(y + 10) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_6_of_y"
+   ],
+   "expression": "(9*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_11_of_y"
+   ],
+   "expression": "(2*y + 11) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_8_of_x"
+   ],
+   "expression": "(2*x + 8) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_4_of_x"
+   ],
+   "expression": "(7*x + 4) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "saturating_add"
+   ],
+   "expression": "min(x+y,N-1)",
+   "minT": 125,
+   "nT": 10,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_4_of_x",
+    "affine_4_0_of_x",
+    "shift_left_2_of_x"
+   ],
+   "expression": "4*x mod N (ignore y)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_6_of_x"
+   ],
+   "expression": "(6*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_2_of_y"
+   ],
+   "expression": "(8*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_14_of_y"
+   ],
+   "expression": "(12*y + 14) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_11_of_y"
+   ],
+   "expression": "(15*y + 11) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_12_of_x"
+   ],
+   "expression": "1 if x<12 else 0 (unsigned) (ignore y)",
+   "minT": 33,
+   "nT": 36,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_7_of_y"
+   ],
+   "expression": "(10*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_11_of_y"
+   ],
+   "expression": "(7*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_12_of_y"
+   ],
+   "expression": "(8*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_14_of_y"
+   ],
+   "expression": "(11*y + 14) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_13_of_x"
+   ],
+   "expression": "(3*x + 13) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_5_of_y"
+   ],
+   "expression": "(12*y + 5) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_13_of_y"
+   ],
+   "expression": "y OR 13 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_10_of_y"
+   ],
+   "expression": "(9*y + 10) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_13_of_x"
+   ],
+   "expression": "(13*x + 13) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_2_of_x"
+   ],
+   "expression": "(8*x + 2) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_7_of_y"
+   ],
+   "expression": "y AND 7 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_8_of_y",
+    "affine_8_0_of_y",
+    "shift_left_3_of_y"
+   ],
+   "expression": "8*y mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_3_of_y"
+   ],
+   "expression": "(6*y + 3) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_9_of_x"
+   ],
+   "expression": "(11*x + 9) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_12_of_x"
+   ],
+   "expression": "(7*x + 12) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_7_of_y"
+   ],
+   "expression": "(5*y + 7) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_2_of_y"
+   ],
+   "expression": "(15*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_12_of_y"
+   ],
+   "expression": "1 if y=12 else 0 (ignore x)",
+   "minT": 19,
+   "nT": 129,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_4_of_x"
+   ],
+   "expression": "(2*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_8_of_x"
+   ],
+   "expression": "(15*x + 8) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_12_of_x"
+   ],
+   "expression": "(11*x + 12) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_9_of_y",
+    "affine_9_0_of_y"
+   ],
+   "expression": "9*y mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_15_of_x"
+   ],
+   "expression": "(8*x + 15) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_4_of_x"
+   ],
+   "expression": "1 if x=4 else 0 (ignore y)",
+   "minT": 24,
+   "nT": 126,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_11_of_y"
+   ],
+   "expression": "(9*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_13_of_y"
+   ],
+   "expression": "(4*y + 13) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_3_of_x"
+   ],
+   "expression": "(10*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_5_of_y"
+   ],
+   "expression": "(10*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_10_of_y"
+   ],
+   "expression": "(4*y + 10) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_5_of_x"
+   ],
+   "expression": "x OR 5 (ignore y)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_5_of_x"
+   ],
+   "expression": "1 if x<5 else 0 (unsigned) (ignore y)",
+   "minT": 117,
+   "nT": 6,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and",
+    "bitwise_boolean_1000"
+   ],
+   "expression": "x AND y",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_2_of_y"
+   ],
+   "expression": "(10*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_6_of_x"
+   ],
+   "expression": "1 if x=6 else 0 (ignore y)",
+   "minT": 21,
+   "nT": 170,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_14_of_y"
+   ],
+   "expression": "(8*y + 14) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_7_of_x"
+   ],
+   "expression": "(7*x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_9_of_x"
+   ],
+   "expression": "(10*x + 9) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_14_of_y"
+   ],
+   "expression": "(9*y + 14) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_13_of_x"
+   ],
+   "expression": "x AND 13 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add"
+   ],
+   "expression": "(x+y) mod N",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_13_of_x"
+   ],
+   "expression": "1 if x=13 else 0 (ignore y)",
+   "minT": 9,
+   "nT": 184,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_11_of_y",
+    "affine_1_11_of_y"
+   ],
+   "expression": "(y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_3_of_y",
+    "affine_3_0_of_y"
+   ],
+   "expression": "3*y mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_1_of_x"
+   ],
+   "expression": "(10*x + 1) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_12_of_y",
+    "affine_1_12_of_y"
+   ],
+   "expression": "(y + 12) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_5_of_y"
+   ],
+   "expression": "(2*y + 5) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_15_of_y"
+   ],
+   "expression": "(6*y + 15) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_13_of_y"
+   ],
+   "expression": "(7*y + 13) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "shift_right_3_of_y"
+   ],
+   "expression": "y >> 3 (unsigned) (ignore x)",
+   "minT": 43,
+   "nT": 40,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_11_of_x"
+   ],
+   "expression": "(2*x + 11) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_6_of_x"
+   ],
+   "expression": "(3*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_4_of_y"
+   ],
+   "expression": "y XOR 4 (ignore x)",
+   "minT": 14,
+   "nT": 185,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_9_of_x"
+   ],
+   "expression": "(12*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_5_of_y"
+   ],
+   "expression": "y OR 5 (ignore x)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_3_of_x"
+   ],
+   "expression": "(14*x + 3) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_1_of_y"
+   ],
+   "expression": "(2*y + 1) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "decrement_of_x",
+    "add_15_of_x",
+    "affine_1_15_of_x"
+   ],
+   "expression": "(x - 1) mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_7_of_y",
+    "affine_1_7_of_y"
+   ],
+   "expression": "(y + 7) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_1_of_x"
+   ],
+   "expression": "x XOR 1 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_8_of_y"
+   ],
+   "expression": "(6*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_3_of_y"
+   ],
+   "expression": "(13*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_1_of_x"
+   ],
+   "expression": "(6*x + 1) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_5_of_x"
+   ],
+   "expression": "(13*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 189,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_11_of_x"
+   ],
+   "expression": "(7*x + 11) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_5_of_y"
+   ],
+   "expression": "(8*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_5_of_y"
+   ],
+   "expression": "(5*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_6_of_x"
+   ],
+   "expression": "(13*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_9_of_y"
+   ],
+   "expression": "y AND 9 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_nonzero_of_y"
+   ],
+   "expression": "1 if y != 0 else 0 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_14_of_y"
+   ],
+   "expression": "(13*y + 14) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "not_equal_unsigned_mask",
+    "not_equal_signed_mask"
+   ],
+   "expression": "not_equal: unsigned inputs, true=15, false=0",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_4_of_y"
+   ],
+   "expression": "y OR 4 (ignore x)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_10_of_x"
+   ],
+   "expression": "(11*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_15_of_x"
+   ],
+   "expression": "(4*x + 15) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_8_of_x"
+   ],
+   "expression": "(3*x + 8) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_1_of_x"
+   ],
+   "expression": "x AND 1 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_9_of_y"
+   ],
+   "expression": "(12*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_8_of_y"
+   ],
+   "expression": "(14*y + 8) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_13_of_y"
+   ],
+   "expression": "(2*y + 13) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_1_of_y"
+   ],
+   "expression": "y XOR 1 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_13_of_y"
+   ],
+   "expression": "(13*y + 13) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_13_of_x"
+   ],
+   "expression": "(11*x + 13) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_14_of_x",
+    "affine_1_14_of_x"
+   ],
+   "expression": "(x + 14) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_7_of_y"
+   ],
+   "expression": "(7*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_13_of_x"
+   ],
+   "expression": "x XOR 13 (ignore y)",
+   "minT": 16,
+   "nT": 179,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_1_of_x"
+   ],
+   "expression": "(7*x + 1) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_5_of_y"
+   ],
+   "expression": "(3*y + 5) mod N (ignore x)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_14_of_y"
+   ],
+   "expression": "(3*y + 14) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_14_of_y"
+   ],
+   "expression": "(15*y + 14) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_7_of_x",
+    "affine_1_7_of_x"
+   ],
+   "expression": "(x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_4_of_y"
+   ],
+   "expression": "(15*y + 4) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_2_of_x"
+   ],
+   "expression": "(3*x + 2) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_6_of_y",
+    "affine_1_6_of_y"
+   ],
+   "expression": "(y + 6) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_10_of_x"
+   ],
+   "expression": "x OR 10 (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_12_of_x"
+   ],
+   "expression": "(15*x + 12) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_1_of_x"
+   ],
+   "expression": "(15*x + 1) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_14_of_x"
+   ],
+   "expression": "(13*x + 14) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_1_of_y"
+   ],
+   "expression": "(11*y + 1) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_6_of_x",
+    "constant_6_of_y",
+    "affine_0_6_of_x",
+    "affine_0_6_of_y"
+   ],
+   "expression": "6 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_13_of_x"
+   ],
+   "expression": "(2*x + 13) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_2_of_y"
+   ],
+   "expression": "y AND 2 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "negation_of_x",
+    "multiply_15_of_x",
+    "affine_15_0_of_x"
+   ],
+   "expression": "-x mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_2_of_x"
+   ],
+   "expression": "1 if x<2 else 0 (unsigned) (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_12_of_x"
+   ],
+   "expression": "x AND 12 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_11_of_x"
+   ],
+   "expression": "(4*x + 11) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_13_of_x"
+   ],
+   "expression": "(9*x + 13) mod N (ignore y)",
+   "minT": 10,
+   "nT": 189,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_14_of_y"
+   ],
+   "expression": "1 if y=14 else 0 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_4_of_y",
+    "affine_4_0_of_y",
+    "shift_left_2_of_y"
+   ],
+   "expression": "4*y mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_14_of_y",
+    "affine_1_14_of_y"
+   ],
+   "expression": "(y + 14) mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_15_of_x"
+   ],
+   "expression": "(14*x + 15) mod N (ignore y)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_2_of_y",
+    "affine_1_2_of_y"
+   ],
+   "expression": "(y + 2) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_4_of_x",
+    "constant_4_of_y",
+    "affine_0_4_of_x",
+    "affine_0_4_of_y"
+   ],
+   "expression": "4 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_7_of_x"
+   ],
+   "expression": "(4*x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_8_of_y"
+   ],
+   "expression": "(15*y + 8) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_8_of_x"
+   ],
+   "expression": "(12*x + 8) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_6_of_y"
+   ],
+   "expression": "(8*y + 6) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_10_of_x"
+   ],
+   "expression": "x AND 10 (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_1_of_x"
+   ],
+   "expression": "(5*x + 1) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_11_of_y"
+   ],
+   "expression": "(12*y + 11) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_5_of_y"
+   ],
+   "expression": "(13*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_7_of_x"
+   ],
+   "expression": "1 if x=7 else 0 (ignore y)",
+   "minT": 14,
+   "nT": 172,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_6_of_x",
+    "affine_6_0_of_x"
+   ],
+   "expression": "6*x mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_9_of_y"
+   ],
+   "expression": "(9*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "signed_shift_right_3_of_x",
+    "signed_shift_right_4_of_x"
+   ],
+   "expression": "signed_W(x) >> 3, encoded mod N (ignore y)",
+   "minT": 14,
+   "nT": 172,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_4_of_y"
+   ],
+   "expression": "(14*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_9_of_y"
+   ],
+   "expression": "(5*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_6_of_x"
+   ],
+   "expression": "(8*x + 6) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_7_of_x"
+   ],
+   "expression": "x AND 7 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_5_of_y"
+   ],
+   "expression": "(9*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_2_of_x",
+    "affine_1_2_of_x"
+   ],
+   "expression": "(x + 2) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_14_of_x"
+   ],
+   "expression": "(8*x + 14) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_3_of_y"
+   ],
+   "expression": "(10*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_7_of_y"
+   ],
+   "expression": "(14*y + 7) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "decrement_of_y",
+    "add_15_of_y",
+    "affine_1_15_of_y"
+   ],
+   "expression": "(y - 1) mod N (ignore x)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_8_of_y"
+   ],
+   "expression": "(13*y + 8) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_8_of_x",
+    "xor_8_of_x",
+    "affine_1_8_of_x"
+   ],
+   "expression": "(x + 8) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_8_of_x"
+   ],
+   "expression": "1 if x<8 else 0 (unsigned) (ignore y)",
+   "minT": 37,
+   "nT": 22,
+   "at_256": false
+  },
+  {
+   "names": [
+    "not_equal_unsigned_bool",
+    "not_equal_signed_bool"
+   ],
+   "expression": "not_equal: unsigned inputs, true=1, false=0",
+   "minT": 7,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_5_of_y"
+   ],
+   "expression": "(11*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_13_of_y"
+   ],
+   "expression": "(5*y + 13) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_2_of_y"
+   ],
+   "expression": "(7*y + 2) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_5_of_x"
+   ],
+   "expression": "(10*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_11_of_x"
+   ],
+   "expression": "(15*x + 11) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_10_of_x"
+   ],
+   "expression": "(2*x + 10) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_11_of_x",
+    "affine_1_11_of_x"
+   ],
+   "expression": "(x + 11) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_2_of_x"
+   ],
+   "expression": "(12*x + 2) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_11_of_x"
+   ],
+   "expression": "(3*x + 11) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_2_of_x"
+   ],
+   "expression": "1 if x=2 else 0 (ignore y)",
+   "minT": 7,
+   "nT": 189,
+   "at_256": false
+  },
+  {
+   "names": [
+    "unsigned_min"
+   ],
+   "expression": "min(x,y)",
+   "minT": 127,
+   "nT": 9,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_1_of_y"
+   ],
+   "expression": "(13*y + 1) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_14_of_y"
+   ],
+   "expression": "y AND 14 (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_14_of_x"
+   ],
+   "expression": "(7*x + 14) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_14_of_x"
+   ],
+   "expression": "x AND 14 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_7_of_y"
+   ],
+   "expression": "1 if y=7 else 0 (ignore x)",
+   "minT": 17,
+   "nT": 133,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_3_of_x"
+   ],
+   "expression": "(6*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_11_of_x"
+   ],
+   "expression": "x AND 11 (ignore y)",
+   "minT": 11,
+   "nT": 182,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_11_of_y"
+   ],
+   "expression": "y OR 11 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_10_of_y"
+   ],
+   "expression": "(6*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_13_of_x",
+    "affine_13_0_of_x"
+   ],
+   "expression": "13*x mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_11_of_x"
+   ],
+   "expression": "(8*x + 11) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_12_of_x"
+   ],
+   "expression": "(13*x + 12) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_12_of_y"
+   ],
+   "expression": "(13*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "bitwise_boolean_1101"
+   ],
+   "expression": "per-bit Boolean table 0b1101, bit index=2*x_bit+y_bit",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_7_of_y",
+    "affine_15_7_of_y"
+   ],
+   "expression": "y XOR 7 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "bitwise_not_of_x",
+    "xor_15_of_x",
+    "affine_15_15_of_x",
+    "bitwise_boolean_0011"
+   ],
+   "expression": "~x masked to W bits (ignore y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_13_of_y"
+   ],
+   "expression": "(12*y + 13) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_12_of_x"
+   ],
+   "expression": "(10*x + 12) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_9_of_x"
+   ],
+   "expression": "1 if x=9 else 0 (ignore y)",
+   "minT": 15,
+   "nT": 167,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_3_of_x"
+   ],
+   "expression": "(3*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_8_of_x"
+   ],
+   "expression": "(8*x + 8) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_9_of_x"
+   ],
+   "expression": "x XOR 9 (ignore y)",
+   "minT": 18,
+   "nT": 176,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_4_of_y"
+   ],
+   "expression": "(4*y + 4) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_14_of_y"
+   ],
+   "expression": "(6*y + 14) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_8_of_x"
+   ],
+   "expression": "(6*x + 8) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_12_of_y"
+   ],
+   "expression": "1 if y<12 else 0 (unsigned) (ignore x)",
+   "minT": 35,
+   "nT": 52,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_8_of_y"
+   ],
+   "expression": "y AND 8 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_10_of_x"
+   ],
+   "expression": "(12*x + 10) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_6_of_y"
+   ],
+   "expression": "y OR 6 (ignore x)",
+   "minT": 13,
+   "nT": 186,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_9_of_y"
+   ],
+   "expression": "(14*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_5_of_x"
+   ],
+   "expression": "(2*x + 5) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_1_of_x"
+   ],
+   "expression": "(8*x + 1) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_7_of_y"
+   ],
+   "expression": "1 if y<7 else 0 (unsigned) (ignore x)",
+   "minT": 66,
+   "nT": 4,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_6_of_y"
+   ],
+   "expression": "(12*y + 6) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_12_of_x"
+   ],
+   "expression": "(5*x + 12) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_12_of_x"
+   ],
+   "expression": "(4*x + 12) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_9_of_x"
+   ],
+   "expression": "(15*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_10_of_y"
+   ],
+   "expression": "(13*y + 10) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_9_of_x"
+   ],
+   "expression": "(5*x + 9) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_7_of_y"
+   ],
+   "expression": "(9*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "nand",
+    "bitwise_boolean_0111"
+   ],
+   "expression": "NOT(x AND y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_8_of_y"
+   ],
+   "expression": "(4*y + 8) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_4_of_x"
+   ],
+   "expression": "x OR 4 (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_2_of_x",
+    "constant_2_of_y",
+    "affine_0_2_of_x",
+    "affine_0_2_of_y"
+   ],
+   "expression": "2 (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_10_of_y"
+   ],
+   "expression": "(12*y + 10) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_3_of_x",
+    "constant_3_of_y",
+    "affine_0_3_of_x",
+    "affine_0_3_of_y"
+   ],
+   "expression": "3 (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_2_of_x",
+    "affine_2_0_of_x",
+    "shift_left_1_of_x"
+   ],
+   "expression": "2*x mod N (ignore y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_3_of_x"
+   ],
+   "expression": "x AND 3 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_10_of_x"
+   ],
+   "expression": "(13*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_14_of_y"
+   ],
+   "expression": "(7*y + 14) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_8_of_x"
+   ],
+   "expression": "x AND 8 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_12_of_y"
+   ],
+   "expression": "(6*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_2_of_x"
+   ],
+   "expression": "(10*x + 2) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_12_of_x"
+   ],
+   "expression": "(9*x + 12) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_10_of_y"
+   ],
+   "expression": "(3*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_12_of_y"
+   ],
+   "expression": "(10*y + 12) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_5_of_y"
+   ],
+   "expression": "(6*y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_4_of_x"
+   ],
+   "expression": "1 if x<4 else 0 (unsigned) (ignore y)",
+   "minT": 66,
+   "nT": 5,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_14_of_x"
+   ],
+   "expression": "(10*x + 14) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_2_of_y"
+   ],
+   "expression": "(11*y + 2) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_14_of_x",
+    "constant_14_of_y",
+    "affine_0_14_of_x",
+    "affine_0_14_of_y"
+   ],
+   "expression": "14 (ignore y)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_5_of_x",
+    "constant_5_of_y",
+    "affine_0_5_of_x",
+    "affine_0_5_of_y"
+   ],
+   "expression": "5 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_4_of_y"
+   ],
+   "expression": "(11*y + 4) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_6_of_x"
+   ],
+   "expression": "(4*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_15_of_x"
+   ],
+   "expression": "(13*x + 15) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_5_of_x"
+   ],
+   "expression": "(14*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_8_of_y"
+   ],
+   "expression": "(10*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_unsigned_mask",
+    "equal_signed_mask"
+   ],
+   "expression": "equal: unsigned inputs, true=15, false=0",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_2_of_x"
+   ],
+   "expression": "(14*x + 2) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_14_of_x"
+   ],
+   "expression": "(9*x + 14) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_8_of_y"
+   ],
+   "expression": "(2*y + 8) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_11_of_x"
+   ],
+   "expression": "x XOR 11 (ignore y)",
+   "minT": 15,
+   "nT": 175,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_7_of_x",
+    "constant_7_of_y",
+    "affine_0_7_of_x",
+    "affine_0_7_of_y"
+   ],
+   "expression": "7 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_14_of_x"
+   ],
+   "expression": "1 if x=14 else 0 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_7_of_x"
+   ],
+   "expression": "(11*x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_12_of_y"
+   ],
+   "expression": "(4*y + 12) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_4_of_x"
+   ],
+   "expression": "(3*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_11_of_y"
+   ],
+   "expression": "(11*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_4_of_x"
+   ],
+   "expression": "x XOR 4 (ignore y)",
+   "minT": 15,
+   "nT": 182,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_4_of_y"
+   ],
+   "expression": "1 if y=4 else 0 (ignore x)",
+   "minT": 10,
+   "nT": 116,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_2_of_y"
+   ],
+   "expression": "(12*y + 2) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_9_of_y"
+   ],
+   "expression": "(15*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_9_of_x"
+   ],
+   "expression": "(7*x + 9) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_4_of_x"
+   ],
+   "expression": "(10*x + 4) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_11_of_x"
+   ],
+   "expression": "(6*x + 11) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_15_of_y"
+   ],
+   "expression": "1 if y=15 else 0 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_10_of_y"
+   ],
+   "expression": "(11*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_2_of_y"
+   ],
+   "expression": "y OR 2 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_14_of_y"
+   ],
+   "expression": "y XOR 14 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_12_of_y"
+   ],
+   "expression": "(2*y + 12) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_13_of_y"
+   ],
+   "expression": "y XOR 13 (ignore x)",
+   "minT": 13,
+   "nT": 186,
+   "at_256": false
+  },
+  {
+   "names": [
+    "bitwise_boolean_0010"
+   ],
+   "expression": "per-bit Boolean table 0b0010, bit index=2*x_bit+y_bit",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_3_of_x"
+   ],
+   "expression": "(11*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_8_of_x"
+   ],
+   "expression": "x OR 8 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_9_of_y"
+   ],
+   "expression": "(4*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_3_of_y"
+   ],
+   "expression": "(7*y + 3) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_15_of_x"
+   ],
+   "expression": "(11*x + 15) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_5_of_x"
+   ],
+   "expression": "(7*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_14_of_x",
+    "affine_14_0_of_x"
+   ],
+   "expression": "14*x mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_9_of_y"
+   ],
+   "expression": "(10*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_7_of_y"
+   ],
+   "expression": "y OR 7 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_7_of_x",
+    "affine_15_7_of_x"
+   ],
+   "expression": "x XOR 7 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_14_of_x"
+   ],
+   "expression": "(2*x + 14) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "clear_lowest_set_bit_of_x"
+   ],
+   "expression": "x AND (x-1) (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_5_of_y"
+   ],
+   "expression": "(7*y + 5) mod N (ignore x)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_9_of_y"
+   ],
+   "expression": "(11*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_11_of_x"
+   ],
+   "expression": "1 if x<11 else 0 (unsigned) (ignore y)",
+   "minT": 109,
+   "nT": 1,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_11_of_y"
+   ],
+   "expression": "(13*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_12_of_y"
+   ],
+   "expression": "(5*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_3_of_y"
+   ],
+   "expression": "1 if y<3 else 0 (unsigned) (ignore x)",
+   "minT": 24,
+   "nT": 106,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_9_of_x",
+    "constant_9_of_y",
+    "affine_0_9_of_x",
+    "affine_0_9_of_y"
+   ],
+   "expression": "9 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_6_of_y"
+   ],
+   "expression": "(2*y + 6) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_5_of_x"
+   ],
+   "expression": "(8*x + 5) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_1_of_y"
+   ],
+   "expression": "(6*y + 1) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_8_of_y",
+    "xor_8_of_y",
+    "affine_1_8_of_y"
+   ],
+   "expression": "(y + 8) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_14_of_x"
+   ],
+   "expression": "x XOR 14 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "signed_abs_of_x"
+   ],
+   "expression": "abs(signed_W(x)) mod N (ignore y)",
+   "minT": 119,
+   "nT": 11,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_8_of_y"
+   ],
+   "expression": "1 if y<8 else 0 (unsigned) (ignore x)",
+   "minT": 28,
+   "nT": 41,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_4_of_y"
+   ],
+   "expression": "(7*y + 4) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_6_of_x"
+   ],
+   "expression": "x XOR 6 (ignore y)",
+   "minT": 13,
+   "nT": 186,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_1_of_y"
+   ],
+   "expression": "(10*y + 1) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_9_of_x"
+   ],
+   "expression": "1 if x<9 else 0 (unsigned) (ignore y)",
+   "minT": 155,
+   "nT": 7,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_13_of_x",
+    "affine_1_13_of_x"
+   ],
+   "expression": "(x + 13) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "identity_of_x",
+    "add_0_of_x",
+    "xor_0_of_x",
+    "or_0_of_x",
+    "multiply_1_of_x",
+    "and_15_of_x",
+    "affine_1_0_of_x",
+    "rotate_left_4_of_x",
+    "rotate_right_4_of_x",
+    "bitwise_boolean_1100"
+   ],
+   "expression": "x (ignore y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_10_of_x"
+   ],
+   "expression": "1 if x=10 else 0 (ignore y)",
+   "minT": 21,
+   "nT": 157,
+   "at_256": false
+  },
+  {
+   "names": [
+    "identity_of_y",
+    "add_0_of_y",
+    "xor_0_of_y",
+    "or_0_of_y",
+    "multiply_1_of_y",
+    "and_15_of_y",
+    "affine_1_0_of_y",
+    "rotate_left_4_of_y",
+    "rotate_right_4_of_y",
+    "bitwise_boolean_1010"
+   ],
+   "expression": "y (ignore x)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_6_of_y"
+   ],
+   "expression": "(11*y + 6) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_15_of_y"
+   ],
+   "expression": "(4*y + 15) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_13_of_y"
+   ],
+   "expression": "1 if y<13 else 0 (unsigned) (ignore x)",
+   "minT": 23,
+   "nT": 63,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_15_of_y"
+   ],
+   "expression": "(13*y + 15) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_4_of_x"
+   ],
+   "expression": "(6*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_7_of_y"
+   ],
+   "expression": "(4*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_15_of_y"
+   ],
+   "expression": "(12*y + 15) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_11_of_x"
+   ],
+   "expression": "(10*x + 11) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_7_of_y"
+   ],
+   "expression": "(8*y + 7) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_15_of_x",
+    "constant_15_of_y",
+    "or_15_of_x",
+    "or_15_of_y",
+    "affine_0_15_of_x",
+    "affine_0_15_of_y",
+    "bitwise_boolean_1111"
+   ],
+   "expression": "15 (ignore y)",
+   "minT": 1,
+   "nT": 198,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_12_of_y"
+   ],
+   "expression": "y AND 12 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_1_of_y"
+   ],
+   "expression": "y OR 1 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_7_of_y"
+   ],
+   "expression": "(13*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_12_of_x",
+    "constant_12_of_y",
+    "affine_0_12_of_x",
+    "affine_0_12_of_y"
+   ],
+   "expression": "12 (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_1_of_x"
+   ],
+   "expression": "(9*x + 1) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_8_of_y"
+   ],
+   "expression": "(5*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_power_of_two_of_x"
+   ],
+   "expression": "1 if x is a positive power of two else 0 (ignore y)",
+   "minT": 27,
+   "nT": 67,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_15_of_y"
+   ],
+   "expression": "(7*y + 15) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_13_of_x",
+    "constant_13_of_y",
+    "affine_0_13_of_x",
+    "affine_0_13_of_y"
+   ],
+   "expression": "13 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_1_of_y"
+   ],
+   "expression": "(3*y + 1) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_12_of_x"
+   ],
+   "expression": "x XOR 12 (ignore y)",
+   "minT": 13,
+   "nT": 184,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_power_of_two_of_y"
+   ],
+   "expression": "1 if y is a positive power of two else 0 (ignore x)",
+   "minT": 19,
+   "nT": 66,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_8_of_x",
+    "constant_8_of_y",
+    "affine_0_8_of_x",
+    "affine_0_8_of_y"
+   ],
+   "expression": "8 (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_2_of_x"
+   ],
+   "expression": "(2*x + 2) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_10_of_y"
+   ],
+   "expression": "(15*y + 10) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "signed_shift_right_3_of_y",
+    "signed_shift_right_4_of_y"
+   ],
+   "expression": "signed_W(y) >> 3, encoded mod N (ignore x)",
+   "minT": 9,
+   "nT": 185,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_14_of_x"
+   ],
+   "expression": "(11*x + 14) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_11_of_y"
+   ],
+   "expression": "(6*y + 11) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_10_of_x"
+   ],
+   "expression": "x XOR 10 (ignore y)",
+   "minT": 22,
+   "nT": 176,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_12_of_x"
+   ],
+   "expression": "(6*x + 12) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_6_of_x"
+   ],
+   "expression": "(5*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_11_of_x"
+   ],
+   "expression": "x OR 11 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_6_of_y"
+   ],
+   "expression": "(10*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_5_of_x"
+   ],
+   "expression": "(9*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_6_of_x"
+   ],
+   "expression": "(2*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_4_of_x"
+   ],
+   "expression": "(13*x + 4) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_11_of_y"
+   ],
+   "expression": "(5*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_10_of_x"
+   ],
+   "expression": "(7*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_8_of_x"
+   ],
+   "expression": "(10*x + 8) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_9_of_x"
+   ],
+   "expression": "(9*x + 9) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_8_of_x"
+   ],
+   "expression": "(9*x + 8) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_unsigned_bool",
+    "equal_signed_bool"
+   ],
+   "expression": "equal: unsigned inputs, true=1, false=0",
+   "minT": 7,
+   "nT": 184,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_14_of_x"
+   ],
+   "expression": "(5*x + 14) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_not",
+    "bitwise_boolean_0100"
+   ],
+   "expression": "x AND NOT y",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_13_of_y",
+    "affine_1_13_of_y"
+   ],
+   "expression": "(y + 13) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_6_of_x"
+   ],
+   "expression": "(14*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_5_of_x",
+    "affine_1_5_of_x"
+   ],
+   "expression": "(x + 5) mod N (ignore y)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_15_of_y"
+   ],
+   "expression": "(9*y + 15) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_12_of_x"
+   ],
+   "expression": "(2*x + 12) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_3_of_y"
+   ],
+   "expression": "(3*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_2_of_x"
+   ],
+   "expression": "(4*x + 2) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_14_of_x"
+   ],
+   "expression": "1 if x<14 else 0 (unsigned) (ignore y)",
+   "minT": 11,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_1_of_y"
+   ],
+   "expression": "(7*y + 1) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_15_of_y"
+   ],
+   "expression": "(14*y + 15) mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_5_of_y"
+   ],
+   "expression": "1 if y=5 else 0 (ignore x)",
+   "minT": 11,
+   "nT": 134,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_2_of_x"
+   ],
+   "expression": "(9*x + 2) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_14_of_y"
+   ],
+   "expression": "(5*y + 14) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_7_of_x"
+   ],
+   "expression": "(10*x + 7) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_10_of_y"
+   ],
+   "expression": "y XOR 10 (ignore x)",
+   "minT": 20,
+   "nT": 179,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_5_of_x"
+   ],
+   "expression": "(15*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_4_of_x"
+   ],
+   "expression": "(5*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_6_of_y"
+   ],
+   "expression": "(7*y + 6) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_12_of_y",
+    "affine_12_0_of_y"
+   ],
+   "expression": "12*y mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_14_of_y",
+    "affine_14_0_of_y"
+   ],
+   "expression": "14*y mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_10_of_x"
+   ],
+   "expression": "(4*x + 10) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_2_of_y"
+   ],
+   "expression": "y XOR 2 (ignore x)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_8_of_y"
+   ],
+   "expression": "(12*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_2_of_y"
+   ],
+   "expression": "(6*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_13_of_x"
+   ],
+   "expression": "(10*x + 13) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_2_of_x"
+   ],
+   "expression": "(13*x + 2) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_3_of_x"
+   ],
+   "expression": "(7*x + 3) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_10_of_y"
+   ],
+   "expression": "(10*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_10_of_y",
+    "affine_10_0_of_y"
+   ],
+   "expression": "10*y mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_zero_of_x",
+    "equal_0_of_x",
+    "less_than_1_of_x"
+   ],
+   "expression": "1 if x = 0 else 0 (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_12_of_y"
+   ],
+   "expression": "(3*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_4_of_y"
+   ],
+   "expression": "(3*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_6_of_y"
+   ],
+   "expression": "y AND 6 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_4_of_y"
+   ],
+   "expression": "(9*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_4_of_y",
+    "affine_1_4_of_y"
+   ],
+   "expression": "(y + 4) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_11_of_x"
+   ],
+   "expression": "(5*x + 11) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_11_of_y",
+    "affine_11_0_of_y"
+   ],
+   "expression": "11*y mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_10_of_x"
+   ],
+   "expression": "(6*x + 10) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "shift_right_3_of_x"
+   ],
+   "expression": "x >> 3 (unsigned) (ignore y)",
+   "minT": 44,
+   "nT": 27,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_2_of_y"
+   ],
+   "expression": "(9*y + 2) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "bitwise_implication",
+    "bitwise_boolean_1011"
+   ],
+   "expression": "(NOT x) OR y",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_2_of_y"
+   ],
+   "expression": "(2*y + 2) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_1_of_x"
+   ],
+   "expression": "(3*x + 1) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_15_of_x"
+   ],
+   "expression": "(6*x + 15) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_14_of_x"
+   ],
+   "expression": "(4*x + 14) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_1_of_x"
+   ],
+   "expression": "x OR 1 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_1_of_y"
+   ],
+   "expression": "(14*y + 1) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_7_of_y"
+   ],
+   "expression": "(3*y + 7) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_12_of_x"
+   ],
+   "expression": "(14*x + 12) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_4_of_y"
+   ],
+   "expression": "(6*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_3_of_y",
+    "affine_1_3_of_y"
+   ],
+   "expression": "(y + 3) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_8_of_x"
+   ],
+   "expression": "(7*x + 8) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_2_of_y"
+   ],
+   "expression": "(14*y + 2) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_12_of_x",
+    "affine_12_0_of_x"
+   ],
+   "expression": "12*x mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_12_of_x"
+   ],
+   "expression": "(12*x + 12) mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_3_of_x"
+   ],
+   "expression": "(5*x + 3) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_1_of_y"
+   ],
+   "expression": "(12*y + 1) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_1_of_x"
+   ],
+   "expression": "(2*x + 1) mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_13_of_x"
+   ],
+   "expression": "(12*x + 13) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_9_of_y"
+   ],
+   "expression": "y XOR 9 (ignore x)",
+   "minT": 14,
+   "nT": 185,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_5_of_x"
+   ],
+   "expression": "1 if x=5 else 0 (ignore y)",
+   "minT": 12,
+   "nT": 148,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_14_of_x"
+   ],
+   "expression": "(6*x + 14) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_15_of_x"
+   ],
+   "expression": "1 if x=15 else 0 (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_2_of_x"
+   ],
+   "expression": "x OR 2 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xnor",
+    "bitwise_boolean_1001"
+   ],
+   "expression": "NOT(x XOR y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_13_of_x"
+   ],
+   "expression": "x OR 13 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_4_of_y"
+   ],
+   "expression": "y AND 4 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_5_of_y"
+   ],
+   "expression": "(4*y + 5) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_zero_of_y",
+    "equal_0_of_y",
+    "less_than_1_of_y"
+   ],
+   "expression": "1 if y = 0 else 0 (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_6_of_y"
+   ],
+   "expression": "(5*y + 6) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_12_of_x"
+   ],
+   "expression": "1 if x=12 else 0 (ignore y)",
+   "minT": 17,
+   "nT": 154,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_4_of_x"
+   ],
+   "expression": "(12*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_8_of_x"
+   ],
+   "expression": "(5*x + 8) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_8_of_y"
+   ],
+   "expression": "y OR 8 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_3_of_y"
+   ],
+   "expression": "(14*y + 3) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_3_of_x"
+   ],
+   "expression": "(8*x + 3) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_15_of_y"
+   ],
+   "expression": "(11*y + 15) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_4_of_x",
+    "affine_1_4_of_x"
+   ],
+   "expression": "(x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_9_of_x"
+   ],
+   "expression": "(4*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_10_of_x"
+   ],
+   "expression": "(10*x + 10) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_4_of_y"
+   ],
+   "expression": "(12*y + 4) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_2_of_y",
+    "affine_2_0_of_y",
+    "shift_left_1_of_y"
+   ],
+   "expression": "2*y mod N (ignore x)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_10_of_y"
+   ],
+   "expression": "(14*y + 10) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_15_of_x"
+   ],
+   "expression": "(5*x + 15) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_8_of_y"
+   ],
+   "expression": "(8*y + 8) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_9_of_x",
+    "affine_9_0_of_x"
+   ],
+   "expression": "9*x mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_14_of_x"
+   ],
+   "expression": "(12*x + 14) mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_11_of_x",
+    "constant_11_of_y",
+    "affine_0_11_of_x",
+    "affine_0_11_of_y"
+   ],
+   "expression": "11 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_1_of_y"
+   ],
+   "expression": "(4*y + 1) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_11_of_y"
+   ],
+   "expression": "1 if y=11 else 0 (ignore x)",
+   "minT": 11,
+   "nT": 183,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_9_of_x"
+   ],
+   "expression": "(8*x + 9) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_9_of_y"
+   ],
+   "expression": "(13*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "signed_signum_of_x"
+   ],
+   "expression": "sign(signed_W(x)) encoded mod N (ignore y)",
+   "minT": 145,
+   "nT": 5,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_12_of_y"
+   ],
+   "expression": "(12*y + 12) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "constant_1_of_x",
+    "constant_1_of_y",
+    "affine_0_1_of_x",
+    "affine_0_1_of_y"
+   ],
+   "expression": "1 (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_6_of_y"
+   ],
+   "expression": "(14*y + 6) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_12_of_y"
+   ],
+   "expression": "y XOR 12 (ignore x)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "negation_of_y",
+    "multiply_15_of_y",
+    "affine_15_0_of_y"
+   ],
+   "expression": "-y mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_8_of_x"
+   ],
+   "expression": "(11*x + 8) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_2_of_x"
+   ],
+   "expression": "(11*x + 2) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_12_of_y"
+   ],
+   "expression": "(14*y + 12) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_13_of_y"
+   ],
+   "expression": "y AND 13 (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_10_of_x",
+    "affine_10_0_of_x"
+   ],
+   "expression": "10*x mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_8_of_x"
+   ],
+   "expression": "(13*x + 8) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_6_of_x"
+   ],
+   "expression": "(7*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "lowest_set_bit_of_x"
+   ],
+   "expression": "x AND (-x), masked to W bits (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_2_of_x"
+   ],
+   "expression": "(5*x + 2) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_4_of_x"
+   ],
+   "expression": "(14*x + 4) mod N (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_2_of_y"
+   ],
+   "expression": "(5*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_3_of_y"
+   ],
+   "expression": "(15*y + 3) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_15_of_x"
+   ],
+   "expression": "(12*x + 15) mod N (ignore y)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_10_of_y"
+   ],
+   "expression": "(5*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "is_nonzero_of_x"
+   ],
+   "expression": "1 if x != 0 else 0 (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_15_of_y"
+   ],
+   "expression": "(5*y + 15) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_1_of_y"
+   ],
+   "expression": "(9*y + 1) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_1_of_y"
+   ],
+   "expression": "(5*y + 1) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_14_of_y"
+   ],
+   "expression": "(2*y + 14) mod N (ignore x)",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_15_of_x"
+   ],
+   "expression": "(10*x + 15) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "nor",
+    "bitwise_boolean_0001"
+   ],
+   "expression": "NOT(x OR y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_8_of_x"
+   ],
+   "expression": "1 if x=8 else 0 (ignore y)",
+   "minT": 6,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_5_of_x",
+    "affine_5_0_of_x"
+   ],
+   "expression": "5*x mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_4_of_x"
+   ],
+   "expression": "(11*x + 4) mod N (ignore y)",
+   "minT": 10,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_5_of_y"
+   ],
+   "expression": "y AND 5 (ignore x)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_5_of_y"
+   ],
+   "expression": "(14*y + 5) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "bitwise_not_of_y",
+    "xor_15_of_y",
+    "affine_15_15_of_y",
+    "bitwise_boolean_0101"
+   ],
+   "expression": "~y masked to W bits (ignore x)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_12_of_x"
+   ],
+   "expression": "(3*x + 12) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_9_of_y"
+   ],
+   "expression": "1 if y=9 else 0 (ignore x)",
+   "minT": 14,
+   "nT": 177,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_14_of_y"
+   ],
+   "expression": "y OR 14 (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_11_of_x"
+   ],
+   "expression": "1 if x=11 else 0 (ignore y)",
+   "minT": 18,
+   "nT": 161,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_13_of_y"
+   ],
+   "expression": "(6*y + 13) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_4_of_x"
+   ],
+   "expression": "(4*x + 4) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_3_of_x",
+    "affine_1_3_of_x"
+   ],
+   "expression": "(x + 3) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "greater_equal_unsigned_mask"
+   ],
+   "expression": "greater_equal: unsigned inputs, true=15, false=0",
+   "minT": 227,
+   "nT": 6,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_6_of_x"
+   ],
+   "expression": "(9*x + 6) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_11_of_y"
+   ],
+   "expression": "(8*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_11_of_x"
+   ],
+   "expression": "(9*x + 11) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_14_of_y"
+   ],
+   "expression": "(10*y + 14) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_8_of_y"
+   ],
+   "expression": "1 if y=8 else 0 (ignore x)",
+   "minT": 15,
+   "nT": 180,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_1_of_x"
+   ],
+   "expression": "(12*x + 1) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_6_of_x"
+   ],
+   "expression": "(12*x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_9_of_y"
+   ],
+   "expression": "(6*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_unsigned_mask"
+   ],
+   "expression": "less_than: unsigned inputs, true=15, false=0",
+   "minT": 234,
+   "nT": 2,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_2_of_y"
+   ],
+   "expression": "(3*y + 2) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_3_of_y"
+   ],
+   "expression": "(9*y + 3) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_13_of_y",
+    "affine_13_0_of_y"
+   ],
+   "expression": "13*y mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_10_of_x"
+   ],
+   "expression": "(14*x + 10) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_2_of_y"
+   ],
+   "expression": "(4*y + 2) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_13_of_y"
+   ],
+   "expression": "(10*y + 13) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_10_of_y"
+   ],
+   "expression": "1 if y=10 else 0 (ignore x)",
+   "minT": 23,
+   "nT": 142,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_6_of_y"
+   ],
+   "expression": "1 if y=6 else 0 (ignore x)",
+   "minT": 11,
+   "nT": 145,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_5_of_x"
+   ],
+   "expression": "(5*x + 5) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_1_of_y"
+   ],
+   "expression": "(15*y + 1) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_3_of_y"
+   ],
+   "expression": "y XOR 3 (ignore x)",
+   "minT": 14,
+   "nT": 185,
+   "at_256": false
+  },
+  {
+   "names": [
+    "clear_lowest_set_bit_of_y"
+   ],
+   "expression": "y AND (y-1) (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_3_of_x"
+   ],
+   "expression": "(12*x + 3) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_2_of_x"
+   ],
+   "expression": "(15*x + 2) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "increment_of_x",
+    "add_1_of_x",
+    "affine_1_1_of_x"
+   ],
+   "expression": "(x + 1) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "increment_of_y",
+    "add_1_of_y",
+    "affine_1_1_of_y"
+   ],
+   "expression": "(y + 1) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_7_of_x"
+   ],
+   "expression": "x OR 7 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_15_of_x"
+   ],
+   "expression": "(7*x + 15) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_13_of_x"
+   ],
+   "expression": "(7*x + 13) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_7_of_y"
+   ],
+   "expression": "(11*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_12_of_x"
+   ],
+   "expression": "x OR 12 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_9_of_y"
+   ],
+   "expression": "(2*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_7_of_x"
+   ],
+   "expression": "(5*x + 7) mod N (ignore y)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "trailing_zeros_mod_N_of_x"
+   ],
+   "expression": "trailing-zero count; x=0 maps to W mod N (ignore y)",
+   "minT": 135,
+   "nT": 1,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_7_of_x"
+   ],
+   "expression": "(9*x + 7) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_9_of_y",
+    "affine_1_9_of_y"
+   ],
+   "expression": "(y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_5_of_x"
+   ],
+   "expression": "(11*x + 5) mod N (ignore y)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_4_of_x"
+   ],
+   "expression": "(9*x + 4) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_5_of_y",
+    "affine_1_5_of_y"
+   ],
+   "expression": "(y + 5) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_9_of_x"
+   ],
+   "expression": "(6*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_6_of_x"
+   ],
+   "expression": "(11*x + 6) mod N (ignore y)",
+   "minT": 10,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_11_of_x"
+   ],
+   "expression": "(13*x + 11) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_3_of_y"
+   ],
+   "expression": "(2*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "equal_3_of_y"
+   ],
+   "expression": "1 if y=3 else 0 (ignore x)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_4_of_y"
+   ],
+   "expression": "(5*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_2_of_y"
+   ],
+   "expression": "1 if y<2 else 0 (unsigned) (ignore x)",
+   "minT": 10,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_13_of_y"
+   ],
+   "expression": "(11*y + 13) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_9_of_x"
+   ],
+   "expression": "x OR 9 (ignore y)",
+   "minT": 8,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_11_of_x"
+   ],
+   "expression": "(12*x + 11) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_9_of_y"
+   ],
+   "expression": "y OR 9 (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_10_of_y"
+   ],
+   "expression": "(7*y + 10) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_6_of_y"
+   ],
+   "expression": "(13*y + 6) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "subtract"
+   ],
+   "expression": "(x-y) mod N",
+   "minT": 3,
+   "nT": 196,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_12_of_x",
+    "affine_1_12_of_x"
+   ],
+   "expression": "(x + 12) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_6_of_y",
+    "affine_6_0_of_y"
+   ],
+   "expression": "6*y mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_5_of_x"
+   ],
+   "expression": "(6*x + 5) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_13_9_of_x"
+   ],
+   "expression": "(13*x + 9) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_15_of_x"
+   ],
+   "expression": "(2*x + 15) mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_9_of_x"
+   ],
+   "expression": "(2*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_3_of_x"
+   ],
+   "expression": "x OR 3 (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_13_of_x"
+   ],
+   "expression": "(15*x + 13) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or_10_of_y"
+   ],
+   "expression": "y OR 10 (ignore x)",
+   "minT": 12,
+   "nT": 187,
+   "at_256": false
+  },
+  {
+   "names": [
+    "or",
+    "bitwise_boolean_1110"
+   ],
+   "expression": "x OR y",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_3_of_x"
+   ],
+   "expression": "(15*x + 3) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "greater_than_unsigned_mask"
+   ],
+   "expression": "greater_than: unsigned inputs, true=15, false=0",
+   "minT": 227,
+   "nT": 6,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_15_of_y"
+   ],
+   "expression": "(10*y + 15) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_8_of_y"
+   ],
+   "expression": "(9*y + 8) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_6_of_y"
+   ],
+   "expression": "y XOR 6 (ignore x)",
+   "minT": 11,
+   "nT": 188,
+   "at_256": false
+  },
+  {
+   "names": [
+    "xor_3_of_x"
+   ],
+   "expression": "x XOR 3 (ignore y)",
+   "minT": 18,
+   "nT": 179,
+   "at_256": false
+  },
+  {
+   "names": [
+    "rotate_left_1_of_y",
+    "rotate_right_3_of_y"
+   ],
+   "expression": "rotate W-bit y left by 1 (ignore x)",
+   "minT": 70,
+   "nT": 6,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_15_of_y"
+   ],
+   "expression": "(3*y + 15) mod N (ignore x)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_9_10_of_x"
+   ],
+   "expression": "(9*x + 10) mod N (ignore y)",
+   "minT": 9,
+   "nT": 190,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_14_of_x"
+   ],
+   "expression": "(14*x + 14) mod N (ignore y)",
+   "minT": 2,
+   "nT": 197,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_13_of_y"
+   ],
+   "expression": "(8*y + 13) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_5_3_of_y"
+   ],
+   "expression": "(5*y + 3) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_11_of_y"
+   ],
+   "expression": "(3*y + 11) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_4_of_y"
+   ],
+   "expression": "(10*y + 4) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "reverse_subtract"
+   ],
+   "expression": "(y-x) mod N",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_10_of_x",
+    "affine_1_10_of_x"
+   ],
+   "expression": "(x + 10) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_2_7_of_y"
+   ],
+   "expression": "(2*y + 7) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_15_of_y"
+   ],
+   "expression": "1 if y<15 else 0 (unsigned) (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "add_6_of_x",
+    "affine_1_6_of_x"
+   ],
+   "expression": "(x + 6) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_3_13_of_y"
+   ],
+   "expression": "(3*y + 13) mod N (ignore x)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "cube_of_y"
+   ],
+   "expression": "y^3 mod N (ignore x)",
+   "minT": 118,
+   "nT": 2,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_11_1_of_x"
+   ],
+   "expression": "(11*x + 1) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "less_than_7_of_x"
+   ],
+   "expression": "1 if x<7 else 0 (unsigned) (ignore y)",
+   "minT": 163,
+   "nT": 4,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_4_5_of_x"
+   ],
+   "expression": "(4*x + 5) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_10_of_x"
+   ],
+   "expression": "(8*x + 10) mod N (ignore y)",
+   "minT": 6,
+   "nT": 193,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_8_9_of_y"
+   ],
+   "expression": "(8*y + 9) mod N (ignore x)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_6_13_of_x"
+   ],
+   "expression": "(6*x + 13) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "and_2_of_x"
+   ],
+   "expression": "x AND 2 (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_10_11_of_y"
+   ],
+   "expression": "(10*y + 11) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_1_of_x"
+   ],
+   "expression": "(14*x + 1) mod N (ignore y)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_15_13_of_y"
+   ],
+   "expression": "(15*y + 13) mod N (ignore x)",
+   "minT": 5,
+   "nT": 194,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_12_7_of_x"
+   ],
+   "expression": "(12*x + 7) mod N (ignore y)",
+   "minT": 7,
+   "nT": 192,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_7_9_of_y"
+   ],
+   "expression": "(7*y + 9) mod N (ignore x)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "affine_14_9_of_x"
+   ],
+   "expression": "(14*x + 9) mod N (ignore y)",
+   "minT": 8,
+   "nT": 191,
+   "at_256": false
+  },
+  {
+   "names": [
+    "multiply_3_of_x",
+    "affine_3_0_of_x"
+   ],
+   "expression": "3*x mod N (ignore y)",
+   "minT": 4,
+   "nT": 195,
+   "at_256": false
+  }
+ ]
+}
