@@ -1,0 +1,1 @@
+{"T": 19, "isa": "SWAP,ADD,NAND,SKZ", "binary": true, "distinct_functions": 10518750, "programs_covered": [[0, 4294967296]], "gaps": [], "chunks": 64}
