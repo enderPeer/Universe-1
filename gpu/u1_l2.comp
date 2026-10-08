@@ -22,7 +22,7 @@ shared uint sh_cnt[64]; shared uint sh_min[40];   // per-workgroup aggregation o
 
 uint64_t mix(uint64_t x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdul; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ul; x ^= x >> 33; return x; }
 
-uint A, Z, Cf, PC, T; uint M[32]; uint code[8]; int wcnt[17]; bool doStats; int s_best, s_final, s_first, s_intact, s_ever, s_fmod, s_walk, s_off;
+uint A, Z, Cf, PC, T, wmask; uint M[32]; uint code[8]; int wcnt[17]; bool doStats; int s_best, s_final, s_first, s_intact, s_ever, s_fmod, s_walk, s_off;
 uint mask, amask, pmask, opmask;
 uint rd(uint addr) { return M[addr & amask]; }
 int score_best(out uint where) { int best = 0; where = pc.nins; for (uint k = pc.nins; k + pc.nins <= pc.nM; k++) { int sc = wcnt[k - pc.nins]; if (sc > best) { best = sc; where = k; } } return best; }
@@ -32,19 +32,19 @@ void wr(uint addr, uint v) {
   if (addr < pc.nins) { if (old != v) { s_ever = 1; if ((old >> (pc.I - pc.o)) == (v >> (pc.I - pc.o))) s_walk++; } }
   else {
     int klo = int(addr) - int(pc.nins) + 1; if (klo < int(pc.nins)) klo = int(pc.nins); int khi = int(addr); if (khi > int(pc.nM) - int(pc.nins)) khi = int(pc.nM) - int(pc.nins);
-    for (int k = klo; k <= khi; k++) { int j = int(addr) - k; wcnt[k - int(pc.nins)] += int(v == code[j]) - int(old == code[j]);
+    bool was_written = ((wmask >> addr) & 1u) != 0u; wmask |= 1u << addr;
+    for (int k = klo; k <= khi; k++) { int j = int(addr) - k; wcnt[k - int(pc.nins)] += int(v == code[j]) - int(was_written && old == code[j]);
       int sc = wcnt[k - int(pc.nins)]; if (sc > s_best) { s_best = sc; if (uint(sc) == pc.nins) { s_first = int(T) + 1; s_off = k; int ok = 1; for (uint q = 0u; q < pc.nins; q++) ok &= int(M[q] == code[q]); s_intact = ok; } } }
   }
 }
 void setA(uint v) { A = v & mask; Z = uint(A == 0u); }
 
 uint run(uint64_t pb, uint x, bool stats) {
-  A = x & mask; Z = uint(A == 0u); Cf = 0u; PC = 0u; doStats = stats; T = 0u;
+  A = x & mask; Z = uint(A == 0u); Cf = 0u; PC = 0u; doStats = stats; T = 0u; wmask = 0u;
   for (uint k = 0u; k < pc.nins; k++) code[k] = uint(pb >> (k * pc.I)) & ((1u << pc.I) - 1u);
   for (uint i = 0u; i < pc.nM; i++) M[i] = (code[i % pc.nins] + 1u) & mask;
   for (uint k = 0u; k < pc.nins; k++) M[k] = code[k];
-  if (stats) { s_best = 0; s_final = 0; s_first = 0; s_intact = 0; s_ever = 0; s_fmod = 0; s_walk = 0; s_off = int(pc.nins);
-    for (uint k = pc.nins; k + pc.nins <= pc.nM; k++) { int sc = 0; for (uint j = 0u; j < pc.nins; j++) sc += int(M[k + j] == code[j]); wcnt[k - pc.nins] = sc; if (sc > s_best) { s_best = sc; s_off = int(k); } } }
+  if (stats) { s_best = 0; s_final = 0; s_first = 0; s_intact = 0; s_ever = 0; s_fmod = 0; s_walk = 0; s_off = int(pc.nins); for (int k = 0; k < 17; k++) wcnt[k] = 0; }
   bool halted = false;
   for (uint t = 0u; t < 256u && !halted; t++) {
     T = t;

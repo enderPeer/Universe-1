@@ -2,8 +2,8 @@
 // program words (I = W bits each) are loaded at M[0..2^p-1], fetch reads M[PC], so programs can rewrite themselves. Semantics =
 // sim/machine_l2.py. Per program: the unary truth table A(x) at step 256 (or HALT) -> same shard format as u1_cuda (skipped with
 // --copy-only); and, on the x = 0 run, the self-modification statistics (lessons of the Dimension42 NANO sweeps):
-//   copy score = the largest number of code words found position-wise at any non-overlapping offset k in [2^p, 2^a - 2^p]
-//   (the region beyond the code is pre-filled with code[i mod 2^p]+1, so a full copy needs writes; partial matches can pre-exist at offsets not divisible by 2^p): best over all steps and at the end;
+//   copy score = the largest number of code words found position-wise, in words the program has WRITTEN, at any non-overlapping
+//   offset k in [2^p, 2^a - 2^p] (pre-filled contents never count, so a copy must be written entirely): best over all steps and at the end;
 //   step and offset of the first full copy and whether the code was still intact then; whether the code was ever changed / differs
 //   at the end; walker = at least 4 writes into code that changed only the operand field. A copier needs >= 2 nonzero code words.
 // Output: <out> (function shard, unless --copy-only) and <out>.copy (text: histograms, counts, up to --max-copiers copiers with flags).
@@ -37,7 +37,7 @@ __device__ __forceinline__ ull mix(ull x) { x ^= x >> 33; x *= 0xff51afd7ed558cc
 
 struct Stats { int best, final, first_full, intact, ever_mod, final_mod, walker_writes, offset; };
 #define NOFF 17   // window offsets k = nins .. nM - nins (17 for a = 5, 1 for a = 4)
-struct St { unsigned A, Z, Cf, PC; unsigned char M[MAXM]; unsigned char code[8]; signed char cnt[NOFF]; Stats *S; int t; };
+struct St { unsigned A, Z, Cf, PC, wmask; unsigned char M[MAXM]; unsigned char code[8]; signed char cnt[NOFF]; Stats *S; int t; };   // wmask: words written since the start; only written words count as copied
 __device__ __forceinline__ unsigned rd(St &s, unsigned addr) { return s.M[addr & C.amask]; }
 __device__ __forceinline__ int score(St &s, int *where) { int best = 0, bk = C.nins; for (int k = C.nins; k + C.nins <= C.nM; k++) { int sc = s.cnt[k - C.nins]; if (sc > best) { best = sc; bk = k; } } if (where) *where = bk; return best; }
 __device__ __forceinline__ void wr(St &s, unsigned addr, unsigned v) {
@@ -46,7 +46,8 @@ __device__ __forceinline__ void wr(St &s, unsigned addr, unsigned v) {
   if (addr < (unsigned)C.nins) { if (old != v) { s.S->ever_mod = 1; if ((old >> (C.I - C.o)) == (v >> (C.I - C.o))) s.S->walker_writes++; } }
   else {
     int klo = (int)addr - C.nins + 1; if (klo < C.nins) klo = C.nins; int khi = (int)addr; if (khi > C.nM - C.nins) khi = C.nM - C.nins;
-    for (int k = klo; k <= khi; k++) { int j = (int)addr - k; s.cnt[k - C.nins] += (int)(v == s.code[j]) - (int)(old == s.code[j]);
+    int was_written = (s.wmask >> addr) & 1; s.wmask |= 1u << addr;
+    for (int k = klo; k <= khi; k++) { int j = (int)addr - k; s.cnt[k - C.nins] += (int)(v == s.code[j]) - (int)(was_written && old == s.code[j]);
       int sc = s.cnt[k - C.nins]; if (sc > s.S->best) { s.S->best = sc; if (sc == C.nins) { s.S->first_full = s.t + 1; s.S->offset = k; int ok = 1; for (int q = 0; q < C.nins; q++) ok &= s.M[q] == s.code[q]; s.S->intact = ok; } } }
   }
 }
@@ -54,12 +55,11 @@ __device__ __forceinline__ void setA(St &s, unsigned v) { s.A = v & C.mask; s.Z 
 
 // runs program pb with A = x; S != nullptr collects the exp06b statistics; returns final A
 __device__ unsigned run(ull pb, unsigned x, Stats *S) {
-  St s; s.A = x & C.mask; s.Z = (s.A == 0); s.Cf = 0; s.PC = 0; s.S = S; s.t = 0;
+  St s; s.A = x & C.mask; s.Z = (s.A == 0); s.Cf = 0; s.PC = 0; s.S = S; s.t = 0; s.wmask = 0;
   for (int k = 0; k < C.nins; k++) s.code[k] = (unsigned char)((pb >> (k * C.I)) & ((1u << C.I) - 1));
   for (int i = 0; i < C.nM; i++) s.M[i] = (unsigned char)((s.code[i % C.nins] + 1) & C.mask);   // beyond the code: code+1 pattern, differs from the code at every offset position
   for (int k = 0; k < C.nins; k++) s.M[k] = s.code[k];
-  if (S) { S->best = S->final = S->first_full = S->intact = S->ever_mod = S->final_mod = S->walker_writes = 0; S->offset = C.nins;
-    for (int k = C.nins; k + C.nins <= C.nM; k++) { int sc = 0; for (int j = 0; j < C.nins; j++) sc += s.M[k + j] == s.code[j]; s.cnt[k - C.nins] = (signed char)sc; if (sc > S->best) { S->best = sc; S->offset = k; } } }
+  if (S) { S->best = S->final = S->first_full = S->intact = S->ever_mod = S->final_mod = S->walker_writes = 0; S->offset = C.nins; for (int k = 0; k < NOFF; k++) s.cnt[k] = 0; }
   int halted = 0;
   for (int t = 0; t < MAX_STEPS && !halted; t++) {
     s.t = t;

@@ -53,8 +53,8 @@ for name, W, a, p, I, isa in ISAS:
     for f in copies:
         txt = Path(f).read_text()
         assert sum(int(c) for _, c, _ in re.findall(r'final (\d+) count (\d+) min_program (0x[0-9a-f]+)', txt)) == CH, f'{f}: programs unaccounted for (dropped GPU work?)'
-        for tag, hist, mins in (('final', final, fmin), ('best', best, bmin)):
-            for sc, cnt, mp in re.findall(tag + r' (\d+) count (\d+) min_program (0x[0-9a-f]+)', txt):
+        for tg, hist, mins in (('final', final, fmin), ('best', best, bmin)):
+            for sc, cnt, mp in re.findall(tg + r' (\d+) count (\d+) min_program (0x[0-9a-f]+)', txt):
                 sc, cnt, mp = int(sc), int(cnt), int(mp, 16); hist[sc] = hist.get(sc, 0) + cnt
                 if cnt: mins[sc] = min(mins.get(sc, mp), mp)
         g = re.search(r'ever_mod (\d+) final_mod (\d+) walkers (\d+) copiers_ever (\d+) copiers_final (\d+) copiers_intact (\d+) min_intact_copier (0x[0-9a-f]+)', txt)

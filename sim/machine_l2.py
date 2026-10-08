@@ -46,11 +46,12 @@ class MachineL2:
         for k, c in enumerate(code): M[k] = c
         return M
 
-    def copy_score(self, M: List[int], code: List[int]) -> Tuple[int, int]:
-        """(best number of code words found position-wise at a non-overlapping offset k in [2^p, 2^a - 2^p], that offset)."""
+    def copy_score(self, M: List[int], code: List[int], written) -> Tuple[int, int]:
+        """(best number of code words found position-wise, in words the program has written, at a non-overlapping offset k in
+        [2^p, 2^a - 2^p], that offset). Pre-filled contents never count, so a copy must be written entirely."""
         n = len(code); best, where = 0, n
         for k in range(n, len(M) - n + 1):
-            sc = sum(M[k + j] == code[j] for j in range(n))
+            sc = sum(M[k + j] == code[j] and (k + j) in written for j in range(n))
             if sc > best: best, where = sc, k
         return best, where
 
@@ -60,16 +61,15 @@ class MachineL2:
         code = self.code(program); st = StateL2(A=init_A & mask, M=self.load(program)); st.Z = int(st.A == 0)
         if y is not None: st.M[n] = y & mask
         M = st.M; opfield = self.opmask
-        S = dict(best=0, final=0, first_full=0, intact=0, ever_mod=0, final_mod=0, walker_writes=0, offset=n)
-        if stats: S['best'], S['offset'] = self.copy_score(M, code)   # partial matches can pre-exist at offsets not divisible by 2^p (never a full copy)
+        S = dict(best=0, final=0, first_full=0, intact=0, ever_mod=0, final_mod=0, walker_writes=0, offset=n); written = set()
         def rd(addr): return M[addr & amask]
         def wr(addr, v):
-            addr &= amask; v &= mask; old = M[addr]; M[addr] = v
+            addr &= amask; v &= mask; old = M[addr]; M[addr] = v; written.add(addr)
             if stats and addr < n and old != v:
                 S['ever_mod'] = 1
                 if (old >> (cfg.I - self.o)) == (v >> (cfg.I - self.o)): S['walker_writes'] += 1
             if stats and addr >= n:
-                sc, where = self.copy_score(M, code)
+                sc, where = self.copy_score(M, code, written)
                 if sc > S['best']:
                     S['best'] = sc
                     if sc == n: S['first_full'] = t + 1; S['offset'] = where; S['intact'] = int(M[:n] == code)
@@ -124,7 +124,7 @@ class MachineL2:
             elif name == 'STIND': wr(rd(op), A)
             else: raise ValueError(name)
         if stats:
-            S['final'] = self.copy_score(M, code)[0]; S['final_mod'] = int(M[:n] != code); S['walker'] = int(S['walker_writes'] >= 4); S['nonzero'] = sum(c != 0 for c in code)
+            S['final'] = self.copy_score(M, code, written)[0]; S['final_mod'] = int(M[:n] != code); S['walker'] = int(S['walker_writes'] >= 4); S['nonzero'] = sum(c != 0 for c in code)
             S['copier'] = int(S['best'] == n and S['nonzero'] >= 2)   # NANO rule: at least 2 nonzero code words
             return st, steps, reason, S
         return st, steps, reason
