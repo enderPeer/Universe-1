@@ -25,4 +25,17 @@ JC on adler40 (RTX 4090 + 4080: sweeps 10 min, merges 27 min). Per-step maps and
 - JC's functions are even more fleeting (56 % at one step only), but its persistent core is 4.3x larger (703,698 functions at 128 or more steps).
 - Both ISAs keep adding functions at the end of the clock (JC: 211 M first seen in steps 193-256), so the JC library beyond 256 steps is worth sweeping too.
 
+## Named functions over the clock (catalog of `fast/map_functions.py`, 352 tables)
+
+| | champion | JC |
+|---|---:|---:|
+| named tables realised at some step <= 256 | 339 | 348 |
+| realised by this ISA only | 1 (trailing_zeros, T 135) | 10 |
+| shared functions reached at a smaller minimal T | 13 | 31 (294 equal; median minimal T 7 for both) |
+
+JC-only, with minimal T: signed shift right by 2 (11), shift right by 1 (14), rotate by 2 (22), shift right by 2 (23), floor log2 (25),
+x < 10 (27), leading zeros (37), signed shift right by 1 (65), popcount (86), Gray decode (86). Highlights where the clock changes the
+cost: signed abs 119 -> 7, rotate left 76 -> 8, parity 62 -> 29, cube 62 -> 49; square goes the other way, 85 -> 116. Still absent in
+both over 256 steps: bit reverse, Gray encode, integer sqrt (Gray encode and bit reverse need XOR or SHR in the ISA, see exp05).
+
 Binary versions of both maps at every step are being swept next (champion first); the Life worlds sample those, not the unary ones.
