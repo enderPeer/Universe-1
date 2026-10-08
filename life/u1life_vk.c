@@ -13,6 +13,7 @@ static const char *PNAME[] = { "NOP","HALT","LD","ST","LDI","CLR","SET","NOT","A
 static double now(void) { struct timespec t; clock_gettime(CLOCK_MONOTONIC, &t); return t.tv_sec + t.tv_nsec * 1e-9; }
 static uint64_t mix(uint64_t x) { x ^= x >> 33; x *= 0xff51afd7ed558ccdULL; x ^= x >> 33; x *= 0xc4ceb9fe1a85ec53ULL; x ^= x >> 33; return x; }
 static VkPhysicalDevice phys; static VkDevice dev;
+void write_ppm(const char *path, const uint32_t *g, const uint32_t *m, uint32_t n);
 static VkBuffer make_buffer(VkDeviceSize size, void **map) {
   VkBuffer buf; VkDeviceMemory mem;
   VkBufferCreateInfo bi = { VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO, NULL, 0, size, VK_BUFFER_USAGE_STORAGE_BUFFER_BIT, VK_SHARING_MODE_EXCLUSIVE, 0, NULL };
@@ -25,7 +26,7 @@ static VkBuffer make_buffer(VkDeviceSize size, void **map) {
 }
 int main(int argc, char **argv) {
   Push P; memset(&P, 0, sizeof P); P.n = 256; P.W = 4; P.a = 2; P.p = 3; P.I = 4; P.income = 20; P.trigger = 15; P.repro_cost = 128; P.max_energy = 255; P.max_age = 1024; P.start_energy = 64;
-  uint64_t seed = 1, mu = 128, dr = 512, ticks = 10000, report = 100; double density = 0.05; const char *isa_s = "SWAP,ADD,NAND,SKZ", *out_dir = ".", *load = NULL; int gpu = 0, dump_final = 0;
+  uint64_t seed = 1, mu = 128, dr = 512, ticks = 10000, report = 100, ppm_every = 0; double density = 0.05; const char *isa_s = "SWAP,ADD,NAND,SKZ", *out_dir = ".", *load = NULL; int gpu = 0, dump_final = 0;
   for (int i = 1; i < argc; i++) {
     #define ARG(nm) (!strcmp(argv[i], nm) && i + 1 < argc)
     if (ARG("--gpu")) gpu = atoi(argv[++i]); else if (ARG("--N")) P.n = atoi(argv[++i]); else if (ARG("--seed")) seed = strtoull(argv[++i], 0, 0);
@@ -34,6 +35,7 @@ int main(int argc, char **argv) {
     else if (ARG("--income")) P.income = atoi(argv[++i]); else if (ARG("--trigger")) P.trigger = atoi(argv[++i]); else if (ARG("--repro-cost")) P.repro_cost = atoi(argv[++i]);
     else if (ARG("--max-energy")) P.max_energy = atoi(argv[++i]); else if (ARG("--mu-bits")) mu = strtoull(argv[++i], 0, 0); else if (ARG("--max-age")) P.max_age = atoi(argv[++i]);
     else if (ARG("--death-rate")) dr = strtoull(argv[++i], 0, 0); else if (ARG("--start-energy")) P.start_energy = atoi(argv[++i]); else if (ARG("--out-dir")) out_dir = argv[++i];
+    else if (ARG("--ppm-every")) ppm_every = strtoull(argv[++i], 0, 0);   /* frames out_dir/t%08llu.ppm, as the CUDA engine */
     else if (ARG("--load")) load = argv[++i]; else if (!strcmp(argv[i], "--dump-final")) dump_final = 1; else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
   uint32_t isa[256]; int nisa = 0; char buf[1024]; strncpy(buf, isa_s, 1023); buf[1023] = 0;
@@ -86,6 +88,7 @@ int main(int argc, char **argv) {
   snprintf(path, sizeof path, "%s/stats.csv", out_dir); FILE *csv = fopen(path, "w"); fprintf(csv, "tick,alive,distinct_genomes,mean_energy,births,deaths\n");
   double t0 = now(); ull births = 0, deaths = 0;
   for (ull t = 0; t <= ticks; t++) {
+    if (ppm_every && t % ppm_every == 0 && t != ticks) { snprintf(path, sizeof path, "%s/t%08llu.ppm", out_dir, t); write_ppm(path, g, m, P.n); }
     if (t % report == 0 || t == ticks) {
       ull alive = 0; double es = 0; uint32_t *gs = malloc(nn * 4); ull k = 0; for (ull i = 0; i < nn; i++) if ((m[i] >> 4) & 1) { alive++; es += m[i] >> 16; gs[k++] = g[i]; }
       // distinct genomes via sort
@@ -99,8 +102,13 @@ int main(int argc, char **argv) {
     memcpy(g, ng, nn * 4); memcpy(m, nm, nn * 4);   // host-visible buffers: swap by copy (simple, exact)
   }
   if (dump_final) { snprintf(path, sizeof path, "%s/final.bin", out_dir); FILE *df = fopen(path, "wb"); fwrite(g, 4, nn, df); fwrite(m, 4, nn, df); fclose(df); }
-  snprintf(path, sizeof path, "%s/final.ppm", out_dir); FILE *pf = fopen(path, "wb"); fprintf(pf, "P6\n%u %u\n255\n", P.n, P.n);
-  for (ull i = 0; i < nn; i++) { unsigned char px[3] = {0, 0, 0}; if ((m[i] >> 4) & 1) { uint64_t h = mix(g[i]); uint64_t b = 96 + (m[i] & 15) * 10; px[0] = (h & 255) * b / 255; px[1] = ((h >> 8) & 255) * b / 255; px[2] = ((h >> 16) & 255) * b / 255; } fwrite(px, 1, 3, pf); }
-  fclose(pf); fclose(csv); fprintf(stderr, "done %llu ticks in %.1fs\n", ticks, now() - t0); return 0;
+  snprintf(path, sizeof path, "%s/final.ppm", out_dir); write_ppm(path, g, m, P.n);
+  fclose(csv); fprintf(stderr, "done %llu ticks in %.1fs\n", ticks, now() - t0); return 0;
 }
 int cmpu(const void *a, const void *b) { uint32_t x = *(const uint32_t *)a, y = *(const uint32_t *)b; return x < y ? -1 : x > y; }
+void write_ppm(const char *path, const uint32_t *g, const uint32_t *m, uint32_t n) {
+  FILE *pf = fopen(path, "wb"); if (!pf) { perror(path); exit(1); } fprintf(pf, "P6\n%u %u\n255\n", n, n);
+  unsigned char *px = malloc((size_t)n * n * 3);
+  for (size_t i = 0; i < (size_t)n * n; i++) { unsigned char *p = px + i * 3; p[0] = p[1] = p[2] = 0; if ((m[i] >> 4) & 1) { uint64_t h = mix(g[i]); uint64_t b = 96 + (m[i] & 15) * 10; p[0] = (h & 255) * b / 255; p[1] = ((h >> 8) & 255) * b / 255; p[2] = ((h >> 16) & 255) * b / 255; } }
+  fwrite(px, 1, (size_t)n * n * 3, pf); fclose(pf); free(px);
+}
