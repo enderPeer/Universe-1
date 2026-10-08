@@ -54,7 +54,7 @@ Reports: `exp09_summary.md`, `exp10_w4_o2_add_summary.md`, `exp09_jc_vs_champion
 growing with the clock (a linear extrapolation ends near step 1,100 at about 400 M champion functions); late functions are fleeting;
 only five functions are stable across the whole clock. Per-step maps and unions on knecht24/adler40 and the workstation (`exp09/`).
 
-## 3. Every step, binary, champion (exp09 binary; 198 of 256 steps analysed, the rest arriving)
+## 3. Every step, binary, champion (exp09 binary; all 256 steps, `exp09_binary_summary.md`)
 
 | step T | binary functions |
 |---:|---:|
@@ -67,10 +67,11 @@ only five functions are stable across the whole clock. Per-step maps and unions 
 | 220 (richest) | 28,058,604 |
 | 256 (the old map) | 24,684,247 |
 
-Named binary functions over the clock (catalog of 740 tables): 673 realised at some analysed step. Three of the functions that were
-missing from every step-256 binary map exist earlier in the run: **saturating add at step 125** (10 steps), **unsigned min at step 127**
-(9 steps), **less-than as a mask at step 234** (2 steps). Still absent at every analysed step: multiply, max, gcd, lcm, divide,
-remainder, less-than as 0/1, carry, absolute difference. Table: `exp09/w4_o2_add_bin/named_over_T.json`; per-step maps on the workstation.
+Named binary functions over the clock (catalog of 740 tables): 678 realised at some step, 646 at step 256, 32 only before 256.
+Of the translator's open binary functions, three exist earlier in the run: **saturating add at step 125** (13 steps), **unsigned min at
+step 127** (18 steps), **less-than, greater-than and greater-equal as masks at steps 227 to 234**. Still absent at every step: multiply,
+max, gcd, lcm, divide, remainder, less-than as 0/1, carry, absolute difference. Table: `exp09/w4_o2_add_bin/named_over_T.json`;
+the 256 per-step maps (116 GB) on the workstation.
 
 ## 4. Self-modifying code (exp06b, exp06c; layout L2, 16 or 32 words, code in memory)
 
