@@ -6,7 +6,8 @@ import argparse, json, os, queue, re, subprocess, sys, threading, time
 from pathlib import Path
 import numpy as np
 ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT / 'fast')); import merge_np
-ap = argparse.ArgumentParser(); ap.add_argument('--gpus', default='0'); ap.add_argument('--only'); ap.add_argument('--chunk-log2', type=int, default=26); ap.add_argument('--cap-log2', type=int, default=22)
+ap = argparse.ArgumentParser(); ap.add_argument('--gpus', default='0'); ap.add_argument('--only', help='comma-separated ISA names'); ap.add_argument('--chunk-log2', type=int, default=26); ap.add_argument('--cap-log2', type=int, default=22)
+ap.add_argument('--engine', default='gpu/u1_l2', help='gpu/u1_l2 (CUDA) or gpu/u1_l2_vk (Vulkan)')
 args = ap.parse_args(); gpus = [int(g) for g in args.gpus.split(',')]
 OUT = ROOT / 'results/exp06b'; RAW = ROOT / 'results/shards/exp06b'; OUT.mkdir(parents=True, exist_ok=True); RAW.mkdir(parents=True, exist_ok=True)
 log = open(OUT / 'run.log', 'a')
@@ -16,7 +17,7 @@ ISAS = []
 for l in (ROOT / 'cluster/isas_exp06b.conf').read_text().splitlines():
     if not l.strip() or l.lstrip().startswith('#'): continue
     name, geom, isa = (x.strip() for x in l.split('|')); a, p, I = (int(x) for x in geom.split())
-    if args.only and args.only != name: continue
+    if args.only and name not in args.only.split(','): continue
     ISAS.append((name, a, p, I, isa))
 for name, a, p, I, isa in ISAS:
     if (OUT / f'{name}.json').exists(): say(f'{name}: done already, skipped'); continue
@@ -27,7 +28,7 @@ for name, a, p, I, isa in ISAS:
             try: k = todo.get_nowait()
             except queue.Empty: return
             out = RAW / f'{name}_{k:04d}.bin'
-            cmd = [str(ROOT / 'gpu/u1_l2'), '--gpu', str(gpu), '--W', '4', '--a', str(a), '--p', str(p), '--I', str(I), '--isa', isa, '--cap-log2', str(args.cap_log2), '--lo', str(k * CH), '--hi', str((k + 1) * CH), '--out', str(out)]
+            cmd = [str(ROOT / args.engine), '--gpu', str(gpu), '--W', '4', '--a', str(a), '--p', str(p), '--I', str(I), '--isa', isa, '--cap-log2', str(args.cap_log2), '--lo', str(k * CH), '--hi', str((k + 1) * CH), '--out', str(out)]
             r = subprocess.run(cmd, capture_output=True, text=True)
             with lock:
                 if r.returncode: say(f'!! {name} gpu {gpu} chunk {k} failed: {r.stderr.strip()[:300]}'); todo.put(k); return
@@ -38,10 +39,12 @@ for name, a, p, I, isa in ISAS:
     secs = time.time() - t0
     files = sorted(str(f) for f in RAW.glob(f'{name}_[0-9][0-9][0-9][0-9].bin'))
     hdr, isa_ids, covered, gaps, merged = merge_np.merge(files); assert not gaps and covered[0][0] == 0 and covered[-1][1] == SPAN
+    say(f'{name}: swept in {secs:.0f}s, merging {len(files)} shards')
     np.save(OUT / f'{name}.T256.npy', merged)
     final = {}; best = {}; fmin = {}; bmin = {}; tot = dict(ever_mod=0, final_mod=0, walkers=0, copiers_ever=0, copiers_final=0, copiers_intact=0); imin = None; first = {}; copiers = []
     for f in files:
         txt = Path(f + '.copy').read_text()
+        assert sum(int(c) for _, c, _ in re.findall(r'final (\d+) count (\d+) min_program (0x[0-9a-f]+)', txt)) == CH, f'{f}: programs unaccounted for (dropped GPU work?)'
         for tag, hist, mins in (('final', final, fmin), ('best', best, bmin)):
             for sc, cnt, mp in re.findall(tag + r' (\d+) count (\d+) min_program (0x[0-9a-f]+)', txt):
                 sc, cnt, mp = int(sc), int(cnt), int(mp, 16); hist[sc] = hist.get(sc, 0) + cnt
