@@ -58,3 +58,9 @@ not the opcode count.
 
 See [the verified SSH cluster inventory](docs/cluster-inventory.md) for all
 GPUs, CPUs, RAM, access details, and a live availability snapshot.
+
+## Related projects
+
+- [Dimension42](https://github.com/enderPeer/Dimension42): the NANO 8-bit von Neumann machine, exhaustive class maps up to 6 bytes (2^48 programs), the 2+2 search (74,527 proven 5-byte adders), the behaviour catalog, the alife toolkit (316 replicators, none with intact code) and the neural adder experiments. Universe-1 took its cross-device validation discipline, its per-chunk program accounting and its copier criterion from there.
+- [Universe-7](https://github.com/enderPeer/universe7): the drawing law itself chosen by exhaustive search so that almost every short program is a distinct picture; 8.4 million programs up to 22 bits.
+- `docs/09_three_projects.md` compares the three and ranks the open experiments; `docs/10_avida_comparison.md` compares the Universe-1 copier results with the exhaustive Avida replicator enumeration (Nitash C G et al. 2017).
