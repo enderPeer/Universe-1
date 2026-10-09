@@ -37,9 +37,38 @@ def read_activity(p):
 def opt(opts, key, default):
     m = re.search(r'--' + key + r' (\S+)', opts); return m.group(1) if m else default
 
+
+def chains(d, st):
+    """Births grouped into chains: from births.tsv (consecutive births at most 8 ticks apart) or, without it, from consecutive
+    report rows with births. Returns (list of chains as dicts, source)."""
+    bp = d / 'births.tsv'
+    if bp.exists() and sum(1 for _ in open(bp)) > 1:
+        rows = [l.rstrip('\n').split('\t') for l in open(bp)][1:]; out = []; cur = None
+        for tick, pg, cg, k, fa in rows:
+            tick = int(tick)
+            if cur and tick - cur['end'] <= 8: cur['end'] = tick; cur['n'] += 1; cur['genomes'].add(cg); cur['faithful'] += fa == '1'; cur['offsets'].add(int(k))
+            else:
+                if cur: out.append(cur)
+                cur = dict(start=tick, end=tick, n=1, genomes={pg, cg}, root=pg, faithful=int(fa == '1'), offsets={int(k)})
+        if cur: out.append(cur)
+        return out, 'births.tsv'
+    t = st['tick']; inc = np.diff(st['births']); out = []; cur = None
+    for i, x in enumerate(inc):
+        if x > 0:
+            if cur: cur['n'] += int(x); cur['end'] = int(t[i + 1])
+            else: cur = dict(start=int(t[i + 1]), end=int(t[i + 1]), n=int(x), genomes=set(), root=None, faithful=0, offsets=set())
+        elif cur: out.append(cur); cur = None
+    if cur: out.append(cur)
+    return out, 'stats rows'
+
 res = {}; L = ['# Design C soup ensemble: analysis', '', 'Rules and predictions: `docs/12_design_c_soup.md`. Runs: `cluster/soup_runs.conf`. One row per run; "adaptive genomes" are',
-               'birth genomes whose cumulative activity (sum of census counts) exceeds the largest activity any genome of the neutral shadow reached.', '',
-               '| run | processors | mu | rays | inflow | ticks | births | faithful | fertile at end | genomes in map | shadow map | max activity real / shadow | adaptive genomes | first / last adaptive seen | verdict |', '|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---|---:|---|---|']
+               'birth genomes whose cumulative activity (sum of census counts) exceeds the largest activity any genome of the neutral shadow reached.',
+               'Caveat: placements land on the same position by chance (about P^2 / 2N pairs among the living at any census), so identical genomes with 2 to 4',
+               'copies occur in every census of soup and shadow alike; the activity maps are mostly these collisions, and a chain whose members live 4 ticks',
+               'cannot exceed the shadow maximum. The chains of births (from births.tsv) are the sensitive measure of reproduction in this soup. Chains whose',
+               'root genome is uniform (all eight words equal, e.g. LDIND 7 x 8) are counted separately: such a genome is reproduced by any loop that writes',
+               'that constant into eight words, which happens when the processor has itself been overwritten; it is not a copy loop.', '',
+               '| run | processors | life (steps) | mu | inflow | ticks | births | faithful | chains | chains per M ticks | longest chain | genomes in map | shadow map | max activity real / shadow | adaptive genomes | verdict |', '|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|---|']
 fig, axes = plt.subplots(2, 2, figsize=(14, 9)); fig2, ax2 = plt.subplots(1, 1, figsize=(8, 5))
 for name in runs:
     d = SOUP / name; st = read_stats(d / 'stats.csv'); opts = conf.get(name, status.get(name, {}).get('options', ''))
@@ -57,8 +86,16 @@ for name in runs:
     if births[-1] == 0: verdict = 'none: no birth at all'
     extinct = 'extinct' if st['live'][-1] == 0 else ''
     fert = int(st['fertile'][-1]); P = int(opt(opts, 'P', 65536)); mu = opt(opts, 'mu', '0'); rays = opt(opts, 'rays', '0'); inflow = 'no' if opt(opts, 'spontaneous', '1') == '0' else 'yes'
-    L.append(f'| {name} | {P:,} | {mu} | {rays} | {inflow} | {ticks_done:,}{" " + extinct if extinct else ""} | {int(births[-1]):,} | {int(st["faithful"][-1]):,} | {fert:,} | {len(act):,} | {len(sact):,} | {amax:,} / {smax:,} | {len(adaptive):,} | {min(first_ad) if first_ad else "-"} / {max(first_ad) if first_ad else "-"} | {verdict} |')
-    res[name] = dict(options=opts, ticks=ticks_done, births=int(births[-1]), faithful=int(st['faithful'][-1]), mutant=int(st['mutant'][-1]), fertile_end=fert, live_end=int(st['live'][-1]),
+    ch, src = chains(d, st)
+    def uniform(g):
+        if not g: return False
+        v = int(g, 16); words = [(v >> (5 * k)) & 31 for k in range(8)]; return len(set(words)) == 1
+    degenerate = [c for c in ch if uniform(c['root'])]; ch = [c for c in ch if not uniform(c['root'])]   # a uniform genome is reproduced by any loop writing that constant
+    sizes = collections.Counter(c['n'] for c in ch); longest = sorted(ch, key=lambda c: -c['n'])[:5]
+    res_ch = dict(source=src, chains=len(ch), degenerate_chains=len(degenerate), degenerate_births=sum(c['n'] for c in degenerate), per_million_ticks=len(ch) / max(ticks_done, 1) * 1e6, size_histogram={str(k): v for k, v in sorted(sizes.items())}, longest=[dict(start=c['start'], births=c['n'], genomes=len(c['genomes']), root=c['root'], faithful=c['faithful'], offsets=sorted(c['offsets'])) for c in longest])
+    age = opt(opts, 'max-age', '1024'); infl = ('random code' if opt(opts, 'inflow', 'processors') == 'words' else 'processors') if inflow == 'yes' else 'none'
+    L.append(f'| {name} | {P:,} | {age} | {mu} | {infl} | {ticks_done:,}{" " + extinct if extinct else ""} | {int(births[-1]):,} | {int(st["faithful"][-1]):,} | {len(ch):,} | {res_ch["per_million_ticks"]:.1f} | {longest[0]["n"] if longest else 0} | {len(act):,} | {len(sact):,} | {amax:,} / {smax:,} | {len(adaptive):,} | {verdict} |')
+    res[name] = dict(chains=res_ch, options=opts, ticks=ticks_done, births=int(births[-1]), faithful=int(st['faithful'][-1]), mutant=int(st['mutant'][-1]), fertile_end=fert, live_end=int(st['live'][-1]),
                      genomes_in_map=len(act), shadow_genomes_in_map=len(sact), max_activity=amax, shadow_max_activity=smax, adaptive_genomes=len(adaptive), adaptive_first_seen_thirds=[n_early, n_mid, n_late], verdict=verdict,
                      top_adaptive=[dict(genome=a[0], first_seen=a[1], last_seen=a[2], activity=a[3], peak=a[4]) for a in sorted(adaptive, key=lambda a: -a[3])[:20]])
     lab = name
@@ -83,6 +120,11 @@ for name in runs:
         for a in r['top_adaptive']:
             g = int(a['genome'], 16); words = [(g >> (5 * k)) & 31 for k in range(8)]; dis = '; '.join(f'{["LDIND", "STIND", "INCM", "JNZ"][w >> 3]} {w & 7}' for w in words)
             L.append(f'| {a["genome"]} | {a["first_seen"]:,} | {a["last_seen"]:,} | {a["activity"]:,} | {a["peak"]:,} | {dis} |')
+        L.append('')
+    rc = r['chains']
+    if rc['chains']:
+        L += [f'## {name}: chains of births ({rc["source"]}; {rc["chains"]} chains, {rc["per_million_ticks"]:.1f} per million ticks; size histogram {rc["size_histogram"]}' + (f'; {rc["degenerate_chains"]} chains with {rc["degenerate_births"]} births of uniform genomes such as all LDIND 7 excluded' if rc['degenerate_chains'] else '') + ')', '', '| start tick | births | distinct genomes in the chain | root genome | faithful births | offsets |', '|---:|---:|---:|---|---:|---|']
+        for c in rc['longest']: L.append(f'| {c["start"]:,} | {c["births"]} | {c["genomes"]} | {c["root"] or "-"} | {c["faithful"]} | {" ".join(str(k) for k in c["offsets"])} |')
         L.append('')
     cens = sorted((SOUP / name).glob('census_*.tsv'))
     if cens:
