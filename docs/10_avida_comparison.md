@@ -5,7 +5,7 @@ length 8 were run through Avida's Analyze Mode; 914 are viable self-replicators 
 5.9 mers); none exist at length 5, 6 or 7, so 8 is the minimal replicator length in Avida. The replicators form clusters in the
 Hamming-distance-1 network (four clusters of 212, 199, 165 and 95 hold about 75 %, 20 are singletons), split into two classes that
 do not intermix (fg-type, hc-type), differ in evolvability, and three genotypes win about 65 % of primordial-soup competitions.
-The 914 sequences are public (figshare 10.6084/m9.figshare.4551559, CC BY 4.0, one 8-kB text file).
+The 914 sequences are public (figshare 10.6084/m9.figshare.4551559, CC BY 4.0, one 8-kB text file); downloaded 2026-10-09 to `results/exp11/figshare/len8`, structure in `results/exp11/README.md` (h-alloc, h-copy, h-divide in every genome; a seven-instruction core with one free slot accounts for 320 of them; 41 one-substitution clusters).
 
 ## The two machines
 
