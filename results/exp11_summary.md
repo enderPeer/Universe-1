@@ -80,9 +80,53 @@ three of eight slots on alloc/copy/divide and must close a loop with templates; 
 themselves. Both spaces show the same sharp length threshold (nothing at 7, hundreds at 8 / nothing with one operand bit, 141 with
 two) and the same cluster structure (a few large Hamming-1 clusters plus singletons).
 
-## Length 9: all 26^9 = 5,429,503,678,976 genomes (running)
+## Length 9: all 26^9 = 5,429,503,678,976 genomes (`results/exp11/len9.json`, `len9_viable.tsv`, `len9_analysis.json`)
 
-Started 2026-10-09 10:37 (falke64, 2 x R9700, chunks 0..11699) and 10:46 (specht32, RX 9070 XT + 9060 XT, chunks 11700..20217) with
-2^28 genomes per chunk and a 180-cycle budget; about 7 hours. Results will be appended here (viable count, depth split, intact
-fraction, fecundity and first-divide distributions, clusters) with the comparison to length 8 and to the information-content
-prediction (a constant 5.9 mers would predict 26^9 x 26^-5.907 = 23,800 viable genomes).
+| | count |
+|---|---:|
+| viable | **37,104** |
+| copy-true at depth 0 (the first child equals the genome) | 17,707 (all with the parent intact) |
+| viable only at depth 1 / depth 2 | 19,350 / 47 |
+| parent intact after the first divide | 19,005 |
+| genomes that divide at all within 180 cycles | 3,822,391 |
+| fecundity within the 180-cycle lifetime: 1 / 2 / 3 | 33,531 / 3,444 / 129 |
+| copy-true fecundity 0 / 1 / 2 / 3 | 19,397 / 17,602 / 92 / 13 |
+| first divide: min / median / max cycle | 35 / 111 / 180 |
+| distinct up to rotation | 31,121 |
+| one-substitution clusters (largest) | 141 (17,817, 5,363, 5,085, 4,213, 2,517), 48 singletons |
+| instruction multisets | 606 |
+| instructions in every viable genome | h-copy, h-alloc, h-divide (nop-B, if-label, mov-head in 95-96 %) |
+| time | 50,612 GPU-seconds (7.1 h wall on the four AMD cards, 2^28 genomes per chunk) |
+
+Engine check at length 9: the Vulkan engine agrees with `sim/avida.py` on every field for 600 viable genomes drawn from the result
+plus 16,384 random length-9 genomes.
+
+- **Density and information.** 37,104 / 26^9 = 6.8e-9, information content 9 - log26(37,104) = 5.77 mers, against 5.91 mers at
+  length 8: a constant 5.9 mers would have predicted 23,800 viable genomes; there are 1.56 times more. The extra slot is cheaper
+  than a constant per-site cost because it is mostly free.
+- **Almost all of them are the length-8 replicators with one instruction inserted.** 35,415 of the 37,104 (95.4 %) are one deletion
+  away from one of the 916; the 916 have 165,463 distinct single insertions, of which those 35,415 (21 %) are viable. The other
+  1,689 (519 copy-true at depth 0, 1,131 at depth 1, 39 at depth 2) are new structures.
+- **Most are viable only through their child.** 19,350 of the 37,104 (52 %) do not copy themselves: in a sample of 3,000 of them,
+  2,704 (90 %) produce a length-8 child that is itself one of the 916 (the inserted instruction is not copied), 199 a length-9
+  child, 96 a length-10 child, 1 a length-11 child, all true replicators. At length 8 this class was 51 of 916 (5.6 %). The 47
+  depth-2 genomes need two generations to reach a replicator (e.g. `zwvvfgxgb` -> `awvvfgxgb` -> `awvvfgxgba`, which copies itself).
+- **Every genome that copies itself at depth 0 keeps the parent intact** (17,707 of 17,707), as at length 8 (865 of 865): with
+  separate heads and h-divide, a true copy and an intact parent are the same event. The 1,298 intact-but-not-copy-true genomes
+  cut the parent exactly at 9 and produce a different child.
+- **Fecundity grows with length:** 3,573 genomes (9.6 %) divide twice or three times within their 180-cycle lifetime (length 8:
+  7 of 916, 0.8 %); 105 of them produce two or three true copies. The fastest first divides (cycle 35, `vvxfgwgbg`) are faster
+  than anything at length 8 (57).
+- **Clusters:** the Hamming-1 graph has 141 components; the largest holds 17,817 (48 %), the next four 5,363, 5,085, 4,213, 2,517;
+  48 singletons. At length 8: 41 components, the largest 213 (23 %), 20 singletons. The landscape is more connected at length 9.
+
+## Information content per length (this experiment)
+
+| length | genomes | viable | density | mers (L - log26 viable) | copy themselves | intact | fecundity >= 2 |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 7 | 8.03e9 | 0 | 0 | - | 0 | 0 | 0 |
+| 8 | 2.09e11 | 916 | 4.4e-9 | 5.91 | 865 (94 %) | 906 (99 %) | 7 (0.8 %) |
+| 9 | 5.43e12 | 37,104 | 6.8e-9 | 5.77 | 17,707 (48 %) | 19,005 (51 %) | 3,573 (9.6 %) |
+
+Length 10 (1.4e14 genomes) would take about 8 days on the four AMD cards at this rate, or 2 days with the five NVIDIA cards added
+(the CUDA engine is validated); not run.
