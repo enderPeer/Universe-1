@@ -1,10 +1,10 @@
-# Overnight ensemble 2026-10-08/09: 19 Life worlds, up to 6,000,000 ticks
+# Overnight ensemble 2026-10-08/09: 18 Life worlds, up to 6,000,000 ticks
 
 Launched 19:11 Berlin on all nine GPUs and the CPUs of the four nodes (`cluster/overnight_plan.conf`, `cluster/overnight.py`);
-17 runs finished by 06:58, the last two (the adler40 CPU world and the 2048^2 swap world on falke64) by about 10:30. No run went
-extinct. Per-run rows, phenotypes of the dominant genomes and renders are in `ANALYSIS.md` (all 30 worlds); this file is the
+16 runs finished by 06:58, the last two (the adler40 CPU world and the 2048^2 swap world on falke64) at 10:25 and 10:26. No run
+went extinct. Per-run rows, phenotypes of the dominant genomes and renders are in `ANALYSIS.md` (all 30 worlds); this file is the
 overnight reading. Curves: `overnight_curves.png` (symlog time axis, per-cell quantities so that 512^2, 1024^2, 2048^2 and 4096^2
-worlds can be compared).
+worlds can be compared; all 18 runs).
 
 ![curves](overnight_curves.png)
 
@@ -19,10 +19,10 @@ worlds can be compared).
 | swap_long_rc64 (swap, repro_cost 64) | R9700 | 6,000,000 | 7.0 | 239 | 1,046,058 (99.8 %) | 1,043,366 | 62,614 | 49,677 | 48,850 | 49,565 | 48,788 |
 | swap_long_s2 | RX 9070 XT | 4,000,000 | 8.2 | 136 | 843,736 (80 %) | 831,548 | 232,652 | 234,485 | 234,303 | 234,061 | 11,472 |
 | swap_long_s3 | RX 9060 XT | 4,000,000 | 7.2 | 154 | 862,490 (82 %) | 820,895 | 238,780 | 218,542 | 213,555 | 219,624 | 11,977 |
-| swap_2048_s1 (swap, 2048^2) | R9700 | 3,000,000 | ~15 | ~56 | finishing | | | | | | |
+| swap_2048_s1 (swap, 2048^2) | R9700 | 3,000,000 | 14.7 | 57 | 3,456,733 (82 %) | 3,330,547 | 743,309 | 754,565 | 722,174 | 721,029 | 49,309 |
 | shrmul_long_s1 (Codex's SHR/MUL ISA) | R9700 | 6,000,000 | 4.2 | 395 | 909,254 (87 %) | 868,349 | 181,616 | 181,892 | 198,239 | 193,838 | 15,520 |
 | shrmul_s1 / s2 / s3 (phase B) | R9700, R9700, RX 9070 XT | 200,000 | 0.2 to 0.4 | 127 to 236 | 925,152 / 967,574 / 932,602 | 857,648 to 868,349 | 181,616 / 123,640 / 176,261 | | | | 16,474 / 17,595 / 16,196 |
-| cpu_jc_512_s1 (JC, 512^2, 18 CPU threads) | adler40 CPU | 2,500,000 | ~14 | ~50 | finishing | | | | | | |
+| cpu_jc_512_s1 (JC, 512^2, 18 CPU threads) | adler40 CPU | 2,500,000 | 15.2 | 46 | 225,139 (86 %) | 47,269 | 22,872 | 18,417 | 19,994 | 21,619 | 2,638 |
 | cpu_champ512_512_s1 (champion 512-step, 512^2) | knecht24 CPU | 1,000,000 | 13.8 | 20 | 239,178 (91 %) | 75,773 | 14,540 | 8,513 | | 8,513 | 2,518 |
 | cpu_jc_512_mu32 (JC, mu_bits 32, 512^2) | specht32 CPU | 1,000,000 | 8.8 | 31 | 252,499 (96 %) | 8,824 | 161,012 | 148,065 | | 148,065 | 2,984 |
 | cpu_swap_512_s1 (swap, 512^2) | falke64 CPU | 2,500,000 | 6.4 | 108 | 214,883 (82 %) | 205,116 | 57,743 | 63,201 | 65,200 | 62,958 | 2,888 |
@@ -48,7 +48,15 @@ structure therefore equilibrates much later than the diversity count does.
   395 ticks/s on an R9700 (its genomes halt early). Its three phase-B seeds agree within 30 %.
 - **The 512-step champion at 2048^2** settles at about 147,000 genomes (0.035 per cell) from 1,000,000 ticks on; the CPU control at 512^2
   settles at 8,500 (0.032 per cell). The extended clock does not destabilise the world.
-- **Nothing went extinct** in 19 worlds over a combined 45,000,000 ticks; the lowest live fraction after the first 1,000 ticks was 9 %
+- **Nothing went extinct** in 18 worlds over a combined 46,000,000 ticks; the lowest live fraction after the first 1,000 ticks was 9 %
   (the 4096^2 JC world during its first turnover wave).
+- **The same world, 22 times longer: the winner stays the winner.** The overnight JC worlds continue yesterday's seeds, so their
+  first 200,000 ticks are the phase-B runs. Seed 1's dominant genome (0x23a492e7) held 10.5 % of the cells at 200,000 ticks and
+  30.0 % at 4,500,000; seed 2's (0x32b4936d) went from 12.1 % to 35.4 %. No succession of families took place; the runner-ups
+  changed, but they are one-instruction variants of the same winner. The diversity plateau is that family's mutation cloud
+  (about a quarter of all births carry a bit flip at mu_bits 128), not a pool of competing strategies.
+- **Per-cell diversity of the JC world falls with world size**: 0.082 per cell at 512^2 (2.5 M ticks), 0.055 at 1024^2 (4.5 M),
+  0.035 at 2048^2 for the 512-step champion (1.8 M), 0.029 at 4096^2 (1 M, still falling). Bigger tori hold bigger domains of the
+  same family; the swap ISA shows the opposite, weaker trend (0.24 at 512^2, 0.22 at 1024^2, 0.17 at 2048^2).
 - **Seeds agree, parameters decide**: the two JC seeds end within 0.4 % of each other at 4,500,000 ticks; the two swap seeds within 7 %.
   Mutation rate, reproduction cost and the ISA change the plateau by factors of 3 to 15.

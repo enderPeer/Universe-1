@@ -94,9 +94,9 @@ self-copiers exist only in the crawler ISA and none keeps its original code inta
 
 `life/ANALYSIS.md`: 30 worlds (champion, swap, JC, SHR/MUL; 256-step and 512-step clocks; parameter scans), no extinction,
 neighbour-dependent phenotypes dominate; videos in `life/*/`; learned world model in `life/worldmodel/REPORT.md` (97.6 % next-state
-accuracy in-world, 81.5 % on an unseen seed). `life/OVERNIGHT_RESULTS.md`: the overnight ensemble of 2026-10-08/09, 19 worlds up to
+accuracy in-world, 81.5 % on an unseen seed). `life/OVERNIGHT_RESULTS.md`: the overnight ensemble of 2026-10-08/09, 18 worlds up to
 6,000,000 ticks and 4096^2 cells: the JC world's diversity loss stops at about 0.05 genomes per cell after 1,000,000 ticks, the
-halting ISAs (swap, SHR/MUL) hold 0.2 genomes per cell for the whole run, nothing goes extinct in 45,000,000 combined ticks.
+halting ISAs (swap, SHR/MUL) hold 0.2 genomes per cell for the whole run, nothing goes extinct in 46,000,000 combined ticks.
 
 ## Data locations
 

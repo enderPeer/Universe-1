@@ -1,6 +1,6 @@
 # Overnight plan 2026-10-08 -> 2026-10-09 (check this when you are back)
 
-**Outcome (2026-10-09 morning):** 17 of 19 runs ended `exit 0` between 05:00 and 06:58 Berlin, the adler40 CPU world and the
+**Outcome (2026-10-09 morning):** 16 of 18 runs ended `exit 0` between 05:00 and 06:58 Berlin, the adler40 CPU world and the
 2048^2 swap world on falke64 by about 10:30; nothing went extinct. Results and the reading: `results/life/OVERNIGHT_RESULTS.md`,
 per-run rows in `results/life/ANALYSIS.md`. exp06c (3 intact 5-byte self-copiers) and the exp09 binary maps committed themselves.
 
