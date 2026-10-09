@@ -29,6 +29,14 @@ worlds can be compared).
 
 ## What the long runs say
 
+Key frames of the two big worlds (`jc_4096_s1/keyframes.png`, `champ512_2048_s1/keyframes.png`; showcase videos with sound next
+to them): both coarsen. Domains of one genome family grow from a few cells at 10,000 ticks to hundreds of cells across at 1,000,000
+ticks, and in the 4096^2 JC world they are still growing at the end while the genome count has already flattened. The spatial
+structure therefore equilibrates much later than the diversity count does.
+
+![jc_4096 key frames](jc_4096_s1/keyframes.png)
+![champ512_2048 key frames](champ512_2048_s1/keyframes.png)
+
 - **The JC world's diversity loss stops.** At 200,000 ticks (yesterday's phase B) the JC worlds were still losing genomes. Over
   4,500,000 ticks both seeds settle between 45,000 and 57,000 genomes per 1024^2 (about 0.05 per cell) from 1,000,000 ticks on,
   with births and fill constant. The 4096^2 world shows the same per-cell density at 1,000,000 ticks (480,892 genomes, 0.029 per

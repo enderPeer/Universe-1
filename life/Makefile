@@ -14,3 +14,7 @@ u1life_emu: u1life.cu ../gpu/cuda_shim.h
 	g++ -O2 -x c++ -include ../gpu/cuda_shim.h -o u1life_emu u1life.cu
 clean:
 	rm -f u1life_cuda u1life_vk u1life.spv u1life_emu
+
+# Design C soup (docs/12_design_c_soup.md), CUDA only for now
+u1soup_cuda: u1soup.cu
+	$(NVCC) -O3 -arch=native -o u1soup_cuda u1soup.cu
