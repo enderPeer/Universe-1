@@ -18,7 +18,8 @@ World (every rule listed; nothing else is decided for the organisms):
   is there now. The owner map (which living processor's segment covers a word, the highest slot when segments overlap) only serves
   the parasite statistic (reads from another living organism's segment).
 - Placement (--spontaneous 1): every slot still free after births and deaths receives a processor at a uniformly random position, with
-  the words there as its birth genome. Processors are conserved; the soup samples its own content and nothing is chosen.
+  the words there as its birth genome (--inflow processors: the soup samples its own content) or, with --inflow words, after writing L
+  uniformly random words there (the inflow brings random code, so the soup keeps sampling the whole program space). Nothing is chosen.
 - Rays: --rays R expected single-bit flips per tick anywhere in memory.
 - Shadow (Bedau's neutral shadow for the activity statistics): a population of genomes without processors: for every real birth a
   copy of a uniformly random living shadow genome, mutated with the same mu; for every real death a random shadow death; for every
@@ -114,10 +115,16 @@ class Soup:
         self.place_spontaneous()
 
     def place_spontaneous(self):
-        """Every free slot (in slot order) gets a processor at a random position; draw j for the j-th free slot."""
+        """Every free slot (in slot order) gets a processor at a random position (draw j for the j-th free slot). With --inflow words the
+        placement first writes L random words there (all placements write, later ones winning, then all genomes are read); with
+        --inflow processors the words found there are the genome."""
         if not self.a.spontaneous: return
-        for j, s in enumerate(self.free_slots()):
-            B = hsh(self.seed, self.tick, 2, j) % self.N; self.attach(s, B, self.read_genome(B)); self.c['placements'] += 1
+        free = self.free_slots(); Bs = [hsh(self.seed, self.tick, 2, j) % self.N for j in range(len(free))]
+        if self.a.inflow == 'words':
+            for j, B in enumerate(Bs):
+                for q in range(self.L): x = (B + q) % self.N; self.M[x] = hsh(self.seed, self.tick, 4, j * self.L + q) & self.mask; self.last_writer[x] = -1
+        for j, s in enumerate(free):
+            self.attach(s, Bs[j], self.read_genome(Bs[j])); self.c['placements'] += 1
             if self.shadow: self.shadow.add(self.genome[s])
 
     # ---- one step for all processors
@@ -247,7 +254,7 @@ def parse(argv=None):
     ap.add_argument('--N', type=int, default=4096); ap.add_argument('--P', type=int, default=256); ap.add_argument('--W', type=int, default=5); ap.add_argument('--a', type=int, default=5); ap.add_argument('--p', type=int, default=3)
     ap.add_argument('--isa', default='LDIND,STIND,INCM,JNZ'); ap.add_argument('--S', type=int, default=32); ap.add_argument('--ticks', type=int, default=1000); ap.add_argument('--seed', type=int, default=1)
     ap.add_argument('--fill', default='random', choices=['zero', 'random', 'pattern']); ap.add_argument('--ancestors', default=''); ap.add_argument('--n-ancestors', type=int, default=1)
-    ap.add_argument('--spontaneous', type=int, default=1); ap.add_argument('--mu', type=float, default=0.0); ap.add_argument('--rays', type=float, default=0.0); ap.add_argument('--max-age', type=int, default=1024)
+    ap.add_argument('--spontaneous', type=int, default=1); ap.add_argument('--inflow', default='processors', choices=['processors', 'words']); ap.add_argument('--mu', type=float, default=0.0); ap.add_argument('--rays', type=float, default=0.0); ap.add_argument('--max-age', type=int, default=1024)
     ap.add_argument('--report-every', type=int, default=10); ap.add_argument('--census-every', type=int, default=100); ap.add_argument('--shadow', type=int, default=1)
     ap.add_argument('--out-dir', default='results/soup/ref'); ap.add_argument('--dump-final', action='store_true')
     return ap.parse_args(argv)

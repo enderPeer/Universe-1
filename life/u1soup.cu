@@ -1,6 +1,6 @@
 // Design C soup (docs/12_design_c_soup.md), GPU implementation of sim/soup.py (normative; bit-identical outputs, fast/check_soup.py).
 // usage: u1soup_cuda --gpu g [--N 4096 --P 256 --W 5 --a 5 --p 3 --isa LDIND,STIND,INCM,JNZ --S 32 --ticks 1000 --seed 1
-//        --fill random|zero|pattern --ancestors 0x..[,0x..]|@file --n-ancestors 1 --spontaneous 1 --mu 0 --rays 0 --max-age 1024
+//        --fill random|zero|pattern --ancestors 0x..[,0x..]|@file --n-ancestors 1 --spontaneous 1 --inflow processors|words --mu 0 --rays 0 --max-age 1024
 //        --report-every 10 --census-every 100 --shadow 1 --out-dir dir --dump-final]   (defaults as sim/soup.py)
 // One thread per processor slot. A step is two kernels: k_exec (the watcher for the previous step's write, then one instruction with
 // the write only claimed: 64-bit atomicMax on a (step, slot) stamp per word, so the highest slot wins and the stamp's low bits are the
@@ -120,6 +120,17 @@ __global__ void k_place(Soup s, unsigned nf, ull tick, ull seq0) {
   unsigned j = blockIdx.x * blockDim.x + threadIdx.x; if (j >= nf) return;
   unsigned B = (unsigned)(hsh(C.seed, tick, 2, j) % C.N); ull g = read_genome(s.M, B); attach(s, s.freel[j], B, g, seq0 + j); s.placed[j] = g; atomicAdd(&s.cnt[5], 1ull);
 }
+// --inflow words: placement j writes L random words at its position; all placements claim (highest j wins, as later placements win in the
+// reference), then the winners write; the stamp sits between the last step's and the next step's processor stamps, and its low bits
+// (0x80000000 | j) are no processor's, so the words have no last writer.
+__global__ void k_place_claim(Soup s, unsigned nf, ull tick, ull gstep) {
+  unsigned j = blockIdx.x * blockDim.x + threadIdx.x; if (j >= nf) return; unsigned B = (unsigned)(hsh(C.seed, tick, 2, j) % C.N);
+  for (unsigned q = 0; q < C.L; q++) atomicMax(&s.claim[(B + q) % C.N], (gstep << 32) | (0x80000000u | j));
+}
+__global__ void k_place_write(Soup s, unsigned nf, ull tick, ull gstep) {
+  unsigned j = blockIdx.x * blockDim.x + threadIdx.x; if (j >= nf) return; unsigned B = (unsigned)(hsh(C.seed, tick, 2, j) % C.N);
+  for (unsigned q = 0; q < C.L; q++) { unsigned x = (B + q) % C.N; if (s.claim[x] == ((gstep << 32) | (0x80000000u | j))) s.M[x] = (unsigned char)(hsh(C.seed, tick, 4, (ull)j * C.L + q) & C.mask); }
+}
 __global__ void k_rays(Soup s, unsigned nr, ull tick) {
   unsigned i = blockIdx.x * blockDim.x + threadIdx.x; if (i >= nr) return; ull r = hsh(C.seed, tick, 3, 1 + i); unsigned x = (unsigned)(r % C.N), bit = (unsigned)((r >> 40) % C.W);
   atomicXor((unsigned *)(s.M + (x & ~3u)), (1u << bit) << (8 * (x & 3))); atomicAdd(&s.cnt[6], 1ull);
@@ -147,7 +158,7 @@ static double entropy(const std::unordered_map<ull, unsigned> &cnt, ull n) { dou
 
 int main(int argc, char **argv) {
   Cfg c; memset(&c, 0, sizeof c); c.N = 4096; c.P = 256; c.W = 5; c.a = 5; c.p = 3; c.max_age = 1024; c.seed = 1;
-  std::string isa_s = "LDIND,STIND,INCM,JNZ", fill = "random", ancestors, out_dir = "results/soup/run"; int gpu = 0, S = 32, n_anc = 1, spontaneous = 1, shadow = 1, dump_final = 0;
+  std::string isa_s = "LDIND,STIND,INCM,JNZ", fill = "random", ancestors, out_dir = "results/soup/run", inflow = "processors"; int gpu = 0, S = 32, n_anc = 1, spontaneous = 1, shadow = 1, dump_final = 0;
   double mu = 0, rays = 0; ull ticks = 1000, report_every = 10, census_every = 100;   // defaults as sim/soup.py
   for (int i = 1; i < argc; i++) {
     #define ARG(n) (!strcmp(argv[i], n) && i + 1 < argc)
@@ -155,7 +166,7 @@ int main(int argc, char **argv) {
     else if (ARG("--W")) c.W = atoi(argv[++i]); else if (ARG("--a")) c.a = atoi(argv[++i]); else if (ARG("--p")) c.p = atoi(argv[++i]); else if (ARG("--isa")) isa_s = argv[++i];
     else if (ARG("--S")) S = atoi(argv[++i]); else if (ARG("--ticks")) ticks = strtoull(argv[++i], 0, 0); else if (ARG("--seed")) c.seed = strtoull(argv[++i], 0, 0);
     else if (ARG("--fill")) fill = argv[++i]; else if (ARG("--ancestors")) ancestors = argv[++i]; else if (ARG("--n-ancestors")) n_anc = atoi(argv[++i]);
-    else if (ARG("--spontaneous")) spontaneous = atoi(argv[++i]); else if (ARG("--mu")) mu = atof(argv[++i]); else if (ARG("--rays")) rays = atof(argv[++i]); else if (ARG("--max-age")) c.max_age = strtoul(argv[++i], 0, 0);
+    else if (ARG("--spontaneous")) spontaneous = atoi(argv[++i]); else if (ARG("--inflow")) inflow = argv[++i]; else if (ARG("--mu")) mu = atof(argv[++i]); else if (ARG("--rays")) rays = atof(argv[++i]); else if (ARG("--max-age")) c.max_age = strtoul(argv[++i], 0, 0);
     else if (ARG("--report-every")) report_every = strtoull(argv[++i], 0, 0); else if (ARG("--census-every")) census_every = strtoull(argv[++i], 0, 0); else if (ARG("--shadow")) shadow = atoi(argv[++i]);
     else if (ARG("--out-dir")) out_dir = argv[++i]; else if (!strcmp(argv[i], "--dump-final")) dump_final = 1; else { fprintf(stderr, "bad arg %s\n", argv[i]); return 2; }
   }
@@ -186,7 +197,7 @@ int main(int argc, char **argv) {
   cudaMemcpy(s.M, M.data(), N, cudaMemcpyHostToDevice);
   std::vector<unsigned> h_free(P); for (unsigned i = 0; i < P; i++) h_free[i] = i;
   thrust::device_ptr<unsigned char> d_alive(s.alive); thrust::device_ptr<unsigned> d_parents(s.parents), d_freel(s.freel), d_sortval(s.sortval); thrust::device_ptr<ull> d_sortkey(s.sortkey);
-  ull nseq = 0, live = 0, final_tick = ticks;
+  ull nseq = 0, live = 0, final_tick = ticks, gstep = 0;
   // Shadow and statistics on the host
   std::vector<ull> sh_g; std::vector<unsigned> sh_live; Activity act, sact; ull c_births = 0, c_faithful = 0, c_mutant = 0, c_dage = 0, c_dreap = 0, c_place = 0, c_rays = 0;
   std::vector<unsigned char> h_alive(P), h_ext(P), h_outr(P); std::vector<ull> h_genome(P); std::vector<unsigned> h_children(P); std::vector<ull> h_placed(P);
@@ -201,6 +212,7 @@ int main(int argc, char **argv) {
     if (!spontaneous) return;
     unsigned nf = thrust::copy_if(thrust::counting_iterator<unsigned>(0), thrust::counting_iterator<unsigned>(P), d_freel, IsFree{s.alive}) - d_freel;
     if (!nf) return;
+    if (inflow == "words") { k_place_claim<<<(nf + 127) / 128, 128>>>(s, nf, tick, gstep); k_place_write<<<(nf + 127) / 128, 128>>>(s, nf, tick, gstep); }
     k_place<<<(nf + 127) / 128, 128>>>(s, nf, tick, nseq); cudaDeviceSynchronize(); nseq += nf; live += nf; c_place += nf;
     if (shadow) { cudaMemcpy(h_placed.data(), s.placed, nf * 8, cudaMemcpyDeviceToHost); for (unsigned j = 0; j < nf; j++) { sh_g.push_back(h_placed[j]); sh_live.push_back((unsigned)sh_g.size() - 1); } }
   };
@@ -234,7 +246,7 @@ int main(int argc, char **argv) {
     fprintf(stderr, "tick %9llu live %7llu births %10llu (faithful %llu mutant %llu) deaths age %llu reaper %llu placements %llu genomes %zu top %llu parasites %llu (%.0fs) %s\n", tick, nl, c_births, c_faithful, c_mutant, c_dage, c_dreap, c_place, cnt.size(), topc, par, std::chrono::duration<double>(std::chrono::steady_clock::now() - t0).count(), prop.name);
     fprintf(logf, "tick %llu live %llu births %llu genomes %zu\n", tick, nl, c_births, cnt.size()); fflush(logf);
   };
-  unsigned grid = (P + 127) / 128; ull gstep = 0; ull hcnt[8];
+  unsigned grid = (P + 127) / 128; ull hcnt[8];
   for (ull t = 0; t <= ticks; t++) {
     if (t % report_every == 0) report(t, t % census_every == 0);
     if (t == ticks) break;
