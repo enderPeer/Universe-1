@@ -118,5 +118,181 @@
     "source_commit": "b8975eb",
     "wall_seconds": 1017.0,
     "note": "exp10 phase C: 512-step clock; income 20 went extinct within 1,000 ticks, income 36 keeps the net budget of a full-cost organism at +4"
+  },
+  "jc_4096_s1": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4090",
+    "gpu_index": "0",
+    "options": "--isa SWAP,ADD,NAND,JC --N 4096 --seed 1 --ticks 1000000 --report-every 1000 --income 20 --ppm-every 2000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 37083.0,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "champ512_2048_s1": {
+    "state": "complete",
+    "node": "adler40",
+    "gpu": "RTX 4080",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 2048 --seed 1 --ticks 1800000 --report-every 1000 --income 36 --max-steps 512 --ppm-every 4000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 35119.7,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "jc_long_s1": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #0",
+    "gpu_index": "0",
+    "options": "--isa SWAP,ADD,NAND,JC --N 1024 --seed 1 --ticks 4500000 --report-every 1000 --income 20 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 32958.4,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "jc_long_s2": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,JC --N 1024 --seed 2 --ticks 4500000 --report-every 1000 --income 20 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 35117.8,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "jc_s3": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #2",
+    "gpu_index": "2",
+    "options": "--isa SWAP,ADD,NAND,JC --N 1024 --seed 3 --ticks 200000 --report-every 1000 --income 20 --ppm-every 100",
+    "source_commit": "1f932f6",
+    "wall_seconds": 1590.4,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "jc_long_mu512": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "RTX 3060 #2",
+    "gpu_index": "2",
+    "options": "--isa SWAP,ADD,NAND,JC --N 1024 --seed 1 --ticks 4000000 --report-every 1000 --income 20 --mu-bits 512 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 32020.6,
+    "engine": "life/u1life_cuda",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "cpu_champ512_512_s1": {
+    "state": "complete",
+    "node": "knecht24",
+    "gpu": "CPU",
+    "gpu_index": "cpu",
+    "options": "--isa SWAP,ADD,NAND,SKZ --N 512 --seed 1 --ticks 1000000 --report-every 1000 --income 36 --max-steps 512 --ppm-every 3000 --threads 16",
+    "source_commit": "1f932f6",
+    "wall_seconds": 49629.9,
+    "engine": "life/u1life_cpu",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "shrmul_s1": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #0",
+    "gpu_index": "0",
+    "options": "--isa SWAP,ADD,NAND,XOR,SHR,MUL,SKZ,HALT --N 1024 --seed 1 --ticks 200000 --report-every 1000 --income 8 --ppm-every 100",
+    "source_commit": "1f932f6",
+    "wall_seconds": 1244.1,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "shrmul_s2": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,XOR,SHR,MUL,SKZ,HALT --N 1024 --seed 2 --ticks 200000 --report-every 1000 --income 8 --ppm-every 100",
+    "source_commit": "1f932f6",
+    "wall_seconds": 849.1,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "swap_long_rc64": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 1 --ticks 6000000 --report-every 1000 --income 8 --repro-cost 64 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 25153.6,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "shrmul_long_s1": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "R9700 #1",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,XOR,SHR,MUL,SKZ,HALT --N 1024 --seed 1 --ticks 6000000 --report-every 1000 --income 8 --ppm-every 4000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 15202.5,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "cpu_swap_512_s1": {
+    "state": "complete",
+    "node": "falke64",
+    "gpu": "CPU",
+    "gpu_index": "cpu",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 512 --seed 1 --ticks 2500000 --report-every 1000 --income 8 --ppm-every 3000 --threads 8",
+    "source_commit": "1f932f6",
+    "wall_seconds": 23153.7,
+    "engine": "life/u1life_cpu",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "shrmul_s3": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "RX 9070 XT",
+    "gpu_index": "1",
+    "options": "--isa SWAP,ADD,NAND,XOR,SHR,MUL,SKZ,HALT --N 1024 --seed 3 --ticks 200000 --report-every 1000 --income 8 --ppm-every 100",
+    "source_commit": "1f932f6",
+    "wall_seconds": 1579.0,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "swap_long_s2": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "RX 9070 XT",
+    "gpu_index": "1",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 2 --ticks 4000000 --report-every 1000 --income 8 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 29508.1,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "swap_long_s3": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "RX 9060 XT",
+    "gpu_index": "0",
+    "options": "--isa SWAP,LDI,NAND,ADD,ROL,SKNZ,INC,HALT --N 1024 --seed 3 --ticks 4000000 --report-every 1000 --income 8 --ppm-every 5000",
+    "source_commit": "1f932f6",
+    "wall_seconds": 26055.6,
+    "engine": "life/u1life_vk",
+    "note": "overnight ensemble 2026-10-08"
+  },
+  "cpu_jc_512_mu32": {
+    "state": "complete",
+    "node": "specht32",
+    "gpu": "CPU",
+    "gpu_index": "cpu",
+    "options": "--isa SWAP,ADD,NAND,JC --N 512 --seed 1 --ticks 1000000 --report-every 1000 --income 20 --mu-bits 32 --ppm-every 3000 --threads 8",
+    "source_commit": "1f932f6",
+    "wall_seconds": 31741.7,
+    "engine": "life/u1life_cpu",
+    "note": "overnight ensemble 2026-10-08"
   }
 }

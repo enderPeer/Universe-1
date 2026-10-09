@@ -1,4 +1,4 @@
-# Universe-1 results: all function searches, unary and binary (state 2026-10-08)
+# Universe-1 results: all function searches, unary and binary (state 2026-10-09)
 
 Every number below comes from an exhaustive sweep of all 4,294,967,296 programs (32 bits, 8 instructions of 4 bits) unless stated
 otherwise; "unary" = one 4-bit input x in the accumulator (16-entry truth table), "binary" = inputs x in the accumulator and y in
@@ -92,9 +92,11 @@ self-copiers exist only in the crawler ISA and none keeps its original code inta
 
 ## 5. Life (artificial-life worlds on these machines)
 
-`life/ANALYSIS.md`: twelve 1024^2 worlds for 200,000 ticks (champion, swap, JC; 256-step and 512-step clocks; parameter scans), no
-extinction, neighbour-dependent phenotypes dominate; videos in `life/*/`; learned world model in `life/worldmodel/REPORT.md`
-(97.6 % next-state accuracy in-world, 81.5 % on an unseen seed).
+`life/ANALYSIS.md`: 30 worlds (champion, swap, JC, SHR/MUL; 256-step and 512-step clocks; parameter scans), no extinction,
+neighbour-dependent phenotypes dominate; videos in `life/*/`; learned world model in `life/worldmodel/REPORT.md` (97.6 % next-state
+accuracy in-world, 81.5 % on an unseen seed). `life/OVERNIGHT_RESULTS.md`: the overnight ensemble of 2026-10-08/09, 19 worlds up to
+6,000,000 ticks and 4096^2 cells: the JC world's diversity loss stops at about 0.05 genomes per cell after 1,000,000 ticks, the
+halting ISAs (swap, SHR/MUL) hold 0.2 genomes per cell for the whole run, nothing goes extinct in 45,000,000 combined ticks.
 
 ## Data locations
 

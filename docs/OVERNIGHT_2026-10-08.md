@@ -1,5 +1,9 @@
 # Overnight plan 2026-10-08 -> 2026-10-09 (check this when you are back)
 
+**Outcome (2026-10-09 morning):** 17 of 19 runs ended `exit 0` between 05:00 and 06:58 Berlin, the adler40 CPU world and the
+2048^2 swap world on falke64 by about 10:30; nothing went extinct. Results and the reading: `results/life/OVERNIGHT_RESULTS.md`,
+per-run rows in `results/life/ANALYSIS.md`. exp06c (3 intact 5-byte self-copiers) and the exp09 binary maps committed themselves.
+
 Launched 19:11 Berlin by `cluster/overnight.py` from `cluster/overnight_plan.conf`. Every node runs `results/life/overnight.sh`
 on its own (nohup, survives the workstation session); GPU chains started when the node's 5-byte crawler share ended, CPU worlds
 started at once at nice 19. Progress per node: `results/life/overnight_status.txt` (start/end lines) and each run's `run.log`.

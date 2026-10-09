@@ -32,6 +32,8 @@ for name, W, a, p, I, isa in ISAS:
             try: k = todo.get_nowait()
             except queue.Empty: return
             out = RAW / f'{name}_{k:04d}.bin'
+            if (RAW / f'{name}_{k:04d}.bin.copy').exists() and (args.copy_only or out.exists()):
+                with lock: done[k] = 'reused'; continue   # chunk already computed (resume after a kill)
             cmd = [str(ROOT / args.engine), '--gpu', str(gpu), '--W', str(W), '--a', str(a), '--p', str(p), '--I', str(I), '--isa', isa, '--cap-log2', str(args.cap_log2), '--lo', str(k * CH), '--hi', str((k + 1) * CH), '--out', str(out)] + (['--copy-only'] if args.copy_only else [])
             r = subprocess.run(cmd, capture_output=True, text=True)
             with lock:
