@@ -35,3 +35,12 @@ results/life/analyze_overnight.log
 results/life-analysis-deps.log
 results/share-bridge*.log
 results/share-bridge-status.json
+gpu/u1_avida
+gpu/u1_avida_emu
+gpu/u1_avida.spv
+gpu/u1_avida_vk
+gpu/u1_l2
+gpu/u1_l2_emu
+gpu/u1_l2.spv
+gpu/u1_l2_vk
+results/exp11/run.log

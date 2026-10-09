@@ -1,0 +1,212 @@
+#version 450
+// Universe-1 exp11, Vulkan compute (AMD cards): Avida heads CPU + Analyze-Mode viability test, same semantics, counters and list
+// format as gpu/u1_avida.cu (= sim/avida.py = docs/14_exp11_avida.md). One genome per invocation.
+#extension GL_EXT_shader_explicit_arithmetic_types_int64 : require
+layout(local_size_x = 128) in;
+layout(std430, binding = 0) buffer Cnt { uint cnt[]; };          // 1024 counters, see u1_avida.cu
+layout(std430, binding = 1) buffer LIdx { uint64_t list_idx[]; };
+layout(std430, binding = 2) buffer LVal { uint list_val[]; };
+layout(std430, binding = 3) buffer Misc { uint misc[]; };        // 0 = number of list entries claimed
+layout(std430, binding = 4) buffer Idx { uint64_t idx_list[]; }; // list mode: genome indices
+layout(push_constant) uniform Push { uint L, budget, gens, list_mode, max_list, lo_lo, lo_hi, count; } pc;
+
+const int MAXMEM = 128, MAXGEN = 40, MAXCHILD = 80, STACK_SIZE = 10, MAX_LABEL = 10, MIN_GENOME_LENGTH = 8, MAX_GENOME_LENGTH = 2048, NUM_NOPS = 3, INST_ERROR = 255;
+const int NOP_A=0,NOP_B=1,NOP_C=2,IF_N_EQU=3,IF_LESS=4,IF_LABEL=5,MOV_HEAD=6,JMP_HEAD=7,GET_HEAD=8,SET_FLOW=9,SHIFT_R=10,SHIFT_L=11,INC=12,DEC=13,PUSH=14,POP=15,
+  SWAP_STK=16,SWAP=17,ADD=18,SUB=19,NAND=20,H_COPY=21,H_ALLOC=22,H_DIVIDE=23,IO=24,H_SEARCH=25;
+const int HEAD_IP=0, HEAD_READ=1, HEAD_WRITE=2, HEAD_FLOW=3, REG_AX=0, REG_BX=1, REG_CX=2;
+const uint C_VIABLE=0u, C_DEPTH=1u, C_DIVIDES0=4u, C_INTACT=5u, C_COPYTRUE0=6u, C_PROCESSED=7u, C_FIRST=64u, C_FEC=512u, C_FECT=768u;
+const int INPUTS[3] = int[3](0x0f13149f, 0x3308e53e, 0x556241eb);
+shared uint sh[8];
+
+// ---- organism state (globals; one invocation = one genome) ----
+int mem[MAXMEM]; uint exe[4]; uint cop[4]; int msize;
+int reg[3]; int heads[4]; int lstack[STACK_SIZE]; int gstack[STACK_SIZE]; int lsp, gsp, cur_stack;
+int rlabel[MAX_LABEL]; int nlabel[MAX_LABEL]; int rlen, nlen;
+int mal_active, advance_ip, time_used, num_divides, input_ptr;
+int genome[MAXGEN]; int glen;                 // the injected genome of the running organism
+int first_step, first_copy_true, first_intact, divides_true, child_len; int child[MAXCHILD];
+int g0[MAXGEN]; int c0[MAXCHILD]; int c1[MAXCHILD]; int l0, l1;
+
+bool is_nop(int inst) { return inst < NUM_NOPS; }
+int adjust(int pos) { if (pos >= 0 && pos < msize) return pos; if (msize == 0 || pos < 0) return 0; return pos < 2 * msize ? pos - msize : pos % msize; }
+void advance(int h) { heads[h] = adjust(heads[h] + 1); }
+int next_inst() { int p = heads[HEAD_IP]; return p + 1 == msize ? INST_ERROR : mem[p + 1]; }
+void set_exe(int pos) { if (pos >= 0 && pos < msize) exe[pos >> 5] |= 1u << (pos & 31); }
+void set_cop(int pos) { cop[pos >> 5] |= 1u << (pos & 31); }
+int get_exe(int pos) { return int((exe[pos >> 5] >> (pos & 31)) & 1u); }
+int get_cop(int pos) { return int((cop[pos >> 5] >> (pos & 31)) & 1u); }
+int find_modified(int def) { if (is_nop(next_inst())) { advance(HEAD_IP); def = mem[heads[HEAD_IP]]; set_exe(heads[HEAD_IP]); } return def; }
+void read_next_label() { nlen = 0; while (is_nop(next_inst()) && nlen < MAX_LABEL) { advance(HEAD_IP); nlabel[nlen++] = mem[heads[HEAD_IP]]; if (nlen <= 1) set_exe(heads[HEAD_IP]); } }
+void complement_label() { for (int i = 0; i < nlen; i++) { nlabel[i] += 1; if (nlabel[i] >= NUM_NOPS) nlabel[i] -= NUM_NOPS; } }
+int find_label_forward(int pos) {
+  int size = msize, search_start = pos, ls = nlen; bool found = false;
+  pos += ls;
+  while (pos < size) {
+    if (is_nop(mem[pos])) {
+      int start_pos = pos, end_pos = pos + 1;
+      while (start_pos > search_start && is_nop(mem[start_pos - 1])) start_pos--;
+      while (end_pos < size && is_nop(mem[end_pos])) end_pos++;
+      int max_offset = end_pos - start_pos - ls + 1, offset = start_pos;
+      for (offset = start_pos; offset < start_pos + max_offset; offset++) {
+        int matches;
+        for (matches = 0; matches < ls; matches++) if (nlabel[matches] != mem[offset + matches]) break;
+        if (matches == ls) { found = true; break; }
+      }
+      if (found) { pos = ls + offset; break; }
+      pos = end_pos;
+    }
+    pos += ls;
+  }
+  return found ? pos : -1;
+}
+int find_label() { if (nlen == 0) return heads[HEAD_IP]; int f = find_label_forward(0); return f >= 0 ? adjust(f - 1) : heads[HEAD_IP]; }
+void stack_push(int v) { if (cur_stack == 0) { lsp = lsp == 0 ? STACK_SIZE - 1 : lsp - 1; lstack[lsp] = v; } else { gsp = gsp == 0 ? STACK_SIZE - 1 : gsp - 1; gstack[gsp] = v; } }
+int stack_pop() { int v; if (cur_stack == 0) { v = lstack[lsp]; lstack[lsp] = 0; if (++lsp == STACK_SIZE) lsp = 0; } else { v = gstack[gsp]; gstack[gsp] = 0; if (++gsp == STACK_SIZE) gsp = 0; } return v; }
+bool allocate_main(int allocated) {
+  if (mal_active != 0) return false; if (allocated < 1) return false;
+  int old = msize, nw = old + allocated;
+  if (nw > MAX_GENOME_LENGTH || nw < MIN_GENOME_LENGTH) return false;
+  if (allocated > int(float(old) * 2.0)) return false;
+  if (old > int(float(allocated) * 2.0)) return false;
+  if (nw > MAXMEM) return false;
+  for (int i = old; i < nw; i++) { mem[i] = 0; exe[i >> 5] &= ~(1u << (i & 31)); cop[i >> 5] &= ~(1u << (i & 31)); }
+  msize = nw; mal_active = 1; return true;
+}
+bool divide_check_viable(int parent_size, int child_size) {
+  int g = glen;
+  int min_size = g / 2; if (min_size < MIN_GENOME_LENGTH) min_size = MIN_GENOME_LENGTH;
+  int max_size = g * 2; if (max_size > MAX_GENOME_LENGTH) max_size = MAX_GENOME_LENGTH;
+  if (child_size < min_size || child_size > max_size) return false;
+  if (parent_size < min_size || parent_size > max_size) return false;
+  int executed = 0; for (int i = 0; i < parent_size; i++) executed += get_exe(i);
+  if (executed < parent_size / 2) return false;
+  int copied = 0; for (int i = parent_size; i < parent_size + child_size; i++) copied += get_cop(i);
+  if (copied < child_size / 2) return false;
+  return true;
+}
+void reset_cpu() {
+  reg[0] = 0; reg[1] = 0; reg[2] = 0; heads[0] = 0; heads[1] = 0; heads[2] = 0; heads[3] = 0;
+  for (int i = 0; i < STACK_SIZE; i++) { lstack[i] = 0; gstack[i] = 0; } lsp = 0; gsp = 0; cur_stack = 0; rlen = 0; nlen = 0;
+  exe[0] = 0u; exe[1] = 0u; exe[2] = 0u; exe[3] = 0u; cop[0] = 0u; cop[1] = 0u; cop[2] = 0u; cop[3] = 0u;
+}
+bool divide_main(int div_point, int extra_lines) {
+  int child_size = msize - div_point - extra_lines;
+  if (!divide_check_viable(div_point, child_size)) return false;
+  bool copy_true = child_size == glen; for (int i = 0; copy_true && i < child_size; i++) copy_true = mem[div_point + i] == genome[i];
+  num_divides++; if (copy_true) divides_true++;
+  if (num_divides == 1) {
+    first_step = time_used; first_copy_true = copy_true ? 1 : 0;
+    bool intact = div_point == glen; for (int i = 0; intact && i < div_point; i++) intact = mem[i] == genome[i];
+    first_intact = intact ? 1 : 0; child_len = child_size;
+    for (int i = 0; i < child_size && i < MAXCHILD; i++) child[i] = mem[div_point + i];
+  }
+  msize = div_point; mal_active = 0; advance_ip = 0;
+  reset_cpu();
+  return true;
+}
+void execute(int inst) {
+  if (inst < NUM_NOPS) return;
+  if (inst == IF_N_EQU) { int op1 = find_modified(REG_BX), op2 = (op1 + 1) % 3; if (reg[op1] == reg[op2]) advance(HEAD_IP); }
+  else if (inst == IF_LESS) { int op1 = find_modified(REG_BX), op2 = (op1 + 1) % 3; if (reg[op1] >= reg[op2]) advance(HEAD_IP); }
+  else if (inst == IF_LABEL) { read_next_label(); complement_label(); bool eq = nlen == rlen; for (int i = 0; eq && i < nlen; i++) eq = nlabel[i] == rlabel[i]; if (!eq) advance(HEAD_IP); }
+  else if (inst == MOV_HEAD) { int h = find_modified(HEAD_IP); heads[h] = heads[HEAD_FLOW]; if (h == HEAD_IP) advance_ip = 0; }
+  else if (inst == JMP_HEAD) { int h = find_modified(HEAD_IP); heads[h] = adjust(heads[h] + reg[REG_CX]); }
+  else if (inst == GET_HEAD) { int h = find_modified(HEAD_IP); reg[REG_CX] = heads[h]; }
+  else if (inst == SET_FLOW) { int r = find_modified(REG_CX); heads[HEAD_FLOW] = adjust(reg[r]); }
+  else if (inst == SHIFT_R) { int r = find_modified(REG_BX); reg[r] = reg[r] >> 1; }
+  else if (inst == SHIFT_L) { int r = find_modified(REG_BX); reg[r] = reg[r] << 1; }
+  else if (inst == INC) { int r = find_modified(REG_BX); reg[r] = reg[r] + 1; }
+  else if (inst == DEC) { int r = find_modified(REG_BX); reg[r] = reg[r] - 1; }
+  else if (inst == PUSH) { int r = find_modified(REG_BX); stack_push(reg[r]); }
+  else if (inst == POP) { int r = find_modified(REG_BX); reg[r] = stack_pop(); }
+  else if (inst == SWAP_STK) { cur_stack ^= 1; }
+  else if (inst == SWAP) { int op1 = find_modified(REG_BX), op2 = (op1 + 1) % 3, t = reg[op1]; reg[op1] = reg[op2]; reg[op2] = t; }
+  else if (inst == ADD) { int d = find_modified(REG_BX); reg[d] = reg[REG_BX] + reg[REG_CX]; }
+  else if (inst == SUB) { int d = find_modified(REG_BX); reg[d] = reg[REG_BX] - reg[REG_CX]; }
+  else if (inst == NAND) { int d = find_modified(REG_BX); reg[d] = ~(reg[REG_BX] & reg[REG_CX]); }
+  else if (inst == H_COPY) {
+    heads[HEAD_READ] = adjust(heads[HEAD_READ]); heads[HEAD_WRITE] = adjust(heads[HEAD_WRITE]);
+    int r = mem[heads[HEAD_READ]];
+    if (is_nop(r)) { if (rlen < MAX_LABEL) rlabel[rlen++] = r; } else rlen = 0;
+    mem[heads[HEAD_WRITE]] = r; set_cop(heads[HEAD_WRITE]);
+    advance(HEAD_READ); advance(HEAD_WRITE);
+  }
+  else if (inst == H_ALLOC) { int cur = msize, alloc = int(2.0 * float(cur)); if (alloc > MAX_GENOME_LENGTH - cur) alloc = MAX_GENOME_LENGTH - cur; if (allocate_main(alloc)) reg[REG_AX] = cur; }
+  else if (inst == H_DIVIDE) {
+    for (int h = 0; h < 4; h++) heads[h] = adjust(heads[h]);
+    int div_pos = heads[HEAD_READ], child_end = heads[HEAD_WRITE]; if (child_end == 0) child_end = msize;
+    divide_main(div_pos, msize - child_end);
+    for (int h = 0; h < 4; h++) heads[h] = adjust(heads[h]);
+  }
+  else if (inst == IO) { int r = find_modified(REG_BX); if (input_ptr >= 3) input_ptr = 0; reg[r] = INPUTS[input_ptr++]; }
+  else if (inst == H_SEARCH) {
+    read_next_label(); complement_label(); int found = find_label();
+    reg[REG_BX] = found - heads[HEAD_IP]; reg[REG_CX] = nlen; heads[HEAD_FLOW] = found; advance(HEAD_FLOW);
+  }
+}
+// src: 0 = g0 (length L), 1 = c0, 2 = c1
+int run_org(int src, int len, int budget, bool lifetime) {
+  glen = len; msize = len;
+  for (int i = 0; i < len; i++) { int v = src == 0 ? g0[i] : (src == 1 ? c0[i] : c1[i]); genome[i] = v; mem[i] = v; }
+  reset_cpu();
+  mal_active = 0; advance_ip = 1; time_used = 0; num_divides = 0; input_ptr = 0;
+  first_step = 0; first_copy_true = 0; first_intact = 0; divides_true = 0; child_len = 0;
+  while (time_used < budget && (lifetime || num_divides == 0)) {
+    time_used++; advance_ip = 1;
+    heads[HEAD_IP] = adjust(heads[HEAD_IP]); int ip = heads[HEAD_IP]; int inst = mem[ip];
+    set_exe(ip);
+    execute(inst);
+    if (advance_ip != 0) advance(HEAD_IP);
+  }
+  return num_divides;
+}
+bool child_same_g0() { if (child_len != int(pc.L)) return false; for (int i = 0; i < child_len; i++) if (child[i] != g0[i]) return false; return true; }
+bool child_same_c0() { if (child_len != l0) return false; for (int i = 0; i < child_len; i++) if (child[i] != c0[i]) return false; return true; }
+
+void main() {
+  uint lid = gl_LocalInvocationID.x;
+  if (lid < 8u) sh[lid] = 0u;
+  barrier();
+  uint idx = gl_GlobalInvocationID.x; bool valid = idx < pc.count;
+  int L = int(pc.L);
+  if (valid) {
+    uint64_t g = pc.list_mode != 0u ? idx_list[idx] : ((uint64_t(pc.lo_hi) << 32) | uint64_t(pc.lo_lo)) + uint64_t(idx);
+    uint64_t t = g; for (int k = 0; k < L; k++) { g0[k] = int(t % 26ul); t /= 26ul; }
+    int viable = 0, depth = 3;
+    int n0 = run_org(0, L, 20 * L, true);
+    int divides0 = n0, fstep = first_step, ct0 = first_copy_true, intact = first_intact, fec = n0, fect = divides_true;
+    if (n0 > 0) {
+      if (first_copy_true != 0) { viable = 1; depth = 0; }
+      else if (pc.gens >= 2u) {
+        l0 = child_len; for (int i = 0; i < l0; i++) c0[i] = child[i];
+        if (l0 <= MAXGEN) {
+          int n1 = run_org(1, l0, 20 * l0, false);
+          if (n1 > 0) {
+            if (first_copy_true != 0 || child_same_g0()) { viable = 1; depth = 1; }
+            else if (pc.gens >= 3u) {
+              l1 = child_len; for (int i = 0; i < l1; i++) c1[i] = child[i];
+              if (l1 <= MAXGEN) {
+                int n2 = run_org(2, l1, 20 * l1, false);
+                if (n2 > 0 && (first_copy_true != 0 || child_same_g0() || child_same_c0())) { viable = 1; depth = 2; }
+              }
+            }
+          }
+        }
+      }
+    }
+    atomicAdd(sh[C_PROCESSED], 1u);
+    if (divides0 != 0) atomicAdd(sh[C_DIVIDES0], 1u);
+    if (viable != 0) {
+      atomicAdd(sh[C_VIABLE], 1u); atomicAdd(sh[C_DEPTH + uint(depth)], 1u);
+      if (intact != 0) atomicAdd(sh[C_INTACT], 1u); if (ct0 != 0) atomicAdd(sh[C_COPYTRUE0], 1u);
+      atomicAdd(cnt[C_FIRST + uint(fstep)], 1u); atomicAdd(cnt[C_FEC + uint(fec < 255 ? fec : 255)], 1u); atomicAdd(cnt[C_FECT + uint(fect < 255 ? fect : 255)], 1u);
+    }
+    if (viable != 0 || pc.list_mode != 0u) {
+      uint slot = atomicAdd(misc[0], 1u);
+      if (slot < pc.max_list) { list_idx[slot] = g; list_val[slot] = uint(depth & 3) | (uint(fstep) << 2) | (uint(intact) << 11) | (uint(ct0) << 12)
+                                | (uint(fec < 511 ? fec : 511) << 13) | (uint(fect < 511 ? fect : 511) << 22) | (uint(viable) << 31); }
+    }
+  }
+  barrier();
+  if (lid < 8u && sh[lid] != 0u) atomicAdd(cnt[lid], sh[lid]);
+}

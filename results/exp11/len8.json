@@ -1,0 +1,9285 @@
+{
+ "experiment": "exp11",
+ "length": 8,
+ "alphabet": "abcdefghijklmnopqrstuvwxyz",
+ "genome_index": "sum op_i * 26^i, position 0 least significant",
+ "gens": 3,
+ "budget_cycles": 160,
+ "chunk_log2": 26,
+ "chunks": [
+  0,
+  3111
+ ],
+ "genomes": 208827064576,
+ "viable": 916,
+ "depth0": 865,
+ "depth1": 51,
+ "depth2": 0,
+ "divides0": 87418,
+ "intact": 906,
+ "copy_true0": 865,
+ "processed": 208827064576,
+ "hist": {
+  "first_divide_hist": {
+   "57": 3,
+   "61": 1,
+   "62": 3,
+   "82": 34,
+   "83": 34,
+   "84": 1,
+   "85": 1,
+   "92": 1,
+   "94": 17,
+   "95": 35,
+   "96": 1,
+   "97": 96,
+   "102": 1,
+   "107": 1,
+   "108": 34,
+   "109": 66,
+   "110": 129,
+   "111": 32,
+   "112": 31,
+   "118": 1,
+   "119": 1,
+   "120": 3,
+   "121": 3,
+   "124": 3,
+   "125": 6,
+   "126": 1,
+   "127": 1,
+   "128": 4,
+   "129": 17,
+   "130": 38,
+   "131": 1,
+   "132": 34,
+   "133": 33,
+   "135": 5,
+   "136": 13,
+   "137": 9,
+   "138": 2,
+   "139": 7,
+   "140": 3,
+   "141": 2,
+   "142": 2,
+   "143": 1,
+   "144": 2,
+   "145": 5,
+   "146": 6,
+   "147": 18,
+   "148": 22,
+   "149": 3,
+   "150": 1,
+   "151": 16,
+   "152": 33,
+   "153": 13,
+   "154": 38,
+   "155": 35,
+   "156": 13
+  },
+  "fecundity_hist": {
+   "1": 909,
+   "2": 7
+  },
+  "fecundity_true_hist": {
+   "0": 51,
+   "1": 858,
+   "2": 7
+  }
+ },
+ "wall_seconds": 1792.578429698944,
+ "nodes": [
+  {
+   "host": "falke64",
+   "gpus": [
+    0,
+    1
+   ],
+   "engine": "gpu/u1_avida_vk",
+   "chunks": [
+    0,
+    1867
+   ],
+   "wall_seconds": 947.7677483558655
+  },
+  {
+   "host": "specht32",
+   "gpus": [
+    0,
+    1
+   ],
+   "engine": "gpu/u1_avida_vk",
+   "chunks": [
+    1868,
+    3111
+   ],
+   "wall_seconds": 844.8106813430786
+  }
+ ],
+ "parts": [
+  "len8.part_0-1867.json",
+  "len8.part_1868-3111.json"
+ ],
+ "viable_genomes": [
+  {
+   "genome": "wrcxhcva",
+   "index": 6514598944,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxva",
+   "index": 6761541744,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxa",
+   "index": 7355610544,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwvfagb",
+   "index": 9887974299,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxvfagb",
+   "index": 9887974924,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxvfagb",
+   "index": 9887974949,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvxwfagb",
+   "index": 9887992499,
+   "depth": 0,
+   "first_divide": 119,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvvxfagb",
+   "index": 9888008724,
+   "depth": 0,
+   "first_divide": 120,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwvxfagb",
+   "index": 9888008749,
+   "depth": 0,
+   "first_divide": 120,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvwxfagb",
+   "index": 9888009399,
+   "depth": 0,
+   "first_divide": 120,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwvfdgb",
+   "index": 9923618427,
+   "depth": 0,
+   "first_divide": 138,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxvfdgb",
+   "index": 9923619052,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxvfdgb",
+   "index": 9923619077,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvxwfdgb",
+   "index": 9923636627,
+   "depth": 0,
+   "first_divide": 124,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvvxfdgb",
+   "index": 9923652852,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwvxfdgb",
+   "index": 9923652877,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvwxfdgb",
+   "index": 9923653527,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwvfegb",
+   "index": 9935499803,
+   "depth": 0,
+   "first_divide": 138,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxvfegb",
+   "index": 9935500428,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxvfegb",
+   "index": 9935500453,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvxwfegb",
+   "index": 9935518003,
+   "depth": 0,
+   "first_divide": 124,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvvxfegb",
+   "index": 9935534228,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwvxfegb",
+   "index": 9935534253,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvwxfegb",
+   "index": 9935534903,
+   "depth": 0,
+   "first_divide": 125,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwhfggb",
+   "index": 9959016491,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxhfggb",
+   "index": 9959017116,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxhfggb",
+   "index": 9959017141,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwifggb",
+   "index": 9959034067,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxifggb",
+   "index": 9959034692,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxifggb",
+   "index": 9959034717,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwjfggb",
+   "index": 9959051643,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxjfggb",
+   "index": 9959052268,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxjfggb",
+   "index": 9959052293,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwkfggb",
+   "index": 9959069219,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxkfggb",
+   "index": 9959069844,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxkfggb",
+   "index": 9959069869,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwlfggb",
+   "index": 9959086795,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxlfggb",
+   "index": 9959087420,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxlfggb",
+   "index": 9959087445,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwmfggb",
+   "index": 9959104371,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxmfggb",
+   "index": 9959104996,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxmfggb",
+   "index": 9959105021,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwnfggb",
+   "index": 9959121947,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxnfggb",
+   "index": 9959122572,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxnfggb",
+   "index": 9959122597,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwofggb",
+   "index": 9959139523,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxofggb",
+   "index": 9959140148,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxofggb",
+   "index": 9959140173,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwpfggb",
+   "index": 9959157099,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxpfggb",
+   "index": 9959157724,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxpfggb",
+   "index": 9959157749,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwqfggb",
+   "index": 9959174675,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxqfggb",
+   "index": 9959175300,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxqfggb",
+   "index": 9959175325,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwrfggb",
+   "index": 9959192251,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxrfggb",
+   "index": 9959192876,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxrfggb",
+   "index": 9959192901,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwsfggb",
+   "index": 9959209827,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxsfggb",
+   "index": 9959210452,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxsfggb",
+   "index": 9959210477,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwtfggb",
+   "index": 9959227403,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxtfggb",
+   "index": 9959228028,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxtfggb",
+   "index": 9959228053,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwufggb",
+   "index": 9959244979,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxufggb",
+   "index": 9959245604,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxufggb",
+   "index": 9959245629,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfwfggb",
+   "index": 9959268639,
+   "depth": 0,
+   "first_divide": 107,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxhwfggb",
+   "index": 9959269991,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxiwfggb",
+   "index": 9959270667,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxjwfggb",
+   "index": 9959271343,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxkwfggb",
+   "index": 9959272019,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxlwfggb",
+   "index": 9959272695,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxmwfggb",
+   "index": 9959273371,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxnwfggb",
+   "index": 9959274047,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxowfggb",
+   "index": 9959274723,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxpwfggb",
+   "index": 9959275399,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxqwfggb",
+   "index": 9959276075,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxrwfggb",
+   "index": 9959276751,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxswfggb",
+   "index": 9959277427,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxtwfggb",
+   "index": 9959278103,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxuwfggb",
+   "index": 9959278779,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwwfggb",
+   "index": 9959280131,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vhxwfggb",
+   "index": 9959280391,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vixwfggb",
+   "index": 9959280417,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjxwfggb",
+   "index": 9959280443,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkxwfggb",
+   "index": 9959280469,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlxwfggb",
+   "index": 9959280495,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmxwfggb",
+   "index": 9959280521,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnxwfggb",
+   "index": 9959280547,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "voxwfggb",
+   "index": 9959280573,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpxwfggb",
+   "index": 9959280599,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqxwfggb",
+   "index": 9959280625,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrxwfggb",
+   "index": 9959280651,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vsxwfggb",
+   "index": 9959280677,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtxwfggb",
+   "index": 9959280703,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vuxwfggb",
+   "index": 9959280729,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvxwfggb",
+   "index": 9959280741,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivxwfggb",
+   "index": 9959280742,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvxwfggb",
+   "index": 9959280743,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvxwfggb",
+   "index": 9959280744,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvxwfggb",
+   "index": 9959280745,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvxwfggb",
+   "index": 9959280746,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvxwfggb",
+   "index": 9959280747,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovxwfggb",
+   "index": 9959280748,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvxwfggb",
+   "index": 9959280749,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvxwfggb",
+   "index": 9959280750,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvxwfggb",
+   "index": 9959280751,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svxwfggb",
+   "index": 9959280752,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvxwfggb",
+   "index": 9959280753,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvxwfggb",
+   "index": 9959280754,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvxwfggb",
+   "index": 9959280755,
+   "depth": 0,
+   "first_divide": 61,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "wvxwfggb",
+   "index": 9959280756,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvxwfggb",
+   "index": 9959280757,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvxwfggb",
+   "index": 9959280758,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxwfggb",
+   "index": 9959280781,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxxwfggb",
+   "index": 9959280807,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vyxwfggb",
+   "index": 9959280833,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxywfggb",
+   "index": 9959281483,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvhxfggb",
+   "index": 9959287516,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwhxfggb",
+   "index": 9959287541,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvixfggb",
+   "index": 9959288192,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwixfggb",
+   "index": 9959288217,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvjxfggb",
+   "index": 9959288868,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwjxfggb",
+   "index": 9959288893,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvkxfggb",
+   "index": 9959289544,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwkxfggb",
+   "index": 9959289569,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvlxfggb",
+   "index": 9959290220,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwlxfggb",
+   "index": 9959290245,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvmxfggb",
+   "index": 9959290896,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwmxfggb",
+   "index": 9959290921,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvnxfggb",
+   "index": 9959291572,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwnxfggb",
+   "index": 9959291597,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvoxfggb",
+   "index": 9959292248,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwoxfggb",
+   "index": 9959292273,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvpxfggb",
+   "index": 9959292924,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwpxfggb",
+   "index": 9959292949,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvqxfggb",
+   "index": 9959293600,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwqxfggb",
+   "index": 9959293625,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvrxfggb",
+   "index": 9959294276,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwrxfggb",
+   "index": 9959294301,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvsxfggb",
+   "index": 9959294952,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwsxfggb",
+   "index": 9959294977,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvtxfggb",
+   "index": 9959295628,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwtxfggb",
+   "index": 9959295653,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvuxfggb",
+   "index": 9959296304,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwuxfggb",
+   "index": 9959296329,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "whvxfggb",
+   "index": 9959296616,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wivxfggb",
+   "index": 9959296642,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wjvxfggb",
+   "index": 9959296668,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wkvxfggb",
+   "index": 9959296694,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wlvxfggb",
+   "index": 9959296720,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wmvxfggb",
+   "index": 9959296746,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wnvxfggb",
+   "index": 9959296772,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wovxfggb",
+   "index": 9959296798,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wpvxfggb",
+   "index": 9959296824,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wqvxfggb",
+   "index": 9959296850,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrvxfggb",
+   "index": 9959296876,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wsvxfggb",
+   "index": 9959296902,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wtvxfggb",
+   "index": 9959296928,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wuvxfggb",
+   "index": 9959296954,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvvxfggb",
+   "index": 9959296980,
+   "depth": 0,
+   "first_divide": 62,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "fwvxfggb",
+   "index": 9959296989,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hwvxfggb",
+   "index": 9959296991,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "iwvxfggb",
+   "index": 9959296992,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jwvxfggb",
+   "index": 9959296993,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kwvxfggb",
+   "index": 9959296994,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lwvxfggb",
+   "index": 9959296995,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mwvxfggb",
+   "index": 9959296996,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nwvxfggb",
+   "index": 9959296997,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "owvxfggb",
+   "index": 9959296998,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pwvxfggb",
+   "index": 9959296999,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qwvxfggb",
+   "index": 9959297000,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rwvxfggb",
+   "index": 9959297001,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "swvxfggb",
+   "index": 9959297002,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "twvxfggb",
+   "index": 9959297003,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uwvxfggb",
+   "index": 9959297004,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwvxfggb",
+   "index": 9959297005,
+   "depth": 0,
+   "first_divide": 62,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "wwvxfggb",
+   "index": 9959297006,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwvxfggb",
+   "index": 9959297007,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ywvxfggb",
+   "index": 9959297008,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wxvxfggb",
+   "index": 9959297032,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wyvxfggb",
+   "index": 9959297058,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfwxfggb",
+   "index": 9959297239,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vhwxfggb",
+   "index": 9959297291,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "viwxfggb",
+   "index": 9959297317,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjwxfggb",
+   "index": 9959297343,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkwxfggb",
+   "index": 9959297369,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlwxfggb",
+   "index": 9959297395,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmwxfggb",
+   "index": 9959297421,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnwxfggb",
+   "index": 9959297447,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vowxfggb",
+   "index": 9959297473,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpwxfggb",
+   "index": 9959297499,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqwxfggb",
+   "index": 9959297525,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrwxfggb",
+   "index": 9959297551,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vswxfggb",
+   "index": 9959297577,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtwxfggb",
+   "index": 9959297603,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vuwxfggb",
+   "index": 9959297629,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvwxfggb",
+   "index": 9959297641,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivwxfggb",
+   "index": 9959297642,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvwxfggb",
+   "index": 9959297643,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvwxfggb",
+   "index": 9959297644,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvwxfggb",
+   "index": 9959297645,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvwxfggb",
+   "index": 9959297646,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvwxfggb",
+   "index": 9959297647,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovwxfggb",
+   "index": 9959297648,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvwxfggb",
+   "index": 9959297649,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvwxfggb",
+   "index": 9959297650,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvwxfggb",
+   "index": 9959297651,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svwxfggb",
+   "index": 9959297652,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvwxfggb",
+   "index": 9959297653,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvwxfggb",
+   "index": 9959297654,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvwxfggb",
+   "index": 9959297655,
+   "depth": 0,
+   "first_divide": 62,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "wvwxfggb",
+   "index": 9959297656,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvwxfggb",
+   "index": 9959297657,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvwxfggb",
+   "index": 9959297658,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwwxfggb",
+   "index": 9959297681,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwxfggb",
+   "index": 9959297707,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vywxfggb",
+   "index": 9959297733,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxxfggb",
+   "index": 9959298332,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxxfggb",
+   "index": 9959298357,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvyxfggb",
+   "index": 9959299008,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwyxfggb",
+   "index": 9959299033,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwyfggb",
+   "index": 9959315283,
+   "depth": 0,
+   "first_divide": 108,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxyfggb",
+   "index": 9959315908,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxyfggb",
+   "index": 9959315933,
+   "depth": 0,
+   "first_divide": 109,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfghgb",
+   "index": 9971319691,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfghgb",
+   "index": 9971320316,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfghgb",
+   "index": 9971320341,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwhgb",
+   "index": 9978637391,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwhgb",
+   "index": 9978936391,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxhgb",
+   "index": 9979094316,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxhgb",
+   "index": 9979094341,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxhgb",
+   "index": 9979375791,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgigb",
+   "index": 9983201067,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgigb",
+   "index": 9983201692,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgigb",
+   "index": 9983201717,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwigb",
+   "index": 9990518767,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwigb",
+   "index": 9990817767,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxigb",
+   "index": 9990975692,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxigb",
+   "index": 9990975717,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxigb",
+   "index": 9991257167,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgjgb",
+   "index": 9995082443,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgjgb",
+   "index": 9995083068,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgjgb",
+   "index": 9995083093,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwjgb",
+   "index": 10002400143,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwjgb",
+   "index": 10002699143,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxjgb",
+   "index": 10002857068,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxjgb",
+   "index": 10002857093,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxjgb",
+   "index": 10003138543,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgkgb",
+   "index": 10006963819,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgkgb",
+   "index": 10006964444,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgkgb",
+   "index": 10006964469,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwkgb",
+   "index": 10014281519,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwkgb",
+   "index": 10014580519,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxkgb",
+   "index": 10014738444,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxkgb",
+   "index": 10014738469,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxkgb",
+   "index": 10015019919,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfglgb",
+   "index": 10018845195,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfglgb",
+   "index": 10018845820,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfglgb",
+   "index": 10018845845,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwlgb",
+   "index": 10026162895,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwlgb",
+   "index": 10026461895,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxlgb",
+   "index": 10026619820,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxlgb",
+   "index": 10026619845,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxlgb",
+   "index": 10026901295,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgmgb",
+   "index": 10030726571,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgmgb",
+   "index": 10030727196,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgmgb",
+   "index": 10030727221,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwmgb",
+   "index": 10038044271,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwmgb",
+   "index": 10038343271,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxmgb",
+   "index": 10038501196,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxmgb",
+   "index": 10038501221,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxmgb",
+   "index": 10038782671,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgngb",
+   "index": 10042607947,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgngb",
+   "index": 10042608572,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgngb",
+   "index": 10042608597,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwngb",
+   "index": 10049925647,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwngb",
+   "index": 10050224647,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxngb",
+   "index": 10050382572,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxngb",
+   "index": 10050382597,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxngb",
+   "index": 10050664047,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgogb",
+   "index": 10054489323,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgogb",
+   "index": 10054489948,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgogb",
+   "index": 10054489973,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwogb",
+   "index": 10061807023,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwogb",
+   "index": 10062106023,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxogb",
+   "index": 10062263948,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxogb",
+   "index": 10062263973,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxogb",
+   "index": 10062545423,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgpgb",
+   "index": 10066370699,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgpgb",
+   "index": 10066371324,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgpgb",
+   "index": 10066371349,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwpgb",
+   "index": 10073688399,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwpgb",
+   "index": 10073987399,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxpgb",
+   "index": 10074145324,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxpgb",
+   "index": 10074145349,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxpgb",
+   "index": 10074426799,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgqgb",
+   "index": 10078252075,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgqgb",
+   "index": 10078252700,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgqgb",
+   "index": 10078252725,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwqgb",
+   "index": 10085569775,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwqgb",
+   "index": 10085868775,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxqgb",
+   "index": 10086026700,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxqgb",
+   "index": 10086026725,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxqgb",
+   "index": 10086308175,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgrgb",
+   "index": 10090133451,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgrgb",
+   "index": 10090134076,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgrgb",
+   "index": 10090134101,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwrgb",
+   "index": 10097451151,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwrgb",
+   "index": 10097750151,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxrgb",
+   "index": 10097908076,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxrgb",
+   "index": 10097908101,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxrgb",
+   "index": 10098189551,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgsgb",
+   "index": 10102014827,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgsgb",
+   "index": 10102015452,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgsgb",
+   "index": 10102015477,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwsgb",
+   "index": 10109332527,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwsgb",
+   "index": 10109631527,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxsgb",
+   "index": 10109789452,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxsgb",
+   "index": 10109789477,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxsgb",
+   "index": 10110070927,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgtgb",
+   "index": 10113896203,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgtgb",
+   "index": 10113896828,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgtgb",
+   "index": 10113896853,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwtgb",
+   "index": 10121213903,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwtgb",
+   "index": 10121512903,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxtgb",
+   "index": 10121670828,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxtgb",
+   "index": 10121670853,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxtgb",
+   "index": 10121952303,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgugb",
+   "index": 10125777579,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgugb",
+   "index": 10125778204,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgugb",
+   "index": 10125778229,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwugb",
+   "index": 10133095279,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwugb",
+   "index": 10133394279,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxugb",
+   "index": 10133552204,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxugb",
+   "index": 10133552229,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxugb",
+   "index": 10133833679,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxhfgwgb",
+   "index": 10149530191,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxifgwgb",
+   "index": 10149530867,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxjfgwgb",
+   "index": 10149531543,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxkfgwgb",
+   "index": 10149532219,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxlfgwgb",
+   "index": 10149532895,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxmfgwgb",
+   "index": 10149533571,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxnfgwgb",
+   "index": 10149534247,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxofgwgb",
+   "index": 10149534923,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxpfgwgb",
+   "index": 10149535599,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxqfgwgb",
+   "index": 10149536275,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxrfgwgb",
+   "index": 10149536951,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxsfgwgb",
+   "index": 10149537627,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxtfgwgb",
+   "index": 10149538303,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxufgwgb",
+   "index": 10149538979,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgwgb",
+   "index": 10149540331,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vhxfgwgb",
+   "index": 10149540591,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vixfgwgb",
+   "index": 10149540617,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjxfgwgb",
+   "index": 10149540643,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkxfgwgb",
+   "index": 10149540669,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlxfgwgb",
+   "index": 10149540695,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmxfgwgb",
+   "index": 10149540721,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnxfgwgb",
+   "index": 10149540747,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "voxfgwgb",
+   "index": 10149540773,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpxfgwgb",
+   "index": 10149540799,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqxfgwgb",
+   "index": 10149540825,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrxfgwgb",
+   "index": 10149540851,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vsxfgwgb",
+   "index": 10149540877,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtxfgwgb",
+   "index": 10149540903,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vuxfgwgb",
+   "index": 10149540929,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvxfgwgb",
+   "index": 10149540941,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivxfgwgb",
+   "index": 10149540942,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvxfgwgb",
+   "index": 10149540943,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvxfgwgb",
+   "index": 10149540944,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvxfgwgb",
+   "index": 10149540945,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvxfgwgb",
+   "index": 10149540946,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvxfgwgb",
+   "index": 10149540947,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovxfgwgb",
+   "index": 10149540948,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvxfgwgb",
+   "index": 10149540949,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvxfgwgb",
+   "index": 10149540950,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvxfgwgb",
+   "index": 10149540951,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svxfgwgb",
+   "index": 10149540952,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvxfgwgb",
+   "index": 10149540953,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvxfgwgb",
+   "index": 10149540954,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvxfgwgb",
+   "index": 10149540955,
+   "depth": 0,
+   "first_divide": 92,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgwgb",
+   "index": 10149540956,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvxfgwgb",
+   "index": 10149540957,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvxfgwgb",
+   "index": 10149540958,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgwgb",
+   "index": 10149540981,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxxfgwgb",
+   "index": 10149541007,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vyxfgwgb",
+   "index": 10149541033,
+   "depth": 0,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxyfgwgb",
+   "index": 10149541683,
+   "depth": 0,
+   "first_divide": 151,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfghwgb",
+   "index": 10150003391,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxhwgb",
+   "index": 10150302391,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgiwgb",
+   "index": 10150460367,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxiwgb",
+   "index": 10150759367,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgjwgb",
+   "index": 10150917343,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxjwgb",
+   "index": 10151216343,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgkwgb",
+   "index": 10151374319,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxkwgb",
+   "index": 10151673319,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfglwgb",
+   "index": 10151831295,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxlwgb",
+   "index": 10152130295,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgmwgb",
+   "index": 10152288271,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxmwgb",
+   "index": 10152587271,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgnwgb",
+   "index": 10152745247,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxnwgb",
+   "index": 10153044247,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgowgb",
+   "index": 10153202223,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxowgb",
+   "index": 10153501223,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgpwgb",
+   "index": 10153659199,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxpwgb",
+   "index": 10153958199,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgqwgb",
+   "index": 10154116175,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxqwgb",
+   "index": 10154415175,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgrwgb",
+   "index": 10154573151,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxrwgb",
+   "index": 10154872151,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgswgb",
+   "index": 10155030127,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxswgb",
+   "index": 10155329127,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgtwgb",
+   "index": 10155487103,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxtwgb",
+   "index": 10155786103,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfguwgb",
+   "index": 10155944079,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxuwgb",
+   "index": 10156243079,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwwgb",
+   "index": 10156858031,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwwgb",
+   "index": 10157157031,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vhfgxwgb",
+   "index": 10157314591,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vifgxwgb",
+   "index": 10157314617,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjfgxwgb",
+   "index": 10157314643,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkfgxwgb",
+   "index": 10157314669,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlfgxwgb",
+   "index": 10157314695,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmfgxwgb",
+   "index": 10157314721,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnfgxwgb",
+   "index": 10157314747,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vofgxwgb",
+   "index": 10157314773,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpfgxwgb",
+   "index": 10157314799,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqfgxwgb",
+   "index": 10157314825,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrfgxwgb",
+   "index": 10157314851,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vsfgxwgb",
+   "index": 10157314877,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtfgxwgb",
+   "index": 10157314903,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vufgxwgb",
+   "index": 10157314929,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvfgxwgb",
+   "index": 10157314941,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivfgxwgb",
+   "index": 10157314942,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvfgxwgb",
+   "index": 10157314943,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvfgxwgb",
+   "index": 10157314944,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvfgxwgb",
+   "index": 10157314945,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvfgxwgb",
+   "index": 10157314946,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvfgxwgb",
+   "index": 10157314947,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovfgxwgb",
+   "index": 10157314948,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvfgxwgb",
+   "index": 10157314949,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvfgxwgb",
+   "index": 10157314950,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvfgxwgb",
+   "index": 10157314951,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svfgxwgb",
+   "index": 10157314952,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvfgxwgb",
+   "index": 10157314953,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvfgxwgb",
+   "index": 10157314954,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvfgxwgb",
+   "index": 10157314955,
+   "depth": 0,
+   "first_divide": 84,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxwgb",
+   "index": 10157314956,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvfgxwgb",
+   "index": 10157314957,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvfgxwgb",
+   "index": 10157314958,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxwgb",
+   "index": 10157314981,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgxwgb",
+   "index": 10157315007,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vyfgxwgb",
+   "index": 10157315033,
+   "depth": 0,
+   "first_divide": 132,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfghxwgb",
+   "index": 10157332791,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgixwgb",
+   "index": 10157350367,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgjxwgb",
+   "index": 10157367943,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgkxwgb",
+   "index": 10157385519,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfglxwgb",
+   "index": 10157403095,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgmxwgb",
+   "index": 10157420671,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgnxwgb",
+   "index": 10157438247,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgoxwgb",
+   "index": 10157455823,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgpxwgb",
+   "index": 10157473399,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgqxwgb",
+   "index": 10157490975,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgrxwgb",
+   "index": 10157508551,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgsxwgb",
+   "index": 10157526127,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgtxwgb",
+   "index": 10157543703,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfguxwgb",
+   "index": 10157561279,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxwgb",
+   "index": 10157596431,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxxwgb",
+   "index": 10157614007,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgyxwgb",
+   "index": 10157631583,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgywgb",
+   "index": 10157771983,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxywgb",
+   "index": 10158070983,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvhfgxgb",
+   "index": 10161411516,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwhfgxgb",
+   "index": 10161411541,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvifgxgb",
+   "index": 10161412192,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwifgxgb",
+   "index": 10161412217,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvjfgxgb",
+   "index": 10161412868,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwjfgxgb",
+   "index": 10161412893,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvkfgxgb",
+   "index": 10161413544,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwkfgxgb",
+   "index": 10161413569,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvlfgxgb",
+   "index": 10161414220,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwlfgxgb",
+   "index": 10161414245,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvmfgxgb",
+   "index": 10161414896,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwmfgxgb",
+   "index": 10161414921,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvnfgxgb",
+   "index": 10161415572,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwnfgxgb",
+   "index": 10161415597,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvofgxgb",
+   "index": 10161416248,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwofgxgb",
+   "index": 10161416273,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvpfgxgb",
+   "index": 10161416924,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwpfgxgb",
+   "index": 10161416949,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvqfgxgb",
+   "index": 10161417600,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwqfgxgb",
+   "index": 10161417625,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvrfgxgb",
+   "index": 10161418276,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwrfgxgb",
+   "index": 10161418301,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvsfgxgb",
+   "index": 10161418952,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwsfgxgb",
+   "index": 10161418977,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvtfgxgb",
+   "index": 10161419628,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwtfgxgb",
+   "index": 10161419653,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvufgxgb",
+   "index": 10161420304,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwufgxgb",
+   "index": 10161420329,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "whvfgxgb",
+   "index": 10161420616,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wivfgxgb",
+   "index": 10161420642,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wjvfgxgb",
+   "index": 10161420668,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wkvfgxgb",
+   "index": 10161420694,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wlvfgxgb",
+   "index": 10161420720,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wmvfgxgb",
+   "index": 10161420746,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wnvfgxgb",
+   "index": 10161420772,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wovfgxgb",
+   "index": 10161420798,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wpvfgxgb",
+   "index": 10161420824,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wqvfgxgb",
+   "index": 10161420850,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrvfgxgb",
+   "index": 10161420876,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wsvfgxgb",
+   "index": 10161420902,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wtvfgxgb",
+   "index": 10161420928,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wuvfgxgb",
+   "index": 10161420954,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvvfgxgb",
+   "index": 10161420980,
+   "depth": 0,
+   "first_divide": 57,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "fwvfgxgb",
+   "index": 10161420989,
+   "depth": 0,
+   "first_divide": 96,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hwvfgxgb",
+   "index": 10161420991,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "iwvfgxgb",
+   "index": 10161420992,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jwvfgxgb",
+   "index": 10161420993,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kwvfgxgb",
+   "index": 10161420994,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lwvfgxgb",
+   "index": 10161420995,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mwvfgxgb",
+   "index": 10161420996,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nwvfgxgb",
+   "index": 10161420997,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "owvfgxgb",
+   "index": 10161420998,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pwvfgxgb",
+   "index": 10161420999,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qwvfgxgb",
+   "index": 10161421000,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rwvfgxgb",
+   "index": 10161421001,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "swvfgxgb",
+   "index": 10161421002,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "twvfgxgb",
+   "index": 10161421003,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uwvfgxgb",
+   "index": 10161421004,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwvfgxgb",
+   "index": 10161421005,
+   "depth": 0,
+   "first_divide": 57,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "wwvfgxgb",
+   "index": 10161421006,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwvfgxgb",
+   "index": 10161421007,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ywvfgxgb",
+   "index": 10161421008,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wxvfgxgb",
+   "index": 10161421032,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wyvfgxgb",
+   "index": 10161421058,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfwfgxgb",
+   "index": 10161421239,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vhwfgxgb",
+   "index": 10161421291,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "viwfgxgb",
+   "index": 10161421317,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjwfgxgb",
+   "index": 10161421343,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkwfgxgb",
+   "index": 10161421369,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlwfgxgb",
+   "index": 10161421395,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmwfgxgb",
+   "index": 10161421421,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnwfgxgb",
+   "index": 10161421447,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vowfgxgb",
+   "index": 10161421473,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpwfgxgb",
+   "index": 10161421499,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqwfgxgb",
+   "index": 10161421525,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrwfgxgb",
+   "index": 10161421551,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vswfgxgb",
+   "index": 10161421577,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtwfgxgb",
+   "index": 10161421603,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vuwfgxgb",
+   "index": 10161421629,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvwfgxgb",
+   "index": 10161421641,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivwfgxgb",
+   "index": 10161421642,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvwfgxgb",
+   "index": 10161421643,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvwfgxgb",
+   "index": 10161421644,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvwfgxgb",
+   "index": 10161421645,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvwfgxgb",
+   "index": 10161421646,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvwfgxgb",
+   "index": 10161421647,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovwfgxgb",
+   "index": 10161421648,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvwfgxgb",
+   "index": 10161421649,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvwfgxgb",
+   "index": 10161421650,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvwfgxgb",
+   "index": 10161421651,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svwfgxgb",
+   "index": 10161421652,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvwfgxgb",
+   "index": 10161421653,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvwfgxgb",
+   "index": 10161421654,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvwfgxgb",
+   "index": 10161421655,
+   "depth": 0,
+   "first_divide": 57,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 2,
+   "fecundity_true": 2
+  },
+  {
+   "genome": "wvwfgxgb",
+   "index": 10161421656,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvwfgxgb",
+   "index": 10161421657,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvwfgxgb",
+   "index": 10161421658,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwwfgxgb",
+   "index": 10161421681,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgxgb",
+   "index": 10161421707,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vywfgxgb",
+   "index": 10161421733,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgxgb",
+   "index": 10161422332,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgxgb",
+   "index": 10161422357,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvyfgxgb",
+   "index": 10161423008,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwyfgxgb",
+   "index": 10161423033,
+   "depth": 0,
+   "first_divide": 97,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfghxgb",
+   "index": 10161884716,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfghxgb",
+   "index": 10161884741,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwhxgb",
+   "index": 10162166191,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgixgb",
+   "index": 10162341692,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgixgb",
+   "index": 10162341717,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwixgb",
+   "index": 10162623167,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgjxgb",
+   "index": 10162798668,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgjxgb",
+   "index": 10162798693,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwjxgb",
+   "index": 10163080143,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgkxgb",
+   "index": 10163255644,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgkxgb",
+   "index": 10163255669,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwkxgb",
+   "index": 10163537119,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfglxgb",
+   "index": 10163712620,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfglxgb",
+   "index": 10163712645,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwlxgb",
+   "index": 10163994095,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgmxgb",
+   "index": 10164169596,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgmxgb",
+   "index": 10164169621,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwmxgb",
+   "index": 10164451071,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgnxgb",
+   "index": 10164626572,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgnxgb",
+   "index": 10164626597,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwnxgb",
+   "index": 10164908047,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgoxgb",
+   "index": 10165083548,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgoxgb",
+   "index": 10165083573,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwoxgb",
+   "index": 10165365023,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgpxgb",
+   "index": 10165540524,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgpxgb",
+   "index": 10165540549,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwpxgb",
+   "index": 10165821999,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgqxgb",
+   "index": 10165997500,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgqxgb",
+   "index": 10165997525,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwqxgb",
+   "index": 10166278975,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgrxgb",
+   "index": 10166454476,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgrxgb",
+   "index": 10166454501,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwrxgb",
+   "index": 10166735951,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgsxgb",
+   "index": 10166911452,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgsxgb",
+   "index": 10166911477,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwsxgb",
+   "index": 10167192927,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgtxgb",
+   "index": 10167368428,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgtxgb",
+   "index": 10167368453,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwtxgb",
+   "index": 10167649903,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfguxgb",
+   "index": 10167825404,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfguxgb",
+   "index": 10167825429,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwuxgb",
+   "index": 10168106879,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgvxgb",
+   "index": 10168282380,
+   "depth": 1,
+   "first_divide": 83,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "vwfgvxgb",
+   "index": 10168282405,
+   "depth": 1,
+   "first_divide": 83,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "vhfgwxgb",
+   "index": 10168738991,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vifgwxgb",
+   "index": 10168739017,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vjfgwxgb",
+   "index": 10168739043,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vkfgwxgb",
+   "index": 10168739069,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vlfgwxgb",
+   "index": 10168739095,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vmfgwxgb",
+   "index": 10168739121,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vnfgwxgb",
+   "index": 10168739147,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vofgwxgb",
+   "index": 10168739173,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vpfgwxgb",
+   "index": 10168739199,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vqfgwxgb",
+   "index": 10168739225,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vrfgwxgb",
+   "index": 10168739251,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vsfgwxgb",
+   "index": 10168739277,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vtfgwxgb",
+   "index": 10168739303,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vufgwxgb",
+   "index": 10168739329,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "hvfgwxgb",
+   "index": 10168739341,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ivfgwxgb",
+   "index": 10168739342,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "jvfgwxgb",
+   "index": 10168739343,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "kvfgwxgb",
+   "index": 10168739344,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "lvfgwxgb",
+   "index": 10168739345,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "mvfgwxgb",
+   "index": 10168739346,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "nvfgwxgb",
+   "index": 10168739347,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "ovfgwxgb",
+   "index": 10168739348,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "pvfgwxgb",
+   "index": 10168739349,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "qvfgwxgb",
+   "index": 10168739350,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "rvfgwxgb",
+   "index": 10168739351,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "svfgwxgb",
+   "index": 10168739352,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "tvfgwxgb",
+   "index": 10168739353,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "uvfgwxgb",
+   "index": 10168739354,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vvfgwxgb",
+   "index": 10168739355,
+   "depth": 0,
+   "first_divide": 85,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgwxgb",
+   "index": 10168739356,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvfgwxgb",
+   "index": 10168739357,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "yvfgwxgb",
+   "index": 10168739358,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgwxgb",
+   "index": 10168739381,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwxgb",
+   "index": 10168739407,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vyfgwxgb",
+   "index": 10168739433,
+   "depth": 0,
+   "first_divide": 133,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfghwxgb",
+   "index": 10168757191,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgiwxgb",
+   "index": 10168774767,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgjwxgb",
+   "index": 10168792343,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgkwxgb",
+   "index": 10168809919,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfglwxgb",
+   "index": 10168827495,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgmwxgb",
+   "index": 10168845071,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgnwxgb",
+   "index": 10168862647,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgowxgb",
+   "index": 10168880223,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgpwxgb",
+   "index": 10168897799,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgqwxgb",
+   "index": 10168915375,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgrwxgb",
+   "index": 10168932951,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgswxgb",
+   "index": 10168950527,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgtwxgb",
+   "index": 10168968103,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfguwxgb",
+   "index": 10168985679,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwwxgb",
+   "index": 10169020831,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwxgb",
+   "index": 10169038407,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgywxgb",
+   "index": 10169055983,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxxgb",
+   "index": 10169196332,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxxgb",
+   "index": 10169196357,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxxgb",
+   "index": 10169477807,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgyxgb",
+   "index": 10169653308,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgyxgb",
+   "index": 10169653333,
+   "depth": 0,
+   "first_divide": 83,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwyxgb",
+   "index": 10169934783,
+   "depth": 0,
+   "first_divide": 112,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxwfgygb",
+   "index": 10173303083,
+   "depth": 0,
+   "first_divide": 94,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvxfgygb",
+   "index": 10173303708,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwxfgygb",
+   "index": 10173303733,
+   "depth": 0,
+   "first_divide": 95,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vxfgwygb",
+   "index": 10180620783,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgxwygb",
+   "index": 10180919783,
+   "depth": 0,
+   "first_divide": 110,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wvfgxygb",
+   "index": 10181077708,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfgxygb",
+   "index": 10181077733,
+   "depth": 0,
+   "first_divide": 82,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgwxygb",
+   "index": 10181359183,
+   "depth": 0,
+   "first_divide": 111,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvb",
+   "index": 14546409120,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvb",
+   "index": 14793351920,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxb",
+   "index": 15387420720,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvc",
+   "index": 22578219296,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvc",
+   "index": 22825162096,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxc",
+   "index": 23419230896,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvd",
+   "index": 30610029472,
+   "depth": 0,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvd",
+   "index": 30856972272,
+   "depth": 0,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxd",
+   "index": 31451041072,
+   "depth": 0,
+   "first_divide": 128,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcve",
+   "index": 38641839648,
+   "depth": 0,
+   "first_divide": 141,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxve",
+   "index": 38888782448,
+   "depth": 0,
+   "first_divide": 141,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxe",
+   "index": 39482851248,
+   "depth": 0,
+   "first_divide": 124,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvf",
+   "index": 46673649824,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvf",
+   "index": 46920592624,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxf",
+   "index": 47514661424,
+   "depth": 0,
+   "first_divide": 127,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvh",
+   "index": 62737270176,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvh",
+   "index": 62984212976,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxh",
+   "index": 63578281776,
+   "depth": 0,
+   "first_divide": 121,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvj",
+   "index": 78800890528,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvj",
+   "index": 79047833328,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxj",
+   "index": 79641902128,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvk",
+   "index": 86832700704,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvk",
+   "index": 87079643504,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxk",
+   "index": 87673712304,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvl",
+   "index": 94864510880,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvl",
+   "index": 95111453680,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxl",
+   "index": 95705522480,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvo",
+   "index": 118959941408,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvo",
+   "index": 119206884208,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxo",
+   "index": 119800953008,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvp",
+   "index": 126991751584,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvp",
+   "index": 127238694384,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxp",
+   "index": 127832763184,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvq",
+   "index": 135023561760,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvq",
+   "index": 135270504560,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxq",
+   "index": 135864573360,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcav",
+   "index": 168695381344,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxav",
+   "index": 168942324144,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcbv",
+   "index": 169004297120,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwvfcgbv",
+   "index": 169049234351,
+   "depth": 1,
+   "first_divide": 149,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wxvfcgbv",
+   "index": 169049234376,
+   "depth": 1,
+   "first_divide": 150,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "xvwfcgbv",
+   "index": 169049235001,
+   "depth": 1,
+   "first_divide": 149,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrchcxbv",
+   "index": 169251239920,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhccv",
+   "index": 169313212896,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxahcv",
+   "index": 169369420944,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxbhcv",
+   "index": 169369877920,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xpwrchcv",
+   "index": 169370242909,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "zxwrchcv",
+   "index": 169370243119,
+   "depth": 0,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xzwrchcv",
+   "index": 169370243169,
+   "depth": 0,
+   "first_divide": 145,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wpxrchcv",
+   "index": 169370243584,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "zwxrchcv",
+   "index": 169370243769,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wzxrchcv",
+   "index": 169370243844,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwzrchcv",
+   "index": 169370245119,
+   "depth": 0,
+   "first_divide": 145,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wxzrchcv",
+   "index": 169370245144,
+   "depth": 0,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxchcv",
+   "index": 169370334896,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxdhcv",
+   "index": 169370791872,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxehcv",
+   "index": 169371248848,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxfhcv",
+   "index": 169371705824,
+   "depth": 0,
+   "first_divide": 144,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxjhcv",
+   "index": 169373533728,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxkhcv",
+   "index": 169373990704,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxlhcv",
+   "index": 169374447680,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxohcv",
+   "index": 169375818608,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxphcv",
+   "index": 169376275584,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxqhcv",
+   "index": 169376732560,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "axrcwhcv",
+   "index": 169379115594,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "bxrcwhcv",
+   "index": 169379115595,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "cxrcwhcv",
+   "index": 169379115596,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "dxrcwhcv",
+   "index": 169379115597,
+   "depth": 1,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "exrcwhcv",
+   "index": 169379115598,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "fxrcwhcv",
+   "index": 169379115599,
+   "depth": 1,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "ixrcwhcv",
+   "index": 169379115602,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "jxrcwhcv",
+   "index": 169379115603,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "kxrcwhcv",
+   "index": 169379115604,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "lxrcwhcv",
+   "index": 169379115605,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "oxrcwhcv",
+   "index": 169379115608,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "pxrcwhcv",
+   "index": 169379115609,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "qxrcwhcv",
+   "index": 169379115610,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "xxrcwhcv",
+   "index": 169379115617,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "zxrcwhcv",
+   "index": 169379115619,
+   "depth": 1,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrcxwhcv",
+   "index": 169379474416,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcaxhcv",
+   "index": 169379527144,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcbxhcv",
+   "index": 169379544720,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrccxhcv",
+   "index": 169379562296,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wprcxhcv",
+   "index": 169379572384,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "zwrcxhcv",
+   "index": 169379572569,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wzrcxhcv",
+   "index": 169379572644,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcdxhcv",
+   "index": 169379579872,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcfxhcv",
+   "index": 169379615024,
+   "depth": 0,
+   "first_divide": 142,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcjxhcv",
+   "index": 169379685328,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrckxhcv",
+   "index": 169379702904,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrclxhcv",
+   "index": 169379720480,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcoxhcv",
+   "index": 169379773208,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcpxhcv",
+   "index": 169379790784,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcqxhcv",
+   "index": 169379808360,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcwxhcv",
+   "index": 169379913816,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxxhcv",
+   "index": 169379931392,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxcv",
+   "index": 169560155696,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcjv",
+   "index": 171475623328,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxjv",
+   "index": 171722566128,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhckv",
+   "index": 171784539104,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxkv",
+   "index": 172031481904,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhclv",
+   "index": 172093454880,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxlv",
+   "index": 172340397680,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcov",
+   "index": 173020202208,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxov",
+   "index": 173267145008,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcpv",
+   "index": 173329117984,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxpv",
+   "index": 173576060784,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcqv",
+   "index": 173638033760,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxqv",
+   "index": 173884976560,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xvfcgbwv",
+   "index": 175478823101,
+   "depth": 1,
+   "first_divide": 149,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "axrchcwv",
+   "index": 175491169594,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "bxrchcwv",
+   "index": 175491169595,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "cxrchcwv",
+   "index": 175491169596,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "dxrchcwv",
+   "index": 175491169597,
+   "depth": 1,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "exrchcwv",
+   "index": 175491169598,
+   "depth": 1,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "fxrchcwv",
+   "index": 175491169599,
+   "depth": 1,
+   "first_divide": 152,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "ixrchcwv",
+   "index": 175491169602,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "jxrchcwv",
+   "index": 175491169603,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "kxrchcwv",
+   "index": 175491169604,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "lxrchcwv",
+   "index": 175491169605,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "oxrchcwv",
+   "index": 175491169608,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "pxrchcwv",
+   "index": 175491169609,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "qxrchcwv",
+   "index": 175491169610,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "xxrchcwv",
+   "index": 175491169617,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "zxrchcwv",
+   "index": 175491169619,
+   "depth": 1,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrcxhcwv",
+   "index": 175491528416,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxwv",
+   "index": 175738471216,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcaxv",
+   "index": 175774115344,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcbxv",
+   "index": 175785996720,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchccxv",
+   "index": 175797878096,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcahcxv",
+   "index": 175800039944,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcbhcxv",
+   "index": 175800057520,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcchcxv",
+   "index": 175800075096,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wprchcxv",
+   "index": 175800085184,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "zwrchcxv",
+   "index": 175800085369,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wzrchcxv",
+   "index": 175800085444,
+   "depth": 0,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcdhcxv",
+   "index": 175800092672,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcehcxv",
+   "index": 175800110248,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcfhcxv",
+   "index": 175800127824,
+   "depth": 0,
+   "first_divide": 145,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcjhcxv",
+   "index": 175800198128,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrckhcxv",
+   "index": 175800215704,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrclhcxv",
+   "index": 175800233280,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcohcxv",
+   "index": 175800286008,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcphcxv",
+   "index": 175800303584,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcqhcxv",
+   "index": 175800321160,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcwhcxv",
+   "index": 175800426616,
+   "depth": 0,
+   "first_divide": 156,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcxv",
+   "index": 175800444192,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcdxv",
+   "index": 175809759472,
+   "depth": 0,
+   "first_divide": 153,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcfxv",
+   "index": 175833522224,
+   "depth": 0,
+   "first_divide": 142,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcjxv",
+   "index": 175881047728,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchckxv",
+   "index": 175892929104,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchclxv",
+   "index": 175904810480,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcoxv",
+   "index": 175940454608,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcpxv",
+   "index": 175952335984,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcqxv",
+   "index": 175964217360,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcwxv",
+   "index": 176035505616,
+   "depth": 0,
+   "first_divide": 155,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxxv",
+   "index": 176047386992,
+   "depth": 0,
+   "first_divide": 154,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwrchczv",
+   "index": 176417916919,
+   "depth": 0,
+   "first_divide": 144,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wxrchczv",
+   "index": 176417916944,
+   "depth": 0,
+   "first_divide": 145,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhczv",
+   "index": 176418275744,
+   "depth": 0,
+   "first_divide": 145,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfgvxgbw",
+   "index": 177090911655,
+   "depth": 0,
+   "first_divide": 102,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "axrchcvw",
+   "index": 183214063994,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "bxrchcvw",
+   "index": 183214063995,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "cxrchcvw",
+   "index": 183214063996,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "dxrchcvw",
+   "index": 183214063997,
+   "depth": 1,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "fxrchcvw",
+   "index": 183214063999,
+   "depth": 1,
+   "first_divide": 146,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "ixrchcvw",
+   "index": 183214064002,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "jxrchcvw",
+   "index": 183214064003,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "kxrchcvw",
+   "index": 183214064004,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "lxrchcvw",
+   "index": 183214064005,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "oxrchcvw",
+   "index": 183214064008,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "pxrchcvw",
+   "index": 183214064009,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "qxrchcvw",
+   "index": 183214064010,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "xxrchcvw",
+   "index": 183214064017,
+   "depth": 1,
+   "first_divide": 147,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "zxrchcvw",
+   "index": 183214064019,
+   "depth": 1,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrcxhcvw",
+   "index": 183214422816,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvw",
+   "index": 183461365616,
+   "depth": 0,
+   "first_divide": 148,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfcgbvxw",
+   "index": 184054959551,
+   "depth": 1,
+   "first_divide": 131,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrchcvxw",
+   "index": 184055434416,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvax",
+   "index": 184982181744,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvbx",
+   "index": 185291097520,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvcx",
+   "index": 185600013296,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvdx",
+   "index": 185908929072,
+   "depth": 0,
+   "first_divide": 128,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvfx",
+   "index": 186526760624,
+   "depth": 0,
+   "first_divide": 118,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvhx",
+   "index": 187144592176,
+   "depth": 0,
+   "first_divide": 121,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvjx",
+   "index": 187762423728,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvkx",
+   "index": 188071339504,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvlx",
+   "index": 188380255280,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvox",
+   "index": 189307002608,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvpx",
+   "index": 189615918384,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvqx",
+   "index": 189924834160,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcavx",
+   "index": 191219904144,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcbvx",
+   "index": 191231785520,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vwfcgbvx",
+   "index": 191233527701,
+   "depth": 1,
+   "first_divide": 143,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrchccvx",
+   "index": 191243666896,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcahcvx",
+   "index": 191245828744,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcbhcvx",
+   "index": 191245846320,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcchcvx",
+   "index": 191245863896,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wprchcvx",
+   "index": 191245873984,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "zwrchcvx",
+   "index": 191245874169,
+   "depth": 0,
+   "first_divide": 128,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wzrchcvx",
+   "index": 191245874244,
+   "depth": 0,
+   "first_divide": 128,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcdhcvx",
+   "index": 191245881472,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcehcvx",
+   "index": 191245899048,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcfhcvx",
+   "index": 191245916624,
+   "depth": 0,
+   "first_divide": 126,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcjhcvx",
+   "index": 191245986928,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrckhcvx",
+   "index": 191246004504,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrclhcvx",
+   "index": 191246022080,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcohcvx",
+   "index": 191246074808,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcphcvx",
+   "index": 191246092384,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcqhcvx",
+   "index": 191246109960,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcwhcvx",
+   "index": 191246215416,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvx",
+   "index": 191246232992,
+   "depth": 0,
+   "first_divide": 137,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcjvx",
+   "index": 191326836528,
+   "depth": 0,
+   "first_divide": 135,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchckvx",
+   "index": 191338717904,
+   "depth": 0,
+   "first_divide": 135,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchclvx",
+   "index": 191350599280,
+   "depth": 0,
+   "first_divide": 135,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcovx",
+   "index": 191386243408,
+   "depth": 0,
+   "first_divide": 135,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcpvx",
+   "index": 191398124784,
+   "depth": 0,
+   "first_divide": 135,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcqvx",
+   "index": 191410006160,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfcgbwvx",
+   "index": 191480819551,
+   "depth": 1,
+   "first_divide": 132,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrchcwvx",
+   "index": 191481294416,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvx",
+   "index": 191493175792,
+   "depth": 0,
+   "first_divide": 136,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "vfcgbvwx",
+   "index": 191777853951,
+   "depth": 1,
+   "first_divide": 132,
+   "intact": 0,
+   "copy_true": 0,
+   "fecundity": 1,
+   "fecundity_true": 0
+  },
+  {
+   "genome": "wrchcvwx",
+   "index": 191778328816,
+   "depth": 0,
+   "first_divide": 130,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxx",
+   "index": 192087244592,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvzx",
+   "index": 192705076144,
+   "depth": 0,
+   "first_divide": 121,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "xwrchcvz",
+   "index": 207309494519,
+   "depth": 0,
+   "first_divide": 139,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wxrchcvz",
+   "index": 207309494544,
+   "depth": 0,
+   "first_divide": 140,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrcxhcvz",
+   "index": 207309853344,
+   "depth": 0,
+   "first_divide": 140,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcxvz",
+   "index": 207556796144,
+   "depth": 0,
+   "first_divide": 140,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  },
+  {
+   "genome": "wrchcvxz",
+   "index": 208150864944,
+   "depth": 0,
+   "first_divide": 129,
+   "intact": 1,
+   "copy_true": 1,
+   "fecundity": 1,
+   "fecundity_true": 1
+  }
+ ]
+}

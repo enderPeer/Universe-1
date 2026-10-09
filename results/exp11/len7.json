@@ -1,0 +1,44 @@
+{
+ "experiment": "exp11",
+ "length": 7,
+ "alphabet": "abcdefghijklmnopqrstuvwxyz",
+ "genome_index": "sum op_i * 26^i, position 0 least significant",
+ "gens": 3,
+ "budget_cycles": 140,
+ "chunk_log2": 26,
+ "chunks": [
+  0,
+  119
+ ],
+ "genomes": 8031810176,
+ "viable": 0,
+ "depth0": 0,
+ "depth1": 0,
+ "depth2": 0,
+ "divides0": 565,
+ "intact": 0,
+ "copy_true0": 0,
+ "processed": 8031810176,
+ "hist": {
+  "first_divide_hist": {},
+  "fecundity_hist": {},
+  "fecundity_true_hist": {}
+ },
+ "wall_seconds": 55.21744346618652,
+ "nodes": [
+  {
+   "host": "falke64",
+   "gpus": [
+    0,
+    1
+   ],
+   "engine": "gpu/u1_avida_vk",
+   "chunks": [
+    0,
+    119
+   ],
+   "wall_seconds": 55.21744346618652
+  }
+ ],
+ "viable_genomes": []
+}
