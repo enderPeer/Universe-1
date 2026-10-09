@@ -1,0 +1,183 @@
+{
+ "rand_p16_mu0": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4090",
+  "gpu_index": 0,
+  "options": "--N 1048576 --P 65536 --ticks 8000000 --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534399.8114371,
+  "exit": "143",
+  "note": "stopped by hand at about 1.6 M ticks: frozen soup (births constant since tick 11,000); GPU redirected to the --inflow words runs"
+ },
+ "rand_p16_mu01": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 8000000 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534400.0252662,
+  "exit": "143",
+  "note": "stopped by hand at about 1.6 M ticks: frozen soup (births constant since tick 11,000); GPU redirected to the --inflow words runs"
+ },
+ "rand_p13_mu0": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #0",
+  "gpu_index": 0,
+  "options": "--N 1048576 --P 8192 --ticks 8000000 --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534400.3241656,
+  "exit": "143",
+  "note": "stopped by hand at 2.55 M ticks: frozen soup (no birth at all with 8,192 processors and the processor inflow)"
+ },
+ "seed462_mu01": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #1",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534400.621116,
+  "exit": "143",
+  "note": "stopped by hand at 0.77 M ticks: the 4,096 ancestors made 839 children by tick 3,000, no birth since"
+ },
+ "seed462_mu002": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #2",
+  "gpu_index": 2,
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.002 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534400.891056,
+  "exit": "143",
+  "note": "stopped by hand at 0.77 M ticks: the 4,096 ancestors made 843 children by tick 3,000, no birth since"
+ },
+ "words_p16_mu0": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4090",
+  "gpu_index": 0,
+  "options": "--N 1048576 --P 65536 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534980.211713,
+  "exit": "137",
+  "wall_seconds": 1385.302874803543,
+  "note": "killed by the OOM killer at 2.1 M ticks (the engine shadow kept every genome ever placed; fixed afterwards); 2.1 M ticks kept as the record"
+ },
+ "words_p13_mu0": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 8192 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791534980.9520643,
+  "exit": "0",
+  "wall_seconds": 3373.9986321926117
+ },
+ "words_p11_mu0": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #0",
+  "gpu_index": 0,
+  "options": "--N 1048576 --P 2048 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791535353.6660275,
+  "exit": "0",
+  "wall_seconds": 4289.61310172081
+ },
+ "words_p11_age128": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4090",
+  "gpu_index": 0,
+  "options": "--N 1048576 --P 2048 --ticks 6000000 --inflow words --mu 0 --max-age 128 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791537531.5450332,
+  "exit": "0",
+  "wall_seconds": 2497.3619146347046
+ },
+ "words_p13_age128": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #1",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 8192 --ticks 6000000 --inflow words --mu 0 --max-age 128 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791537545.3945088,
+  "exit": "0",
+  "wall_seconds": 4003.1432716846466
+ },
+ "words_p16_mu01": {
+  "state": "complete",
+  "node": "knecht24",
+  "gpu": "RTX 3060 #2",
+  "gpu_index": 2,
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --inflow words --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791537548.187596,
+  "exit": "0",
+  "wall_seconds": 5719.332048177719
+ },
+ "seed462_mu05": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.05 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791538359.7952805,
+  "exit": "0",
+  "wall_seconds": 232.96479892730713
+ },
+ "rand_p16_rays": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 1000000 --mu 0 --rays 1 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791538599.995594,
+  "exit": "0",
+  "wall_seconds": 478.65404081344604
+ },
+ "seed462_closed_mu01": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.01 --spontaneous 0 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791539087.046808,
+  "exit": "0",
+  "wall_seconds": 73.16742038726807
+ },
+ "fec2_mu01": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors 0x01b30b190e --n-ancestors 4096 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "started_unix": 1791539166.114621,
+  "exit": "0",
+  "wall_seconds": 306.645920753479
+ },
+ "intact_a2c841f269": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xa2c841f269 --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "started_unix": 1791539478.6509674,
+  "exit": "0",
+  "wall_seconds": 59.05017828941345
+ },
+ "intact_a9344f2e8d": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xa9344f2e8d --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "started_unix": 1791539543.4283009,
+  "exit": "0",
+  "wall_seconds": 59.43378949165344
+ },
+ "intact_d9b17359e8": {
+  "state": "complete",
+  "node": "adler40",
+  "gpu": "RTX 4080",
+  "gpu_index": 1,
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xd9b17359e8 --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "started_unix": 1791539610.9028144,
+  "exit": "0",
+  "wall_seconds": 95.99059009552002
+ }
+}

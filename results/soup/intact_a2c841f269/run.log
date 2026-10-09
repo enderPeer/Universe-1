@@ -1,0 +1,8 @@
+life/u1soup_cuda --gpu 1 --N 65536 --P 4096 --ticks 10000 --ancestors 0xa2c841f269 --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000 --out-dir results/soup/intact_a2c841f269 --dump-final 
+tick 0 live 1 births 0 genomes 1
+tick 10 live 2 births 1 genomes 1
+tick 20 live 2 births 1 genomes 1
+tick 30 live 2 births 1 genomes 1
+tick 39 live 0 births 1 genomes 0
+extinct at tick 39
+done

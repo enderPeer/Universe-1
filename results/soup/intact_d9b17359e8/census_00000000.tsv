@@ -1,0 +1,2 @@
+genome	count	first_seen	disassembly
+0xd9b17359e8	1	0	STIND 0; STIND 7; INCM 6; LDIND 6; INCM 7; JNZ 0; LDIND 6; JNZ 3

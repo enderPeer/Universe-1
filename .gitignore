@@ -25,3 +25,7 @@ results/exp09/*/union.npy
 results/shards/exp09/
 results/life/*/*_showcase.mp4
 results/life/*/*_showcase.wav
+results/soup/*/activity.tsv
+results/soup/*/shadow_activity.tsv
+results/soup/*/run.out
+results/soup/run_soup.log

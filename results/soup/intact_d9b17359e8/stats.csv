@@ -1,0 +1,6 @@
+tick,live,births,faithful,mutant,deaths_age,deaths_reaper,placements,rays,distinct_genomes,entropy,singletons,top_count,top_genome,parasites,out_readers,fertile,new_genomes,genomes_ever,shadow_distinct,shadow_entropy,shadow_singletons,shadow_new,shadow_ever
+0,1,0,0,0,0,0,0,0,1,0.0000,1,1,0xd9b17359e8,0,0,0,0,0,1,0.0000,1,0,0
+10,2,1,1,0,0,0,0,0,1,0.0000,0,2,0xd9b17359e8,1,2,1,1,1,1,0.0000,0,1,1
+20,2,1,1,0,0,0,0,0,1,0.0000,0,2,0xd9b17359e8,1,2,1,0,1,1,0.0000,0,0,1
+30,2,1,1,0,0,0,0,0,1,0.0000,0,2,0xd9b17359e8,1,2,1,0,1,1,0.0000,0,0,1
+39,0,1,1,0,2,0,0,0,0,0.0000,0,0,0x0000000000,0,0,0,0,1,0,0.0000,0,0,1

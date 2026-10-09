@@ -1,0 +1,1079 @@
+{
+ "rand_p16_mu0": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 2,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 1.2091898428053205,
+   "size_histogram": {
+    "2": 2
+   },
+   "longest": [
+    {
+     "start": 1000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 3000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 8000000 --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 1654000,
+  "births": 4,
+  "faithful": 3,
+  "mutant": 1,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "rand_p16_mu01": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 2,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 1.1627906976744187,
+   "size_histogram": {
+    "2": 2
+   },
+   "longest": [
+    {
+     "start": 1000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 3000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 8000000 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 1720000,
+  "births": 4,
+  "faithful": 3,
+  "mutant": 1,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "rand_p13_mu0": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 0,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 0.0,
+   "size_histogram": {},
+   "longest": []
+  },
+  "options": "--N 1048576 --P 8192 --ticks 8000000 --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 2549000,
+  "births": 0,
+  "faithful": 0,
+  "mutant": 0,
+  "fertile_end": 0,
+  "live_end": 8192,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no birth at all",
+  "top_adaptive": []
+ },
+ "words_p16_mu0": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 24,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 11.444921316165951,
+   "size_histogram": {
+    "1": 22,
+    "2": 2
+   },
+   "longest": [
+    {
+     "start": 1550000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 1971000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 137000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 174000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 352000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 2097000,
+  "births": 26,
+  "faithful": 19,
+  "mutant": 7,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "words_p13_mu0": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 20,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 3.3333333333333335,
+   "size_histogram": {
+    "1": 14,
+    "2": 5,
+    "14": 1
+   },
+   "longest": [
+    {
+     "start": 3966000,
+     "births": 14,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 2478000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 3379000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 4856000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 4929000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 8192 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 6000000,
+  "births": 38,
+  "faithful": 30,
+  "mutant": 8,
+  "fertile_end": 0,
+  "live_end": 8192,
+  "genomes_in_map": 190535,
+  "shadow_genomes_in_map": 190400,
+  "max_activity": 3,
+  "shadow_max_activity": 3,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "words_p11_mu0": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 7,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 1.1666666666666665,
+   "size_histogram": {
+    "1": 6,
+    "2": 1
+   },
+   "longest": [
+    {
+     "start": 4929000,
+     "births": 2,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 315000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 2766000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 3243000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    },
+    {
+     "start": 3902000,
+     "births": 1,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 2048 --ticks 6000000 --inflow words --mu 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 6000000,
+  "births": 8,
+  "faithful": 8,
+  "mutant": 0,
+  "fertile_end": 0,
+  "live_end": 2048,
+  "genomes_in_map": 11952,
+  "shadow_genomes_in_map": 11937,
+  "max_activity": 3,
+  "shadow_max_activity": 3,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "words_p11_age128": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 46,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 7.666666666666667,
+   "size_histogram": {
+    "1": 36,
+    "2": 3,
+    "4": 3,
+    "8": 1,
+    "12": 1,
+    "20": 1,
+    "34": 1
+   },
+   "longest": [
+    {
+     "start": 2782813,
+     "births": 34,
+     "genomes": 1,
+     "root": "0x3196777676",
+     "faithful": 34,
+     "offsets": [
+      16
+     ]
+    },
+    {
+     "start": 1668369,
+     "births": 20,
+     "genomes": 1,
+     "root": "0xd460142c29",
+     "faithful": 20,
+     "offsets": [
+      10,
+      20
+     ]
+    },
+    {
+     "start": 533641,
+     "births": 12,
+     "genomes": 1,
+     "root": "0x2e62880429",
+     "faithful": 12,
+     "offsets": [
+      10
+     ]
+    },
+    {
+     "start": 3214633,
+     "births": 8,
+     "genomes": 1,
+     "root": "0xc9ac88180a",
+     "faithful": 8,
+     "offsets": [
+      11
+     ]
+    },
+    {
+     "start": 4928033,
+     "births": 4,
+     "genomes": 1,
+     "root": "0x8e91180429",
+     "faithful": 4,
+     "offsets": [
+      10
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 2048 --ticks 6000000 --inflow words --mu 0 --max-age 128 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 6000000,
+  "births": 128,
+  "faithful": 112,
+  "mutant": 16,
+  "fertile_end": 0,
+  "live_end": 2048,
+  "genomes_in_map": 11857,
+  "shadow_genomes_in_map": 11857,
+  "max_activity": 3,
+  "shadow_max_activity": 3,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "words_p13_age128": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 138,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 23.0,
+   "size_histogram": {
+    "1": 112,
+    "2": 12,
+    "3": 1,
+    "4": 10,
+    "11": 1,
+    "17": 1,
+    "26": 1
+   },
+   "longest": [
+    {
+     "start": 3927917,
+     "births": 26,
+     "genomes": 2,
+     "root": "0x3e55045ce9",
+     "faithful": 25,
+     "offsets": [
+      9
+     ]
+    },
+    {
+     "start": 2308707,
+     "births": 17,
+     "genomes": 2,
+     "root": "0xd42285860a",
+     "faithful": 16,
+     "offsets": [
+      10
+     ]
+    },
+    {
+     "start": 4265201,
+     "births": 11,
+     "genomes": 1,
+     "root": "0xd1a08b18aa",
+     "faithful": 11,
+     "offsets": [
+      10
+     ]
+    },
+    {
+     "start": 723757,
+     "births": 4,
+     "genomes": 1,
+     "root": "0x3e608b9caa",
+     "faithful": 4,
+     "offsets": [
+      10
+     ]
+    },
+    {
+     "start": 1294574,
+     "births": 4,
+     "genomes": 1,
+     "root": "0x02d0885ce8",
+     "faithful": 4,
+     "offsets": [
+      9
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 8192 --ticks 6000000 --inflow words --mu 0 --max-age 128 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 6000000,
+  "births": 233,
+  "faithful": 194,
+  "mutant": 39,
+  "fertile_end": 0,
+  "live_end": 8192,
+  "genomes_in_map": 190980,
+  "shadow_genomes_in_map": 190980,
+  "max_activity": 4,
+  "shadow_max_activity": 4,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "words_p16_mu01": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 35,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 11.666666666666666,
+   "size_histogram": {
+    "1": 33,
+    "2": 2
+   },
+   "longest": [
+    {
+     "start": 1970722,
+     "births": 2,
+     "genomes": 1,
+     "root": "0xd452081140",
+     "faithful": 2,
+     "offsets": [
+      9
+     ]
+    },
+    {
+     "start": 2127748,
+     "births": 2,
+     "genomes": 1,
+     "root": "0xd863043829",
+     "faithful": 2,
+     "offsets": [
+      9
+     ]
+    },
+    {
+     "start": 136897,
+     "births": 1,
+     "genomes": 2,
+     "root": "0x4e4a82d609",
+     "faithful": 0,
+     "offsets": [
+      11
+     ]
+    },
+    {
+     "start": 173409,
+     "births": 1,
+     "genomes": 2,
+     "root": "0x3eaf041fcf",
+     "faithful": 0,
+     "offsets": [
+      15
+     ]
+    },
+    {
+     "start": 351841,
+     "births": 1,
+     "genomes": 1,
+     "root": "0x3e6173a34b",
+     "faithful": 1,
+     "offsets": [
+      12
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --inflow words --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 3000000,
+  "births": 37,
+  "faithful": 25,
+  "mutant": 12,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 5896516,
+  "shadow_genomes_in_map": 5896124,
+  "max_activity": 5,
+  "shadow_max_activity": 5,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "seed462_mu01": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 1.2987012987012987,
+   "size_histogram": {
+    "839": 1
+   },
+   "longest": [
+    {
+     "start": 1000,
+     "births": 839,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 770000,
+  "births": 839,
+  "faithful": 630,
+  "mutant": 209,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "seed462_mu002": {
+  "chains": {
+   "source": "stats rows",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 1.3071895424836601,
+   "size_histogram": {
+    "843": 1
+   },
+   "longest": [
+    {
+     "start": 1000,
+     "births": 843,
+     "genomes": 0,
+     "root": null,
+     "faithful": 0,
+     "offsets": []
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 3000000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.002 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 765000,
+  "births": 843,
+  "faithful": 672,
+  "mutant": 171,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 0,
+  "shadow_genomes_in_map": 0,
+  "max_activity": 0,
+  "shadow_max_activity": 0,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "seed462_mu05": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 9,
+   "degenerate_births": 17,
+   "per_million_ticks": 2.0,
+   "size_histogram": {
+    "789": 1
+   },
+   "longest": [
+    {
+     "start": 1,
+     "births": 789,
+     "genomes": 576,
+     "root": "0x0011045ce8",
+     "faithful": 438,
+     "offsets": [
+      8,
+      9,
+      10,
+      11,
+      14,
+      15,
+      16
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.05 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 500000,
+  "births": 806,
+  "faithful": 448,
+  "mutant": 358,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 389195,
+  "shadow_genomes_in_map": 389094,
+  "max_activity": 1995615,
+  "shadow_max_activity": 1995303,
+  "adaptive_genomes": 1,
+  "adaptive_first_seen_thirds": [
+   1,
+   0,
+   0
+  ],
+  "verdict": "transient: adaptive genomes only in the first third",
+  "top_adaptive": [
+   {
+    "genome": "0x0000000000",
+    "first_seen": 1000,
+    "last_seen": 500000,
+    "activity": 1995615,
+    "peak": 4213
+   }
+  ]
+ },
+ "rand_p16_rays": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 6,
+   "degenerate_chains": 44,
+   "degenerate_births": 64,
+   "per_million_ticks": 6.0,
+   "size_histogram": {
+    "1": 6
+   },
+   "longest": [
+    {
+     "start": 85780,
+     "births": 1,
+     "genomes": 1,
+     "root": "0x39c0039ce7",
+     "faithful": 1,
+     "offsets": [
+      18
+     ]
+    },
+    {
+     "start": 111123,
+     "births": 1,
+     "genomes": 1,
+     "root": "0x19ce739ce7",
+     "faithful": 1,
+     "offsets": [
+      11
+     ]
+    },
+    {
+     "start": 209227,
+     "births": 1,
+     "genomes": 1,
+     "root": "0x2108422484",
+     "faithful": 1,
+     "offsets": [
+      23
+     ]
+    },
+    {
+     "start": 263883,
+     "births": 1,
+     "genomes": 2,
+     "root": "0x39ce039ce7",
+     "faithful": 0,
+     "offsets": [
+      15
+     ]
+    },
+    {
+     "start": 646660,
+     "births": 1,
+     "genomes": 1,
+     "root": "0x39ce739cef",
+     "faithful": 1,
+     "offsets": [
+      15
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 1000000 --mu 0 --rays 1 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 1000000,
+  "births": 70,
+  "faithful": 66,
+  "mutant": 4,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 1005571,
+  "shadow_genomes_in_map": 1005580,
+  "max_activity": 2042588,
+  "shadow_max_activity": 2042556,
+  "adaptive_genomes": 1,
+  "adaptive_first_seen_thirds": [
+   1,
+   0,
+   0
+  ],
+  "verdict": "transient: adaptive genomes only in the first third",
+  "top_adaptive": [
+   {
+    "genome": "0x0000000000",
+    "first_seen": 1000,
+    "last_seen": 1000000,
+    "activity": 2042588,
+    "peak": 3855
+   }
+  ]
+ },
+ "seed462_closed_mu01": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 3472.222222222222,
+   "size_histogram": {
+    "12767": 1
+   },
+   "longest": [
+    {
+     "start": 1,
+     "births": 12767,
+     "genomes": 1430,
+     "root": "0x0010abc0e8",
+     "faithful": 10973,
+     "offsets": [
+      8,
+      9,
+      10,
+      11,
+      14,
+      15,
+      16
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.01 --spontaneous 0 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 288,
+  "births": 12767,
+  "faithful": 10973,
+  "mutant": 1794,
+  "fertile_end": 0,
+  "live_end": 0,
+  "genomes_in_map": 462,
+  "shadow_genomes_in_map": 462,
+  "max_activity": 9,
+  "shadow_max_activity": 9,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "fec2_mu01": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 16,
+   "degenerate_births": 27,
+   "per_million_ticks": 2.0,
+   "size_histogram": {
+    "1136": 1
+   },
+   "longest": [
+    {
+     "start": 1,
+     "births": 1136,
+     "genomes": 123,
+     "root": "0x01b30b190e",
+     "faithful": 892,
+     "offsets": [
+      9,
+      11,
+      14,
+      15,
+      16
+     ]
+    }
+   ]
+  },
+  "options": "--N 1048576 --P 65536 --ticks 500000 --ancestors 0x01b30b190e --n-ancestors 4096 --mu 0.01 --seed 1 --report-every 1000 --census-every 100000",
+  "ticks": 500000,
+  "births": 1163,
+  "faithful": 917,
+  "mutant": 246,
+  "fertile_end": 0,
+  "live_end": 65536,
+  "genomes_in_map": 387615,
+  "shadow_genomes_in_map": 387592,
+  "max_activity": 2038170,
+  "shadow_max_activity": 2038117,
+  "adaptive_genomes": 1,
+  "adaptive_first_seen_thirds": [
+   1,
+   0,
+   0
+  ],
+  "verdict": "transient: adaptive genomes only in the first third",
+  "top_adaptive": [
+   {
+    "genome": "0x0000000000",
+    "first_seen": 1000,
+    "last_seen": 500000,
+    "activity": 2038170,
+    "peak": 4282
+   }
+  ]
+ },
+ "intact_a2c841f269": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 25641.02564102564,
+   "size_histogram": {
+    "1": 1
+   },
+   "longest": [
+    {
+     "start": 6,
+     "births": 1,
+     "genomes": 1,
+     "root": "0xa2c841f269",
+     "faithful": 1,
+     "offsets": [
+      16
+     ]
+    }
+   ]
+  },
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xa2c841f269 --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "ticks": 39,
+  "births": 1,
+  "faithful": 1,
+  "mutant": 0,
+  "fertile_end": 0,
+  "live_end": 0,
+  "genomes_in_map": 1,
+  "shadow_genomes_in_map": 1,
+  "max_activity": 6,
+  "shadow_max_activity": 6,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "intact_a9344f2e8d": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 25641.02564102564,
+   "size_histogram": {
+    "1": 1
+   },
+   "longest": [
+    {
+     "start": 6,
+     "births": 1,
+     "genomes": 1,
+     "root": "0xa9344f2e8d",
+     "faithful": 1,
+     "offsets": [
+      22
+     ]
+    }
+   ]
+  },
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xa9344f2e8d --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "ticks": 39,
+  "births": 1,
+  "faithful": 1,
+  "mutant": 0,
+  "fertile_end": 0,
+  "live_end": 0,
+  "genomes_in_map": 1,
+  "shadow_genomes_in_map": 1,
+  "max_activity": 6,
+  "shadow_max_activity": 6,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ },
+ "intact_d9b17359e8": {
+  "chains": {
+   "source": "births.tsv",
+   "chains": 1,
+   "degenerate_chains": 0,
+   "degenerate_births": 0,
+   "per_million_ticks": 25641.02564102564,
+   "size_histogram": {
+    "1": 1
+   },
+   "longest": [
+    {
+     "start": 6,
+     "births": 1,
+     "genomes": 1,
+     "root": "0xd9b17359e8",
+     "faithful": 1,
+     "offsets": [
+      21
+     ]
+    }
+   ]
+  },
+  "options": "--N 65536 --P 4096 --ticks 10000 --ancestors 0xd9b17359e8 --n-ancestors 1 --fill pattern --spontaneous 0 --seed 1 --report-every 10 --census-every 1000",
+  "ticks": 39,
+  "births": 1,
+  "faithful": 1,
+  "mutant": 0,
+  "fertile_end": 0,
+  "live_end": 0,
+  "genomes_in_map": 1,
+  "shadow_genomes_in_map": 1,
+  "max_activity": 6,
+  "shadow_max_activity": 6,
+  "adaptive_genomes": 0,
+  "adaptive_first_seen_thirds": [
+   0,
+   0,
+   0
+  ],
+  "verdict": "none: no genome outran the shadow",
+  "top_adaptive": []
+ }
+}

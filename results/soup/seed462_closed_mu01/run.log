@@ -1,0 +1,5 @@
+life/u1soup_cuda --gpu 1 --N 1048576 --P 65536 --ticks 500000 --ancestors @cluster/soup_seeds_robust.txt --n-ancestors 4096 --mu 0.01 --spontaneous 0 --seed 1 --report-every 1000 --census-every 100000 --out-dir results/soup/seed462_closed_mu01 --dump-final 
+tick 0 live 4096 births 0 genomes 462
+tick 288 live 0 births 12767 genomes 0
+extinct at tick 288
+done

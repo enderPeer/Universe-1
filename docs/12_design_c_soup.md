@@ -101,6 +101,11 @@ code+1 pattern as the record.
 3. Lengths cannot change (the genome is the 8-word code); parasites in the measured sense (reads into other living processors) will be
    common and uninformative in a dense random soup, since a third of all processors read beyond their own 8 words.
 
+Outcome (2026-10-09 evening, 16 soups, about 60 million ticks): `results/soup/REPORT.md`. The predictions held; two things were not
+predicted (the processor-inflow soup cools into fixed points and stops sampling, and uniform genomes are "copied" by any constant
+writer), and the sparse random-code soup with a 128-step processor life produced chains of up to 34 faithful generations from
+spontaneous copiers, which end because fecundity is one.
+
 ## 7. What to change next if the predictions hold
 
 The pointer words have to leave the genome. The cheapest version in this machine is a sixth word bit (W = 6: 4-bit operands, 16 direct
