@@ -25,3 +25,11 @@ results/exp09/*/union.npy
 results/shards/exp09/
 results/life/*/*_showcase.mp4
 results/life/*/*_showcase.wav
+gpu/u1_avida
+gpu/u1_avida_emu
+gpu/u1_avida.spv
+gpu/u1_avida_vk
+gpu/u1_l2
+gpu/u1_l2_emu
+gpu/u1_l2.spv
+gpu/u1_l2_vk

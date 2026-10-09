@@ -22,5 +22,14 @@ u1_vk: u1_vk.c u1.spv
 	gcc -O2 -Wall -o u1_vk u1_vk.c -lvulkan
 u1_cuda_emu: u1_cuda.cu cuda_shim.h
 	g++ -O2 -x c++ -include cuda_shim.h -o u1_cuda_emu u1_cuda.cu
+# exp11 Avida heads-CPU engines (CUDA, emulation, Vulkan)
+u1_avida: u1_avida.cu
+	$(NVCC) -O3 -arch=native -o u1_avida u1_avida.cu
+u1_avida_emu: u1_avida.cu cuda_shim.h
+	g++ -O2 -x c++ -include cuda_shim.h -o u1_avida_emu u1_avida.cu
+u1_avida.spv: u1_avida.comp
+	glslc --target-env=vulkan1.2 u1_avida.comp -o u1_avida.spv
+u1_avida_vk: u1_avida_vk.c u1_avida.spv
+	gcc -O2 -Wall -o u1_avida_vk u1_avida_vk.c -lvulkan
 clean:
-	rm -f u1_cuda u1_vk u1.spv u1_cuda_emu u1_multi u1_l2 u1_l2_emu u1_l2.spv u1_l2_vk
+	rm -f u1_cuda u1_vk u1.spv u1_cuda_emu u1_multi u1_l2 u1_l2_emu u1_l2.spv u1_l2_vk u1_avida u1_avida_emu u1_avida.spv u1_avida_vk
