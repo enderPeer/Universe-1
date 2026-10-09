@@ -33,3 +33,4 @@ gpu/u1_l2
 gpu/u1_l2_emu
 gpu/u1_l2.spv
 gpu/u1_l2_vk
+results/exp11/run.log
