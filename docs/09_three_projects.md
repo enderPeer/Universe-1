@@ -113,3 +113,13 @@ Across the three projects, the experiments that would change what we know, in or
 
 Status of the running jobs at the time of writing: Universe-1 champion binary every-step map 12 of 13 passes merged
 (208 of 256 maps on the workstation); 5-byte crawler sweep on seven GPUs, about two hours to go.
+
+**Update 2026-10-09.** Item 1 is done twice over: the 5-byte sweep found three intact replicators (exp06c), and design C was built and
+run (`docs/12_design_c_soup.md`, `results/soup/REPORT.md`): a Tierra/Coreworld-style soup on the crawler ISA, Python reference and
+CUDA engine bit-identical, 16 soups over 60 million ticks. Spontaneous copiers arise from random code and start chains of up to 34
+faithful generations, but every chain ends: a copy loop's pointers are its own instruction words and a 3-bit operand survives eight
+increments, so fecundity is one by construction (NANO's replicators have the same limit). Open-ended evolution needs pointers that
+are not code: W = 6 is the next soup. Item 9 (exp11) is done as well: Avida's 914 length-8 replicators reproduced on the cluster
+(916 viable, two missing from the published file, confirmed with Avida 2.14.0), nothing at length 7, and all 26^9 running on the AMD
+cards (`results/exp11_summary.md`, `docs/14_exp11_avida.md`). Still open: items 2 to 8 and 10, the Vulkan port of the soup engine,
+and the three-project write-up of replicator density per genome bit across Avida, NANO and the crawler.
