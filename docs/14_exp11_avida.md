@@ -96,8 +96,14 @@ not ours.
 - `fast/check_avida.py`: the CUDA engine (RTX 3060), its CPU emulation (g++ with `gpu/cuda_shim.h`) and the Vulkan engine (R9700,
   RX 9070 XT, RX 9060 XT) agree with the reference on every field (viable, depth, first divide, intact, copy-true, fecundity,
   copy-true fecundity) for 65,536 random length-8 genomes plus the 914, and for 2,048 random length-7 genomes.
-- The sweeps themselves (results/exp11_summary.md): all 26^7 length-7 genomes -> 0 viable; all 26^8 -> compared as a set with
-  the published 914.
+- **Avida 2.14.0 itself**, built from the `2.14.0` tag on falke64 (`git submodule update --init`, cmake with
+  `-DCMAKE_POLICY_VERSION_MINIMUM=3.5`) and run in Analyze Mode on its default configuration (`results/exp11/avida214_analyze.cfg`,
+  `avida214_analyze_detail.dat`): viability agrees with `sim/avida.py` for all 936 genomes tested (914 published, 2 extra, 20 random),
+  and Avida's `gest_time` equals our first-divide cycle for every viable genome (936 of 936 fields).
+- The sweeps (results/exp11_summary.md): all 26^7 length-7 genomes -> 0 viable; all 26^8 -> the 914 published genomes plus
+  `vwsfgxgb` and `vwsxfggb`, which Avida 2.14.0 also reports viable (gestation 97 and 110). Nothing in sections 1-6 can separate
+  these two from their published neighbours `vwtfgxgb`/`vwufgxgb` (sub/nand in the place of add, identical behaviour with
+  BX = CX = 0), so the published file is short by two, not the semantics.
 
 ## 8. What is still a choice of ours
 
