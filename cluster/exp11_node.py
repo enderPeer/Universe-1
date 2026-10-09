@@ -76,7 +76,7 @@ if args.combine:
     sys.exit(0)
 
 gpus = [int(g) for g in args.gpus.split(',')]
-k0, k1 = (int(x) for x in args.chunk_range.split('-')) if args.chunk_range else (0, NCH - 1); chunks = list(range(k0, k1 + 1)); tag = f'{name}.part_{k0}-{k1}' if args.chunk_range else name
+k0, k1 = (int(x) for x in args.chunk_range.split('-')) if args.chunk_range else (0, NCH - 1); assert 0 <= k0 <= k1 < NCH, f'chunk range must lie in 0..{NCH - 1}'; chunks = list(range(k0, k1 + 1)); tag = f'{name}.part_{k0}-{k1}' if args.chunk_range else name
 if (OUT / f'{tag}.json').exists(): say(f'{tag}: done already'); sys.exit(0)
 todo = queue.Queue(); [todo.put(k) for k in chunks]; done = {}; lock = threading.Lock(); t0 = time.time(); fail = []
 def worker(gpu):
