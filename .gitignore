@@ -29,3 +29,9 @@ results/soup/*/activity.tsv
 results/soup/*/shadow_activity.tsv
 results/soup/*/run.out
 results/soup/run_soup.log
+results/life/*/final.ppm
+results/life/progress.json
+results/life/analyze_overnight.log
+results/life-analysis-deps.log
+results/share-bridge*.log
+results/share-bridge-status.json
