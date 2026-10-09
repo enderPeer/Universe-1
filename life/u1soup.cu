@@ -39,7 +39,7 @@ __device__ __host__ __forceinline__ ull hsh(ull seed, ull tick, ull cell, ull k)
 struct Soup {   // device arrays
   unsigned char *M; ull *claim; int *owner;
   unsigned char *alive, *A, *PC, *ext, *outr, *wflag, *wval; unsigned *B, *age, *wmask, *children, *waddr; int *pending; ull *genome, *seq;
-  unsigned *parents, *pk, *pB, *pg_alive, *freel; ull *pg, *placed, *sortkey; unsigned *sortval; ull *cnt;   // cnt: births, faithful, mutant, deaths_age, deaths_reaper, placements, rays
+  unsigned *parents, *pk, *pB, *pg_alive, *freel; ull *pg, *cg, *placed, *sortkey; unsigned *sortval; ull *cnt;   // cnt: births, faithful, mutant, deaths_age, deaths_reaper, placements, rays
 };
 __device__ __forceinline__ ull read_genome(const unsigned char *M, unsigned B) { ull g = 0; for (unsigned j = 0; j < C.L; j++) g |= (ull)M[(B + j) % C.N] << (j * C.W); return g; }
 __device__ __forceinline__ void attach(Soup s, unsigned slot, unsigned B, ull g, ull seq) {
@@ -113,7 +113,7 @@ __global__ void k_birth(Soup s, unsigned nb, ull seq0) {
   unsigned i = blockIdx.x * blockDim.x + threadIdx.x; if (i >= nb) return;
   unsigned p = s.parents[i], c = s.freel[i]; ull g = read_genome(s.M, s.pB[i]);
   if (s.pg_alive[i]) s.children[p]++;
-  attach(s, c, s.pB[i], g, seq0 + i); atomicAdd(&s.cnt[0], 1ull); atomicAdd(&s.cnt[g == s.pg[i] ? 1 : 2], 1ull);
+  attach(s, c, s.pB[i], g, seq0 + i); s.cg[i] = g; atomicAdd(&s.cnt[0], 1ull); atomicAdd(&s.cnt[g == s.pg[i] ? 1 : 2], 1ull);
 }
 __global__ void k_age(Soup s) { unsigned slot = blockIdx.x * blockDim.x + threadIdx.x; if (slot < C.P && s.alive[slot] && s.age[slot] >= C.max_age) { kill(s, slot); atomicAdd(&s.cnt[3], 1ull); } }
 __global__ void k_place(Soup s, unsigned nf, ull tick, ull seq0) {
@@ -186,7 +186,7 @@ int main(int argc, char **argv) {
   cudaMalloc(&s.alive, P); cudaMalloc(&s.A, P); cudaMalloc(&s.PC, P); cudaMalloc(&s.ext, P); cudaMalloc(&s.outr, P); cudaMalloc(&s.wflag, P); cudaMalloc(&s.wval, P);
   cudaMalloc(&s.B, P * 4); cudaMalloc(&s.age, P * 4); cudaMalloc(&s.wmask, P * 4); cudaMalloc(&s.children, P * 4); cudaMalloc(&s.waddr, P * 4); cudaMalloc(&s.pending, P * 4);
   cudaMalloc(&s.genome, P * 8); cudaMalloc(&s.seq, P * 8); cudaMalloc(&s.parents, P * 4); cudaMalloc(&s.pk, P * 4); cudaMalloc(&s.pB, P * 4); cudaMalloc(&s.pg_alive, P * 4); cudaMalloc(&s.freel, P * 4);
-  cudaMalloc(&s.pg, P * 8); cudaMalloc(&s.placed, P * 8); cudaMalloc(&s.sortkey, P * 8); cudaMalloc(&s.sortval, P * 4); cudaMalloc(&s.cnt, 8 * 8);
+  cudaMalloc(&s.pg, P * 8); cudaMalloc(&s.cg, P * 8); cudaMalloc(&s.placed, P * 8); cudaMalloc(&s.sortkey, P * 8); cudaMalloc(&s.sortval, P * 4); cudaMalloc(&s.cnt, 8 * 8);
   cudaMemset(s.claim, 0, (size_t)N * 8); cudaMemset(s.owner, 0xFF, (size_t)N * 4); cudaMemset(s.alive, 0, P); cudaMemset(s.wflag, 0, P); cudaMemset(s.cnt, 0, 64);
   // ---- initial memory and ancestors (host side, as the reference)
   std::vector<unsigned char> M(N, 0);
@@ -199,14 +199,16 @@ int main(int argc, char **argv) {
   thrust::device_ptr<unsigned char> d_alive(s.alive); thrust::device_ptr<unsigned> d_parents(s.parents), d_freel(s.freel), d_sortval(s.sortval); thrust::device_ptr<ull> d_sortkey(s.sortkey);
   ull nseq = 0, live = 0, final_tick = ticks, gstep = 0;
   // Shadow and statistics on the host
-  std::vector<ull> sh_g; std::vector<unsigned> sh_live; Activity act, sact; ull c_births = 0, c_faithful = 0, c_mutant = 0, c_dage = 0, c_dreap = 0, c_place = 0, c_rays = 0;
+  std::vector<ull> sh_g; std::vector<unsigned> sh_live, sh_free; Activity act, sact;   // shadow genomes in reusable slots (the reference's list grows; same picks)
+  auto sh_add = [&](ull g) { unsigned i; if (!sh_free.empty()) { i = sh_free.back(); sh_free.pop_back(); sh_g[i] = g; } else { i = (unsigned)sh_g.size(); sh_g.push_back(g); } sh_live.push_back(i); };
+  auto sh_kill = [&](size_t k) { sh_free.push_back(sh_live[k]); sh_live[k] = sh_live.back(); sh_live.pop_back(); }; ull c_births = 0, c_faithful = 0, c_mutant = 0, c_dage = 0, c_dreap = 0, c_place = 0, c_rays = 0;
   std::vector<unsigned char> h_alive(P), h_ext(P), h_outr(P); std::vector<ull> h_genome(P); std::vector<unsigned> h_children(P); std::vector<ull> h_placed(P);
   if (n) {   // ancestors: k_birth with pg_alive = 0 and pg = genome (counts as a faithful birth; corrected below)
     std::vector<unsigned> slots(n), Bs(n); std::vector<ull> gs(n); for (unsigned i = 0; i < n; i++) { slots[i] = i; Bs[i] = (unsigned)(((ull)i * N) / n); ull g = 0; for (unsigned j = 0; j < L; j++) g |= (ull)M[(Bs[i] + j) % N] << (j * c.W); gs[i] = g; }
     cudaMemcpy(s.freel, slots.data(), n * 4, cudaMemcpyHostToDevice); cudaMemcpy(s.pB, Bs.data(), n * 4, cudaMemcpyHostToDevice); cudaMemcpy(s.pg, gs.data(), n * 8, cudaMemcpyHostToDevice);
     cudaMemset(s.pg_alive, 0, n * 4); cudaMemcpy(s.parents, slots.data(), n * 4, cudaMemcpyHostToDevice);
     k_birth<<<(n + 127) / 128, 128>>>(s, n, 0); cudaDeviceSynchronize(); cudaMemset(s.cnt, 0, 64); nseq = n; live = n;
-    if (shadow) for (unsigned i = 0; i < n; i++) { sh_g.push_back(gs[i]); sh_live.push_back((unsigned)sh_g.size() - 1); }
+    if (shadow) for (unsigned i = 0; i < n; i++) sh_add(gs[i]);
   }
   auto do_place = [&](ull tick) {   // every free slot gets a processor at a random position
     if (!spontaneous) return;
@@ -214,7 +216,7 @@ int main(int argc, char **argv) {
     if (!nf) return;
     if (inflow == "words") { k_place_claim<<<(nf + 127) / 128, 128>>>(s, nf, tick, gstep); k_place_write<<<(nf + 127) / 128, 128>>>(s, nf, tick, gstep); }
     k_place<<<(nf + 127) / 128, 128>>>(s, nf, tick, nseq); cudaDeviceSynchronize(); nseq += nf; live += nf; c_place += nf;
-    if (shadow) { cudaMemcpy(h_placed.data(), s.placed, nf * 8, cudaMemcpyDeviceToHost); for (unsigned j = 0; j < nf; j++) { sh_g.push_back(h_placed[j]); sh_live.push_back((unsigned)sh_g.size() - 1); } }
+    if (shadow) { cudaMemcpy(h_placed.data(), s.placed, nf * 8, cudaMemcpyDeviceToHost); for (unsigned j = 0; j < nf; j++) sh_add(h_placed[j]); }
   };
   do_place(0);
   // ---- output
@@ -223,6 +225,8 @@ int main(int argc, char **argv) {
   FILE *csv = fopen((out_dir + "/stats.csv").c_str(), "w"); if (!csv) { perror(out_dir.c_str()); return 1; }
   fprintf(csv, "tick,live,births,faithful,mutant,deaths_age,deaths_reaper,placements,rays,distinct_genomes,entropy,singletons,top_count,top_genome,parasites,out_readers,fertile,new_genomes,genomes_ever,shadow_distinct,shadow_entropy,shadow_singletons,shadow_new,shadow_ever\n");
   FILE *logf = fopen((out_dir + "/run.log").c_str(), "a"); fprintf(logf, "%s\n", cmd.c_str()); fflush(logf);
+  FILE *bf = fopen((out_dir + "/births.tsv").c_str(), "w"); fprintf(bf, "tick\tparent_genome\tchild_genome\toffset\tfaithful\n");   // every birth (rare events; the lineage record)
+  std::vector<ull> h_pg(P), h_cg(P); std::vector<unsigned> h_pk(P);
   auto t0 = std::chrono::steady_clock::now();
   auto report = [&](ull tick, int census) {
     cudaMemcpy(h_alive.data(), s.alive, P, cudaMemcpyDeviceToHost); cudaMemcpy(h_genome.data(), s.genome, P * 8, cudaMemcpyDeviceToHost); cudaMemcpy(h_ext.data(), s.ext, P, cudaMemcpyDeviceToHost);
@@ -242,7 +246,7 @@ int main(int argc, char **argv) {
       char nm[64]; snprintf(nm, sizeof nm, "/census_%08llu.tsv", tick); FILE *f = fopen((out_dir + nm).c_str(), "w"); fprintf(f, "genome\tcount\tfirst_seen\tdisassembly\n");
       for (size_t i = 0; i < v.size() && i < 50; i++) { auto it = act.m.find(v[i].first); fprintf(f, "0x%0*llx\t%u\t%llu\t", width, v[i].first, v[i].second, it == act.m.end() ? tick : it->second.first);
         for (unsigned j = 0; j < L; j++) { unsigned w = (v[i].first >> (j * c.W)) & c.mask; fprintf(f, "%s%s %u", j ? "; " : "", PNAME[isa[w >> c.sh]], w & c.opmask); } fprintf(f, "\n"); }
-      fclose(f); }
+      fclose(f); act.write(out_dir + "/activity.tsv", width); if (shadow) sact.write(out_dir + "/shadow_activity.tsv", width); }   // activity files at every census, so a stopped run has them
     fprintf(stderr, "tick %9llu live %7llu births %10llu (faithful %llu mutant %llu) deaths age %llu reaper %llu placements %llu genomes %zu top %llu parasites %llu (%.0fs) %s\n", tick, nl, c_births, c_faithful, c_mutant, c_dage, c_dreap, c_place, cnt.size(), topc, par, std::chrono::duration<double>(std::chrono::steady_clock::now() - t0).count(), prop.name);
     fprintf(logf, "tick %llu live %llu births %llu genomes %zu\n", tick, nl, c_births, cnt.size()); fflush(logf);
   };
@@ -260,14 +264,16 @@ int main(int argc, char **argv) {
     if (nb) {
       thrust::copy_if(thrust::counting_iterator<unsigned>(0), thrust::counting_iterator<unsigned>(P), d_freel, IsFree{s.alive});
       k_palive<<<(nb + 127) / 128, 128>>>(s, nb); k_mutate<<<(nb + 127) / 128, 128>>>(s, nb, t); k_birth<<<(nb + 127) / 128, 128>>>(s, nb, nseq); nseq += nb; live += nb;
+      cudaMemcpy(h_pg.data(), s.pg, nb * 8, cudaMemcpyDeviceToHost); cudaMemcpy(h_cg.data(), s.cg, nb * 8, cudaMemcpyDeviceToHost); cudaMemcpy(h_pk.data(), s.pk, nb * 4, cudaMemcpyDeviceToHost);
+      for (unsigned i = 0; i < nb; i++) fprintf(bf, "%llu\t0x%0*llx\t0x%0*llx\t%u\t%d\n", t, width, h_pg[i], width, h_cg[i], h_pk[i], h_pg[i] == h_cg[i]); fflush(bf);
     }
     k_age<<<grid, 128>>>(s); cudaMemcpy(hcnt, s.cnt, 64, cudaMemcpyDeviceToHost);
     ull dage = hcnt[3] - c_dage; c_dage = hcnt[3]; deaths += dage; live -= dage; c_births = hcnt[0]; c_faithful = hcnt[1]; c_mutant = hcnt[2];
     if (shadow) {   // births first, then deaths
       for (unsigned i = 0; i < nb; i++) { ull p = sh_g[sh_live[hsh(c.seed ^ SHADOW_SEED, t, 3, i) % sh_live.size()]];
         for (unsigned j = 0; j < L; j++) { ull r = hsh(c.seed ^ SHADOW_SEED, t, 1, (ull)i * L + j); if ((r & 0xFFFFFFFFull) < c.mu_thr) p ^= 1ull << (j * c.W + (r >> 32) % c.W); }
-        sh_g.push_back(p); sh_live.push_back((unsigned)sh_g.size() - 1); }
-      for (ull i = 0; i < deaths; i++) { size_t k = hsh(c.seed ^ SHADOW_SEED, t, 2, i) % sh_live.size(); sh_live[k] = sh_live.back(); sh_live.pop_back(); }
+        sh_add(p); }
+      for (ull i = 0; i < deaths; i++) sh_kill(hsh(c.seed ^ SHADOW_SEED, t, 2, i) % sh_live.size());
     }
     do_place(t);
     { ull r = hsh(c.seed, t, 3, 0); unsigned nr = (unsigned)rays + (((r & 0xFFFFFFFFull) < (ull)((rays - (unsigned)rays) * 4294967296.0)) ? 1 : 0);
@@ -276,7 +282,7 @@ int main(int argc, char **argv) {
     if (shadow && sh_live.size() != live) { fprintf(stderr, "shadow size %zu != live %llu at tick %llu\n", sh_live.size(), live, t); return 1; }
     if (!live) { final_tick = t + 1; report(t + 1, 1); fprintf(stderr, "extinct at tick %llu\n", t + 1); fprintf(logf, "extinct at tick %llu\n", t + 1); break; }
   }
-  fclose(csv); act.write(out_dir + "/activity.tsv", width); if (shadow) sact.write(out_dir + "/shadow_activity.tsv", width);
+  fclose(csv); fclose(bf); act.write(out_dir + "/activity.tsv", width); if (shadow) sact.write(out_dir + "/shadow_activity.tsv", width);
   if (dump_final) {   // same format as sim/soup.py dump()
     cudaMemcpy(M.data(), s.M, N, cudaMemcpyDeviceToHost); std::vector<unsigned char> hA(P), hPC(P); std::vector<unsigned> hB(P), hage(P), hw(P); std::vector<ull> hseq(P);
     cudaMemcpy(h_alive.data(), s.alive, P, cudaMemcpyDeviceToHost); cudaMemcpy(hA.data(), s.A, P, cudaMemcpyDeviceToHost); cudaMemcpy(hPC.data(), s.PC, P, cudaMemcpyDeviceToHost); cudaMemcpy(hB.data(), s.B, P * 4, cudaMemcpyDeviceToHost);

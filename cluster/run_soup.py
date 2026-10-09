@@ -29,7 +29,7 @@ if not a.no_sync and not a.collect:
 def collect(name, node):
     d = OUT / name; d.mkdir(parents=True, exist_ok=True)
     if a.dry: return
-    r = subprocess.run(["ssh", "-o", "BatchMode=yes", node, f"cd {REMOTE}/results/soup/{name} && tar cf - stats.csv run.log run.out activity.tsv shadow_activity.tsv census_*.tsv 2>/dev/null"], capture_output=True)
+    r = subprocess.run(["ssh", "-o", "BatchMode=yes", node, f"cd {REMOTE}/results/soup/{name} && tar cf - stats.csv run.log run.out births.tsv activity.tsv shadow_activity.tsv census_*.tsv 2>/dev/null"], capture_output=True)
     subprocess.run(["tar", "xf", "-", "-C", str(d)], input=r.stdout, check=True)
 def finished(name, node):
     r = sh(node, f"cat {REMOTE}/results/soup/{name}/exit 2>/dev/null"); return r.stdout.strip() if r.stdout.strip() else None

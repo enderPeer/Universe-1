@@ -6,7 +6,8 @@ activity.png (activity distributions real vs shadow). The verdict per run follow
 adaptive component if its cumulative activity exceeds every shadow genome's; the number of adaptive components over time (by first-seen
 tick) says whether adaptive novelty is absent, transient, bounded or still growing at the end.
 usage: python cluster/analyze_soup.py [--runs a,b,...]"""
-import argparse, collections, csv, json, math, re, sys
+import argparse, collections, csv, json, math, re, sys, warnings
+warnings.filterwarnings('ignore')
 from pathlib import Path
 import numpy as np
 import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
